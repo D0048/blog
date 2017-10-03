@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>D0048</title>
+  
+  <subtitle>a record of thoughts, ideas, solutions and traps</subtitle>
+  <link href="/blog/atom.xml" rel="self"/>
+  
+  <link href="https://d0048.github.io/blog/"/>
+  <updated>2017-10-03T08:49:25.534Z</updated>
+  <id>https://d0048.github.io/blog/</id>
+  
+  <author>
+    <name>D0048</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://d0048.github.io/blog/2017/10/03/hello-world/"/>
+    <id>https://d0048.github.io/blog/2017/10/03/hello-world/</id>
+    <published>2017-10-03T08:49:25.534Z</published>
+    <updated>2017-10-03T08:49:25.534Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Update pepper flash player under linux</title>
+    <link href="https://d0048.github.io/blog/2017/09/24/update-pepper-flash-player-under-linux/"/>
+    <id>https://d0048.github.io/blog/2017/09/24/update-pepper-flash-player-under-linux/</id>
+    <published>2017-09-24T09:53:28.000Z</published>
+    <updated>2017-09-24T09:54:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Install of going for update using package manager, use <code>sudo update-pepperflashplugin-nonfree --install</code>.</p><p>ps: the most idiotic design ever :’</p><p>2017/9/24</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Install of going for update using package manager, use &lt;code&gt;sudo update-pepperflashplugin-nonfree --install&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;ps: the most 
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Convert an image into an XBitMap C array stored in a C header file</title>
+    <link href="https://d0048.github.io/blog/2017/09/12/convert-an-image-into-an-xbitmap-array/"/>
+    <id>https://d0048.github.io/blog/2017/09/12/convert-an-image-into-an-xbitmap-array/</id>
+    <published>2017-09-12T12:52:52.000Z</published>
+    <updated>2017-09-12T12:56:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>==<a href="https://stackoverflow.com/questions/2156572/c-header-file-with-bitmapped-fonts/2156872#2156872" target="_blank" rel="external">Credit: StackOverflow</a>==</p><p>Basically, install <code>imagemagick</code>, and use the shell command: <code>convert $source.png $dest.xbm</code>….</p><p>This is a really simple solution but takes me hours to really figure things out.</p><p>2017/9/12 21:00</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;==&lt;a href=&quot;https://stackoverflow.com/questions/2156572/c-header-file-with-bitmapped-fonts/2156872#2156872&quot; target=&quot;_blank&quot; rel=&quot;external&quot;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>A key point understanding single variable chain rule</title>
+    <link href="https://d0048.github.io/blog/2017/09/12/a-key-point-understanding-single-variable-chain-rule/"/>
+    <id>https://d0048.github.io/blog/2017/09/12/a-key-point-understanding-single-variable-chain-rule/</id>
+    <published>2017-09-12T12:33:25.000Z</published>
+    <updated>2017-09-12T12:37:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>A key point understanding single variable chain rule: </p><p>f(g(x)) = f’(g)*g’ </p><p>At f’(g) part, g is inserted into f’ as a macro <strong>==after==</strong> taking the derivative!!!!! </p><p>e.g:</p><pre>f(x)=a^2g(x)=2af'(g), instead of dx((2a)^2) /dyis actually: "dx(a^2)/dy".replace("a","2a") !!!</pre><p>2017/9/12 20:30</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;A key point understanding single variable chain rule: &lt;/p&gt;
+&lt;p&gt;f(g(x)) = f’(g)*g’ &lt;/p&gt;
+&lt;p&gt;At f’(g) part, g is inserted into f’ as a macro 
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Change screen saver image on a rooted kindle pw2 manually without installing any more hacks</title>
+    <link href="https://d0048.github.io/blog/2017/09/09/change-wall-papers-on-a-rooted-kindle-manually-without-installing-any-more-hacks/"/>
+    <id>https://d0048.github.io/blog/2017/09/09/change-wall-papers-on-a-rooted-kindle-manually-without-installing-any-more-hacks/</id>
+    <published>2017-09-09T01:43:08.000Z</published>
+    <updated>2017-09-09T01:58:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>I am just tired with the screensaver images and the ads thus trying to change them up. Also, I don’t want any more hack packages without really checking what’s inside myself. </p><p>First of all, connect to the shell of that kindle using whatever methods possible.(e.g: xterm)</p><p>The original wall papers seems to be located at <code>/user/share/blanket/screensaver/</code>. By replacing them with my own, I should be able to use my own images.</p><p>However, the file system there seems to be mounted as read only. Use <code>df /user/share/blanket/screensaver/</code> to locate the mounting point and remount it with <code>mount -o remount,rw /</code>(coz in my case it mounted together with <code>/</code>)</p><p>Then, one could freely copy his/her images(should be in the right size) into that folder following the name sequence. </p><p>2017/9/9</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;I am just tired with the screensaver images and the ads thus trying to change them up. Also, I don’t want any more hack packages without 
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Solve </title>
+    <link href="https://d0048.github.io/blog/2017/09/05/solve-missingsectionheadererror-file-contains-no-section-headers-in-configphaser-pyhton/"/>
+    <id>https://d0048.github.io/blog/2017/09/05/solve-missingsectionheadererror-file-contains-no-section-headers-in-configphaser-pyhton/</id>
+    <published>2017-09-05T12:44:57.000Z</published>
+    <updated>2017-09-05T12:51:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>While reading config files with utf-8 BOM header, configphaser throws this confusing exception. </p><p>While most of the online solutions suggests manually change the encoding of the file to ANSCII, or read the file and save it again in another format. The former drops support to special characters and the latter is just not easy enough.</p><p>I found that the default ConfigPhaser uses non-encoded format. In order to make sure it reads the file in the correct format:<br><code>configphaser.ConfigPhaser().read(config_file, encoding=&quot;utf-8-sig&quot;)</code></p><p>This should tell the phaser to use the utf-8 encoding with bom.</p><p>2017/9/5</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;While reading config files with utf-8 BOM header, configphaser throws this confusing exception. &lt;/p&gt;
+&lt;p&gt;While most of the online solution
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Concerns Over a Trend of Online-compiled Application Dev Platforms</title>
+    <link href="https://d0048.github.io/blog/2017/09/03/cong-e-ni-cong-er-neng-sui/"/>
+    <id>https://d0048.github.io/blog/2017/09/03/cong-e-ni-cong-er-neng-sui/</id>
+    <published>2017-09-03T05:58:42.000Z</published>
+    <updated>2017-09-03T06:01:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Along the higher levels of abstract of the hardware, programming tends to become easier and more universal, together with acceptable amount of performance lost. Overall, such observation is a good thing to have since it make everyone’s life easier.  </p><p>However, this could actually cause many security/privacy issues. Using my experience in the summer camp as an example, where we were asked to perform all our developments on an “environment” made by a company called Apicloud(As I was told, there are tons of similar platforms available but they are essentially the same thing). This is a platform where you can create gui phone applications using simple js language and the api the company provided. All the low level code are packaged into so-called “modules”(named by the company). The key point is, those modules are provided by third party, non-open source, and not even accessible to the ones who use it. All the so-called “compilation and build” are performed online, by uploading user code to a repo binds to this user’s account and send an build request over a webpage panel.  </p><p>This is actually a really bad signal—developers no longer know what happened to the project and they just upload their code(more like pseudo-code thou) and depending on some third-party companies in responsible for the rest. One shall never know what has been added into one’s application packages to make an 3-line hello world program larger than 30mb and starts automatically on phone boot. What might be inside? Backdoors? ADs? Or user trackers? We shall never know! Moreover, the account of every developer is forced to bonded to his/er phone number, which is further forced to bonded to his/er ID number. This way, it would be a huge privacy issue in that the gov shall now know who, at where is making those applications, and have the total ability to disable one’s ability to further produce/use any applications by deleting his/er account and disable their applications.  </p><p>This way, users and developers are all losing their control over their applications, instead giving the right to some kinds of third-party organization! </p><p>Moreover, according to my observation, tons of popular, rather lower scale applications, are all based on similar platforms! We shall be aware of what is going on!</p><p>2017/9/3 14:00</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Along the higher levels of abstract of the hardware, programming tends to become easier and more universal, together with acceptable amou
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Casting java obj[] into String[]</title>
+    <link href="https://d0048.github.io/blog/2017/08/02/casting-java-obj-into-string/"/>
+    <id>https://d0048.github.io/blog/2017/08/02/casting-java-obj-into-string/</id>
+    <published>2017-08-02T05:42:54.000Z</published>
+    <updated>2017-08-02T05:46:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>In java, an object array can not be directly cast into a string array. This problem usually occurs when getting an array from a collection. </p><p>According to <a href="https://stackoverflow.com/questions/22731706/java-lang-classcastexception-ljava-lang-object-cannot-be-cast-to-ljava-lang" target="_blank" rel="external">this post</a>It’s possible to do it like this:<br><code>String[] str = someCollection.toArray(new String[someCollection.size()]);</code></p><p>2017.8.2</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;In java, an object array can not be directly cast into a string array. This problem usually occurs when getting an array from a collectio
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vim plugin Syntastic works without error or effect</title>
+    <link href="https://d0048.github.io/blog/2017/07/20/vim-plugin-syntastic-works-without-error-or-effect/"/>
+    <id>https://d0048.github.io/blog/2017/07/20/vim-plugin-syntastic-works-without-error-or-effect/</id>
+    <published>2017-07-20T06:53:15.000Z</published>
+    <updated>2017-07-20T06:57:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Compile YouCompleteMe again with extra flag: <code>./install.sh --clang-completer</code>.</p><p>2017/7/20</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Compile YouCompleteMe again with extra flag: &lt;code&gt;./install.sh --clang-completer&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;2017/7/20&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Audio device disabled and replaced by dummy audio after using hdajackretask</title>
+    <link href="https://d0048.github.io/blog/2017/07/11/audio-device-disabled-and-replaced-by-dummy-audio-after-using-hdajackretask/"/>
+    <id>https://d0048.github.io/blog/2017/07/11/audio-device-disabled-and-replaced-by-dummy-audio-after-using-hdajackretask/</id>
+    <published>2017-07-11T02:57:33.000Z</published>
+    <updated>2017-07-11T03:12:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>After some modification on <code>hdajackretask</code>, which previously worked but disabled my audio card after reboot(in both dual of windows 10 and ubuntu).</p><p>Ubuntu will reports an error of <code>codecs not found</code> and windows will return an error of <code>device moved</code>.</p><p>In my case, this problem is solved through editing <code>/etc/modprobe.d/alsa-base.conf</code> in that the desired audio card is marked with <code>index=-2</code>.</p><p>By changing the index of the desired interface to ‘1’,(in my case, the one with <code>intel</code> in it because I am using <code>snd-hda-intel</code> ) and adding <code>options snd-hda-intel model=auto</code>, the problem is resolved after reboot. </p><p>2017/7/11</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;After some modification on &lt;code&gt;hdajackretask&lt;/code&gt;, which previously worked but disabled my audio card after reboot(in both dual of wi
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>A few points need to be caution while using crypt() in c</title>
+    <link href="https://d0048.github.io/blog/2017/06/13/a-few-points-need-to-be-caution-while-using-crypt-in-c/"/>
+    <id>https://d0048.github.io/blog/2017/06/13/a-few-points-need-to-be-caution-while-using-crypt-in-c/</id>
+    <published>2017-06-13T00:48:16.000Z</published>
+    <updated>2017-06-13T01:09:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>While using this function, there’s a lot that’s mentioned in the manual but hard to find.</p><p>From manual:</p><pre>#define _XOPEN_SOURCE        /* See feature_test_macros(7) */#include <unistd.h>char *crypt(const char *key, const char *salt);#define _GNU_SOURCE          /* See feature_test_macros(7) */#include <crypt.h>char *crypt_r(const char *key, const char *salt,struct crypt_data *data);Link with -lcrypt.</crypt.h></unistd.h></pre><p>However:</p><pre>The return value points to static data whose contentis overwritten by each call.</pre>This means a strdup or similar operation is necessary to copy it if one want to preserve the value and use the previous after another crypt. Also, it is not in the manual that using an encrypted string as salt means using the same salt that encrypts the string is used to encrypt the new one. The reason is that the string output will have its own salt at its beginning. The manual mentions nothing about how the check works but it works at here. So I looked for the source code in c posix library(From here:https://code.woboq.org/userspace/glibc/crypt/crypt-entry.c.html#crypt):<pre>157    char *158    crypt (const char *key, const char *salt)159    {160    #ifdef _LIBC161      /* Try to find out whether we have to use MD5 encryption replacement.  */162      if (strncmp (md5_salt_prefix, salt, sizeof (md5_salt_prefix) - 1) == 0163          /* Let __crypt_r deal with the error code if FIPS is enabled.  */164          && !fips_enabled_p ())165        return __md5_crypt (key, salt);166    167      /* Try to find out whether we have to use SHA256 encryption replacement.  */168      if (strncmp (sha256_salt_prefix, salt, sizeof (sha256_salt_prefix) - 1) == 0)169        return __sha256_crypt (key, salt);170    171      /* Try to find out whether we have to use SHA512 encryption replacement.  */172      if (strncmp (sha512_salt_prefix, salt, sizeof (sha512_salt_prefix) - 1) == 0)173        return __sha512_crypt (key, salt);174    #endif175    176      return __crypt_r (key, salt, &_ufc_foobar);177    }</pre><p>It seems to be smarter than I excepted and can even determine which way to encrypt according to the salt….</p><p>2017/6/13</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;While using this function, there’s a lot that’s mentioned in the manual but hard to find.&lt;/p&gt;
+&lt;p&gt;From manual:&lt;/p&gt;
+&lt;pre&gt;
+#define _XOPEN_SO
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>How to have two header files contain each other to use the others&#39; class</title>
+    <link href="https://d0048.github.io/blog/2017/05/17/how-to-have-two-header-files-contain-each-other-to-use-the-others-class-2/"/>
+    <id>https://d0048.github.io/blog/2017/05/17/how-to-have-two-header-files-contain-each-other-to-use-the-others-class-2/</id>
+    <published>2017-05-17T08:47:15.000Z</published>
+    <updated>2017-05-17T09:00:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>When 2 <code>.h</code> files are trying to use classes in each other, an error will occur if no special treatment is applied:</p><pre> syntax error : identifier "class_name"</pre>It seems like the compiler identify the class as an identifier. I tried to use macro commands like the following <pre>#ifndef PACKAGE#include "Package.h"#define PACKAGE#endif</pre>==But failed.==With the help of this [passage](http://www.bijishequ.com/detail/149692?p=), I found a way to solve it. A class in C++ can be first declared and then defined like this:<pre>class class_name;//this is a declaration.class class_name{    Content contents;};//this is a definition</pre><p>So by putting only the declaration of classes in the header files or by putting another declaration of the class before use, it is made possible for this problem to be solved.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;When 2 &lt;code&gt;.h&lt;/code&gt; files are trying to use classes in each other, an error will occur if no special treatment is applied:&lt;/p&gt;
+&lt;pre&gt;
+ 
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>MACHINE LEARNING ARE REALLY ADVANCING THESE DAYS</title>
+    <link href="https://d0048.github.io/blog/2017/05/15/machine-learning-are-really-advancing-these-days/"/>
+    <id>https://d0048.github.io/blog/2017/05/15/machine-learning-are-really-advancing-these-days/</id>
+    <published>2017-05-15T13:03:57.000Z</published>
+    <updated>2017-05-15T13:16:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Recently, I formed a strong interest on machine learning in that it provides a new way to view the relationship between how programs view the world and how we view the world. Even if digging the detail requires a strong math knowledge, which I don’t have yet, by reading basic concepts, I can have a grasp of the idea. I believe it might be the future of computers.</p><p>Leave out how this subject is powerful since I am just beginning my first contact with it, let’s look at how much has been done through it. For example, it allows programs to learn from the past and form new knowledge. I went through a paper called “Major Life Event Extraction from Twitter based on Congratulations/Condolences Speech Acts” and I found that a lot more could be done with appropriate machine learning strategies. It is almost unimaginable before for a program to identify intents inside texts used by humans and now it’s made possible by machine learning. That’s cool.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Recently, I formed a strong interest on machine learning in that it provides a new way to view the relationship between how programs view
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Important stuff about the crypt() function in crypt.h under linux</title>
+    <link href="https://d0048.github.io/blog/2017/05/13/important-stuff-about-the-crypt-function-in-crypt-h-under-linux/"/>
+    <id>https://d0048.github.io/blog/2017/05/13/important-stuff-about-the-crypt-function-in-crypt-h-under-linux/</id>
+    <published>2017-05-13T04:15:08.000Z</published>
+    <updated>2017-05-25T07:30:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>The <code>char* crypt(char*salt, char* str);</code> function is used for one-way encryption with salt.  However, the buffer it returns is always the same piece of memory so it may appear to be returning duplicated results.</p><p>Solution: Use <code>strcp()</code> or <code>strdup()</code> to make a copy of the result every-time after invokes. Also, remember to free the memory after use. </p><p>Example:</p><p><pre><br>char<em> a = crypt(“string1”,”this_is_salt”);<br>char</em> b = crypt(“string2”,”this_is_salt”);<br>printf(“%s”, strcmp(a,b));<br></pre><br>The above is a wrong example and will print 0;</p><p><pre><br>char<em> a = strdup(crypt(“string1”,”this_is_salt”));<br>char</em> b = strdup(crypt(“string2”,”this_is_salt”));<br>printf(“%s”, strcmp(a,b));<br>free(a);free(b);<br></pre><br>The above is a correct example and will print a non-0 value;</p><p>2017/5/25</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;The &lt;code&gt;char* crypt(char*salt, char* str);&lt;/code&gt; function is used for one-way encryption with salt.  However, the buffer it returns is
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Migrate/Share everything between vivaldi and chrome under linux</title>
+    <link href="https://d0048.github.io/blog/2017/05/12/migrate-everything/"/>
+    <id>https://d0048.github.io/blog/2017/05/12/migrate-everything/</id>
+    <published>2017-05-12T06:13:26.000Z</published>
+    <updated>2017-05-12T06:45:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>I just found the vivaldi browser, which based on chromium, works really good for me. Thus I need to find a way to migrate. Here we go:</p><ol><li><p>Find a config file of chrome, usually located under <code>~/.config/google-chrome</code>|~<code>~/.config/google-chrome-beta</code>|<code>~/.config/chromium</code> or similar places.</p></li><li><p>Create a soft link of the folder called <code>default</code> with <code>ln -s</code> or whatever method preferred. </p></li><li><p>Run vivaldi once and close it to generate proper configuration files.</p></li><li><p>Locate the vivaldi config file, usually located under <code>~/.config/vivaldi</code>.</p></li><li><p>Delete the <code>default</code> folder under <code>~/.config/vivaldi</code>.</p></li><li><p>Copy the softlink just created here and name it <code>default</code>.</p></li><li><p>Till now, we got everything but stored password in the browser migrated successfully. If preferred, copy the whole <code>default</code> folder from chrome and override the one for vivaldi will do the same trick but prevent sharing config files.</p></li><li><p>Also, copy all the content under<br><code>~/.config/google-chrome</code>|~<code>~/.config/google-chrome-beta</code>|<code>~/.config/chromium</code> <br><br>into<br><code>~/.config/vivaldi</code><br>litereally </p></li></ol><p>==For now, no automatic way to make importing password possible. However, one can manually do so….==<br><br>2017/5/12</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;I just found the vivaldi browser, which based on chromium, works really good for me. Thus I need to find a way to migrate. Here we go:&lt;/p
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Meanings of abnormal memories value in visual studio under debug mode</title>
+    <link href="https://d0048.github.io/blog/2017/05/11/meanings-of-memory-excpetion-in-visual-studio-under-debug-mode/"/>
+    <id>https://d0048.github.io/blog/2017/05/11/meanings-of-memory-excpetion-in-visual-studio-under-debug-mode/</id>
+    <published>2017-05-11T11:42:58.000Z</published>
+    <updated>2017-05-11T11:51:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Thanks for the ide tool, the environment is controlled to provide faster problem locationg function.</p><p>As I quote from msdn:</p><pre>* 0xcccccccc : Used by Microsoft's C++ debugging runtime library to mark uninitialised stack memory = (char)'烫'</pre><pre>* 0xcdcdcdcd : Used by Microsoft's C++ debugging runtime library to mark uninitialised heap memory = (char)'屯'</pre><pre>* 0xfeeefeee : Used by Microsoft's HeapFree() to mark freed heap memory</pre><pre>* 0xabababab : Used by Microsoft's HeapAlloc() to mark "no man's land" guard bytes after allocated heap memory</pre><pre>* 0xabadcafe : A startup to this value to initialize all free memory to catch errant pointers</pre><pre>* 0xbaadf00d : Used by Microsoft's LocalAlloc(LMEM_FIXED) to mark uninitialised allocated heap memory</pre><pre>* 0xbadcab1e : Error Code returned to the Microsoft eVC debugger when connection is severed to the debugger</pre><pre>* 0xbeefcace : Used by Microsoft .NET as a magic number in resource files</pre><p>These will be useful for bebugging!<br>2017/5/11</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Thanks for the ide tool, the environment is controlled to provide faster problem locationg function.&lt;/p&gt;
+&lt;p&gt;As I quote from msdn:&lt;/p&gt;
+&lt;pr
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>A way to compress file into sub-packages in linux</title>
+    <link href="https://d0048.github.io/blog/2017/04/27/ways-to-compress-file-into-sub-packages-in-linux/"/>
+    <id>https://d0048.github.io/blog/2017/04/27/ways-to-compress-file-into-sub-packages-in-linux/</id>
+    <published>2017-04-27T11:33:04.000Z</published>
+    <updated>2017-04-27T11:38:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Pack: <code>tar cjf - {file}/ |split -b 1m - {file}.tar.bz2.</code><br>Unpack: <code>cat {file}.tar.bz2.a* | tar xj</code></p><p>2017/4/27 19:38</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Pack: &lt;code&gt;tar cjf - {file}/ |split -b 1m - {file}.tar.bz2.&lt;/code&gt;&lt;br&gt;Unpack: &lt;code&gt;cat {file}.tar.bz2.a* | tar xj&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;2017/4/
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Problems with the school&#39;s SMS log system that contains high vulnerabilities</title>
+    <link href="https://d0048.github.io/blog/2017/04/25/problems-with-the-schools-sms-log-system-that-contains-high-vulnerabilities/"/>
+    <id>https://d0048.github.io/blog/2017/04/25/problems-with-the-schools-sms-log-system-that-contains-high-vulnerabilities/</id>
+    <published>2017-04-25T12:44:39.000Z</published>
+    <updated>2017-04-25T13:12:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>I just found that the school’s SMS system, which contains all the sensitive and private information of almost every students and personnel in our school, including accounts that can directly change the students’ scores, is highly vulnerable. </p><p>First of all, no ssl certificates are used. That means all the password and content are delivered directly without any encryption. That means…Well, this is what I got on my account:<br><img src="/content/images/2017/04/2017-04-25-20-50-09----.png" alt=""><br>Any time if our traffic are sniffered in any of the routers it routes through, all the passwords and contents in the pages will be leaked. </p><p>Second of all, the side does not limit attempts to enter wrong passwords. That means, with a little amount of time and it will be possible to try out passwords of teachers with a small script.<br>Here is a small example:<br><code>wget http://sms.██s.com/login --post-data=&#39;username=p1234&amp;password=123456&#39; -r</code><br>This is a shell command for an attempt to recursively download all the contents owned by a student’s account. It can be easily planted into a program to try all possible combinations until success. Once the password is correct, all the private information will leak. Also, if the account is for a teacher, students will be able to change their scores themselves. </p><p>==Plus, most of the teachers are using default passwords today…which are██..==</p><p>In conclusion, the school platform need to be refined so that it is made safer!</p><p>2017/4/25</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;I just found that the school’s SMS system, which contains all the sensitive and private information of almost every students and personne
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Run custom script/program on linux hibernate/suspend/thaw/resume/lid-close/lid-open</title>
+    <link href="https://d0048.github.io/blog/2017/04/18/run-custom-script/"/>
+    <id>https://d0048.github.io/blog/2017/04/18/run-custom-script/</id>
+    <published>2017-04-18T10:39:37.000Z</published>
+    <updated>2017-04-18T12:35:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>For <b>hibernate/suspend/resume:</b></p><p>Any executable file under <code>/etc/pm/sleep.d</code> will be executed one any of the above actions with a string inside <strong>the second parameter</strong>(which is <code>args[1]</code> in C or <code>$1</code> in shell). This parameter may reads <code>hibernate</code>, <code>thaw</code>, <code>suspend</code> or resume depending on the operation the system is doing. </p><p>Just write a script or a program that does a certain operation according to the parameter recieved and throw it into the dictionary, mark it as executable(chmod) and it should do the job. </p><p>For <b>lid close/lid open:</b><br>Solutions from here:<br><a href="http://forums.fedoraforum.org/showthread.php?t=291877" target="_blank" rel="external">http://forums.fedoraforum.org/showthread.php?t=291877</a><br>and here:<br><a href="https://wiki.archlinux.org/index.php/Acpid" target="_blank" rel="external">https://wiki.archlinux.org/index.php/Acpid</a><br>looks pretty relevant. However, None of them works.</p><p>Still finding solutions.</p><p>2017/4/18 19:48</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;For &lt;b&gt;hibernate/suspend/resume:&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;Any executable file under &lt;code&gt;/etc/pm/sleep.d&lt;/code&gt; will be executed one any of the above 
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Genymotion can not login even with correct password and user name</title>
+    <link href="https://d0048.github.io/blog/2017/04/17/genymotion-can-not-login-even-with-correct-password-and-user-name/"/>
+    <id>https://d0048.github.io/blog/2017/04/17/genymotion-can-not-login-even-with-correct-password-and-user-name/</id>
+    <published>2017-04-17T09:59:45.000Z</published>
+    <updated>2017-04-17T10:00:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>For some reason,this problem could be solved by changing password in the profile section and login with the new password. (Even the old password and new password are totally the same…)</p><p>2017/4/17 18:00</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;For some reason,this problem could be solved by changing password in the profile section and login with the new password. (Even the old p
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
