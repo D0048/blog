@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Useful Methods from Bukkit | D0048</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ChatColor.[ColorCode]Change the color of the following chat.Reminding: what follows after with a “+” and must be a String. Even if it getLogger().info or print will automatically change non-String ob">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Useful Methods from Bukkit">
+<meta property="og:url" content="https://d0048.github.io/blog/2016/12/13/useful-methods-from-bukkit/index.html">
+<meta property="og:site_name" content="D0048">
+<meta property="og:description" content="ChatColor.[ColorCode]Change the color of the following chat.Reminding: what follows after with a “+” and must be a String. Even if it getLogger().info or print will automatically change non-String ob">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2016-12-18T02:03:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Useful Methods from Bukkit">
+<meta name="twitter:description" content="ChatColor.[ColorCode]Change the color of the following chat.Reminding: what follows after with a “+” and must be a String. Even if it getLogger().info or print will automatically change non-String ob">
+  
+    <link rel="alternate" href="/atom.xml" title="D0048" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88350074-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">D0048</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">a record of thoughts, ideas, solutions and traps</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://d0048.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-useful-methods-from-bukkit" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2016/12/13/useful-methods-from-bukkit/" class="article-date">
+  <time datetime="2016-12-13T07:52:54.000Z" itemprop="datePublished">2016-12-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Useful Methods from Bukkit
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p><code>ChatColor.[ColorCode]</code><br>Change the color of the following chat.<br>Reminding: what follows after with a “+” and must be a String. Even if it getLogger().info or print will automatically change non-String objects into string with the toString method, this one won’t work. We need to manually use object.toString if it’s after this method and connect with “+”.</p>
+</li>
+<li><p><code>Block.setType(Material.material)</code><br>Use Material.air to set to blank.<br>Use Location.getBlock to get Block or Bukkit.getBlock to get block.</p>
+</li>
+<li><p><code>playEffect(Location loc, Effect effect, int data)</code></p>
+</li>
+<li><p><code>List&lt;Entity&gt; near = location.getWorld().getEntities();</code><br>Get all entities in the world</p>
+</li>
+<li><p><code>e.getLocation().distance(location) &lt;= radius</code><br>Get distance between two location</p>
+</li>
+<li><p><code>entity.setVelocity(new Vector(5.0D, e.getBlock().getLocation().getY(), 5.0D));</code><br>Push entity</p>
+</li>
+<li><p><code>for(Entity entity : e.getPlayer().getNearbyEntities(20.0D, 20.0D, 20.0D))</code><br>A cycle for each entity nearby</p>
+</li>
+<li><p><code>((CraftPlayer) player).getHandle().a(true, false, false)</code><br>Eject player from a bed by opening a box to him.</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2016/12/13/useful-methods-from-bukkit/" data-id="cj8bflzss001lpbakn2tqgoau" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2016/12/20/allow-scripts-and-other-programs-too-boot-with-linux/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Allow scripts and other programs to boot with Linux
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2016/12/13/a-huge-vulnerability-on-most-of-the-multicraft-panel-hosting-service/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">A Huge Vulnerability on Most of the Multicraft Panel Hosting Service</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Arkiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Siste innlegg</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2017/10/03/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/09/24/update-pepper-flash-player-under-linux/">Update pepper flash player under linux</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/09/12/convert-an-image-into-an-xbitmap-array/">Convert an image into an XBitMap C array stored in a C header file</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/09/12/a-key-point-understanding-single-variable-chain-rule/">A key point understanding single variable chain rule</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/09/09/change-wall-papers-on-a-rooted-kindle-manually-without-installing-any-more-hacks/">Change screen saver image on a rooted kindle pw2 manually without installing any more hacks</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 D0048<br>
+<!-->      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a><-->
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>D0048</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="D0048">
+<meta property="og:url" content="https://d0048.github.io/blog/page/5/index.html">
+<meta property="og:site_name" content="D0048">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="D0048">
+  
+    <link rel="alternate" href="/atom.xml" title="D0048" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88350074-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">D0048</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">a record of thoughts, ideas, solutions and traps</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://d0048.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-different-between-type-bool-bool-boolean-and-boolean-in-c" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/02/13/different-between-type-bool-bool-boolean-and-boolean-in-c/" class="article-date">
+  <time datetime="2017-02-13T12:57:53.000Z" itemprop="datePublished">2017-02-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/02/13/different-between-type-bool-bool-boolean-and-boolean-in-c/">Different between type bool, BOOL, boolean and BOOLEAN in C/C++</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>For <code>bool</code>, it can only be used in C++. (For C, there is only _Bool in C99 standard. ) It could be either <code>true</code> or <code>false</code>. It’s only true if it’s not <code>0</code>.</p>
+<p>For BOOL, it’s actually int as <code>typedef int BOOL;</code> and can be ither <code>TRUE</code> or <code>FALSE</code>. It’s only true if it equals <code>1</code>. </p>
+<p>For BOOLEAN, it’s actually byte as <code>typedef BYTE BOOLEAN</code> and only 2 bytes long. </p>
+<p>For boolean, it’s not a formal type in C/C++.</p>
+<p>Usually, <code>bool</code> is the most common one we use and takes 4 bytes. <code>BOOLEAN</code> is a better solution with less memory cost. But it’s still recommended to use <code>bool</code> in that I am already familiar with it. </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/02/13/different-between-type-bool-bool-boolean-and-boolean-in-c/" data-id="cj8bflzra000qpbak6fcvpddx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-when-binding-sockets-to-server-which-adress-to-choose" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/02/13/when-binding-sockets-to-server-which-adress-to-choose/" class="article-date">
+  <time datetime="2017-02-13T12:09:58.000Z" itemprop="datePublished">2017-02-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/02/13/when-binding-sockets-to-server-which-adress-to-choose/">When binding sockets to server, which address to choose</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Usually when binding a socket to the server, the ip binded could be any of the ips the server keeps including the loopback address, the local area network address, the public Internet address or a preserved address <code>0.0.0.0</code>.</p>
+<p>For loopback address or <code>127.0.0.1</code>, only local connection to <code>localhost</code> will be recieved. It’s useful in debugging or when using a Reverse Proxy like ngrok. </p>
+<p>For the local area networks adress like <code>192.168.7.7</code> or public Internet address like <code>1.2.3.4</code>, only external access to the mechine will be recieved which is most of the server need.</p>
+<p>There is an ultimate solution which is a preserved address <code>0.0.0.0</code>. It includes both three address above and any other unknown addresses. Using it makes sure that all the connections are listen. </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/02/13/when-binding-sockets-to-server-which-adress-to-choose/" data-id="cj8bflzt0001qpbakkbgu5x3q" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-unknown-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/02/09/unknown-2/" class="article-date">
+  <time datetime="2017-02-09T15:01:33.000Z" itemprop="datePublished">2017-02-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/02/09/unknown-2/">Unknown problem...</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>From: <a href="http://blog.csdn.net/creazyapple/article/details/7459875" target="_blank" rel="external">http://blog.csdn.net/creazyapple/article/details/7459875</a><br>Deal with this:</p>
+<p><pre><block><br>1&gt;InfoSenser.obj : error LNK2019: 无法解析的外部符号 _inet_ntoa@4，该符号在函数 “public: void <strong>thiscall InfoSenser::printNetInfo(void)” (?printNetInfo@InfoSenser@@QAEXXZ) 中被引用<br>1&gt;InfoSenser.obj : error LNK2019: 无法解析的外部符号 _gethostbyname@4，该符号在函数 “public: </strong>thiscall InfoSenser::InfoSenser(void)” (??0InfoSenser@@QAE@XZ) 中被引用<br>1&gt;InfoSenser.obj : error LNK2019: 无法解析的外部符号 _gethostname@8，该符号在函数 “public: <strong>thiscall InfoSenser::InfoSenser(void)” (??0InfoSenser@@QAE@XZ) 中被引用<br>1&gt;InfoSenser.obj : error LNK2019: 无法解析的外部符号 _WSAStartup@8，该符号在函数 “public: </strong>thiscall InfoSenser::InfoSenser(void)” (??0InfoSenser@@QAE@XZ) 中被引用<br>1&gt;InfoSenser.obj : error LNK2019: 无法解析的外部符号 _WSACleanup@0，该符号在函数 “public: <strong>thiscall InfoSenser::~InfoSenser(void)” (??1InfoSenser@@QAE@XZ) 中被引用<br>1&gt;InfoSenser.obj : error LNK2019: 无法解析的外部符号 _WSAGetLastError@0，该符号在函数 “public: </strong>thiscall InfoSenser::InfoSenser(void)” (??0InfoSenser@@QAE@XZ) 中被引用<br>1&gt;D:\netbeans-java\CraftPlugins\ClientCtl\ClientCtl\Debug\ClientCtl.exe : fatal error LNK1120: 6 个无法解析的外部命令<br></block></pre><br>Add <code>#pragma comment(lib,&quot;ws2_32.lib&quot;)</code>right after the inclusion of header files in the .cpp file could previent this.<br>==Still need to find out how does this work. It statically load a dll which I don’t know what it is.==<br>2017/2/9 23:15</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/02/09/unknown-2/" data-id="cj8bflzs9001fpbakxw2wr5dq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-use-getversionexw-function-in-the-new-c-standard" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/02/09/use-getversionexw-function-in-the-new-c-standard/" class="article-date">
+  <time datetime="2017-02-09T14:54:58.000Z" itemprop="datePublished">2017-02-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/02/09/use-getversionexw-function-in-the-new-c-standard/">Use GetVersionExW() function in the new C++ standard</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>From CSDN: <a href="http://bbs.csdn.net/topics/390886929" target="_blank" rel="external">http://bbs.csdn.net/topics/390886929</a><br>This function is marked as depreciated and give a warning C4996. In the newer IDEs, this stop the program from being compiled. Use <code>#pragma warning(disable: 4996)</code> in the header file to disable it.<br>2017/2/9 23:01</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/02/09/use-getversionexw-function-in-the-new-c-standard/" data-id="cj8bflzsq001jpbak9ooemw67" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-duplicated-macro-definitions-when-containing-both-windows-h-and-winsock-h" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/02/09/duplicated-macro-definitions-when-containing-both-windows-h-and-winsock-h/" class="article-date">
+  <time datetime="2017-02-09T12:31:58.000Z" itemprop="datePublished">2017-02-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/02/09/duplicated-macro-definitions-when-containing-both-windows-h-and-winsock-h/">Most effective solution for duplicated macro definitions when containing both windows.h and winsock.h/winsock.h</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>This problem occurs because <code>windows.h</code> itself contains <code>winsocks.h/winsocks2.h</code> and vise versa.== So just include any one of them should be fine.== Do not add any other macros to try to solve this problem like most of the people tell me to do on the Internet. They will only cause troubles!<br>2017/2/9 22:53</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/02/09/duplicated-macro-definitions-when-containing-both-windows-h-and-winsock-h/" data-id="cj8bflzrr0010pbak4o5ygxn5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-a-bad-but-useable-way-to-deal-with-_tchar-argv" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/02/08/a-bad-but-useable-way-to-deal-with-_tchar-argv/" class="article-date">
+  <time datetime="2017-02-08T14:45:48.000Z" itemprop="datePublished">2017-02-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/02/08/a-bad-but-useable-way-to-deal-with-_tchar-argv/">A bad but useable way to deal with _TCHAR* argv[] parameter</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>from: <a href="http://stackoverflow.com/questions/19301538/converting-tchar-to-char" target="_blank" rel="external">http://stackoverflow.com/questions/19301538/converting-tchar-to-char</a><br>==Warning: this is a temporary solution and shouldn’t be used as a long-term solution. ==<br><br><br>Instead of using the original one, just use <code>int main(int argc, char *argv[])</code> instead. The new type _TCHAR is actually a macro of a longer char that allows more kinds of characters (char is 128 which is not enough) just for compatible purpose. Since I don’t need internalizations now anyways, I think it’s safe to do that. </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/02/08/a-bad-but-useable-way-to-deal-with-_tchar-argv/" data-id="cj8bflzqd0005pbakzzu8rg29" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-how-to-create-a-windows-services-program-to-run-background-in-start-up-and-how-to-register-it" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/02/08/how-to-create-a-windows-services-program-to-run-background-in-start-up-and-how-to-register-it/" class="article-date">
+  <time datetime="2017-02-08T14:44:00.000Z" itemprop="datePublished">2017-02-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/02/08/how-to-create-a-windows-services-program-to-run-background-in-start-up-and-how-to-register-it/">How to create a windows services program to run background on start up and how to register it</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>In order to create a windows serivice program, a program must have certain content inside to register and respond to actions. Also, it must be registered to the system through the program <code>sc</code> at shell or through editing the registry table which both need adminstrator permission. <br><br>In the program:<br><br>#Declare three global varible. The name is not important.</p>
+<pre><block>
+SERVICE_TABLE_ENTRY entryTable[2];
+SERVICE_STATUS ServiceStatus;
+SERVICE_STATUS_HANDLE hStatus;
+</block></pre>
+
+<p><br>#declare 2 global functions as follow which one will be called when the service start and work as the main function of the service in another process and another will be called when there is a control signal like start or restart was issued by the system or users. The name of them is not important. </p>
+<pre><block>
+void WINAPI ctrlHandler(DWORD request);
+void WINAPI serviceMain(int argc, char**argv);
+</block></pre>
+
+<p><br>#Fill in the created array of the struct <code>SERVICE_TABLE_ENTRY</code> contains two elements in that service information in the first one and put all nulls in the second as follow. Then, use <code>StartServiceCtrlDispatcher(entryTable);</code> to register the service. This step have to be done during founction <code>main</code>.</p>
+<pre><block>
+void initEntryTable(SERVICE_TABLE_ENTRY &templateEnteyTable){
+    entryTable[0].lpServiceName = templateEnteyTable.lpServiceName;
+    entryTable[0].lpServiceProc = templateEnteyTable.lpServiceProc;
+    entryTable[1].lpServiceName = NULL;
+    entryTable[1].lpServiceProc = NULL;
+    StartServiceCtrlDispatcher(entryTable);
+}</block></pre>
+I use these codes to initialize a entry table.
+<pre><block>
+        serviceT.lpServiceName = TEXT("testservice");
+        serviceT.lpServiceProc = (LPSERVICE_MAIN_FUNCTION)serviceMain;
+        initEntryTable(serviceT);
+</block></pre>
+
+<p><br>#Now the <code>void WINAPI serviceMain(int argc, char**argv);</code> should contains code like the following to illustrate the property of itself by giving certain value of the variables inside the struct ServiceStatus. Then, register the service and get the handle of it with <code>hStatus = ::RegisterServiceCtrlHandlerW(TEXT(&quot;testservice&quot;), ctrlHandler);</code></p>
+<pre><block>
+    ServiceStatus.dwServiceType = SERVICE_WIN32;
+
+    ServiceStatus.dwCurrentState = SERVICE_START_PENDING;/*This is the state of this service and need to be changed actively.*/
+
+    ServiceStatus.dwControlsAccepted = SERVICE_ACCEPT_SHUTDOWN | SERVICE_ACCEPT_STOP; /*This is the types of command your service could recieve*/
+
+    ServiceStatus.dwWin32ExitCode = 0;/*I am still learning this part, leave it 0*/
+
+    ServiceStatus.dwServiceSpecificExitCode = 0;/*I am still learning this part, leave it 0*/
+
+    ServiceStatus.dwCheckPoint = 0;/*I am still learning this part, leave it 0*/
+
+    ServiceStatus.dwWaitHint = 0;/*I am still learning this part, leave it 0*/
+
+
+    hStatus = ::RegisterServiceCtrlHandlerW(TEXT("testservice"), ctrlHandler);
+</block></pre>
+
+<p><br>#Since the <code>serviceMain()</code> founction takes controll of the service status, the state of the service must be change to <code>ServiceStatus.dwCurrentState = SERVICE_RUNNING;</code> and report to the system with <code>SetServiceStatus</code> once it done with initialization or the system will wrongly recognize the service as “going wrong” and get a error of “failed to start, service is not responding”. </p>
+<p><pre><block><br>    ServiceStatus.dwCurrentState = SERVICE_RUNNING;<br>    SetServiceStatus(hStatus, &amp;ServiceStatus);<br></block></pre></p>
+<p><br>#For the void WINAPI <code>ctrlHandler(DWORD request)</code>, it deals with requests like shutdown and the request will be sent as parameter.</p>
+<p><br>#The final step is to register the service officially to the system through <code>sc</code> or the registry table. I use the first step because it’s easier. </p>
+<p>Manually: Enter system shell, use <code>sc create testservice binPath=&quot;C:\path\to\file.exe&quot;</code> to create a new service. ==(There is a space after all the <code>=</code> symbols which is necessary)==<br>To configure it like make the service start up on boot, either <code>sc config testservice [configuration]</code> or <code>sc create testservice [configuration works]</code>. </p>
+<p>InCode: I use the following code the do the job.</p>
+<p><pre><block><br>    std::string filename(argv[0]);<br>    string mycommand = (std::string)”sc create testservice binPath= \””+filename+”\””+” start= auto”;<br>    const char *c = mycommand.data();<br>    std::cout &lt;&lt; “Execute: “ &lt;&lt; mycommand &lt;&lt; “?” &lt;&lt; std::endl&lt;<c; _getch();="" system(c);="" <="" pre=""></c;></block></pre></p>
+<p><br>#Now the service should be done and should be shown in the service control manager.<br>2017/2/9 13:06</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/02/08/how-to-create-a-windows-services-program-to-run-background-in-start-up-and-how-to-register-it/" data-id="cj8bflzrv0013pbakop7sn3ih" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-a-way-to-avoid-duplicate-declaration" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/02/08/a-way-to-avoid-duplicate-declaration/" class="article-date">
+  <time datetime="2017-02-08T14:36:25.000Z" itemprop="datePublished">2017-02-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/02/08/a-way-to-avoid-duplicate-declaration/">A way to avoid duplicate declaration</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>While there are multiple hear file insertions and there are insertions inside those header files, it’s common that a error of duplicate declaration occurs. To solve that, one way is add a macro <code>#ifndef HEADER_FILE_H</code> after the macro <code>#define &lt;header_file.h&gt;</code> and add <code>#endif</code> at the end of the program could solve the confict in header files. </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/02/08/a-way-to-avoid-duplicate-declaration/" data-id="cj8bflzqv000dpbaknfk4pbsp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-a-good-way-to-avoid-duplicated-definition-in-header-files" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/02/08/a-good-way-to-avoid-duplicated-definition-in-header-files/" class="article-date">
+  <time datetime="2017-02-08T14:16:32.000Z" itemprop="datePublished">2017-02-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/02/08/a-good-way-to-avoid-duplicated-definition-in-header-files/">Another good way to avoid duplicated declaration in C/C++ header files besides #ifdef</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Since I prefer to declare everything in the .h file instead of .c/.cpp to make the whole program more readable, I am always dealing with duplicated definitions because of wrong insertion of them. <br><br>Using <code>#ifndef</code> macro is the traditional way to do that, but I simply hate adding <code>#endif</code> at the end of my code. <br><br>Now, I found a new way to do that. Adding key word <code>extern</code> before declaring them and declare them again in the .c/.cpp file can also do the trick. Since the compiles simple replace the .h file at the place where the macro <code>#include</code> is, using extern can solve all the conflicts. </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/02/08/a-good-way-to-avoid-duplicated-definition-in-header-files/" data-id="cj8bflzqy000gpbakqeb5r37y" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-a" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/02/06/a/" class="article-date">
+  <time datetime="2017-02-06T04:14:31.000Z" itemprop="datePublished">2017-02-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/02/06/a/">A Script That Might Crush Ubuntu Without Root</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Name the script <code>something.sh</code> and write <code>./something.sh</code> inside it. This is a infinite loop that takes up all the cores of cpu instead of just one like the traditional loops do. It will cause the computer stop resonponding till it lost power. </p>
+<p>Now I wonder I to solve this problem.</p>
+<p>2017/2/6</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/02/06/a/" data-id="cj8bflzqf0006pbak63cdir5a" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/blog/page/4/">&laquo; __('prev')</a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/3/">3</a><a class="page-number" href="/blog/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/blog/page/6/">6</a><a class="page-number" href="/blog/page/7/">7</a><a class="extend next" rel="next" href="/blog/page/6/">__('next') &raquo;</a>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Arkiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Siste innlegg</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2017/10/03/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/09/24/update-pepper-flash-player-under-linux/">Update pepper flash player under linux</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/09/12/convert-an-image-into-an-xbitmap-array/">Convert an image into an XBitMap C array stored in a C header file</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/09/12/a-key-point-understanding-single-variable-chain-rule/">A key point understanding single variable chain rule</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/09/09/change-wall-papers-on-a-rooted-kindle-manually-without-installing-any-more-hacks/">Change screen saver image on a rooted kindle pw2 manually without installing any more hacks</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 D0048<br>
+<!-->      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a><-->
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+  </div>
+</body>
+</html>

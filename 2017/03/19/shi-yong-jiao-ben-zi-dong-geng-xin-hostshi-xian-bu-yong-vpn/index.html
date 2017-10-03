@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>使用脚本自动更新host实现不用vpn，不用服务器的翻墙。。。 | D0048</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(Ignore this if you can’t read it coz you won’t need it anyways ;p)（这篇只为某些人打算省事而写。。。该host可靠性好步骤少。。。可以少踩点坑。。）恩。。。鉴于看不懂中文的大概也不需要这个,需要这个的也不想看英文，这篇用中文写好了。。。 总之该方法只能访问下谷歌油管之类的国外网站，在各种vpn被封的场景下很好用。 那么现在就正式开">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用脚本自动更新host实现不用vpn，不用服务器的翻墙。。。">
+<meta property="og:url" content="https://d0048.github.io/blog/2017/03/19/shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn/index.html">
+<meta property="og:site_name" content="D0048">
+<meta property="og:description" content="(Ignore this if you can’t read it coz you won’t need it anyways ;p)（这篇只为某些人打算省事而写。。。该host可靠性好步骤少。。。可以少踩点坑。。）恩。。。鉴于看不懂中文的大概也不需要这个,需要这个的也不想看英文，这篇用中文写好了。。。 总之该方法只能访问下谷歌油管之类的国外网站，在各种vpn被封的场景下很好用。 那么现在就正式开">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-03-19T14:11:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用脚本自动更新host实现不用vpn，不用服务器的翻墙。。。">
+<meta name="twitter:description" content="(Ignore this if you can’t read it coz you won’t need it anyways ;p)（这篇只为某些人打算省事而写。。。该host可靠性好步骤少。。。可以少踩点坑。。）恩。。。鉴于看不懂中文的大概也不需要这个,需要这个的也不想看英文，这篇用中文写好了。。。 总之该方法只能访问下谷歌油管之类的国外网站，在各种vpn被封的场景下很好用。 那么现在就正式开">
+  
+    <link rel="alternate" href="/atom.xml" title="D0048" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88350074-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">D0048</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">a record of thoughts, ideas, solutions and traps</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://d0048.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/03/19/shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn/" class="article-date">
+  <time datetime="2017-03-19T13:11:05.000Z" itemprop="datePublished">2017-03-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用脚本自动更新host实现不用vpn，不用服务器的翻墙。。。
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(Ignore this if you can’t read it coz you won’t need it anyways ;p)<br><br>（这篇只为某些人打算省事而写。。。该host可靠性好步骤少。。。可以少踩点坑。。）<br><br>恩。。。鉴于看不懂中文的大概也不需要这个,需要这个的也不想看英文，这篇用中文写好了。。。</p>
+<p>总之该方法只能访问下谷歌油管之类的国外网站，在各种vpn被封的场景下很好用。</p>
+<p>那么现在就正式开始吧。。。<code>这样的玩意请在终端里输入</code></p>
+<p>window平台:</p>
+<p>   某github开发者很贴心的吧工具都写好了。。so。。。<br><br>   <a href="https://github.com/HostsTools/Windows" target="_blank" rel="external">https://github.com/HostsTools/Windows</a><br></p>
+<p>Unix平台（mac/linux。。之类）：</p>
+<p>   MAC似乎有人写了：<a href="https://github.com/HostsTools/OSX" target="_blank" rel="external">https://github.com/HostsTools/OSX</a></p>
+<p>linux的话靠自己吧：</p>
+<p>   1.安装git。 具体方式取决于发行版，有包管理器的话软件包叫git-core。(像什么<code>sudo apt-get install git-core</code>啦。。<code>yum install gitcore</code>啦。。。)没有的话请自己编译。</p>
+<p>   2.随便找个github上还有人维护的hosts文件，再随便找个目录，pull下来。。：<br><code>git pull https://github.com/racaljk/hosts.git</code></p>
+<p>   3.写个脚本。。。：<br><code>nano hosts_updater.sh</code><br>里面输入：</p>
+<p><pre><br>cd /你/现在/的路径/hosts<br>git pull<br>cat /你/现在/的路径/hosts/hosts | sudo tee /etc/hosts ##这句话没有写错。。。<br>/etc/init.d/networking restart<br></pre><br>ctrl+x然后回车保存退出</p>
+<p>   4.给上脚本权限并且执行一次试试:<br><br><code>chmod +x hosts_updater.sh</code><br><br><code>./hosts_updater.sh</code><br><br>过一会看看能不能上谷歌什么的。。。可能需要重启。。。（目测仅debian系可用，红帽党们估计也用不到吧。。）</p>
+<p>   5.安装crontab。。。(像什么<code>sudo apt-get install crontab</code>啦。。<code>yum install crontab</code>啦。。。或者自己编译)</p>
+<p>   6.登录到root用户中:<br><br><code>su root</code></p>
+<p>   7.在crontab里面注册指令让它定时执行。。。:<br><br><code>crontab -e</code><br><br>如果要你选择编辑器，选nano吧。。。<br><br>在最后一行加上 <code>0 0 * * * /到你脚本的路径/hosts_updater.sh</code> <br><br>一样保存退出。。。完事<br></p>
+<p>2017/3/19 22:06</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/03/19/shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn/" data-id="cj8bflzt7001vpbakpkbvqa80" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2017/03/20/difference-between-shallow-copy-default-and-deep-copy-of-objects/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Difference between shallow copy (default) and deep copy of objects
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2017/03/19/logging-as-another-user-and-then-exit-after-finishing-the-desired-work-in-shell-script-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Log in as another user and then exit after finishing the desired work in shell script</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Arkiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Siste innlegg</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2017/10/03/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/09/24/update-pepper-flash-player-under-linux/">Update pepper flash player under linux</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/09/12/convert-an-image-into-an-xbitmap-array/">Convert an image into an XBitMap C array stored in a C header file</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/09/12/a-key-point-understanding-single-variable-chain-rule/">A key point understanding single variable chain rule</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/09/09/change-wall-papers-on-a-rooted-kindle-manually-without-installing-any-more-hacks/">Change screen saver image on a rooted kindle pw2 manually without installing any more hacks</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 D0048<br>
+<!-->      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a><-->
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+  </div>
+</body>
+</html>

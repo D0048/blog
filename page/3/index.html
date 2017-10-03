@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>D0048</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="D0048">
+<meta property="og:url" content="https://d0048.github.io/blog/page/3/index.html">
+<meta property="og:site_name" content="D0048">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="D0048">
+  
+    <link rel="alternate" href="/atom.xml" title="D0048" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88350074-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">D0048</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">a record of thoughts, ideas, solutions and traps</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://d0048.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-virtual-box-error-rtr3init-failed-with-rc-1912-rc-1912" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/04/17/virtual-box-error-rtr3init-failed-with-rc-1912-rc-1912/" class="article-date">
+  <time datetime="2017-04-17T09:08:12.000Z" itemprop="datePublished">2017-04-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/04/17/virtual-box-error-rtr3init-failed-with-rc-1912-rc-1912/">Virtual Box error: RTR3Init failed with rc=-1912(rc=1912)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>This error occurs because the older version of virtual boxes are not completely removed.<br>run <code>sudo dpkg-reconfigure virtualbox*</code> should do the trick of solving this. </p>
+<p>2017/4/17</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/04/17/virtual-box-error-rtr3init-failed-with-rc-1912-rc-1912/" data-id="cj8bflzsz001ppbaktwtkmwn6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-a-conky-profile-that-allows-notes-from-file-to-be-displayed-on-desktop" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/04/10/a-conky-profile-that-allows-notes-from-file-to-be-displayed-on-desktop/" class="article-date">
+  <time datetime="2017-04-10T10:51:17.000Z" itemprop="datePublished">2017-04-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/04/10/a-conky-profile-that-allows-notes-from-file-to-be-displayed-on-desktop/">A conky profile that allows notes from file to be displayed on desktop</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre>
+$hr
+${color black}Notes:
+    ${color black}Overview:
+${color blue}${execpi 10 catpath/to/file|sed 's/^/        /g'|grep -v \*d}
+    ${color black}Important:
+${color red}${execpi 10 cat path/to/file|grep \*i|sed 's/^/        /g'|sed 's/*i//g'|sed 's/*p//g'|grep -v \*d}
+    ${color black}In Progress:
+${color green}${execpi 10 cat path/to/file|grep \*p|sed 's/^/        /g'|sed 's/*i//g'|sed 's/*p//g'|grep -v \*d}
+    ${color black}Done:
+${color grey}${execpi 10 cat path/to/file|grep \*d|sed 's/^/        /g'|sed 's/*i//g'|sed 's/*p//g'|sed 's/*d//g'} 
+${color black}$hr
+</pre>
+The above section should be placed on the `conky.text` section. Please replace all the `path/to/file` with the actual path of the file.
+
+Run  command `cat path/to/file|grep -v \*d|tee path/to/file>/dev/null` to clean the done section. It could be deployed in crontab or any schedulers to do so. ==I tried ` ${execpi 360 cat ~/桌面/fast_note|grep -v \*d|tee ~/桌面/fast_note>/dev/null}` in the file but this will clear the whole note file for unknown reason.==
+
+Markdowns: 
+use a `*i` sign to mark a line as important. The sign won't be included in the note.
+use a `*p` sign to mark a line as in progress. The sign won't be included in the note.
+use a `*d` sign to mark a line as done. The sign won't be included in the note.
+
+Since it's pretty easy and straightforward to add other markdowns to it, more customized functions could be added. 
+
+2017/4/10 18:58
+
+This is my full config file version for reference:
+<pre>
+-- vim: ts=4 sw=4 noet ai cindent syntax=lua
+--[[
+Conky, a system monitor, based on torsmo
+
+Any original torsmo code is licensed under the BSD license
+
+All code written since the fork of torsmo is licensed under the GPL
+
+Please see COPYING for details
+
+Copyright (c) 2004, Hannu Saransaari and Lauri Hakkarainen
+Copyright (c) 2005-2012 Brenden Matthews, Philip Kovacs, et. al. (see AUTHORS)
+All rights reserved.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http: www.gnu.org="" licenses="">.
+]]
+
+conky.config = {
+    alignment = 'top_right',
+    background = false,
+    border_width = 10,
+    cpu_avg_samples = 2,
+    default_color = 'black',
+    default_outline_color = 'white',
+    default_shade_color = 'white',
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    use_xft = true,
+    font = 'DejaVu Sans Mono:bold:size=12',
+    gap_x = 30,
+    gap_y = 90,
+    max_text_width = 5,
+    maximum_width = 400,
+    minimum_height = 5,
+    minimum_width = 0,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_stderr = false,
+    extra_newline = true,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'dock',
+    own_window_transparent = true,
+    own_window_argb_visual = true,
+    own_window_argb_value = 30000,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    stippled_borders = 0,
+    update_interval = 1.0,
+    uppercase = false,
+    use_spacer = 'none',
+    show_graph_scale = false,
+    show_graph_range = false
+}
+
+conky.text = [[
+$hr
+${color black}$nodename - $sysname $kernel on $machine
+$hr
+${color black}Uptime:$color $uptime
+${color black}Frequency (in MHz):$color $freq
+${color black}Frequency (in GHz):$color $freq_g
+${color black}RAM Usage:$color $mem/$memmax-$memperc% ${membar 4}
+${color black}Swap Usage:$color $swap/$swapmax-$swapperc% ${swapbar 4}
+${color black}CPU Usage:$color $cpu% ${cpubar 4}
+${color black}Processes:$color $processes  ${color black}Running:$color $running_processes
+$hr
+${color black}File systems:
+ /: $color${fs_used /}/${fs_size /} ${fs_bar 6 /}
+${color black}Networking:
+IP:${color black}${execpi 3600 myip}
+Up:$color ${upspeed wlo1} ${color black} - Down:$color ${downspeed wlo1}
+$hr
+${color black}Name              PID   CPU%   MEM%
+${color black} ${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
+${color black} ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
+${color black} ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
+${color black} ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
+$hr
+${color black}Notes:
+    ${color black}Overview:
+${color blue}${execpi 10 cat ~/桌面/fast_note|sed 's/^/        /g'|grep -v \*d}
+    ${color black}Important:
+${color red}${execpi 10 cat ~/桌面/fast_note|grep \*i|sed 's/^/        /g'|sed 's/*i//g'|sed 's/*p//g'|grep -v \*d}
+    ${color black}In Progress:
+${color green}${execpi 10 cat ~/桌面/fast_note|grep \*p|sed 's/^/        /g'|sed 's/*i//g'|sed 's/*p//g'|grep -v \*d}
+    ${color black}Done:
+${color grey}${execpi 10 cat ~/桌面/fast_note|grep \*d|sed 's/^/        /g'|sed 's/*i//g'|sed 's/*p//g'|sed 's/*d//g'}
+${color black}$hr
+]]
+</http:></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/04/10/a-conky-profile-that-allows-notes-from-file-to-be-displayed-on-desktop/" data-id="cj8bflzqu000cpbak5khzap41" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-solve-the-conky-transparent-issue-under-unity-desktop" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/04/09/solve-the-conky-transparent-issue-under-unity-desktop/" class="article-date">
+  <time datetime="2017-04-09T13:52:48.000Z" itemprop="datePublished">2017-04-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/04/09/solve-the-conky-transparent-issue-under-unity-desktop/">Solve the conky transparent issue under unity desktop</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>The unity desktop is wired and simply setting <code>.conkyrc</code>‘s transparent setting won’t make it work correctly.<br>After some google, I found these solution:</p>
+<p><pre><br>    own_window = true,<br>    own_window_class = ‘Conky’,<br>    own_window_type = ‘dock’,<br>    own_window_transparent = true,<br>    own_window_argb_visual = true,<br>    own_window_argb_value = 128,<br>    own_window_hints = ‘undecorated,below,sticky,skip_taskbar,skip_pager’,<br></pre><br>But this way it will somehow interrupt with the show-desktop shortcut so the shortcut will not work every-time. Still looking for solutions.</p>
+<p>2017/4/9 21:56</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/04/09/solve-the-conky-transparent-issue-under-unity-desktop/" data-id="cj8bflzs10019pbakdi4c070c" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-solve-the-problem-that-conky-window-disappears-after-clicking-desktop" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/04/09/solve-the-problem-that-conky-window-disappears-after-clicking-desktop/" class="article-date">
+  <time datetime="2017-04-09T10:49:05.000Z" itemprop="datePublished">2017-04-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/04/09/solve-the-problem-that-conky-window-disappears-after-clicking-desktop/">Solve the problem that conky window disappears after clicking desktop</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>In the conky config file, which will be <code>~/.conkyrc</code> prior to <code>/etc/conky/conky.conf</code>, change the line <code>own_window_type = &#39;desktop&#39;</code>,to <code>own_window_type = &#39;override&#39;</code> and restart conky.</p>
+<p>2017/4/9</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/04/09/solve-the-problem-that-conky-window-disappears-after-clicking-desktop/" data-id="cj8bflzs5001bpbakb5pliax6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ways-to-share-the-same-profile-among-chromium-and-chrome-under-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/04/05/ways-to-share-the-same-profile-among-chromium-and-chrome-under-ubuntu/" class="article-date">
+  <time datetime="2017-04-05T08:26:14.000Z" itemprop="datePublished">2017-04-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/04/05/ways-to-share-the-same-profile-among-chromium-and-chrome-under-ubuntu/">Ways to share the same profile among chromium and chrome under Ubuntu</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Chromium is the open source version of chrome while without a flash player. The point is, their profiles are totally compatible with each other.</p>
+<p>The <b>chromium</b> browser storage its user-specific profile(config files, plugins, bookmarks, histories and so on) under <code>~/.config/chromium/</code>.</p>
+<p>The <b>chrome</b> browser storage its user-specific profile(config files, plugins, bookmarks, histories and so on) under <code>~/.config/google-chrome/</code>(if using an beta or unstable version, the name might be something like <code>~/.config/google-chrome-beta/</code>).</p>
+<p>The point is, by simply moving around the contents, users can move around all their configurations and data in the browser.  </p>
+<p>Also, creating a symbolic link called <code>chromium</code> pointed to the <code>google-chrome</code> or the reverse allows the two browser to share the same config file.</p>
+<p>2017/4/5</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/04/05/ways-to-share-the-same-profile-among-chromium-and-chrome-under-ubuntu/" data-id="cj8bflzsy001opbakh9wr2u4e" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-transform-int-to-string-in-java" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/03/23/transform-int-to-string-in-java/" class="article-date">
+  <time datetime="2017-03-23T06:22:51.000Z" itemprop="datePublished">2017-03-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/03/23/transform-int-to-string-in-java/">Transform int to String in Java</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Instead of using <code>str.startWith(1)</code>, just use <code>str.startWith(1+&quot;&quot;)</code> instead and let the grammar sugar added by the compiler finish the rest of the job!</p>
+<p>2017/3/23 14:15</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/03/23/transform-int-to-string-in-java/" data-id="cj8bflzs7001dpbakvubwts5f" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-difference-between-shallow-copy-default-and-deep-copy-of-objects" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/03/20/difference-between-shallow-copy-default-and-deep-copy-of-objects/" class="article-date">
+  <time datetime="2017-03-20T08:13:35.000Z" itemprop="datePublished">2017-03-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/03/20/difference-between-shallow-copy-default-and-deep-copy-of-objects/">Difference between shallow copy (default) and deep copy of objects</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>When using “=” operator coping an object, the default or so-called shallow copy will be executed. </p>
+<p>In java, shallow copy is like another name for the object(like the reference or pointer in C++), expect the basic data types, both objects at each side of “=” operator will be pointed to the same piece of memory. </p>
+<p>In C++, shallow copy will cause a “=” operation from all the members of the first objects to the members in the second object, including those pointers. Thus deleting the second object might cause the destructor to release the pointers in the first object and further more cause troubles. </p>
+<p>For deep copy, it is actually a function or method that allows developer themselves to define what to do during a copy. </p>
+<p>For Java, a clone method from class <code>Object</code> can be override for cloning an object: <code>Object clone();</code> To call it, a new instance shall be returned. </p>
+<p>For C++, a constructor will the parameter of a reference of the class is used for the copy constructor: </p>
+<p><pre><br>class T{<br>public:<br>T(T &amp;t);<br>};<br></pre><br>Use <code>T tCopy(tOriginal);</code> to deep copy an object.</p>
+<p>2017/3/20</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/03/20/difference-between-shallow-copy-default-and-deep-copy-of-objects/" data-id="cj8bflzrd000rpbak3skn57mm" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/03/19/shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn/" class="article-date">
+  <time datetime="2017-03-19T13:11:05.000Z" itemprop="datePublished">2017-03-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/03/19/shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn/">使用脚本自动更新host实现不用vpn，不用服务器的翻墙。。。</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(Ignore this if you can’t read it coz you won’t need it anyways ;p)<br><br>（这篇只为某些人打算省事而写。。。该host可靠性好步骤少。。。可以少踩点坑。。）<br><br>恩。。。鉴于看不懂中文的大概也不需要这个,需要这个的也不想看英文，这篇用中文写好了。。。</p>
+<p>总之该方法只能访问下谷歌油管之类的国外网站，在各种vpn被封的场景下很好用。</p>
+<p>那么现在就正式开始吧。。。<code>这样的玩意请在终端里输入</code></p>
+<p>window平台:</p>
+<p>   某github开发者很贴心的吧工具都写好了。。so。。。<br><br>   <a href="https://github.com/HostsTools/Windows" target="_blank" rel="external">https://github.com/HostsTools/Windows</a><br></p>
+<p>Unix平台（mac/linux。。之类）：</p>
+<p>   MAC似乎有人写了：<a href="https://github.com/HostsTools/OSX" target="_blank" rel="external">https://github.com/HostsTools/OSX</a></p>
+<p>linux的话靠自己吧：</p>
+<p>   1.安装git。 具体方式取决于发行版，有包管理器的话软件包叫git-core。(像什么<code>sudo apt-get install git-core</code>啦。。<code>yum install gitcore</code>啦。。。)没有的话请自己编译。</p>
+<p>   2.随便找个github上还有人维护的hosts文件，再随便找个目录，pull下来。。：<br><code>git pull https://github.com/racaljk/hosts.git</code></p>
+<p>   3.写个脚本。。。：<br><code>nano hosts_updater.sh</code><br>里面输入：</p>
+<p><pre><br>cd /你/现在/的路径/hosts<br>git pull<br>cat /你/现在/的路径/hosts/hosts | sudo tee /etc/hosts ##这句话没有写错。。。<br>/etc/init.d/networking restart<br></pre><br>ctrl+x然后回车保存退出</p>
+<p>   4.给上脚本权限并且执行一次试试:<br><br><code>chmod +x hosts_updater.sh</code><br><br><code>./hosts_updater.sh</code><br><br>过一会看看能不能上谷歌什么的。。。可能需要重启。。。（目测仅debian系可用，红帽党们估计也用不到吧。。）</p>
+<p>   5.安装crontab。。。(像什么<code>sudo apt-get install crontab</code>啦。。<code>yum install crontab</code>啦。。。或者自己编译)</p>
+<p>   6.登录到root用户中:<br><br><code>su root</code></p>
+<p>   7.在crontab里面注册指令让它定时执行。。。:<br><br><code>crontab -e</code><br><br>如果要你选择编辑器，选nano吧。。。<br><br>在最后一行加上 <code>0 0 * * * /到你脚本的路径/hosts_updater.sh</code> <br><br>一样保存退出。。。完事<br></p>
+<p>2017/3/19 22:06</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/03/19/shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn/" data-id="cj8bflzt7001vpbakpkbvqa80" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-logging-as-another-user-and-then-exit-after-finishing-the-desired-work-in-shell-script-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/03/19/logging-as-another-user-and-then-exit-after-finishing-the-desired-work-in-shell-script-2/" class="article-date">
+  <time datetime="2017-03-19T12:32:58.000Z" itemprop="datePublished">2017-03-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/03/19/logging-as-another-user-and-then-exit-after-finishing-the-desired-work-in-shell-script-2/">Log in as another user and then exit after finishing the desired work in shell script</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Today I met a problem that I tried to log in as another user and them execute my script. Simply using <code>su user</code> or <code>su - user</code> will not work or exit in scripts even if I write <code>exit</code> after that. </p>
+<p>I want to exeute <code>himawaripy</code> program for a dynamic wall paper. Using <code>crontab</code> does not work. </p>
+<p>The fist solution is using <code>sudo -u user command</code>. This works in that the script exit correctly but the wallpaper does not change. </p>
+<p>The second solution is found online:</p>
+<block><pre><br>!#/bin/bash<br>su - user&lt;&lt;!<br>command_to_execute<br>exit<br>!<br></pre></block>
+
+<p>This also successfully exit but does not change the wall paper. </p>
+<p>I believe it’s the program’s fault instead of the shell’s. ==Still finding why. ==</p>
+<p>About the usage:<br><a href="https://en.wikipedia.org/wiki/Here_document" target="_blank" rel="external">https://en.wikipedia.org/wiki/Here_document</a></p>
+<p>2017/3/19 20:40</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/03/19/logging-as-another-user-and-then-exit-after-finishing-the-desired-work-in-shell-script-2/" data-id="cj8bflzrj000xpbakk7qrayux" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-use-property-files-in-java" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/03/19/use-property-files-in-java/" class="article-date">
+  <time datetime="2017-03-19T10:49:28.000Z" itemprop="datePublished">2017-03-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/03/19/use-property-files-in-java/">Using property files in Java</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Java use class <code>Property</code> to assemble a property file. In order to use it, a <code>File</code> class object or <code>FileOutputStream</code> class or <code>FileInputStream</code> class object is required.==(this means the latter two will be read only or write only)== </p>
+<p>In order to use it, first call the <code>load()</code> method to load the file or the Stream. ==The steam should not be closed until finish using the file!==</p>
+<p>After that, the property file can be easily used pretty much like a hash map and information can be stored or read in the form of key and object. </p>
+<p>2017/3/19 18:56</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/03/19/use-property-files-in-java/" data-id="cj8bflzsr001kpbakt1xd23q2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/blog/page/2/">&laquo; __('prev')</a><a class="page-number" href="/blog/">1</a><a class="page-number" href="/blog/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/blog/page/4/">4</a><a class="page-number" href="/blog/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/7/">7</a><a class="extend next" rel="next" href="/blog/page/4/">__('next') &raquo;</a>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Arkiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Siste innlegg</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2017/10/03/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/09/24/update-pepper-flash-player-under-linux/">Update pepper flash player under linux</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/09/12/convert-an-image-into-an-xbitmap-array/">Convert an image into an XBitMap C array stored in a C header file</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/09/12/a-key-point-understanding-single-variable-chain-rule/">A key point understanding single variable chain rule</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/09/09/change-wall-papers-on-a-rooted-kindle-manually-without-installing-any-more-hacks/">Change screen saver image on a rooted kindle pw2 manually without installing any more hacks</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 D0048<br>
+<!-->      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a><-->
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+  </div>
+</body>
+</html>
