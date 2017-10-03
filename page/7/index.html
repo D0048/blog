@@ -68,7 +68,7 @@ ga('send', 'pageview');
         
           <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://d0048.github.io/blog"></form>
@@ -78,58 +78,6 @@ ga('send', 'pageview');
 </header>
       <div class="outer">
         <section id="main">
-  
-    <article id="post-building-ssh-server-on-arukas-io" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2016/11/30/building-ssh-server-on-arukas-io/" class="article-date">
-  <time datetime="2016-11-30T12:21:02.000Z" itemprop="datePublished">2016-11-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2016/11/30/building-ssh-server-on-arukas-io/">Building SSH server on arukas.io</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#Create a regular 512Mb RAM application with Docker image: <code>jdeathe/centos-ssh:latest</code></p>
-<p>#Found document of configuration in <a href="https://hub.docker.com/r/jdeathe/centos-ssh/" target="_blank" rel="external">https://hub.docker.com/r/jdeathe/centos-ssh/</a></p>
-<p>#According to the document, open tcp port 22 to the public for ssh protocol connection. </p>
-<p>#In my case, port 2020, 4443 and 25565 also opens in tcp for other purposes. </p>
-<p>#According to the document, set up environment variables:</p>
-<pre><code>SSH_SUDO=ALL=(ALL) NOPASSWD:ALL
-SSH_USER=████
-SSH_USER_PASSWORD=████
-SSH_AUTHORIZED_KEYS=ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAikXL8TXKhADkOOjwEcE0tx792JMYR9mvlRTi+koG0Wb+0s6ouc████████████████████████████████████████████████████lDeqAwjJFC0er1oR6SHjgwxVU9uUfXS+AA03thfgK60CaWRUmCCUbc3vGqCyNMN44WfTMDiEz9zzeDpsrV+1/vQnxSO+K8eWhIV2jmyPMfc9z7QAs7USPfGY7TeLrFgb8m3AuFXFSdwdBp2rmPcLZbjZ9nNNR+f7eZLBn/wwE8z+rCevcprNoZgEn/0sUoHFQ== rsa-key-20161028</code></pre>
-
-<p>#Try previeous SSH-2 RSA keys but failed. <code>Error: server rejects our key.</code></p>
-<p>#Environment variable <code>SSH_USER_PASSWORD=██████</code> does not take in effect for unknown reasons. Error: <em>Fatal error: No supported authentication methods available (server sent: public key,gssapi-key-keyex,gssapt-with-mic)[From putty_V0.63.0.0.43510830]</em></p>
-<p>#Generate a new pair of SSH-2 RSA keys from puttygen. Update environment variable: SSH_AUTHORIZED_KEYS with the new public key. </p>
-<p>#Try reconnect with private key. Success. </p>
-<p>[Warn]: Server domain name and ports mapped is dynamic every restart. <br><br>[Info]: Red-hat linux system used in this server. <br><br>[Info]: Installed package “screen” with command “sudo yum install screen -y”</p>
-<p>*****Server/Client configuration Complete!*****</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2016/11/30/building-ssh-server-on-arukas-io/" data-id="cj8bflzr6000mpbakozuy3b4m" class="article-share-link">Delen</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
   
     <article id="post-building-shadow-socks-server-on-arukas-io-and-connect-it-with-a-regular-client" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -171,7 +119,7 @@ SSH_AUTHORIZED_KEYS=ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAikXL8TXKhADkOOjwEcE0tx79
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2016/11/30/building-shadow-socks-server-on-arukas-io-and-connect-it-with-a-regular-client/" data-id="cj8bflzr0000ipbakptkyi4nc" class="article-share-link">Delen</a>
+      <a data-url="https://d0048.github.io/blog/2016/11/30/building-shadow-socks-server-on-arukas-io-and-connect-it-with-a-regular-client/" data-id="cj8bflzr0000ipbakptkyi4nc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -195,7 +143,7 @@ SSH_AUTHORIZED_KEYS=ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAikXL8TXKhADkOOjwEcE0tx79
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Labels</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"></ul>
     </div>
@@ -214,9 +162,9 @@ SSH_AUTHORIZED_KEYS=ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAikXL8TXKhADkOOjwEcE0tx79
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
     </div>
   </div>
 
@@ -224,13 +172,9 @@ SSH_AUTHORIZED_KEYS=ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAikXL8TXKhADkOOjwEcE0tx79
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/blog/2017/10/03/hello-world/">Hello World</a>
-          </li>
         
           <li>
             <a href="/blog/2017/09/24/update-pepper-flash-player-under-linux/">Update pepper flash player under linux</a>
@@ -246,6 +190,10 @@ SSH_AUTHORIZED_KEYS=ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAikXL8TXKhADkOOjwEcE0tx79
         
           <li>
             <a href="/blog/2017/09/09/change-wall-papers-on-a-rooted-kindle-manually-without-installing-any-more-hacks/">Change screen saver image on a rooted kindle pw2 manually without installing any more hacks</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/09/05/solve-missingsectionheadererror-file-contains-no-section-headers-in-configphaser-pyhton/">Solve </a>
           </li>
         
       </ul>
