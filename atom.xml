@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-10-05T04:06:16.823Z</updated>
+  <updated>2017-10-12T01:04:52.503Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Pass Strings from Python to C/CPP libs</title>
+    <link href="https://d0048.github.io/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/"/>
+    <id>https://d0048.github.io/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/</id>
+    <published>2017-10-12T00:49:35.000Z</published>
+    <updated>2017-10-12T01:04:52.503Z</updated>
+    
+    <content type="html"><![CDATA[<p>Python strings are stored in the memory in a way smart but not c-friendly. There are two ways python strings could be stored:</p><ol><li><p>Non-specifically-encoded strings are usually stored as wide chars(<code>wchar</code>), where a string <code>&quot;test&quot;</code> in python basically looks like <code>&quot;t\0e\0s\0t\0&quot;</code>. This will mess with any functions in C relying on <code>\0</code> to find the end of a string(char*). </p></li><li><p>Encoded string are stored in the specified codec.</p></li></ol><p>Then, to pass a string object as <code>char*</code> or <code>wchar_t*</code> into native libiaries:</p><ol><li><p><code>import ctypes</code></p></li><li><p>Create the prototype of a function via <code>cdll_name.func_name.argtypes=[type,type,type]</code> to specify the types to pass. Use <code>ctypes.c_char_p</code> or <code>ctypes.c_wchar_p</code> to replace the type to specify the type wanted. A full lists of types could be found <a href="https://docs.python.org/3/library/ctypes.html" target="_blank" rel="external">here</a> under tag <code>16.16.1.4.</code>.</p></li><li><p>Call the function via <code>cdll_name.func_name(type(arg),type(arg)...)</code>. For example: <code>cdll_name.func_name(c_float(3.1),c_char_p(&quot;foo&quot;),c_wchar_p(&quot;bar&quot;))</code></p></li></ol><p>2017/10/12</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Python strings are stored in the memory in a way smart but not c-friendly. There are two ways python strings could be stored:&lt;/p&gt;
+&lt;ol&gt;
+&lt;l
+      
+    
+    </summary>
+    
+    
+      <category term="Python, CPP" scheme="https://d0048.github.io/blog/tags/Python-CPP/"/>
+    
+  </entry>
   
   <entry>
     <title>Some Thoughts on Deep Neural Networks and Handwritten digit recognition</title>
@@ -425,27 +450,6 @@
       
         &lt;p&gt;For &lt;b&gt;hibernate/suspend/resume:&lt;/b&gt;&lt;/p&gt;
 &lt;p&gt;Any executable file under &lt;code&gt;/etc/pm/sleep.d&lt;/code&gt; will be executed one any of the above 
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Genymotion can not login even with correct password and user name</title>
-    <link href="https://d0048.github.io/blog/2017/04/17/genymotion-can-not-login-even-with-correct-password-and-user-name/"/>
-    <id>https://d0048.github.io/blog/2017/04/17/genymotion-can-not-login-even-with-correct-password-and-user-name/</id>
-    <published>2017-04-17T09:59:45.000Z</published>
-    <updated>2017-04-17T10:00:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>For some reason,this problem could be solved by changing password in the profile section and login with the new password. (Even the old password and new password are totally the same…)</p><p>2017/4/17 18:00</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;For some reason,this problem could be solved by changing password in the profile section and login with the new password. (Even the old p
       
     
     </summary>

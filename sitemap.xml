@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://d0048.github.io/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/</loc>
+    
+    <lastmod>2017-10-12T01:04:52.503Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://d0048.github.io/blog/2017/10/05/Some-Thoughts-on-Deep-Neural-Networks-and-Handwritten-digit-recognition/</loc>
     
     <lastmod>2017-10-05T04:06:16.823Z</lastmod>
