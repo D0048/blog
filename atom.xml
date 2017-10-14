@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-10-12T01:18:45.194Z</updated>
+  <updated>2017-10-14T11:56:28.253Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Difference Between Weights and Biases: Another way of Looking at Forward Propagation</title>
+    <link href="https://d0048.github.io/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/"/>
+    <id>https://d0048.github.io/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/</id>
+    <published>2017-10-14T11:53:39.000Z</published>
+    <updated>2017-10-14T11:56:28.253Z</updated>
+    
+    <content type="html"><![CDATA[<p>hexo-math test:<br>$$<br>\begin{eqnarray}<br>\nabla\cdot\vec{E} &amp;=&amp; \frac{\rho}{\epsilon_0} \\<br>\nabla\cdot\vec{B} &amp;=&amp; 0 \\<br>\nabla\times\vec{E} &amp;=&amp; -\frac{\partial B}{\partial t} \\<br>\nabla\times\vec{B} &amp;=&amp; \mu_0\left(\vec{J}+\epsilon_0\frac{\partial E}{\partial t} \right)<br>\end{eqnarray}<br>$$</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;hexo-math test:&lt;br&gt;$$&lt;br&gt;\begin{eqnarray}&lt;br&gt;\nabla\cdot\vec{E} &amp;amp;=&amp;amp; \frac{\rho}{\epsilon_0} \\&lt;br&gt;\nabla\cdot\vec{B} &amp;amp;=&amp;amp; 
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Pass Strings from Python to C/CPP libs</title>
@@ -428,28 +449,6 @@
       
       
         &lt;p&gt;I just found that the school’s SMS system, which contains all the sensitive and private information of almost every students and personne
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Run custom script/program on linux hibernate/suspend/thaw/resume/lid-close/lid-open</title>
-    <link href="https://d0048.github.io/blog/2017/04/18/run-custom-script/"/>
-    <id>https://d0048.github.io/blog/2017/04/18/run-custom-script/</id>
-    <published>2017-04-18T10:39:37.000Z</published>
-    <updated>2017-04-18T12:35:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>For <b>hibernate/suspend/resume:</b></p><p>Any executable file under <code>/etc/pm/sleep.d</code> will be executed one any of the above actions with a string inside <strong>the second parameter</strong>(which is <code>args[1]</code> in C or <code>$1</code> in shell). This parameter may reads <code>hibernate</code>, <code>thaw</code>, <code>suspend</code> or resume depending on the operation the system is doing. </p><p>Just write a script or a program that does a certain operation according to the parameter recieved and throw it into the dictionary, mark it as executable(chmod) and it should do the job. </p><p>For <b>lid close/lid open:</b><br>Solutions from here:<br><a href="http://forums.fedoraforum.org/showthread.php?t=291877" target="_blank" rel="external">http://forums.fedoraforum.org/showthread.php?t=291877</a><br>and here:<br><a href="https://wiki.archlinux.org/index.php/Acpid" target="_blank" rel="external">https://wiki.archlinux.org/index.php/Acpid</a><br>looks pretty relevant. However, None of them works.</p><p>Still finding solutions.</p><p>2017/4/18 19:48</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;For &lt;b&gt;hibernate/suspend/resume:&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;Any executable file under &lt;code&gt;/etc/pm/sleep.d&lt;/code&gt; will be executed one any of the above 
       
     
     </summary>
