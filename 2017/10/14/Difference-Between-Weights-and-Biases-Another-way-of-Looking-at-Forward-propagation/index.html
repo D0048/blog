@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="D0048">
 <meta property="og:description" content="================LATEX MATH TEST================:$$\begin{eqnarray}\nabla\times\vec{B} &amp;amp;=&amp;amp; \mu_0\left(\vec{J}+\epsilon_0\frac{\partial E}{\partial t} \right)\end{eqnarray}$$IF THE ABOVE IS NOT">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-15T09:01:30.823Z">
+<meta property="og:updated_time" content="2017-10-15T10:35:48.290Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Difference Between Weights and Biases: Another way of Looking at Forward Propagation">
 <meta name="twitter:description" content="================LATEX MATH TEST================:$$\begin{eqnarray}\nabla\times\vec{B} &amp;amp;=&amp;amp; \mu_0\left(\vec{J}+\epsilon_0\frac{\partial E}{\partial t} \right)\end{eqnarray}$$IF THE ABOVE IS NOT">
@@ -113,7 +113,10 @@ ga('send', 'pageview');
 <p>In conclusion, the biases are supplements to the weights to help a network better fit the pattern, which are not necessary but helps the network to perform better. </p>
 <h2 id="Another-way-of-writing-the-Forward-Propagation"><a href="#Another-way-of-writing-the-Forward-Propagation" class="headerlink" title="Another way of writing the Forward Propagation"></a>Another way of writing the Forward Propagation</h2><p>Interestingly, the forward propagation algorithm<br>$$<br>\vec{y_{n}}=\mathbf{W_n}^T \times  \vec{y_{n-1}} + 1 \times \vec{b_n}<br>$$<br>could also be written like this:<br>$$<br>\vec{y_{n}}=<br>\left[ \begin{array}{c}<br>                x, \ 1<br>\end{array} \right]^T<br>\cdot<br>\left[ \begin{array}{c}<br>                \mathbf{W_n},<br>                \ \vec{b_n}<br>\end{array} \right]<br>$$,which is<br>$$<br>\vec{y_{n}} = \vec{y_{new_{n-1}}}^T \times \vec{W_{new}}<br>$$.<br>This is a way of rewriting the equation makes the adjustment by gradient really easy to write.</p>
 <h2 id="How-to-update-them"><a href="#How-to-update-them" class="headerlink" title="How to update them?"></a>How to update them?</h2><p>It’s super easy after the rewrite:<br>$$<br>\vec{W_{new}} =\vec{W_{new}}-\frac{\delta W_{new}}{\delta Error}<br>$$.</p>
-<p>2017/10/15</p>
+<h2 id="The-Activation-Function"><a href="#The-Activation-Function" class="headerlink" title="The Activation Function"></a>The Activation Function</h2><p>There is one more compoment yet to be mentioned–the Activation Function. It’s basically a function takes the output of a neuron as an input and output whatever value defined as the final output of the neuron.<br>$$<br>\vec{W_{new}} =Activation(\vec{W_{new}}-\frac{\delta W_{new}}{\delta Error})<br>$$<br>There are copious types of them around, but all of them have at least one shared property that there are all <em>Non-linear</em>! </p>
+<p>That’s basically what they are designed for. Activation Functions project output to a non-linear function, thus introducing non-linearity into the model. </p>
+<p>Consider non-linear-seperatable problems like the the XOR problem, giving the network the ability to draw non-linear sperators may help the classification.</p>
+<p>Also, there’s another purpose of the activation function, which is to project a huge input, into the space between -1 and 1, thus making the followed-up calculations easier and faster.<br>2017/10/15</p>
 
       
     </div>
