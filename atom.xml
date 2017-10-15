@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-10-15T06:01:02.719Z</updated>
+  <updated>2017-10-15T06:03:35.996Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://d0048.github.io/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/"/>
     <id>https://d0048.github.io/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/</id>
     <published>2017-10-14T11:53:39.000Z</published>
-    <updated>2017-10-15T06:01:02.719Z</updated>
+    <updated>2017-10-15T06:03:35.996Z</updated>
     
-    <content type="html"><![CDATA[<p>hexo-math test:<br>$$<br>\begin{eqnarray}<br>\nabla\times\vec{B} &amp;=&amp; \mu_0\left(\vec{J}+\epsilon_0\frac{\partial E}{\partial t} \right)<br>\end{eqnarray}<br>$$<br><em>IF THE ABOVE IS NOT SHOWING PROPERLY, PLEASE ENABLE UNSECURE(HTTP) CROSS SITE SCRIPTS…</em></p><p>##What are Weights and Biases</p><p>Consider the following forward propagation algorithm:<br>$$<br>\vec{y_{n}}=\mathbf{W_n}^T \times  \vec{y_{n-1}} + \vec{b_n}<br>$$<br>where $n$ is the number of the layers, $\vec{y_n}$ is the output of the $n^{th}$ layer, expressed as a $l_n \times 1$ ($l_n$ is the number of neurons of the $n^th$ layer) vector. $\mathbf{W_n}$ is a $l_{n-1} \times l_{n}$ matrix storing all the weights of every connection between layer $n$ and $n-1$, thus needing to be transposed for the sake of the product. $\vec{b_n}$, again, is the biases of the connections between the $n^th$ and $(n-1)^th$ layers, in the shape of $l_n\times1$.</p><p>As one can see, both weights and biases are just changeable and derivable(thus trainable) factors that contributes to the final results. </p>]]></content>
+    <content type="html"><![CDATA[<p>================LATEX MATH TEST================:<br>$$<br>\begin{eqnarray}<br>\nabla\times\vec{B} &amp;=&amp; \mu_0\left(\vec{J}+\epsilon_0\frac{\partial E}{\partial t} \right)<br>\end{eqnarray}<br>$$<br><em>IF THE ABOVE IS NOT SHOWING PROPERLY, PLEASE UNBLOCK UNSECURE(HTTP) CROSS SITE SCRIPTS IN YOUR BROWSER</em><br>================LATEX MATH TEST================:</p><h2 id="What-are-Weights-and-Biases"><a href="#What-are-Weights-and-Biases" class="headerlink" title="What are Weights and Biases"></a>What are Weights and Biases</h2><p>Consider the following forward propagation algorithm:<br>$$<br>\vec{y_{n}}=\mathbf{W_n}^T \times  \vec{y_{n-1}} + \vec{b_n}<br>$$<br>where $n$ is the number of the layers, $\vec{y_n}$ is the output of the $n^{th}$ layer, expressed as a $l_n \times 1$ ($l_n$ is the number of neurons of the $n^th$ layer) vector. $\mathbf{W_n}$ is a $l_{n-1} \times l_{n}$ matrix storing all the weights of every connection between layer $n$ and $n-1$, thus needing to be transposed for the sake of the product. $\vec{b_n}$, again, is the biases of the connections between the $n^th$ and $(n-1)^th$ layers, in the shape of $l_n\times1$.</p><p>As one can see, both weights and biases are just changeable and derivable(thus trainable) factors that contributes to the final results.</p><h2 id="Why-do-we-need-both-of-them"><a href="#Why-do-we-need-both-of-them" class="headerlink" title="Why do we need both of them?"></a>Why do we need both of them?</h2>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;hexo-math test:&lt;br&gt;$$&lt;br&gt;\begin{eqnarray}&lt;br&gt;\nabla\times\vec{B} &amp;amp;=&amp;amp; \mu_0\left(\vec{J}+\epsilon_0\frac{\partial E}{\partial t} \
+        &lt;p&gt;================LATEX MATH TEST================:&lt;br&gt;$$&lt;br&gt;\begin{eqnarray}&lt;br&gt;\nabla\times\vec{B} &amp;amp;=&amp;amp; \mu_0\left(\vec{J}+\epsilon
       
     
     </summary>
