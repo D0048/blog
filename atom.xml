@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-10-14T11:56:28.253Z</updated>
+  <updated>2017-10-15T04:33:01.599Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://d0048.github.io/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/"/>
     <id>https://d0048.github.io/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/</id>
     <published>2017-10-14T11:53:39.000Z</published>
-    <updated>2017-10-14T11:56:28.253Z</updated>
+    <updated>2017-10-15T04:33:01.599Z</updated>
     
-    <content type="html"><![CDATA[<p>hexo-math test:<br>$$<br>\begin{eqnarray}<br>\nabla\cdot\vec{E} &amp;=&amp; \frac{\rho}{\epsilon_0} \\<br>\nabla\cdot\vec{B} &amp;=&amp; 0 \\<br>\nabla\times\vec{E} &amp;=&amp; -\frac{\partial B}{\partial t} \\<br>\nabla\times\vec{B} &amp;=&amp; \mu_0\left(\vec{J}+\epsilon_0\frac{\partial E}{\partial t} \right)<br>\end{eqnarray}<br>$$</p>]]></content>
+    <content type="html"><![CDATA[<p>hexo-math test:<br>$$<br>\begin{eqnarray}<br>\nabla\times\vec{B} &amp;=&amp; \mu_0\left(\vec{J}+\epsilon_0\frac{\partial E}{\partial t} \right)<br>\end{eqnarray}<br>$$<br><em>IF THE ABOVE IS NOT SHOWING PROPERLY, PLEASE ENABLE UNSECURE(HTTP) CROSS SITE SCRIPTS…</em></p><p>##What are Weights and Biases</p><p>Consider the following forward propagation algorithm:<br>$$<br>\vec{y_{n}}=\mathbf{W_n}^T \times  \vec{y_{n-1}} + \vec{b}<br>$$<br>where $n$ is the number of the layers, $\vec{y_n}$ is the output of the $n^{th}$ layer, expressed as a $l_n \times 1$ ($l_n$ is the number of neurons of the $n^th$ layer) vector. $\mathbf{W_n}$ is a $l_{n-1} \times l_{n}$ matrix storing all the weights of every connection between layer $n$ and $n-1$, thus needing to be transposed for the sake of the product. </p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;hexo-math test:&lt;br&gt;$$&lt;br&gt;\begin{eqnarray}&lt;br&gt;\nabla\cdot\vec{E} &amp;amp;=&amp;amp; \frac{\rho}{\epsilon_0} \\&lt;br&gt;\nabla\cdot\vec{B} &amp;amp;=&amp;amp; 
+        &lt;p&gt;hexo-math test:&lt;br&gt;$$&lt;br&gt;\begin{eqnarray}&lt;br&gt;\nabla\times\vec{B} &amp;amp;=&amp;amp; \mu_0\left(\vec{J}+\epsilon_0\frac{\partial E}{\partial t} \
       
     
     </summary>
