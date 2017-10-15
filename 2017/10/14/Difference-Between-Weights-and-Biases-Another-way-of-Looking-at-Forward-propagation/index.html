@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="D0048">
 <meta property="og:description" content="================LATEX MATH TEST================:$$\begin{eqnarray}\nabla\times\vec{B} &amp;amp;=&amp;amp; \mu_0\left(\vec{J}+\epsilon_0\frac{\partial E}{\partial t} \right)\end{eqnarray}$$IF THE ABOVE IS NOT">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-15T08:03:54.396Z">
+<meta property="og:updated_time" content="2017-10-15T08:29:54.593Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Difference Between Weights and Biases: Another way of Looking at Forward Propagation">
 <meta name="twitter:description" content="================LATEX MATH TEST================:$$\begin{eqnarray}\nabla\times\vec{B} &amp;amp;=&amp;amp; \mu_0\left(\vec{J}+\epsilon_0\frac{\partial E}{\partial t} \right)\end{eqnarray}$$IF THE ABOVE IS NOT">
@@ -72,7 +72,7 @@ ga('send', 'pageview');
         
           <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://d0048.github.io/blog"></form>
@@ -111,12 +111,13 @@ ga('send', 'pageview');
 <p>This model works alright, even with one neuron it could perfectly fit a linear function like $f(x)=m\times x$, and certain non-linear relations could be fit with neurons work in layers. </p>
 <p>However, this new neuron without biases, lack of a significant ability even comparing to perceptron: it always fires regardless the input thus failing to fit functions like $y=mx+b$. It’s impossible to disable the output of a specific neuron on certain threshold value of the input. Even that adding more layers and neurons a lot eases and hides this issue, neural networks without biases are likely to perform a worse job than those with biases.(Consider the total layers/neurons are the same)</p>
 <p>In conclusion, the biases are supplements to the weights to help a network better fit the pattern, which are not necessary but helps the network to perform better. </p>
-<h2 id="Another-way-of-writing-the-Forward-Propagation"><a href="#Another-way-of-writing-the-Forward-Propagation" class="headerlink" title="Another way of writing the Forward Propagation"></a>Another way of writing the Forward Propagation</h2><p>Interestingly, the forward propagation algorithm could be written like this:<br>$$<br>\vec{y_{n}}=\mathbf{W_n}^T \times  \vec{y_{n-1}} + \vec{b_n}<br>$$</p>
+<h2 id="Another-way-of-writing-the-Forward-Propagation"><a href="#Another-way-of-writing-the-Forward-Propagation" class="headerlink" title="Another way of writing the Forward Propagation"></a>Another way of writing the Forward Propagation</h2><p>Interestingly, the forward propagation algorithm<br>$$<br>\vec{y_{n}}=\mathbf{W_n}^T \times  \vec{y_{n-1}} + 1 \times \vec{b_n}<br>$$<br>could also be written like this:<br>$$<br>\vec{y_{n}}=<br>[ \left[ \begin{array}{c}<br>                x &amp; 1<br>\end{array} \right]]<br>\cdot<br>[ \left[ \begin{array}{c}<br>                \mathbf{W_n}^T &amp; \vec{b_n}<br>\end{array} \right]]</p>
+<p>$$</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/" data-id="cj8ra4w0x000q8uak3xmh5bn9" class="article-share-link">Delen</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/" data-id="cj8ra4w0x000q8uak3xmh5bn9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -127,7 +128,7 @@ ga('send', 'pageview');
   
   
     <a href="/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ouder</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">Pass Strings from Python to C/CPP libs</div>
     </a>
   
@@ -145,7 +146,7 @@ ga('send', 'pageview');
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Labels</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Python/">Python</a></li></ul>
     </div>
@@ -164,7 +165,7 @@ ga('send', 'pageview');
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Arkiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
     </div>
@@ -174,7 +175,7 @@ ga('send', 'pageview');
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Siste innlegg</h3>
     <div class="widget">
       <ul>
         
@@ -256,21 +257,6 @@ s.setAttribute('data-timestamp', +new Date());
 
 <script src="/blog/js/script.js"></script>
 
-  </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
