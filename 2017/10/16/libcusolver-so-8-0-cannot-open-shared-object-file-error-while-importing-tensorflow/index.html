@@ -3,15 +3,20 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>Archives | D0048</title>
+  <title>&#34;libcusolver.so.8.0: cannot open shared object file&#34; error while importing tensorflow | D0048</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="D0048">
-<meta property="og:url" content="https://d0048.github.io/blog/archives/index.html">
+  <meta name="description" content="After installing the gpu version of the tensorflow, I got this error while importing it:  &amp;gt;&amp;gt;&amp;gt; import tensorflow as tf Traceback (most recent call last):   File &quot;/usr/local/lib/python3.5/dist-packages/">
+<meta name="keywords" content="ML,Solution">
+<meta property="og:type" content="article">
+<meta property="og:title" content="&quot;libcusolver.so.8.0: cannot open shared object file&quot; error while importing tensorflow">
+<meta property="og:url" content="https://d0048.github.io/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/index.html">
 <meta property="og:site_name" content="D0048">
+<meta property="og:description" content="After installing the gpu version of the tensorflow, I got this error while importing it:  &amp;gt;&amp;gt;&amp;gt; import tensorflow as tf Traceback (most recent call last):   File &quot;/usr/local/lib/python3.5/dist-packages/">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-10-16T08:29:57.055Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="D0048">
+<meta name="twitter:title" content="&quot;libcusolver.so.8.0: cannot open shared object file&quot; error while importing tensorflow">
+<meta name="twitter:description" content="After installing the gpu version of the tensorflow, I got this error while importing it:  &amp;gt;&amp;gt;&amp;gt; import tensorflow as tf Traceback (most recent call last):   File &quot;/usr/local/lib/python3.5/dist-packages/">
   
     <link rel="alternate" href="/blog/atom.xml" title="D0048" type="application/atom+xml">
   
@@ -77,215 +82,75 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/" class="archive-article-date">
-  <time datetime="2017-10-16T08:18:46.000Z" itemprop="datePublished">Oct 16</time>
+        <section id="main"><article id="post-libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/" class="article-date">
+  <time datetime="2017-10-16T08:18:46.000Z" itemprop="datePublished">2017-10-16</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/">&#34;libcusolver.so.8.0: cannot open shared object file&#34; error while importing tensorflow</a>
+    <h1 class="article-title" itemprop="name">
+      &#34;libcusolver.so.8.0: cannot open shared object file&#34; error while importing tensorflow
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/" class="archive-article-date">
-  <time datetime="2017-10-14T11:53:39.000Z" itemprop="datePublished">Oct 14</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/">Difference Between Weights and Biases: Another way of Looking at Forward Propagation</a>
-    </h1>
-  
+        <p>After installing the gpu version of the tensorflow, I got this error while importing it:</p>
+<pre>
+>>> import tensorflow as tf
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/pywrap_tensorflow.py", line 41, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.5/imp.py", line 242, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 342, in load_dynamic
+    return _load(spec)
+ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or directory
+</module></module></pre>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/" class="archive-article-date">
-  <time datetime="2017-10-12T00:49:35.000Z" itemprop="datePublished">Oct 12</time>
-</a>
+<p>None of the solutions online, like setting the environmental variables to cuda installation.</p>
+<p>I tried <code>locate libcusoler.so</code> and none of the paths refers to the version I wanted. This is because tensorflow only works with cuda 8.0 but the newest version of cuda is installed. (In my case, 8.0).</p>
+<p>Because I am using ubuntu and installed cuda through ppa, I simply installed cuda 8.0 through <code>sudo apt-get install cuda-8-0</code> and everything worked. </p>
+<p>2017/10/16</p>
+
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/">Pass Strings from Python to C/CPP libs</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/10/05/Some-Thoughts-on-Deep-Neural-Networks-and-Handwritten-digit-recognition/" class="archive-article-date">
-  <time datetime="2017-10-05T04:05:29.000Z" itemprop="datePublished">Oct 5</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/" data-id="cj8tx6f6y001x3pakwdmbxomc" class="article-share-link">Partager</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/10/05/Some-Thoughts-on-Deep-Neural-Networks-and-Handwritten-digit-recognition/">Some Thoughts on Deep Neural Networks and Handwritten digit recognition</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/09/24/update-pepper-flash-player-under-linux/" class="archive-article-date">
-  <time datetime="2017-09-24T09:53:28.000Z" itemprop="datePublished">Sep 24</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/09/24/update-pepper-flash-player-under-linux/">Update pepper flash player under linux</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ML/">ML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">Difference Between Weights and Biases: Another way of Looking at Forward Propagation</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/09/12/convert-an-image-into-an-xbitmap-array/" class="archive-article-date">
-  <time datetime="2017-09-12T12:52:52.000Z" itemprop="datePublished">Sep 12</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/09/12/convert-an-image-into-an-xbitmap-array/">Convert an image into an XBitMap C array stored in a C header file</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/09/12/a-key-point-understanding-single-variable-chain-rule/" class="archive-article-date">
-  <time datetime="2017-09-12T12:33:25.000Z" itemprop="datePublished">Sep 12</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/09/12/a-key-point-understanding-single-variable-chain-rule/">A key point understanding single variable chain rule</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/09/09/change-wall-papers-on-a-rooted-kindle-manually-without-installing-any-more-hacks/" class="archive-article-date">
-  <time datetime="2017-09-09T01:43:08.000Z" itemprop="datePublished">Sep 9</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/09/09/change-wall-papers-on-a-rooted-kindle-manually-without-installing-any-more-hacks/">Change screen saver image on a rooted kindle pw2 manually without installing any more hacks</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/09/05/solve-missingsectionheadererror-file-contains-no-section-headers-in-configphaser-pyhton/" class="archive-article-date">
-  <time datetime="2017-09-05T12:44:57.000Z" itemprop="datePublished">Sep 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/09/05/solve-missingsectionheadererror-file-contains-no-section-headers-in-configphaser-pyhton/">Solve </a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/09/03/cong-e-ni-cong-er-neng-sui/" class="archive-article-date">
-  <time datetime="2017-09-03T05:58:42.000Z" itemprop="datePublished">Sep 3</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/09/03/cong-e-ni-cong-er-neng-sui/">Concerns Over a Trend of Online-compiled Application Dev Platforms</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/blog/archives/page/2/">2</a><a class="page-number" href="/blog/archives/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/blog/archives/page/7/">7</a><a class="extend next" rel="next" href="/blog/archives/page/2/">__('next') &raquo;</a>
-  </nav>
 </section>
         
           <aside id="sidebar">

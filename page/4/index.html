@@ -66,9 +66,9 @@ ga('send', 'pageview');
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://d0048.github.io/blog"></form>
@@ -78,6 +78,59 @@ ga('send', 'pageview');
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/03/19/shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn/" class="article-date">
+  <time datetime="2017-03-19T13:11:05.000Z" itemprop="datePublished">2017-03-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/03/19/shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn/">使用脚本自动更新host实现不用vpn，不用服务器的翻墙。。。</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(Ignore this if you can’t read it coz you won’t need it anyways ;p)<br><br>（这篇只为某些人打算省事而写。。。该host可靠性好步骤少。。。可以少踩点坑。。）<br><br>恩。。。鉴于看不懂中文的大概也不需要这个,需要这个的也不想看英文，这篇用中文写好了。。。</p>
+<p>总之该方法只能访问下谷歌油管之类的国外网站，在各种vpn被封的场景下很好用。</p>
+<p>那么现在就正式开始吧。。。<code>这样的玩意请在终端里输入</code></p>
+<p>window平台:</p>
+<p>   某github开发者很贴心的吧工具都写好了。。so。。。<br><br>   <a href="https://github.com/HostsTools/Windows" target="_blank" rel="external">https://github.com/HostsTools/Windows</a><br></p>
+<p>Unix平台（mac/linux。。之类）：</p>
+<p>   MAC似乎有人写了：<a href="https://github.com/HostsTools/OSX" target="_blank" rel="external">https://github.com/HostsTools/OSX</a></p>
+<p>linux的话靠自己吧：</p>
+<p>   1.安装git。 具体方式取决于发行版，有包管理器的话软件包叫git-core。(像什么<code>sudo apt-get install git-core</code>啦。。<code>yum install gitcore</code>啦。。。)没有的话请自己编译。</p>
+<p>   2.随便找个github上还有人维护的hosts文件，再随便找个目录，pull下来。。：<br><code>git pull https://github.com/racaljk/hosts.git</code></p>
+<p>   3.写个脚本。。。：<br><code>nano hosts_updater.sh</code><br>里面输入：</p>
+<p><pre><br>cd /你/现在/的路径/hosts<br>git pull<br>cat /你/现在/的路径/hosts/hosts | sudo tee /etc/hosts ##这句话没有写错。。。<br>/etc/init.d/networking restart<br></pre><br>ctrl+x然后回车保存退出</p>
+<p>   4.给上脚本权限并且执行一次试试:<br><br><code>chmod +x hosts_updater.sh</code><br><br><code>./hosts_updater.sh</code><br><br>过一会看看能不能上谷歌什么的。。。可能需要重启。。。（目测仅debian系可用，红帽党们估计也用不到吧。。）</p>
+<p>   5.安装crontab。。。(像什么<code>sudo apt-get install crontab</code>啦。。<code>yum install crontab</code>啦。。。或者自己编译)</p>
+<p>   6.登录到root用户中:<br><br><code>su root</code></p>
+<p>   7.在crontab里面注册指令让它定时执行。。。:<br><br><code>crontab -e</code><br><br>如果要你选择编辑器，选nano吧。。。<br><br>在最后一行加上 <code>0 0 * * * /到你脚本的路径/hosts_updater.sh</code> <br><br>一样保存退出。。。完事<br></p>
+<p>2017/3/19 22:06</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/03/19/shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn/" data-id="cj8tx6f7100203pakz62qhine" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-logging-as-another-user-and-then-exit-after-finishing-the-desired-work-in-shell-script-2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -115,7 +168,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/19/logging-as-another-user-and-then-exit-after-finishing-the-desired-work-in-shell-script-2/" data-id="cj8sie5uf000y26aks7bxf0aw" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/03/19/logging-as-another-user-and-then-exit-after-finishing-the-desired-work-in-shell-script-2/" data-id="cj8tx6f5t000x3pakz0edkslg" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -155,7 +208,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/19/use-property-files-in-java/" data-id="cj8sie5vz001r26ak2jae6mu2" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/03/19/use-property-files-in-java/" data-id="cj8tx6f6q001q3pakashhf28w" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -209,7 +262,7 @@ inline std::string its(int i){
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/15/the-c-and-c-style-ways-to-transfrom-int-into-char-or-stream/" data-id="cj8sie5ve001g26akm80dke0a" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/03/15/the-c-and-c-style-ways-to-transfrom-int-into-char-or-stream/" data-id="cj8tx6f6b001e3pak17pu4g39" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -256,7 +309,7 @@ inline std::string its(int i){
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/15/wierd-resource-release/" data-id="cj8sie5w5001w26aksver4fdf" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/03/15/wierd-resource-release/" data-id="cj8tx6f6v001v3pakl62f0nrj" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -297,7 +350,7 @@ inline std::string its(int i){
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/14/method-id-not-in-0-0xffff-65536-error/" data-id="cj8sie5w6001x26akdorldg1w" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/03/14/method-id-not-in-0-0xffff-65536-error/" data-id="cj8tx6f6w001w3pakkqke6l6z" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -341,7 +394,7 @@ inline std::string its(int i){
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/02/a-fast-way-to-save-terminator-layout-into-config-file-and-set-it-to-default-2/" data-id="cj8sie5t3000b26akvytwlfix" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/03/02/a-fast-way-to-save-terminator-layout-into-config-file-and-set-it-to-default-2/" data-id="cj8tx6f3d00063pakcn9bjy96" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -379,7 +432,7 @@ inline std::string its(int i){
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/02/customer-command-in-terminator-config-file-not-executing/" data-id="cj8sie5v7001a26ak5a92ti2f" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/03/02/customer-command-in-terminator-config-file-not-executing/" data-id="cj8tx6f6600183pakbzqbaru9" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -421,7 +474,7 @@ inline std::string its(int i){
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/27/no-matching-algo-kex-error-while-attempt-to-ssh-via-older-ssh-clients/" data-id="cj8sie5w9001z26akfbzqiwtg" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/27/no-matching-algo-kex-error-while-attempt-to-ssh-via-older-ssh-clients/" data-id="cj8tx6f6z001y3pak3032rkz2" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -468,48 +521,7 @@ inline std::string its(int i){
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/16/downgrade-kindle-paper-white1-pw-from-the-system-version-5-6-1-1-for-jailbreak/" data-id="cj8sie5uc000w26ak8t7ybjov" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-about-getline-method-in-java" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2017/02/16/about-getline-method-in-java/" class="article-date">
-  <time datetime="2017-02-16T07:04:20.000Z" itemprop="datePublished">2017-02-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2017/02/16/about-getline-method-in-java/">About getline() method in Java</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Recently, I was trying to use an example program in Java to communicate with another C++ program through net socket. The example use a method in Class Stream called <code>getline()</code> to read from the socket with cause a problem that I failed to receive anything which is already sent.</p>
-<p>There are two reasons:</p>
-<p>First, this method will stuck the thread until a line is read. This disable all the debug output in my program.  </p>
-<p>Second, the method will only return if a <code>\n</code> sign or <code>/r</code> sign is read which is not contained in what’s sent. This disable the method from outputting anything and also stuck it forever. </p>
-<p>2017/2/20 12:33</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/16/about-getline-method-in-java/" data-id="cj8sie5tf000g26akelejao7f" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/16/downgrade-kindle-paper-white1-pw-from-the-system-version-5-6-1-1-for-jailbreak/" data-id="cj8tx6f5m000r3pak2p1v03hh" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -533,9 +545,9 @@ inline std::string its(int i){
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Python/">Python</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/ML/">ML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
     </div>
   </div>
 
@@ -543,9 +555,9 @@ inline std::string its(int i){
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Machine-Learning/" style="font-size: 20px;">Machine Learning</a> <a href="/blog/tags/Python/" style="font-size: 10px;">Python</a>
+      <a href="/blog/tags/ML/" style="font-size: 10px;">ML</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 20px;">Machine Learning</a> <a href="/blog/tags/Python/" style="font-size: 10px;">Python</a> <a href="/blog/tags/Solution/" style="font-size: 10px;">Solution</a>
     </div>
   </div>
 
@@ -562,9 +574,13 @@ inline std::string its(int i){
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/">&#34;libcusolver.so.8.0: cannot open shared object file&#34; error while importing tensorflow</a>
+          </li>
         
           <li>
             <a href="/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/">Difference Between Weights and Biases: Another way of Looking at Forward Propagation</a>
@@ -580,10 +596,6 @@ inline std::string its(int i){
         
           <li>
             <a href="/blog/2017/09/24/update-pepper-flash-player-under-linux/">Update pepper flash player under linux</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2017/09/12/convert-an-image-into-an-xbitmap-array/">Convert an image into an XBitMap C array stored in a C header file</a>
           </li>
         
       </ul>

@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-10-15T12:08:19.805Z</updated>
+  <updated>2017-10-16T08:29:57.055Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&quot;libcusolver.so.8.0: cannot open shared object file&quot; error while importing tensorflow</title>
+    <link href="https://d0048.github.io/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/"/>
+    <id>https://d0048.github.io/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/</id>
+    <published>2017-10-16T08:18:46.000Z</published>
+    <updated>2017-10-16T08:29:57.055Z</updated>
+    
+    <content type="html"><![CDATA[<p>After installing the gpu version of the tensorflow, I got this error while importing it:</p><pre>>>> import tensorflow as tfTraceback (most recent call last):  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/pywrap_tensorflow.py", line 41, in <module>    from tensorflow.python.pywrap_tensorflow_internal import *  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>    _pywrap_tensorflow_internal = swig_import_helper()  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)  File "/usr/lib/python3.5/imp.py", line 242, in load_module    return load_dynamic(name, filename, file)  File "/usr/lib/python3.5/imp.py", line 342, in load_dynamic    return _load(spec)ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or directory</module></module></pre><p>None of the solutions online, like setting the environmental variables to cuda installation.</p><p>I tried <code>locate libcusoler.so</code> and none of the paths refers to the version I wanted. This is because tensorflow only works with cuda 8.0 but the newest version of cuda is installed. (In my case, 8.0).</p><p>Because I am using ubuntu and installed cuda through ppa, I simply installed cuda 8.0 through <code>sudo apt-get install cuda-8-0</code> and everything worked. </p><p>2017/10/16</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;After installing the gpu version of the tensorflow, I got this error while importing it:&lt;/p&gt;
+&lt;pre&gt;
+&gt;&gt;&gt; import tensorflow as tf
+Traceback 
+      
+    
+    </summary>
+    
+    
+      <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+  </entry>
   
   <entry>
     <title>Difference Between Weights and Biases: Another way of Looking at Forward Propagation</title>
@@ -430,27 +458,6 @@
       
         &lt;p&gt;Pack: &lt;code&gt;tar cjf - {file}/ |split -b 1m - {file}.tar.bz2.&lt;/code&gt;&lt;br&gt;Unpack: &lt;code&gt;cat {file}.tar.bz2.a* | tar xj&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;2017/4/
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Problems with the school&#39;s SMS log system that contains high vulnerabilities</title>
-    <link href="https://d0048.github.io/blog/2017/04/25/problems-with-the-schools-sms-log-system-that-contains-high-vulnerabilities/"/>
-    <id>https://d0048.github.io/blog/2017/04/25/problems-with-the-schools-sms-log-system-that-contains-high-vulnerabilities/</id>
-    <published>2017-04-25T12:44:39.000Z</published>
-    <updated>2017-04-25T13:12:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>I just found that the school’s SMS system, which contains all the sensitive and private information of almost every students and personnel in our school, including accounts that can directly change the students’ scores, is highly vulnerable. </p><p>First of all, no ssl certificates are used. That means all the password and content are delivered directly without any encryption. That means…Well, this is what I got on my account:<br><img src="/content/images/2017/04/2017-04-25-20-50-09----.png" alt=""><br>Any time if our traffic are sniffered in any of the routers it routes through, all the passwords and contents in the pages will be leaked. </p><p>Second of all, the side does not limit attempts to enter wrong passwords. That means, with a little amount of time and it will be possible to try out passwords of teachers with a small script.<br>Here is a small example:<br><code>wget http://sms.██s.com/login --post-data=&#39;username=p1234&amp;password=123456&#39; -r</code><br>This is a shell command for an attempt to recursively download all the contents owned by a student’s account. It can be easily planted into a program to try all possible combinations until success. Once the password is correct, all the private information will leak. Also, if the account is for a teacher, students will be able to change their scores themselves. </p><p>==Plus, most of the teachers are using default passwords today…which are██..==</p><p>In conclusion, the school platform need to be refined so that it is made safer!</p><p>2017/4/25</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;I just found that the school’s SMS system, which contains all the sensitive and private information of almost every students and personne
       
     
     </summary>
