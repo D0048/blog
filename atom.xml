@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-10-16T08:29:57.055Z</updated>
+  <updated>2017-10-16T08:34:30.468Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://d0048.github.io/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/"/>
     <id>https://d0048.github.io/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/</id>
     <published>2017-10-16T08:18:46.000Z</published>
-    <updated>2017-10-16T08:29:57.055Z</updated>
+    <updated>2017-10-16T08:34:30.468Z</updated>
     
-    <content type="html"><![CDATA[<p>After installing the gpu version of the tensorflow, I got this error while importing it:</p><pre>>>> import tensorflow as tfTraceback (most recent call last):  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/pywrap_tensorflow.py", line 41, in <module>    from tensorflow.python.pywrap_tensorflow_internal import *  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>    _pywrap_tensorflow_internal = swig_import_helper()  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)  File "/usr/lib/python3.5/imp.py", line 242, in load_module    return load_dynamic(name, filename, file)  File "/usr/lib/python3.5/imp.py", line 342, in load_dynamic    return _load(spec)ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or directory</module></module></pre><p>None of the solutions online, like setting the environmental variables to cuda installation.</p><p>I tried <code>locate libcusoler.so</code> and none of the paths refers to the version I wanted. This is because tensorflow only works with cuda 8.0 but the newest version of cuda is installed. (In my case, 8.0).</p><p>Because I am using ubuntu and installed cuda through ppa, I simply installed cuda 8.0 through <code>sudo apt-get install cuda-8-0</code> and everything worked. </p><p>2017/10/16</p>]]></content>
+    <content type="html"><![CDATA[<p>After installing the gpu version of the tensorflow, I got this error while importing it:</p><pre>>>> import tensorflow as tfTraceback (most recent call last):  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/pywrap_tensorflow.py", line 41, in <module>    from tensorflow.python.pywrap_tensorflow_internal import *  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>    _pywrap_tensorflow_internal = swig_import_helper()  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)  File "/usr/lib/python3.5/imp.py", line 242, in load_module    return load_dynamic(name, filename, file)  File "/usr/lib/python3.5/imp.py", line 342, in load_dynamic    return _load(spec)ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or directory</module></module></pre><p>None of the solutions online, like setting the environmental variables to cuda installation.</p><p>I tried <code>locate libcusolver.so</code> and none of the paths refers to the version I wanted. This is because tensorflow only works with cuda 8.0 but the newest version of cuda is installed. (In my case, 8.0).</p><p>Because I am using ubuntu and installed cuda through ppa, I simply installed cuda 8.0 through <code>sudo apt-get install cuda-8-0</code> and everything worked. </p><p>2017/10/16</p>]]></content>
     
     <summary type="html">
     
