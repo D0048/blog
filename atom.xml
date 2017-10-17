@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-10-17T07:43:52.268Z</updated>
+  <updated>2017-10-17T07:52:45.836Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://d0048.github.io/blog/2017/10/17/The-Harmonic-Series-how-comes-the-divergence/"/>
     <id>https://d0048.github.io/blog/2017/10/17/The-Harmonic-Series-how-comes-the-divergence/</id>
     <published>2017-10-17T07:24:42.000Z</published>
-    <updated>2017-10-17T07:43:52.268Z</updated>
+    <updated>2017-10-17T07:52:45.836Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>IF FORMULAS ARE NOT DISPLAYED CORRECTLY, PLEASE ALLOW UNSECURE(HTTP) CROSS SITE SCRIPTS</strong></p><h2 id="What-are-the-Harmonic-Series"><a href="#What-are-the-Harmonic-Series" class="headerlink" title="What are the Harmonic Series"></a>What are the Harmonic Series</h2><p>From Wikipedia, (Haronmic Series)[<a href="https://en.wikipedia.org/wiki/Harmonic_series_(mathematics" target="_blank" rel="external">https://en.wikipedia.org/wiki/Harmonic_series_(mathematics</a>)]</p><blockquote><p>In mathematics, the harmonic series is the divergent infinite series: Its name derives from the concept of overtones, or harmonics in music: the wavelengths of the overtones of a vibrating string are $1/2, 1/3, 1/4$, etc., of the string’s fundamental wavelength. Every term of the series after the first is the harmonic mean of the neighboring terms; the phrase harmonic mean likewise derives from music.</p></blockquote><p>It is basically a series defined like this:<br>$$<br>\sum_{x=0}^{\infinite}<br>$$</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>IF FORMULAS ARE NOT DISPLAYED CORRECTLY, PLEASE ALLOW UNSECURE(HTTP) CROSS SITE SCRIPTS</strong></p><h2 id="What-are-the-Harmonic-Series"><a href="#What-are-the-Harmonic-Series" class="headerlink" title="What are the Harmonic Series?"></a>What are the Harmonic Series?</h2><p>From Wikipedia, (Haronmic Series)[<a href="https://en.wikipedia.org/wiki/Harmonic_series_(mathematics" target="_blank" rel="external">https://en.wikipedia.org/wiki/Harmonic_series_(mathematics</a>)]</p><blockquote><p>In mathematics, the harmonic series is the divergent infinite series: Its name derives from the concept of overtones, or harmonics in music: the wavelengths of the overtones of a vibrating string are $1/2, 1/3, 1/4$, etc., of the string’s fundamental wavelength. Every term of the series after the first is the harmonic mean of the neighboring terms; the phrase harmonic mean likewise derives from music.</p></blockquote><p>It is basically a series defined like this:<br>$$<br>\sum_{x=1}^{\infty} \frac{1}{x} = \frac{1}{1} + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{\infty}<br>$$<br>and it feels, intuitively, to be converging. However, it’s actually the opposite.</p><h2 id="Why-are-they-diverging"><a href="#Why-are-they-diverging" class="headerlink" title="Why are they diverging?"></a>Why are they diverging?</h2>]]></content>
     
     <summary type="html">
     
