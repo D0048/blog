@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://d0048.github.io/blog/2017/10/17/The-Harmonic-Series-how-comes-the-divergence/</loc>
+    
+    <lastmod>2017-10-17T07:38:47.772Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://d0048.github.io/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/</loc>
     
     <lastmod>2017-10-16T08:34:30.468Z</lastmod>

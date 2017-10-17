@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-10-16T08:34:30.468Z</updated>
+  <updated>2017-10-17T07:38:47.772Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>The Harmonic Series: How Comes the Divergence</title>
+    <link href="https://d0048.github.io/blog/2017/10/17/The-Harmonic-Series-how-comes-the-divergence/"/>
+    <id>https://d0048.github.io/blog/2017/10/17/The-Harmonic-Series-how-comes-the-divergence/</id>
+    <published>2017-10-17T07:24:42.000Z</published>
+    <updated>2017-10-17T07:38:47.772Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="What-are-the-Harmonic-Series"><a href="#What-are-the-Harmonic-Series" class="headerlink" title="What are the Harmonic Series"></a>What are the Harmonic Series</h2><p>From Wikipedia, (Haronmic Series)[<a href="https://en.wikipedia.org/wiki/Harmonic_series_(mathematics" target="_blank" rel="external">https://en.wikipedia.org/wiki/Harmonic_series_(mathematics</a>)]</p><blockquote><p>In mathematics, the harmonic series is the divergent infinite series:<br>Its name derives from the concept of overtones, or harmonics in music:<br>the wavelengths of the overtones of a vibrating string are $1/2, 1/3, 1/4$<br>, etc., of the string’s fundamental wavelength. Every term of the<br>series after the first is the harmonic mean of the neighboring terms; the phrase harmonic mean likewise derives from music.</p></blockquote><p>It is basically a series defined like this:<br>$$<br>\sum_{x=0}^{\infinite}<br>$$</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;What-are-the-Harmonic-Series&quot;&gt;&lt;a href=&quot;#What-are-the-Harmonic-Series&quot; class=&quot;headerlink&quot; title=&quot;What are the Harmonic Series&quot;&gt;&lt;/a&gt;Wh
+      
+    
+    </summary>
+    
+    
+      <category term="Math" scheme="https://d0048.github.io/blog/tags/Math/"/>
+    
+  </entry>
   
   <entry>
     <title>&quot;libcusolver.so.8.0: cannot open shared object file&quot; error while importing tensorflow</title>
@@ -38,9 +61,9 @@ Traceback
     </summary>
     
     
-      <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
-    
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
     
   </entry>
   
@@ -259,9 +282,9 @@ Traceback
     </summary>
     
     
-      <category term="Thought" scheme="https://d0048.github.io/blog/tags/Thought/"/>
-    
       <category term="Security" scheme="https://d0048.github.io/blog/tags/Security/"/>
+    
+      <category term="Thought" scheme="https://d0048.github.io/blog/tags/Thought/"/>
     
   </entry>
   
@@ -482,30 +505,6 @@ Traceback
     
     
       <category term="Debug" scheme="https://d0048.github.io/blog/tags/Debug/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A way to compress file into sub-packages in linux</title>
-    <link href="https://d0048.github.io/blog/2017/04/27/ways-to-compress-file-into-sub-packages-in-linux/"/>
-    <id>https://d0048.github.io/blog/2017/04/27/ways-to-compress-file-into-sub-packages-in-linux/</id>
-    <published>2017-04-27T11:33:04.000Z</published>
-    <updated>2017-04-27T11:38:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Pack: <code>tar cjf - {file}/ |split -b 1m - {file}.tar.bz2.</code><br>Unpack: <code>cat {file}.tar.bz2.a* | tar xj</code></p><p>2017/4/27 19:38</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Pack: &lt;code&gt;tar cjf - {file}/ |split -b 1m - {file}.tar.bz2.&lt;/code&gt;&lt;br&gt;Unpack: &lt;code&gt;cat {file}.tar.bz2.a* | tar xj&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;2017/4/
-      
-    
-    </summary>
-    
-    
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
