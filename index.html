@@ -125,7 +125,7 @@ ga('send', 'pageview');
 <li>1 -&gt; $\infty$ with step length of $\frac{1}{x^2-(x-1)^2}$, which proved to be $\frac{1}{step_{x-1}+2}$.<br>(Since we are comparing the force of shrinking a value, we can ignore the upper part of the fraction, which makes the step ${step_{x-1}+2}$)<br>For example, the steps between term_1, 2, 3, 4 are 3, 5 and 7.</li>
 </ul>
 <p>This way, we can compare the first force with the second:<br>$$<br>\frac{1}{step_{x-1}+2} &lt; 0<br>$$<br>which means in all steps the speed convergence of this series is larger than the speed of divergence, which makes its overall behavior convergence. </p>
-<p>Let’s look at another example series where <code>n=0.5</code>:<br>$$<br>\sum_{x=1}^{\infty} \frac{1}{x^{0.5}} = \frac{1}{1^{0.5}} + \frac{1}{2^{0.5}} + \frac{1}{3^{0.5}} + \ldots + \frac{1}{\infty^{0.5}}<br>$$<br>(The steps between term_1, 2, 3, 4 are 0.4, 0.3 and 0.25.)<br>And compare the two forces of it:<br>$$<br>\frac{1}{(x^{0.5}-(x-1)^0.5)^2} &gt; 0<br>$$<br>which means in all steps the speed convergence of this series is smaller than the speed of divergence, which makes its overall behavior divergence. </p>
+<p>Let’s look at another example series where <code>n=0.5</code>:<br>$$<br>\sum_{x=1}^{\infty} \frac{1}{x^{0.5}} = \frac{1}{1^{0.5}} + \frac{1}{2^{0.5}} + \frac{1}{3^{0.5}} + \ldots + \frac{1}{\infty^{0.5}}<br>$$<br>(The steps between term_1, 2, 3, 4 are 0.4, 0.3 and 0.25.)<br>And compare the two forces of it:<br>$$<br>\frac{1}{(x^{0.5}-(x-1)^{0.5})^2} &gt; 0<br>$$<br>which means in all steps the speed convergence of this series is smaller than the speed of divergence, which makes its overall behavior divergence. </p>
 <p>Finally, time to deal with our <code>n=1</code> series. We surprisingly found that the speed of divergence is equal to the speed of convergence, which make it lies at the critical area that yet to be defined. </p>
 <p>However, we know that a series have to be either converges or diverges. Think of it like this: a man chasing another man holding a finish line, both of them are at the same speed. The fact that they are chasing each other makes sure the finish line is ahead of the man. This way, the man never gets to the finish line, thus making the final pattern diverges. </p>
 <p>To draw a conclusion:<br>$$<br>\sum_{x=1}^{\infty} \frac{1}{x^n}$$ Converges only if $n&gt;0$</p>
@@ -137,6 +137,7 @@ ga('send', 'pageview');
 <p>Due to the unknowns of prime numbers, I will replace them with “any series that gets sparser as it grows”. We know that making a series of all the terms pulled out, this new series actually converges. So we are excluding a finite value out of infinite, which still, equals infinite.</p>
 <p>I can almost immidiently feel that a lot of my logics are really sloppy, please point out if anything is wrong. </p>
 <p>2017/10/17</p>
+<p>Update: ok… my understanding seems to be a bit off. It’s still possible to extract a divergent series out of it to make it still diverges…<br>2017/10/19</p>
 
       
     </div>
