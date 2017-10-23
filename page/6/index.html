@@ -79,6 +79,45 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-a-bad-but-useable-way-to-deal-with-_tchar-argv" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/02/08/a-bad-but-useable-way-to-deal-with-_tchar-argv/" class="article-date">
+  <time datetime="2017-02-08T14:45:48.000Z" itemprop="datePublished">2017-02-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/02/08/a-bad-but-useable-way-to-deal-with-_tchar-argv/">A bad but useable way to deal with _TCHAR* argv[] parameter</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>from: <a href="http://stackoverflow.com/questions/19301538/converting-tchar-to-char" target="_blank" rel="external">http://stackoverflow.com/questions/19301538/converting-tchar-to-char</a><br>==Warning: this is a temporary solution and shouldn’t be used as a long-term solution. ==<br><br><br>Instead of using the original one, just use <code>int main(int argc, char *argv[])</code> instead. The new type _TCHAR is actually a macro of a longer char that allows more kinds of characters (char is 128 which is not enough) just for compatible purpose. Since I don’t need internalizations now anyways, I think it’s safe to do that. </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/02/08/a-bad-but-useable-way-to-deal-with-_tchar-argv/" data-id="cj93x35xv0006jqakkznzqhfc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-how-to-create-a-windows-services-program-to-run-background-in-start-up-and-how-to-register-it" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2017/02/08/how-to-create-a-windows-services-program-to-run-background-in-start-up-and-how-to-register-it/" class="article-date">
@@ -162,7 +201,7 @@ I use these codes to initialize a entry table.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/08/how-to-create-a-windows-services-program-to-run-background-in-start-up-and-how-to-register-it/" data-id="cj8vas2bz002mh4aktovi41fa" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/08/how-to-create-a-windows-services-program-to-run-background-in-start-up-and-how-to-register-it/" data-id="cj93x35zk001fjqaku72m8ig9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/WinAPI/">WinAPI</a></li></ul>
@@ -201,7 +240,7 @@ I use these codes to initialize a entry table.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/08/a-way-to-avoid-duplicate-declaration/" data-id="cj8vas29s000gh4akm8xupugf" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/08/a-way-to-avoid-duplicate-declaration/" data-id="cj93x35yi000ijqak8uwcnwku" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li></ul>
@@ -240,7 +279,7 @@ I use these codes to initialize a entry table.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/08/a-good-way-to-avoid-duplicated-definition-in-header-files/" data-id="cj8vas29y000nh4akkaf3hmvc" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/08/a-good-way-to-avoid-duplicated-definition-in-header-files/" data-id="cj93x35yk000ljqakbiaxw7ci" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li></ul>
@@ -282,7 +321,7 @@ I use these codes to initialize a entry table.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/06/a/" data-id="cj8vas29g0007h4ak5wqbkkxz" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/06/a/" data-id="cj93x35xy0007jqak1um7sjp7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Security/">Security</a></li></ul>
@@ -328,7 +367,7 @@ I use these codes to initialize a entry table.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/01/12/ubuntu-failure-to-download-extra-data-files-ttf-mscorefonts-installer-solution/" data-id="cj8vas2c4002uh4akf3dwh0i9" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/01/12/ubuntu-failure-to-download-extra-data-files-ttf-mscorefonts-installer-solution/" data-id="cj93x361l0043jqakag15ihfe" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -367,7 +406,7 @@ I use these codes to initialize a entry table.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/01/05/nullpointer-error-cost-in-arraylist-when-iterating-through-it-by-foreach-function-in-java/" data-id="cj8vas2bc001sh4akx3o4n929" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/01/05/nullpointer-error-cost-in-arraylist-when-iterating-through-it-by-foreach-function-in-java/" data-id="cj93x360b002bjqakg512cvql" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -411,7 +450,7 @@ I use these codes to initialize a entry table.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2016/12/20/allow-scripts-and-other-programs-too-boot-with-linux/" data-id="cj8vas29v000lh4akzmy07bon" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2016/12/20/allow-scripts-and-other-programs-too-boot-with-linux/" data-id="cj93x35yg000gjqak7gsym8wu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -467,7 +506,7 @@ I use these codes to initialize a entry table.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2016/12/13/useful-methods-from-bukkit/" data-id="cj8vas2ck003eh4akpi7w9sr6" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2016/12/13/useful-methods-from-bukkit/" data-id="cj93x3613003hjqakv8ofkkrs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Bukkit/">Bukkit</a></li></ul>
@@ -512,165 +551,10 @@ I use these codes to initialize a entry table.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2016/12/13/a-huge-vulnerability-on-most-of-the-multicraft-panel-hosting-service/" data-id="cj8vas29c0005h4akr69njv9u" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2016/12/13/a-huge-vulnerability-on-most-of-the-multicraft-panel-hosting-service/" data-id="cj93x35y20009jqakgm7889sc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Bukkit/">Bukkit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Security/">Security</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-good-posts-i-found" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2016/12/06/good-posts-i-found/" class="article-date">
-  <time datetime="2016-12-06T11:16:45.000Z" itemprop="datePublished">2016-12-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2016/12/06/good-posts-i-found/">A Good Post I Found about basic Linux (In Chinese)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>==Credit:<a href="http://tieba.baidu.com/p/3348166457?share=9105&amp;fr=share" target="_blank" rel="external">http://tieba.baidu.com/p/3348166457?share=9105&amp;fr=share</a> ==<br><br><br>Linux的安装</p>
-<p>Virtual box &amp; CentOS(Community Enterprise OS)</p>
-<p>Basic Storage Devices（存储盘柜）<br>SpecializedStorage Devices（使用以太网存储设备/FCoE卡集成网络环境10G+/IBM zFCP Server）<br>Use All Space（小白）<br>Replace Existing Linux System(s)<br>Shrink Current System<br>Use Free Space<br>CreateCustom Layout（自己分区）</p>
-<p>分区界面sda（串行磁盘）：sda1, sda2<br>Swap（虚拟内存）交换分配、无挂载点（需要升级）<br>/ 其他分在/下，除非有特定要求</p>
-<p>Ext4（linux下的文件系统格式）<br>Standard Partition（标准分区）<br>RAID Partition<br>LVM Physical Volume（逻辑卷）</p>
-<p>Fixed Size<br>Fill all space up to MB<br>Fill to maximum allowable size</p>
-<p>Force to be a primary partition<br>Encrypt（加密、失性能、物理安全）</p>
-<p>Install boot loader on /dev/sda<br>change Device -&gt;<br>Master Boot Record (MBR)<br>First Sector of boot partition<br>BIOS Drive Order &lt;-<br>Use a boot loader password</p>
-<p>Desktop<br>Minimal Desktop<br>Minimal<br>Basic Server<br>Database Server (SQL)<br>Web Server (Apacher)<br>Virtual Host<br>Software Development Workstation</p>
-<p>Enablekdump（内存环境分析Crash）</p>
-<p>基本操作GNOME图形界面 (仿苹果风格，其他如KDE)<br>打开文件夹窗口edit-&gt;preferences-&gt;behavior-&gt;always open in browser windows<br>主要管理方式CLI：BASH基本操作<br>Shell分为GUI(GraphicalUser Interface): Gnome和CLI (Command Line Interface): BASH两种<br>命令行终端控制system（控制面板）-&gt;terminal<br>模拟终端运行在图形界面中多个桌面环境workspace<br>命令一般由三个部分组成: 命令、选项、参数<br>提示符：#-&gt;root、$-&gt;user、~-&gt;用户家目录命令通配符正则表达式<br>用到的其他命令：</p>
-<p>su 切换到root权限</p>
-<p>su - 切换到root用户</p>
-<p>exit 退出用户登录</p>
-<p>hostname 显示主机名</p>
-<p>ls 列出文件清单</p>
-<p>uname 显示系统名称</p>
-<p>uname -a 完整的系统名</p>
-<p>uname –all 同上（无差别）</p>
-<p>Ctrl+c 终止当前进程</p>
-<p>命令&amp; 在后台执行此命令</p>
-<p>用到的其他命令：</p>
-<p><tab>列出所有命令</tab></p>
-<p>自动补全命令</p>
-<p>自动补全文件名</p>
-<p>无法自动补全参数<br>clear 清除屏幕显示内容<br>Bash会保存你输入命令的历史记录，可以通过上下按键或者history命令来查看</p>
-<p>!! 重复前一个命令</p>
-<p>!字符 重复前一个以”字符”开头的命令</p>
-<p>!num 按照历史记录的序号执行命令</p>
-<p>!?abc 重复之前包含”abc”的命令</p>
-<p>!-n 重复倒数第n个命令</p>
-<p>可以通过Ctrl+r来在历史记录中搜索命令(reverse-i-search)`*:<br>重新调用前一个命令中的参数Esc + .<br>Bash shell支持以下通配符</p>
-<ul>
-<li>匹配零个或多个</li>
-</ul>
-<p>? 匹配任意一个字符</p>
-<p>[0-9] 匹配一个数字范围</p>
-<p>[abc] 匹配列表里任何字符</p>
-<p>[^abd] 匹配列表以外字符<br>通过su命令切换用户</p>
-<p>su - 切换到root用户并使用一个新的运行环境</p>
-<p>sudo 使用管理员身份运行命令</p>
-<p>显示当前用户信息id<br>修改当前用户密码passwd<br>用到的其他命令：</p>
-<p>su - 用户 切换到”用户”账号</p>
-<p>logout 退出当前shell</p>
-<p>exit 退出当前账号身份</p>
-<p>暂停某个程序:通过Ctrl+z命令或者发送信号17<br>管理后台作业</p>
-<p>jobs 查看后台作业列表</p>
-<p>bg 1 继续执行后台任务1</p>
-<p>fg 1 将后台任务调1到前台运行</p>
-<p>Linux文件系统结构<br>Linux文件系统为一个倒转的单根树状结构<br>文件系统的根为”/“<br>文件系统严格区分大小写<br>路径使用”/“分割(windows使用”\”)<br><img src="/content/images/2016/12/1.png" alt="image1"><br>每个shell或系统进程都有一个当前工作目录<br>使用pwd命令可以显示当前的工作目录</p>
-<p>文件的名称大小写敏感<br>名称最多可以为255个字符<br>除了正斜线”/“以外,都是有效字符<br>通过touch命令可以创建一个空白文件或者更新已有文件的时间<br>以”.”开头的文件为隐藏文件</p>
-<p>“ls”命令用来列出目录内容<br>ls -a 显示所有文件（包括隐藏文件）<br>ls -l 显示详细信息<br>ls -R 递归显示子目录结构<br>ls -ld 显示目录和链接信息</p>
-<p>通过”file”命令可以查看文件类型</p>
-<p>绝对路径: 以”/“开头，递归每级目录直到目标的路径<br>不受当前所在工作目录限制<br>相对路径: 以当前目录为起点，到达目标的路径<br>受当前所在工作目录限制</p>
-<p>“cd”命令可以用来切换目录<br>cd .. 切换到上一级目录<br>cd . 切换到当前目录<br>cd ~ 切换到用户”home”目录（/home/user)<br>cd - 切换到上一个工作目录</p>
-<p>相对路径： ../../var/log/sa<br>绝对路径： /var/log/sa</p>
-<p>使用”cp”命令复制文件或目录<br>cp 源文件/文件夹目标文件/文件夹<br>-r 递归复制整个目录树<br>-v 显示详细信息</p>
-<p>通过”mv”命令移动或者重命名文件或目录<br>mv 文件(文件夹) 目标目录<br>如果指定文件名，则可以重命名文件<br>mv 文件新文件名</p>
-<p>通过”touch”命令可以创建一个空文件或更新文件时间<br>使用”rm”命令可以删除文件或目录<br>-i 交互式（删除之前需确认）<br>-r 递归的删除包括目录中的所有内容<br>-f 强制删除，没有警告提示（使用时需十分谨慎）<br>-v 显示详细信息<br>通过”mkdir”命令创建一个目录<br>通过”rmdir”命令删除一个空目录<br>通过”rm -r[f]”命令删除一个非空目录</p>
-<p>/dev 存放设备抽象文件<br>/lib 存放系统库文件，库文件程序.iso .dll<br>/sbin 存放特权级二进制文件<br>/var 一般存放经常变化的数据服务器日志<br>/home 用户家目录，私有数据，用户名相同的文件夹<br>/etc 系统配置文件存放目录.conf .cnf<br>/media 自动挂载设备目录 U盘、光盘<br>/lost+found ext系统文件<br>/srv<br>/tmp 临时文件目录(系统会自动删除其中的文件)<br>/boot 存放内核与启动程序相关文件，引导启动目录内核引导模块<br>/bin 存放二进制文件（可执行命令）常用命令<br>/usr 一般存放安装程序<br>/proc 内存中的实时信息虚拟目录<br>/root 特权用户（root）家目录<br>/opt 大型软件存放目录（非强制）oracle<br>/mnt 正常文件挂载目录<br>/selinux 安全机制相关文件<br>/sys 系统底层信息目录<br><img src="/content/images/2016/12/2.png" alt="image2"><br>命令”date”可以查看、设置当前系统时间<br>格式化显示日期： +%Y–%m–%d<br>显示UTC时间： date -u<br>修改系统时间： date -s<br>命令”hwclock（clock）”用以显示硬件时钟时间<br>命令”cal”用以查看日历<br>命令”uptime”用以查看系统运行时间</p>
-<p>命令”echo”用以显示输入的内容<br>命令”cat”用以显示文件内容<br>命令”head”可以显示文件的头几行(默认10行)<br>-n 指定显示的行数</p>
-<p>命令”tail”用以显示文件的末尾几行(默认10行)<br>-n 指定显示的行数<br>-f 追踪显示文件更新(一般用于查看日志,命令不会退出,而是持续显示新加入的内容)</p>
-<p>命令”more”用于翻页显示文件内容(只能向下翻)<br>命令”less”用于翻页显示文件内容(可上下翻)</p>
-<p>命令”lspci”用以查看PCI设备<br>-v 查看详细信息</p>
-<p>命令”lsusb”用以查看USB设备<br>-v 查看详细信息</p>
-<p>命令”lsmod”用以查看加载的模块(驱动)</p>
-<p>*注：lspci、lsusb等命令系统最小化安装未安装，可自行安装相关程序</p>
-<p>命令”shutdown”用以关闭、重启计算机<br>shutdown [-h|-r] 时间<br>-h 关闭计算机<br>-r 重新启动<br>如：<br>shutdown -h now 立即关机<br>shutdown -h +10 10分钟后关机<br>shutdown -h 23:30 晚上十一点半关机<br>shutdown -r now 立即重启</p>
-<p>命令”poweroff”可以立即关闭计算机<br>命令”reboot”可以立即重启计算机</p>
-<p>命令”zip”用以压缩文件<br>zip filename.zip file1 fiel2 …<br>命令”unzip”可以解压缩zip文件<br>unzip filename.zip<br>命令”gzip”可以压缩文件<br>gzip filename<br>命令”tar”可以归档文件<br>tar -cvf out.tar file1 file2 …<br>tar -xvf filename.tar<br>tar -cvzf out.tar.gz file file1 …<br>-z 参数将归档后的归档文件进行gzip压缩以减少大小</p>
-<p>命令”locate”用以快速查找文件、文件夹<br>locate keyword<br>此命令需预先建立数据库，数据库默认每天更新一次，可以使用”updatedb”命令手工建立、更新数据库</p>
-<p>命令”find”可以高级查找文件、文件夹：<br>find . -name <em>keyword</em> 在当前目录查找文件名中包含”keyword”的文件<br>find / -name <em>.conf 在根目录中查找文件名以”.conf”结尾的文件<br>find / -perm 777 在根目录中查找权限为”777”的文件<br>find / -type d 在根目录中查找类型为”d”(目录)的文件<br>find . -name “a</em>“ -exec ls -l {} \; 立即重启</p>
-<p>“find”支持很多种查找条件,常用的如下：<br>-name 按名称查找<br>-perm 按权限查找<br>-user 按所有者查找<br>-group 按所属用户组查找<br>-ctime 按创建时间查找<br>-type 按文件类型查找<br>-size 按文件大小查找</p>
-<p>vim三种模式<br>IDE设备的名称hd[a-z]<br>SATA\SCSI\SAS\USB则为sd[a-z]<br>分区：将一个磁盘逻辑分为几个区<br>/dev/sda /dev/sda1 /dev/sda2<br>主流分区机制分为MBR和GPT两种软件功能<br>MBR是传统的分区机制，应用于绝大多数使用BIOS的PC设备（苹果EFI引导）<br>MBR支持32和64位系统分区数量有限只支持不超过2T的硬盘超过将只能使用2T 有第三种解决办法企业P级<br>占用446+4*16+2=512<br>Bootstrap Code Area<br>Partition table for primary pav<br>Boot Signature 55h,AAh永久标记<br>主分区：最多4个分区<br>扩展分区：一个扩展分区会占一个主分区位置<br>逻辑分区：最多支持63个IDE和15个SCSI分区<br>GPT GUID Partition Table是一个较新的分区机制，解决了MBR很多缺点，支持超过2T磁盘，寻址空间32M,64M，向后兼容MBR，但必须在支持UEFI的硬件上才能使用，必须使用64bit，MAC和Linux系统都能支持GPT分区格式windows 7 64和windows server 2008 64bit支持 Z单位<br>FDISK分区工具是来自IBM的老牌分区工具，支持绝大多数操作系统，几乎所有的LINUX的发行版本都装有FDISK，包括在LINUX的RESCUE模式下依然能够使用<br>FDISK只能用于MBR<br>FDISK命令只有具有超级用户权限才能够运行使用FIDK–I可以列出所有安装的磁盘及其分区信息<br>使用fdisk/dev/sda可以对目标磁盘进行分区操作<br>分区后需要使用partprobe命令让内核更新分区信息，否则需要重启才能识别新的分区<br>/proc/partitions文件也可用来查看分区信息<br>逻辑分区从5开始</p>
-<p>文件系统<br>系统通过文件系统管理文件已数据，磁盘或分区需要创建文件系统之后才能够为系统使用，创建文件系统的过程有称之为格式化<br>没有文件系统的设备为又称之为裸设备<br>常见的文件系统有fat32 NTFS ext2 ext3 ext4 xfs HFS<br>其他有fat(msdos) vfat(fat32) nfs iso9660(光盘) proc(虚拟) gfs(全面文件系统) jfs(带日志) ntfs(装驱动)<br>文件系统之间的区别：日志，支持的分区大小，支持的单个文件大小，性能等</p>
-<p>MKE2FS命令用来创建文件系统<br>Mke2fs –t ext4 /dev/sda3<br>常用参数<br>-b blocksize指定文件系统块大小文件读写性能默认4k<br>-c check建立文件系统时检查坏损块<br>-L label指定卷标<br>-j 建立文件系统日志默认带（exe3 exe4）<br>MKFS命令也可用于，但参数少，不能精细化控制<br>mkfs ext4 /dev/sdb/</p>
-<p>DUMPE2FS命令&amp;UUID分区号可查看文件系统详细信息微调用</p>
-<p>JOURNAL日志<br>带日志的文件系统拥有较强的稳定性，在出现错误时可以进行恢复<br>使用带日志的文件系统，会使用一个叫做“两阶段提交”的方式进行磁盘操作，当进行磁盘操作时，文件系统进行一下操作：<br>1文件系统将准备执行的事务的具体内容写入日志<br>2文件系统进行操作<br>3操作成功后将食物的具体内容从日志中删除</p>
-<p>意外故障</p>
-<p>E2LABEL命令<br>可以用来为文件系统添加标签</p>
-<p>FSCK命令<br>用来检查并修复损坏的文件系统<br>-y不提示而直接进行修复<br>会自动判断文件系统类型，损坏严重，则加参数-t<br>对于识别为损坏的数据，文件系统无记录，会放入lost+found目录<br>系统启动时会对磁盘进行FSCK操作</p>
-<p>Linux系统挂载使用文件系统<br>挂载操作<br>磁盘或分区创建好文件系统后，需要挂载到一个目录才能够使用<br>Windows或MAC系统会进行自动挂载，一旦创建好文件系统后悔自动挂载到系统上，Windows上称之为C盘、D盘等<br>Linux需要手动进行挂载操作或配置系统进行自动挂载<br>/mnt<br>Mount<br>在Linux中，我们通过mount命令将格式化好的磁盘或分区挂载到一个目录上<br>Mount /dev/sda3 /mnt<br>常用参数<br>不带参数的mount命令会显示所有专辑挂载的文件系统<br>-t指定文件系统的类型<br>-o指定挂载选项<br>ro,rw以只读或读写形式挂载，默认是rw<br>sync代表不使用缓存，而是对所有操作直接写入磁盘<br>async代表使用缓存，默认是async<br>noatime代表每次访问文件时不更新文件的访问时间<br>atime代表每次访问文件时更新文件的访问时间<br>remount重新挂载文件系统<br>-ro只读就无法touch或rm命令<br>umount命令<br>用来卸载已挂载的文件系统，相当于windows中的弹出<br>umount 文件系统/挂载点<br>如果出现device is busy报错，则表示该文件系统正在被使用，无法卸载，可以使用以下命令查看使用文件系统的进程<br>fuser –m /mnt 或者 lsof /mnt查看正在使用的文件</p>
-<p>配置文件 /etc/fstab 用来定义需要自动挂载的文件系统，fstab中每一行代表一个挂载配置<br>格式如下：<br>双击打开fstab</p>
-<p>#开头是注释<br>分为五个部分<br>需要挂载的设备/dev/sda3<br>挂载点 /mnt<br>文件系统 /ext4<br>挂载选项defaults<br>Dump fsck相关选项 00<br>也可以用label取代路径进行识别<br>Mount –a 挂载fstab中的选项<br>先 umount /mnt/ label=…或uuid=…<br>w3m links wget less</p>
-<p>1 -h 或 –help<br>2 man命令最多最详细<br>manls<br>1 用户命令<br>2 内核系统调用<br>3 库函数<br>4 特殊文件和设备<br>5 文件格式和规范<br>6 游戏<br>7 规范、标准和其他页面<br>8 系统管理命令<br>9linux内核api<br>-k关键字<br>3 info类似网页的形式<br>4 doc 很多程序的txt,html,pdf等保存在/usr/share/doc目录中</p>
-<p>用户基础用户、组<br>需要以一个用户的身份登入，一个进程也需要以一个用户的身份运行，用户限制使用者或进程可以使用，不可以使用哪些组方便组织参观用户<br>每个用户拥有一个userid<br>每个用户属于一个主组，属于一个或多个附属组<br>每个组拥有一个groupid<br>每个进程以一个用户身份运行，并受该用户可访问的资源限制<br>每个可登陆用户拥有一个制定的shell</p>
-<p>用户id为32位，从0开始，但是为了和老式系统兼容，用户id限制在60000以下<br>用户分为以下三种<br>root用户 id为0<br>系统用户 id为1到499<br>普通用户500+<br>系统中的文件都有一个所属用户及所属组<br>使用id命令与passwd<br>/etc/passwd 用户信息 /etc/shadow用户密码/etc/group 组信息<br>查看登陆用户<br>命令whoami显示当前用户<br>命令who显示有哪些用户已经登陆系统并在干什么<br>命令w显示有哪些用户<br>创建一个用户<br>命令useradd用以创建一个新用户<br>建立一个与用户用户名相同的组，默认于这个组/skel<br>-d家目录<br>-s登陆shell<br>-u userid<br>-g 主组<br>-G附属组，最多31个，用，分割</p>
-<p>修改用户信息<br>usermod参数username<br>-I 新用户名<br>-u新用户id<br>-d用户家目录位置<br>-g用户所属主组<br>-G用户所属附属组<br>-L锁定用户使其不能登陆<br>-U解除锁定</p>
-<p>删除用户<br>userdel –r xxx同时删除家目录<br>每个组有一个组id，使用部门、职能或地理区域的分类形式<br>组信息保存在 /etc/group中<br>每个用户组拥有一个主组，同时还可以拥有最多31个附属组<br>groupadd<br>groupmod –n<br>groupmod –g<br>groupdel</p>
-<p>权限<br>限制对资源访问<br>读写执行目录必须拥有x权限否则无法浏览ugo模型<br>user group other (rwx) 分别设置9个权限<br>每一个文件拥有一个所属用户和所属组，对应UG，不属于该文件所属用户或所属组的使用o的权限<br>drwxr–xr- -z xxx training 208 oct/13:50 xxx.net<br>d文件类型 rwx：U权限 r-x：G权限 r–：O权限</p>
-<p>chown命令改变文件的所属用户<br>-R参数递归修改<br>命令chgrp用以改变文件的所属组<br>命令chmod用以修改文件的权限<br>格式如下：ugo/a +- rwx<br>Chmod u+rw xxx.net<br>g-x go+r a-x<br>也支持数字方式修改<br>-r=4<br>-w=2<br>-x=1<br>rw=4+2=6<br>rwx=4+2+1=7<br>r-x=4+1=5</p>
-<p>扩展权限<br>默认特殊权限<br>每一个终端都拥有一个umask属性，来确定新建文件，文件夹的默认权限<br>Umask使用数字权限方式表示，如：022<br>目录默认 777-umask<br>文件默认 666-umask<br>普通用户002<br>Root 022<br>新建文件权限：666-002=664<br>新建目录权限：777-002=775</p>
-<p>umask命令<br>除了普通权限外还有三个特殊权限<br>权限 对文件的影响 对目录的影响<br>suid 以文件的所属用户身份执行而非执行文件的用户 无<br>sgid 以文件所属组身份执行 与该目录中创建的任意新文件的所属组于该目录的所属组相同<br>sticky 无 对ultimate拥有写入权限的用户仅可以删除其拥有的文件，无法删除其他用户所拥有的文件 </p>
-<p>设置suid：chmod u+s xxx.net<br>设置sgid：chmod g+s xxx.net<br>设置sticky：chmod o+s xxx.net<br>特殊权限也可以使用数字方式表示–SUID=4 SGID=2 STICKY=1 chmod 4755 xxx.net</p>
-<p>网络原理网络编址（唯一定位）<br>ip编址是一个双层编址方案<br>一个ip标识一个主机（或一个网卡接口）<br>ipv4 32位 ipv6 128位地址不够用<br>网络部分和主机部分（几位并不固定）<br>所属区域和区域中的哪个主机<br>点分十进制4个部分、每个部分8位<br>192.168.1.1 三层地址<br>子网掩码来确定网络部分的位数<br>与ip地址一样，拥有32bit一一对应<br>ip地址中相对应子网掩码中为1的部分为网络部分255=1111111<br>255.255.255.0 /24<br>Mac地址用来在同一个网络内主机之间通信<br>固化地址网卡硬件地址二层地址<br>ARP地址解释协议<br>网关/路由器在不同网络之间传输数据的功能叫做路由功能<br>一般有多个接口，链接到不同的网络中，并且通过路由表进行数据转发<br>出接口etho 1 2 3..目标网络<br>主机名+域名+类型<br>DNS服务就是用来在ip于域名之间进行转换的<br>环回接口127.0.0.1<br>由DNS服务器提供解析域名<br>局域网跨网段可上网<br>以太网连接通过lspci命令可以查看网卡硬件信息<br>如果是USB网卡，则可能需要使用kusb命令<br>命令ifconfig命令用来查看接口信息<br>ifconfig –a 所有 etho特定<br>命令ifup ifdown用来启用、禁用一个接口<br>ifup eth0<br>ifdown eth0<br>setup命令配置网络信息<br>network configuration<br>device configuration<br>网卡配置文件/etc/sysconfig/network-scripts/ifcfg-eth0<br>DNS /etc/resolv.conf<br>主机名 /etc/sysconfig/network<br>静态主机名 /etc/hosts</p>
-<p>网络测试命令<br>ping 192.168.1.1 连通性<br>测试DNS解析host <a href="http://www.xxx.com" target="_blank" rel="external">http://www.xxx.com</a><br>显示路由表 ip roote<br>追踪到达目标地址 trace route<br>使用mtr进行网络质量测试<br>修改主机名<br>实时 hostname xxx.net<br>永久性/etc/sysconfig/network hostname=…<br>故障排查：从底层到高层，从自身到外部<br>先看网络配置网关 DNS ip host<br>Mount -0 remote rw/<br>Passwd …<br>启动grub引导管理程序进入修复<br>不同模式Stop shift recovery mode root</p>
-<p>Linux多买了协作：管重定向及文本处理<br>开源不要重复发明轮子很少出现复杂功能的命令<br>Linux中几乎命令返回数据为纯文本，多命令协作就是通过管道和重定向完成的<br>命令行shell的数据流有以下定义<br>名称 说明 编号 默认<br>STDIN 标准输入 0 键盘<br>STDOUT 标准输出 1 终端<br>STDERR 标准错误 2 终端<br>命令通过STDIN接受参数或数据，通过STDOUT输出结果或通过STDERR输出错误。</p>
-<p>分类 关键字 定义 例子<br>重定向 &gt; 将STDOUT重定向到文件（覆盖） echo”…”&gt;outfile ls&gt;outfile<br>>&gt; 将STDOUT重定向到文件（追加） echo”…”&gt;&gt;outfile date&gt;&gt;outfile<br>2&gt; 将STDERR重定向到文件（覆盖） ls nowhere 2&gt; errorout<br>2&gt;&amp;1 将STDERR与STDOUT结合 ls nowhere 2&gt;&amp;1 alloutput<br>&lt; 重定向STDIN grep …&lt; /etc/passwd<br>管道 | 将一个命令的STDOUT作为另一个命令的STDIN ls -1 | grep …<br>find /-user… | grep video </p>
-<p>命令行文本处理工具<br>命令grep用以基于关键字搜索文本<br>grep ‘…’ /etc/passwd<br>find / -user …| grep video<br>-i在搜索的时候忽略大小写<br>-n显示结果所在行数<br>-v输出不带关键字的行<br>-Ax在输出的时候包含结果所在行之后的指定行数<br>-Bx在输出的时候包含结果所在行之前的指定行数</p>
-<p>基于列处理文本<br>命令cut用以基于列处理文本内容<br>cut –d: -f1 /etc/passwd<br>grep … /etc/passwd | cut –d: -f3</p>
-<p>-d指定分割字符（默认是TAB）<br>-f指定输出的列号<br>-c基于字符进行切割 cut –c2-6/etc/passwd</p>
-<p>文本统计<br>命令WC用以统计文本信息 wc …<br>-l 只统计行数<br>-w 只统计单词<br>-c 只统计字节数<br>-m 字符数</p>
-<p>文本排序<br>命令sort用以对文本内容进行排序<br>-r 进行倒序排序<br>-n 基于数字进行排序<br>-f 忽略大小写<br>-v 产出重复行<br>-tc 使用c作为分隔符分割为列进行排序<br>-kx当进行基于指定字符分割为列的排序时，指定基于那个列排序</p>
-<p>命令uniq用以删除重复的相邻行</p>
-<p>文本比较<br>命令diff用以比较两个文件的区别<br>-I 忽略大小写<br>-b 忽略空格数量的改变<br>-u 统一显示比较信息（一般用以生成patch补丁文件）<br>diff –u … …-new &gt; final .patch</p>
-<p>检查拼写<br>命令aspell用以显示检查英文拼写<br>aspell check …<br>aspell list &lt; …</p>
-<p>处理文本内容<br>命令tr用以处理文本内容<br>删除关键字<br>tr –d ‘TMD’ &lt; …<br>转换大小写<br>tr ‘a-z’ ‘A-Z’ &lt; …</p>
-<p>搜索替换<br>命令sed用以搜索并替换文本<br>sed ‘s/linux/unix/g’ …<br>sed ‘1,50s/linux/unix/g’ …<br>sed –e ‘s/linux/unix/g’ –e ‘s/jimmy/g’ …<br>sed –f sededit …</p>
-<p>Linux系统启动<br>BIOS:基本输入输出系统负责检查硬件并查找可启动设备（USB、CDROM、HD）<br>MBR:BIOS找到设备后执行其引导代码BOOT CODE55AA前446字节EFI查找引导程序<br>GRUB:主流引导程序执行引导程序/boot/grub/grub.conf对应的配置文件，微软NTLDI<br>加载内核<br>执行init<br>Runlevel</p>
-<p>stage1第一阶段512同MBR大小只是镜像可回写<br>_stage1_5 文件系统驱动e2fs,fat,ffs,jfs,minix,reiserfs,iso9660,ufs2,ustafs,xfs<br>stage2 timeout=3 splashimage= hidden menutitle root(hd0,1)<br>内核kernel…<br>initrd</p>
-<p>MBR的引导代码将负责找到并加载linux内核<br>Linux内核保存在/boot/vmlinuz-2.6.32-279.el6.i686<br>一般还会加载内核模块打包文件/boot/initramfs-2.6.32-279.el6.i686.img<br>Linux为何保持kernal的精简将一些不常用的驱动功能编译成为模块，在需要的时候动态加载，而这些模块被打包保存为一个initramfs文件<br>早期版本linux使用initrd文件，initramfs是initrd的替代优化，更节省空间，更灵活<br>命令dmesg可以查看本次启动时内核的输出信息<br>Init<br>Init是linux OS中的第一个进程，PID接启动顺序排，一直存在，是所有进程的父进程<br>调用/ect/rc.d/rc.sysinit负责对系统进行初始化，挂载文件系统并且根据运行级别启动相应服务-0关机-1单用户模式-2不带网络的多用户模式-3多用户模式-4未使用-5XII图形化模式-6重新启动，可以通过/etc/inittab配置文件修改默认的运行级别，每个级别对应的启动服务保存在/etc/rc.d/rc[0123456].d中<br>命令runlevel可现实当前及上一个运行级别<br>命令init可用以改变当前运行级别</p>
-<p>单用户修改root密码<br>为内核传递参数’1’或’single’可系统进入单用户模式<br>单用户模式下不启动任何服务<br>单用户模式直接以root用户登录，并且不需要密码 e,1,b<br>可以使用passwd修改root密码 exit<br>Grub加密<br>通过在grub.conf中的启动配置中加入如下参数即可对grub进行加密<br>Password –md5$1$aoWpTe$/MWUUYbBIF.2RUZK8nbWUo<br>加密后的密码可以通过grub-md5-crypt生成</p>
-<p>Linux软件管理RPM、YUM<br>源代码形式<br>绝大多数开源软件都是直接以源代码形式发布<br>源代码一般会被打包成tar.gz归档压缩文件<br>程序源代码需要编译成为二进制形式之后才能够运行使用<br>源代码基本编译流程<br>1./configure检查编译环境，相关库文件以及配置参数并生成makefile<br>2make源代码进行编译，生成可执行文件<br>3make install将生成的可执行文件安装到当前计算机中源代码形式的软件使用起来较为麻烦，但是兼容性及可控制性较好<br>开源软件一般都会大量使用其他开源软件的功能，所以开源软件会有大量的依赖关系（使用某软件需要先安装其他软件）</p>
-<p>RPM<br>源代码形式的缺点：操作复杂，编译时间较大，极容易出错<br>源代码形式的优点：适用所有系统，可定制<br>为了方便使用，Erik Troan 和Marc Ewing开发有Redhat Package Manager通过将源代码基于特定平台系统编译为可执行文件，并保存依赖关系，来简化开源软件的安装管理<br>RPM设计目标如下：使用简单；使用单一软件包格式文件发布（.rpm文件）；可升级；追踪软件依赖关系；基本信息查询；软件验证功能；支持多平台<br>基础命令<br>安装rpm –i software.rpm 卸载rpm –e software 升级rpm –U software-new.rpm<br>rpm支持通过http,ftp协议安装软件：<br>rpm –ivh <a href="http://www...net/software.rpm" target="_blank" rel="external">http://www...net/software.rpm</a><br>可以加入一下参数–v显示释放信息–h显示进度条<br>rpm查询<br>rpm –qa 列出所有安装的rpm软件<br>rpm –qf filename查询目标文件属于哪个包<br>rpm –qi packagename查询指定已安装rpm软件的信息<br>rpm –ql packagename查询指定已安装rpm软件包含的文件<br>rpm –qip software.rpm查询rpm文件的信息<br>rpm –qlp software.rpm查询rpm文件包含的文件<br>rpm验证：软件在传播过程中可能会被恶意地修改所以为了安全起见现代系统都加入也对软件的验证功能，一般使用非对称加密算法，送一需要一个密钥验证rpm文件rpm –k software.rpm，验证已安装的软件rpm –vsoftware</p>
-<p>YUM<br>rpm软件包形式管理软件虽方便，但需要手工解决软件包的依赖关系，很多时候安装一个软件需要首先安装一个或多个（又是多达上百个）其他软件，手工解决时很复杂使YUM可以解决这个问题。<br>Yellowdog Updater Modified是一个rpm的前端程序，主要目的是设计用来自动解决rpm的依赖关系问题，其特点如下：自动解决依赖关系；可以对rpm进行分组，并基于组织进行安装操作；引入仓库概念，支持多个仓库；配置简单<br>YUM引入了仓库的概念，仓库用来存放所有现有的rpm的软件包，当使用yum安装一个rpm软件的时候，会自动在仓库中查找依赖软件并安装，仓库可以是本地的，也可以通过http,ftp或nfs形式使用集中的，统一的网络仓库<br>YUM使用仓库保存管理rpm软件包，仓库的配置文件保存在/etc/yum.repos.d/目录下，格式如下：<br>[…]<br>Name=This is … rpm soft repo<br>Baseurl=<a href="http://www…net/yum/centos/6/i386/rpms" target="_blank" rel="external">http://www…net/yum/centos/6/i386/rpms</a><br>Enabled=1<br>gpgcheck=1<br>仓库可以使用file,http,ftp,nfs方式<br>Yum配置文件必须以.repo结尾<br>一个配置文件内可以保存多个仓库的配置信息<br>/etc/yum.repos.d/目录下可以存在多个配置文件</p>
-<p>YUM基本命令<br>安装yum install software-name<br>卸载yum remove software-name<br>升级yum update software-name<br>YUM查询<br>搜索yum search keyword<br>yum list (all|installed|recent|updates)<br>yum info packagename<br>yum whatprovides /etc/inittab</p>
-<p>创建YUM仓库<br>可以通过以下手工创建<br>1将所有rpm文件拷贝到一个文件夹中<br>2通过rpm命令手工安装createrepo软件<br>3运行命令createrepo –v/rpm-directory<br>4如果有分组信息，则在运行命令的时候使用-g参数指定分组文件<br>Createrepo –g /tmp/*comps.xml/rpm-directory<br>CentOS/RHEL的分组信息保存在光盘repodata/目录下，文件名以comps.xml结尾的xml文件<br>创建好之后本机可以通过file方式直接使用，如果需要作为对外的yum仓库服务器，可以通过http,ftp或nfs协议共享出去<br>yum cache 为了提高速度会通过缓存很多信息，但是有时候缓存会造成一些故障，可以通过以下命令来清除缓存：yum clean all<br>每次运行安装或查询类命令会重建yum缓存</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2016/12/06/good-posts-i-found/" data-id="cj8vas29e0006h4akvkocjj22" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li></ul>
 
     </footer>
   </div>
@@ -727,6 +611,10 @@ I use these codes to initialize a entry table.
       <ul>
         
           <li>
+            <a href="/blog/2017/10/23/getopt-function-on-raspery-pi/">getopt() function on raspery pi</a>
+          </li>
+        
+          <li>
             <a href="/blog/2017/10/17/The-Harmonic-Series-how-comes-the-divergence/">The Harmonic Series: How Comes the Divergence</a>
           </li>
         
@@ -740,10 +628,6 @@ I use these codes to initialize a entry table.
         
           <li>
             <a href="/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/">Pass Strings from Python to C/CPP libs</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2017/10/05/Some-Thoughts-on-Deep-Neural-Networks-and-Handwritten-digit-recognition/">Some Thoughts on Deep Neural Networks and Handwritten digit recognition</a>
           </li>
         
       </ul>

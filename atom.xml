@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-10-19T14:07:02.701Z</updated>
+  <updated>2017-10-23T08:25:24.764Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>getopt() function on raspery pi</title>
+    <link href="https://d0048.github.io/blog/2017/10/23/getopt-function-on-raspery-pi/"/>
+    <id>https://d0048.github.io/blog/2017/10/23/getopt-function-on-raspery-pi/</id>
+    <published>2017-10-23T08:20:57.000Z</published>
+    <updated>2017-10-23T08:25:24.764Z</updated>
+    
+    <content type="html"><![CDATA[<p>While the <code>getopt()</code> function provided by <code>getopt.h</code> usually returns <code>-1</code> after there are no more arguments. But probably due to certain issues relating to treatment of signs of integers on arm-devices (to be researched), it might return <code>255</code> instead when out of arguments. </p><p>2017/10/23</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;While the &lt;code&gt;getopt()&lt;/code&gt; function provided by &lt;code&gt;getopt.h&lt;/code&gt; usually returns &lt;code&gt;-1&lt;/code&gt; after there are no more argume
+      
+    
+    </summary>
+    
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="C" scheme="https://d0048.github.io/blog/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>The Harmonic Series: How Comes the Divergence</title>
@@ -483,31 +508,6 @@ Traceback
     
     
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Meanings of abnormal memories value in visual studio under debug mode</title>
-    <link href="https://d0048.github.io/blog/2017/05/11/meanings-of-memory-excpetion-in-visual-studio-under-debug-mode/"/>
-    <id>https://d0048.github.io/blog/2017/05/11/meanings-of-memory-excpetion-in-visual-studio-under-debug-mode/</id>
-    <published>2017-05-11T11:42:58.000Z</published>
-    <updated>2017-05-11T11:51:29.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Thanks for the ide tool, the environment is controlled to provide faster problem locationg function.</p><p>As I quote from msdn:</p><pre>* 0xcccccccc : Used by Microsoft's C++ debugging runtime library to mark uninitialised stack memory = (char)'烫'</pre><pre>* 0xcdcdcdcd : Used by Microsoft's C++ debugging runtime library to mark uninitialised heap memory = (char)'屯'</pre><pre>* 0xfeeefeee : Used by Microsoft's HeapFree() to mark freed heap memory</pre><pre>* 0xabababab : Used by Microsoft's HeapAlloc() to mark "no man's land" guard bytes after allocated heap memory</pre><pre>* 0xabadcafe : A startup to this value to initialize all free memory to catch errant pointers</pre><pre>* 0xbaadf00d : Used by Microsoft's LocalAlloc(LMEM_FIXED) to mark uninitialised allocated heap memory</pre><pre>* 0xbadcab1e : Error Code returned to the Microsoft eVC debugger when connection is severed to the debugger</pre><pre>* 0xbeefcace : Used by Microsoft .NET as a magic number in resource files</pre><p>These will be useful for bebugging!<br>2017/5/11</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Thanks for the ide tool, the environment is controlled to provide faster problem locationg function.&lt;/p&gt;
-&lt;p&gt;As I quote from msdn:&lt;/p&gt;
-&lt;pr
-      
-    
-    </summary>
-    
-    
-      <category term="Debug" scheme="https://d0048.github.io/blog/tags/Debug/"/>
     
   </entry>
   

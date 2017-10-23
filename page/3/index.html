@@ -79,6 +79,57 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-meanings-of-memory-excpetion-in-visual-studio-under-debug-mode" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/05/11/meanings-of-memory-excpetion-in-visual-studio-under-debug-mode/" class="article-date">
+  <time datetime="2017-05-11T11:42:58.000Z" itemprop="datePublished">2017-05-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/05/11/meanings-of-memory-excpetion-in-visual-studio-under-debug-mode/">Meanings of abnormal memories value in visual studio under debug mode</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Thanks for the ide tool, the environment is controlled to provide faster problem locationg function.</p>
+<p>As I quote from msdn:</p>
+<pre>
+* 0xcccccccc : Used by Microsoft's C++ debugging runtime library to mark uninitialised stack memory = (char)'烫'</pre>
+<pre>* 0xcdcdcdcd : Used by Microsoft's C++ debugging runtime library to mark uninitialised heap memory = (char)'屯'</pre>
+<pre>* 0xfeeefeee : Used by Microsoft's HeapFree() to mark freed heap memory</pre>
+<pre>* 0xabababab : Used by Microsoft's HeapAlloc() to mark "no man's land" guard bytes after allocated heap memory</pre>
+<pre>* 0xabadcafe : A startup to this value to initialize all free memory to catch errant pointers</pre>
+<pre>* 0xbaadf00d : Used by Microsoft's LocalAlloc(LMEM_FIXED) to mark uninitialised allocated heap memory</pre>
+<pre>* 0xbadcab1e : Error Code returned to the Microsoft eVC debugger when connection is severed to the debugger</pre>
+<pre>* 0xbeefcace : Used by Microsoft .NET as a magic number in resource files</pre>
+
+<p>These will be useful for bebugging!<br>2017/5/11</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/05/11/meanings-of-memory-excpetion-in-visual-studio-under-debug-mode/" data-id="cj93x35zr001pjqakw2miycj7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Debug/">Debug</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-ways-to-compress-file-into-sub-packages-in-linux" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2017/04/27/ways-to-compress-file-into-sub-packages-in-linux/" class="article-date">
@@ -107,7 +158,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/27/ways-to-compress-file-into-sub-packages-in-linux/" data-id="cj8vas2a2000ph4akfe0qfv2d" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/27/ways-to-compress-file-into-sub-packages-in-linux/" data-id="cj93x35z30011jqakxi1vi3yw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -151,7 +202,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/25/problems-with-the-schools-sms-log-system-that-contains-high-vulnerabilities/" data-id="cj8vas2bk0022h4aku0km1eew" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/25/problems-with-the-schools-sms-log-system-that-contains-high-vulnerabilities/" data-id="cj93x36090029jqakxvnts7b9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -193,7 +244,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/18/run-custom-script/" data-id="cj8vas2bm0025h4akrftquw8t" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/18/run-custom-script/" data-id="cj93x360c002ejqakuz9kmoaz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -233,7 +284,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/17/genymotion-can-not-login-even-with-correct-password-and-user-name/" data-id="cj8vas2av001ah4akj7muy40n" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/17/genymotion-can-not-login-even-with-correct-password-and-user-name/" data-id="cj93x35zg001djqakumas6tpj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -273,7 +324,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/17/virtual-box-error-rtr3init-failed-with-rc-1912-rc-1912/" data-id="cj8vas2cm003gh4akhf6ebdkf" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/17/virtual-box-error-rtr3init-failed-with-rc-1912-rc-1912/" data-id="cj93x3615003mjqakxxes9twf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -442,7 +493,7 @@ ${color black}$hr
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/10/a-conky-profile-that-allows-notes-from-file-to-be-displayed-on-desktop/" data-id="cj8vas29m000bh4akdxcdoat3" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/10/a-conky-profile-that-allows-notes-from-file-to-be-displayed-on-desktop/" data-id="cj93x35yc000ejqakxsw5d1vn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -483,7 +534,7 @@ ${color black}$hr
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/09/solve-the-conky-transparent-issue-under-unity-desktop/" data-id="cj8vas2bu002fh4akaomavofz" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/09/solve-the-conky-transparent-issue-under-unity-desktop/" data-id="cj93x360i002ljqakmcklck8s" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -523,7 +574,7 @@ ${color black}$hr
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/09/solve-the-problem-that-conky-window-disappears-after-clicking-desktop/" data-id="cj8vas2cs003nh4akruzwr8fq" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/09/solve-the-problem-that-conky-window-disappears-after-clicking-desktop/" data-id="cj93x363u005jjqakfy26g4d5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -567,50 +618,10 @@ ${color black}$hr
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/05/ways-to-share-the-same-profile-among-chromium-and-chrome-under-ubuntu/" data-id="cj8vas2cy003sh4aks9m11e9c" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/05/ways-to-share-the-same-profile-among-chromium-and-chrome-under-ubuntu/" data-id="cj93x3614003kjqake67n6ji4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-transform-int-to-string-in-java" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2017/03/23/transform-int-to-string-in-java/" class="article-date">
-  <time datetime="2017-03-23T06:22:51.000Z" itemprop="datePublished">2017-03-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2017/03/23/transform-int-to-string-in-java/">Transform int to String in Java</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Instead of using <code>str.startWith(1)</code>, just use <code>str.startWith(1+&quot;&quot;)</code> instead and let the grammar sugar added by the compiler finish the rest of the job!</p>
-<p>2017/3/23 14:15</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/23/transform-int-to-string-in-java/" data-id="cj8vas2c6002zh4aki45ktv70" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
 
     </footer>
   </div>
@@ -667,6 +678,10 @@ ${color black}$hr
       <ul>
         
           <li>
+            <a href="/blog/2017/10/23/getopt-function-on-raspery-pi/">getopt() function on raspery pi</a>
+          </li>
+        
+          <li>
             <a href="/blog/2017/10/17/The-Harmonic-Series-how-comes-the-divergence/">The Harmonic Series: How Comes the Divergence</a>
           </li>
         
@@ -680,10 +695,6 @@ ${color black}$hr
         
           <li>
             <a href="/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/">Pass Strings from Python to C/CPP libs</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2017/10/05/Some-Thoughts-on-Deep-Neural-Networks-and-Handwritten-digit-recognition/">Some Thoughts on Deep Neural Networks and Handwritten digit recognition</a>
           </li>
         
       </ul>

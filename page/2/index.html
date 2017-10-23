@@ -79,6 +79,49 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-solve-missingsectionheadererror-file-contains-no-section-headers-in-configphaser-pyhton" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/09/05/solve-missingsectionheadererror-file-contains-no-section-headers-in-configphaser-pyhton/" class="article-date">
+  <time datetime="2017-09-05T12:44:57.000Z" itemprop="datePublished">2017-09-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/09/05/solve-missingsectionheadererror-file-contains-no-section-headers-in-configphaser-pyhton/">Solve </a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>While reading config files with utf-8 BOM header, configphaser throws this confusing exception. </p>
+<p>While most of the online solutions suggests manually change the encoding of the file to ANSCII, or read the file and save it again in another format. The former drops support to special characters and the latter is just not easy enough.</p>
+<p>I found that the default ConfigPhaser uses non-encoded format. In order to make sure it reads the file in the correct format:<br><code>configphaser.ConfigPhaser().read(config_file, encoding=&quot;utf-8-sig&quot;)</code></p>
+<p>This should tell the phaser to use the utf-8 encoding with bom.</p>
+<p>2017/9/5</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/09/05/solve-missingsectionheadererror-file-contains-no-section-headers-in-configphaser-pyhton/" data-id="cj93x360j002ojqakl7jhc1v7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-cong-e-ni-cong-er-neng-sui" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2017/09/03/cong-e-ni-cong-er-neng-sui/" class="article-date">
@@ -111,7 +154,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/09/03/cong-e-ni-cong-er-neng-sui/" data-id="cj8vas2by002kh4aki3slt3x9" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/09/03/cong-e-ni-cong-er-neng-sui/" data-id="cj93x36060027jqakp76lvhyn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Security/">Security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li></ul>
@@ -152,7 +195,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/08/02/casting-java-obj-into-string/" data-id="cj8vas2c1002ph4aky0bntrt7" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/08/02/casting-java-obj-into-string/" data-id="cj93x35zy001ujqak2c977kwq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -192,7 +235,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/07/20/vim-plugin-syntastic-works-without-error-or-effect/" data-id="cj8vas2d1003xh4ak9j40e2r2" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/07/20/vim-plugin-syntastic-works-without-error-or-effect/" data-id="cj93x361j0041jqaknnn310wi" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Vim/">Vim</a></li></ul>
@@ -235,7 +278,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/07/11/audio-device-disabled-and-replaced-by-dummy-audio-after-using-hdajackretask/" data-id="cj8vas2a8000rh4akyok1qoh0" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/07/11/audio-device-disabled-and-replaced-by-dummy-audio-after-using-hdajackretask/" data-id="cj93x35z0000xjqak650oxf2d" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -322,7 +365,7 @@ So I looked for the source code in c posix library(From here:https://code.woboq.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/06/13/a-few-points-need-to-be-caution-while-using-crypt-in-c/" data-id="cj8vas29o000dh4aksrqa1c5p" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/06/13/a-few-points-need-to-be-caution-while-using-crypt-in-c/" data-id="cj93x35ya000djqakks8ndacp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li></ul>
@@ -386,7 +429,7 @@ class class_name{
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/05/17/how-to-have-two-header-files-contain-each-other-to-use-the-others-class-2/" data-id="cj8vas2az001fh4ak7sfuoi4u" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/05/17/how-to-have-two-header-files-contain-each-other-to-use-the-others-class-2/" data-id="cj93x35zp001njqakjrdlhdlb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li></ul>
@@ -426,7 +469,7 @@ class class_name{
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/05/15/machine-learning-are-really-advancing-these-days/" data-id="cj8vas2b3001lh4akrc0jjsda" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/05/15/machine-learning-are-really-advancing-these-days/" data-id="cj93x35zn001kjqakrs544kjh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li></ul>
@@ -470,7 +513,7 @@ class class_name{
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/05/13/important-stuff-about-the-crypt-function-in-crypt-h-under-linux/" data-id="cj8vas2b0001gh4ak5o2a3x5r" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/05/13/important-stuff-about-the-crypt-function-in-crypt-h-under-linux/" data-id="cj93x35zm001ijqakttbb5k8g" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li></ul>
@@ -528,61 +571,10 @@ class class_name{
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/05/12/migrate-everything/" data-id="cj8vas2bb001qh4ak0da1muyp" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/05/12/migrate-everything/" data-id="cj93x3602001zjqak58454kdg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-meanings-of-memory-excpetion-in-visual-studio-under-debug-mode" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2017/05/11/meanings-of-memory-excpetion-in-visual-studio-under-debug-mode/" class="article-date">
-  <time datetime="2017-05-11T11:42:58.000Z" itemprop="datePublished">2017-05-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2017/05/11/meanings-of-memory-excpetion-in-visual-studio-under-debug-mode/">Meanings of abnormal memories value in visual studio under debug mode</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Thanks for the ide tool, the environment is controlled to provide faster problem locationg function.</p>
-<p>As I quote from msdn:</p>
-<pre>
-* 0xcccccccc : Used by Microsoft's C++ debugging runtime library to mark uninitialised stack memory = (char)'烫'</pre>
-<pre>* 0xcdcdcdcd : Used by Microsoft's C++ debugging runtime library to mark uninitialised heap memory = (char)'屯'</pre>
-<pre>* 0xfeeefeee : Used by Microsoft's HeapFree() to mark freed heap memory</pre>
-<pre>* 0xabababab : Used by Microsoft's HeapAlloc() to mark "no man's land" guard bytes after allocated heap memory</pre>
-<pre>* 0xabadcafe : A startup to this value to initialize all free memory to catch errant pointers</pre>
-<pre>* 0xbaadf00d : Used by Microsoft's LocalAlloc(LMEM_FIXED) to mark uninitialised allocated heap memory</pre>
-<pre>* 0xbadcab1e : Error Code returned to the Microsoft eVC debugger when connection is severed to the debugger</pre>
-<pre>* 0xbeefcace : Used by Microsoft .NET as a magic number in resource files</pre>
-
-<p>These will be useful for bebugging!<br>2017/5/11</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/05/11/meanings-of-memory-excpetion-in-visual-studio-under-debug-mode/" data-id="cj8vas2b7001nh4ak54nqz131" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Debug/">Debug</a></li></ul>
 
     </footer>
   </div>
@@ -639,6 +631,10 @@ class class_name{
       <ul>
         
           <li>
+            <a href="/blog/2017/10/23/getopt-function-on-raspery-pi/">getopt() function on raspery pi</a>
+          </li>
+        
+          <li>
             <a href="/blog/2017/10/17/The-Harmonic-Series-how-comes-the-divergence/">The Harmonic Series: How Comes the Divergence</a>
           </li>
         
@@ -652,10 +648,6 @@ class class_name{
         
           <li>
             <a href="/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/">Pass Strings from Python to C/CPP libs</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2017/10/05/Some-Thoughts-on-Deep-Neural-Networks-and-Handwritten-digit-recognition/">Some Thoughts on Deep Neural Networks and Handwritten digit recognition</a>
           </li>
         
       </ul>
