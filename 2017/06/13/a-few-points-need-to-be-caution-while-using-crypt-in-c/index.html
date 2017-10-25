@@ -157,7 +157,7 @@ So I looked for the source code in c posix library(From here:https://code.woboq.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/06/13/a-few-points-need-to-be-caution-while-using-crypt-in-c/" data-id="cj970fcng000b40aka99h7cgf" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/06/13/a-few-points-need-to-be-caution-while-using-crypt-in-c/" data-id="cj970ge5n000fecakjg8or0tj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li></ul>
@@ -308,6 +308,21 @@ s.setAttribute('data-timestamp', +new Date());
 
 <script src="/blog/js/script.js"></script>
 
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
