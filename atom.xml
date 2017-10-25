@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-10-25T12:26:15.434Z</updated>
+  <updated>2017-10-25T14:00:43.011Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://d0048.github.io/blog/2017/10/25/to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch/"/>
     <id>https://d0048.github.io/blog/2017/10/25/to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch/</id>
     <published>2017-10-25T12:14:52.000Z</published>
-    <updated>2017-10-25T12:26:15.434Z</updated>
+    <updated>2017-10-25T14:00:43.011Z</updated>
     
-    <content type="html"><![CDATA[<p><code>TypeError: to_categorical() missing 1 required positional argument: &#39;nb_classes&#39;</code> was encountered while I was trying to run an example program based on it.</p><p>The function <code>to_catagorical()</code> used to require two arguments, where the second is called <code>nb_classes</code> and represents the total class numbers in classification as an integer. </p><p>It’s not until this <a href="https://github.com/tflearn/tflearn/pull/923" target="_blank" rel="external">pr</a> that the second function is no longer needed but the support for the previous usage is dropped and all the examples are updated to adapt to the new usage.</p><p>However, until today, the default version installed directed from pip is not new enough to support this new feature, thus causing a problem. </p><p>To solve it, either try update to the newest version via <code>pip install git+https://github.com/tflearn/tflearn.git</code> or just add the class number. </p>]]></content>
+    <content type="html"><![CDATA[<p><code>TypeError: to_categorical() missing 1 required positional argument: &#39;nb_classes&#39;</code> was encountered while I was trying to run an example program based on it.</p><p>The function <code>to_catagorical()</code> used to require two arguments, where the second is called <code>nb_classes</code> and represents the total class numbers in classification as an integer. </p><p>It’s not until this <a href="https://github.com/tflearn/tflearn/pull/923" target="_blank" rel="external">pr</a> that the second function is no longer needed but the support for the previous usage is dropped and all the examples are updated to adapt to the new usage.</p><p>However, until today, the default version installed directed from pip is not new enough to support this new feature, thus causing a problem. </p><p>To solve it, either try update to the newest version via <code>pip install git+https://github.com/tflearn/tflearn.git</code> or just add the class number. </p><p>2017/10/25</p>]]></content>
     
     <summary type="html">
     
