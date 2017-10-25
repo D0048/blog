@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="D0048">
 <meta property="og:description" content="What does it do?This is pretty straight forward, just like normal convolution operation, it converts a piece of data structured [channels, height, width] to [kernal_numbers, same_height, same_width],">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-25T11:04:26.671Z">
+<meta property="og:updated_time" content="2017-10-25T12:12:15.925Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Note and Questions on 1x1 Convolutions">
 <meta name="twitter:description" content="What does it do?This is pretty straight forward, just like normal convolution operation, it converts a piece of data structured [channels, height, width] to [kernal_numbers, same_height, same_width],">
@@ -120,7 +120,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/25/Note-and-Questions-on-1x1-Convolutions/" data-id="cj96q59i9001snwakobdb3pai" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/25/Note-and-Questions-on-1x1-Convolutions/" data-id="cj970dvqt0023pgakycfsgjom" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ML/">ML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Problem/">Problem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li></ul>
@@ -262,6 +262,21 @@ s.setAttribute('data-timestamp', +new Date());
 
 <script src="/blog/js/script.js"></script>
 
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>

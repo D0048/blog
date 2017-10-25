@@ -6,7 +6,7 @@
   <title>The C and C++ style ways to transfrom int into *char or string | D0048</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="There are a few ways of doing that.   Keep minusing the value until value%10 = 10 to get each of the values in ASCII. (C way)  Use function char*itoa(int value,char*string,int radix);. ==Microsoft onl">
-<meta name="keywords" content="Solution,C,CPP">
+<meta name="keywords" content="Solution,CPP,C">
 <meta property="og:type" content="article">
 <meta property="og:title" content="The C and C++ style ways to transfrom int into *char or string">
 <meta property="og:url" content="https://d0048.github.io/blog/2017/03/15/the-c-and-c-style-ways-to-transfrom-int-into-char-or-stream/index.html">
@@ -126,7 +126,7 @@ inline std::string its(int i){
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/15/the-c-and-c-style-ways-to-transfrom-int-into-char-or-stream/" data-id="cj96q59j6002qnwak5cbzkn6a" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/03/15/the-c-and-c-style-ways-to-transfrom-int-into-char-or-stream/" data-id="cj970dvte005spgaktfstvtf7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -277,6 +277,21 @@ s.setAttribute('data-timestamp', +new Date());
 
 <script src="/blog/js/script.js"></script>
 
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
