@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://d0048.github.io/blog/2017/10/25/to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch/</loc>
+    
+    <lastmod>2017-10-25T12:26:15.434Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://d0048.github.io/blog/2017/10/25/Note-and-Questions-on-1x1-Convolutions/</loc>
     
     <lastmod>2017-10-25T12:12:15.925Z</lastmod>

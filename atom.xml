@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-10-25T12:12:15.925Z</updated>
+  <updated>2017-10-25T12:26:15.434Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>to_categorical() missing 1 required positional argument nb_classes caused by tflearn version mismatch</title>
+    <link href="https://d0048.github.io/blog/2017/10/25/to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch/"/>
+    <id>https://d0048.github.io/blog/2017/10/25/to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch/</id>
+    <published>2017-10-25T12:14:52.000Z</published>
+    <updated>2017-10-25T12:26:15.434Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>TypeError: to_categorical() missing 1 required positional argument: &#39;nb_classes&#39;</code> was encountered while I was trying to run an example program based on it.</p><p>The function <code>to_catagorical()</code> used to require two arguments, where the second is called <code>nb_classes</code> and represents the total class numbers in classification as an integer. </p><p>It’s not until this <a href="https://github.com/tflearn/tflearn/pull/923" target="_blank" rel="external">pr</a> that the second function is no longer needed but the support for the previous usage is dropped and all the examples are updated to adapt to the new usage.</p><p>However, until today, the default version installed directed from pip is not new enough to support this new feature, thus causing a problem. </p><p>To solve it, either try update to the newest version via <code>pip install git+https://github.com/tflearn/tflearn.git</code> or just add the class number. </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;code&gt;TypeError: to_categorical() missing 1 required positional argument: &amp;#39;nb_classes&amp;#39;&lt;/code&gt; was encountered while I was trying 
+      
+    
+    </summary>
+    
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
+    
+      <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>Note and Questions on 1x1 Convolutions</title>
@@ -489,29 +516,6 @@ Traceback
     
     
       <category term="Thoughts" scheme="https://d0048.github.io/blog/tags/Thoughts/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Important stuff about the crypt() function in crypt.h under linux</title>
-    <link href="https://d0048.github.io/blog/2017/05/13/important-stuff-about-the-crypt-function-in-crypt-h-under-linux/"/>
-    <id>https://d0048.github.io/blog/2017/05/13/important-stuff-about-the-crypt-function-in-crypt-h-under-linux/</id>
-    <published>2017-05-13T04:15:08.000Z</published>
-    <updated>2017-05-25T07:30:45.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>The <code>char* crypt(char*salt, char* str);</code> function is used for one-way encryption with salt.  However, the buffer it returns is always the same piece of memory so it may appear to be returning duplicated results.</p><p>Solution: Use <code>strcp()</code> or <code>strdup()</code> to make a copy of the result every-time after invokes. Also, remember to free the memory after use. </p><p>Example:</p><p><pre><br>char<em> a = crypt(“string1”,”this_is_salt”);<br>char</em> b = crypt(“string2”,”this_is_salt”);<br>printf(“%s”, strcmp(a,b));<br></pre><br>The above is a wrong example and will print 0;</p><p><pre><br>char<em> a = strdup(crypt(“string1”,”this_is_salt”));<br>char</em> b = strdup(crypt(“string2”,”this_is_salt”));<br>printf(“%s”, strcmp(a,b));<br>free(a);free(b);<br></pre><br>The above is a correct example and will print a non-0 value;</p><p>2017/5/25</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;The &lt;code&gt;char* crypt(char*salt, char* str);&lt;/code&gt; function is used for one-way encryption with salt.  However, the buffer it returns is
-      
-    
-    </summary>
-    
-    
-      <category term="C" scheme="https://d0048.github.io/blog/tags/C/"/>
     
   </entry>
   
