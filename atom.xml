@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-10-23T08:25:24.764Z</updated>
+  <updated>2017-10-25T07:34:22.939Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Note and Questions on 1x1 Convolutions</title>
+    <link href="https://d0048.github.io/blog/2017/10/25/Note-and-Questions-on-1x1-Convolutions/"/>
+    <id>https://d0048.github.io/blog/2017/10/25/Note-and-Questions-on-1x1-Convolutions/</id>
+    <published>2017-10-25T07:12:00.000Z</published>
+    <updated>2017-10-25T07:34:22.939Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="What-does-it-do"><a href="#What-does-it-do" class="headerlink" title="What does it do?"></a>What does it do?</h2><p>This is pretty straight forward, just like normal convolution operation, it converts a piece of data structured <code>[channels, height, width]</code> to <code>[kernal_numbers, same_height, same_width]</code>, using a set of learnable parameters in the size of <code>[kernal_number, channel_number, weight_for_this_channel]</code></p><p>#What’s the purpose?</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;What-does-it-do&quot;&gt;&lt;a href=&quot;#What-does-it-do&quot; class=&quot;headerlink&quot; title=&quot;What does it do?&quot;&gt;&lt;/a&gt;What does it do?&lt;/h2&gt;&lt;p&gt;This is pretty s
+      
+    
+    </summary>
+    
+    
+      <category term="Thoughts" scheme="https://d0048.github.io/blog/tags/Thoughts/"/>
+    
+      <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
+    
+      <category term="Problem" scheme="https://d0048.github.io/blog/tags/Problem/"/>
+    
+  </entry>
   
   <entry>
     <title>getopt() function on raspery pi</title>
@@ -485,29 +512,6 @@ Traceback
     
     
       <category term="C" scheme="https://d0048.github.io/blog/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Migrate/Share everything between vivaldi and chrome under linux</title>
-    <link href="https://d0048.github.io/blog/2017/05/12/migrate-everything/"/>
-    <id>https://d0048.github.io/blog/2017/05/12/migrate-everything/</id>
-    <published>2017-05-12T06:13:26.000Z</published>
-    <updated>2017-05-12T06:45:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>I just found the vivaldi browser, which based on chromium, works really good for me. Thus I need to find a way to migrate. Here we go:</p><ol><li><p>Find a config file of chrome, usually located under <code>~/.config/google-chrome</code>|~<code>~/.config/google-chrome-beta</code>|<code>~/.config/chromium</code> or similar places.</p></li><li><p>Create a soft link of the folder called <code>default</code> with <code>ln -s</code> or whatever method preferred. </p></li><li><p>Run vivaldi once and close it to generate proper configuration files.</p></li><li><p>Locate the vivaldi config file, usually located under <code>~/.config/vivaldi</code>.</p></li><li><p>Delete the <code>default</code> folder under <code>~/.config/vivaldi</code>.</p></li><li><p>Copy the softlink just created here and name it <code>default</code>.</p></li><li><p>Till now, we got everything but stored password in the browser migrated successfully. If preferred, copy the whole <code>default</code> folder from chrome and override the one for vivaldi will do the same trick but prevent sharing config files.</p></li><li><p>Also, copy all the content under<br><code>~/.config/google-chrome</code>|~<code>~/.config/google-chrome-beta</code>|<code>~/.config/chromium</code> <br><br>into<br><code>~/.config/vivaldi</code><br>litereally </p></li></ol><p>==For now, no automatic way to make importing password possible. However, one can manually do so….==<br><br>2017/5/12</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;I just found the vivaldi browser, which based on chromium, works really good for me. Thus I need to find a way to migrate. Here we go:&lt;/p
-      
-    
-    </summary>
-    
-    
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
