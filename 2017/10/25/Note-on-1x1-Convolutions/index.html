@@ -14,7 +14,8 @@
 <meta property="og:description" content="What does it do?This is pretty straight forward, just like normal convolution operation, it converts a piece of data structured [channels, height, width] to [kernal_numbers, same_height, same_width],">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://d0048.github.io/blog/images/1d_input.png">
-<meta property="og:updated_time" content="2017-10-26T07:52:26.945Z">
+<meta property="og:image" content="https://d0048.github.io/blog/images/1d_input_conv2.png">
+<meta property="og:updated_time" content="2017-10-26T08:04:41.972Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Note on 1x1 Convolutions">
 <meta name="twitter:description" content="What does it do?This is pretty straight forward, just like normal convolution operation, it converts a piece of data structured [channels, height, width] to [kernal_numbers, same_height, same_width],">
@@ -116,6 +117,7 @@ ga('send', 'pageview');
 <p>The fact that this CCCP operation appending to a normal convolution layers will make a equivalent MLP serves as a sliding convolution kernel, is hard to imagine to be true. It creates confusion in my understanding and it is not until I unroll the whole process so it could be under stood.</p>
 <p>Rather than 2d convolution, using 1d convolution makes things more straight forward while the same rule applies to arbitrary dimensions of convolution.</p>
 <p>Suppose we have an 1d input with 2 channels:<br><img src="/blog/images/1d_input.png" class="[class1 class2]"></p>
+<p>And we perform a normal convolution with one kernel of 2.<br><img src="/blog/images/1d_input_conv2.png" class="[class1 class2]"></p>
 
       
     </div>
@@ -271,21 +273,6 @@ s.setAttribute('data-timestamp', +new Date());
 
 <script src="/blog/js/script.js"></script>
 
-  </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
