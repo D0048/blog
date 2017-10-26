@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://d0048.github.io/blog/images/1d_input_conv2_conv1.png">
 <meta property="og:image" content="https://d0048.github.io/blog/images/1d_input_conv2_conv1_conv1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/iamaaditya/iamaaditya.github.io/master/images/inception_1x1.png">
-<meta property="og:updated_time" content="2017-10-26T09:55:24.788Z">
+<meta property="og:updated_time" content="2017-10-26T10:26:49.671Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Note on 1x1 Convolutions">
 <meta name="twitter:description" content="What does it do?This is pretty straight forward, just like normal convolution operation, it converts a piece of data structured [channels, height, width] to [kernal_numbers, same_height, same_width],">
@@ -127,7 +127,7 @@ ga('send', 'pageview');
 <p>As a result, the 1x1 convolution naturally became one of the choices.</p>
 <h2 id="Ideas-for-Future-Research"><a href="#Ideas-for-Future-Research" class="headerlink" title="Ideas for Future Research"></a>Ideas for Future Research</h2><p>As I read, neurons that fired together creates a relationship between each other and every one of them got easier to fire next time given the condition that the related neurons are fired.</p>
 <p>I am thinking that neurons in regular DNNs does not have any knowledge of the state of other neurons in the same layer, thus maybe it would be possible to create such a relation, to somehow create <strong>“logic”</strong> for networks?</p>
-<p>To do so, maybe we need another set of weights in each neuron used to scale the states of other neurons in the same layer and add to the output, somehow like this:<br>$$<br>\vec{y_{n}}=(\mathbf{W_n}^T \times  \vec{y_{n-1}} + \vec{b_n})+\mathbf{W_new}^T (\mathbf{W_n}^T \times  \vec{y_{n-1}} + \vec{b_n})<br>$$</p>
+<p>To do so, maybe we need another set of weights in each neuron used to scale the states of other neurons in the same layer and add to the output, somehow like this:<br>$$<br>\vec{y_{n}}=(\mathbf{W_n}^T \times  \vec{y_{n-1}} + \vec{b_n})+\mathbf{W_{new}}^T (\mathbf{W_n}^T \times  \vec{y_{n-1}} + \vec{b_n})<br>$$</p>
 <p><center><strong>If the formula is not displayed correctly, please allow unsecure(HTTP) cross site scripts in your browser.</strong></center><br>The detailed implementation is to be researched.</p>
 <p>References:<br><a href="http://blog.csdn.net/yiliang_/article/details/60468655" target="_blank" rel="external">http://blog.csdn.net/yiliang_/article/details/60468655</a><br><a href="http://blog.csdn.net/mounty_fsc/article/details/51746111" target="_blank" rel="external">http://blog.csdn.net/mounty_fsc/article/details/51746111</a><br><a href="http://jntsai.blogspot.com/2015/03/paper-summary-network-in-network-deep.html" target="_blank" rel="external">http://jntsai.blogspot.com/2015/03/paper-summary-network-in-network-deep.html</a><br><a href="https://www.zhihu.com/question/64098749" target="_blank" rel="external">https://www.zhihu.com/question/64098749</a></p>
 
