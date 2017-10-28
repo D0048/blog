@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-10-27T14:38:19.577Z</updated>
+  <updated>2017-10-28T05:39:43.994Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://d0048.github.io/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/"/>
     <id>https://d0048.github.io/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/</id>
     <published>2017-10-27T14:21:03.000Z</published>
-    <updated>2017-10-27T14:38:19.577Z</updated>
+    <updated>2017-10-28T05:39:43.994Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="These-are-my-own-ideas-of-how-might-the-neural-network-architecture-may-be-improved-as-a-note-reminding-my-further-implementation-of-them"><a href="#These-are-my-own-ideas-of-how-might-the-neural-network-architecture-may-be-improved-as-a-note-reminding-my-further-implementation-of-them" class="headerlink" title="These are my own ideas of how might the neural network architecture may be improved, as a note reminding my further implementation of them"></a>These are my own ideas of how might the neural network architecture may be improved, as a note reminding my further implementation of them</h1><p>##</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="These-are-my-own-ideas-of-how-might-the-neural-network-architecture-may-be-improved-as-a-note-reminding-my-further-implementation-of-them"><a href="#These-are-my-own-ideas-of-how-might-the-neural-network-architecture-may-be-improved-as-a-note-reminding-my-further-implementation-of-them" class="headerlink" title="These are my own ideas of how might the neural network architecture may be improved, as a note reminding my further implementation of them"></a>These are my own ideas of how might the neural network architecture may be improved, as a note reminding my further implementation of them</h1><p>##Generator for cheating a network<br>What would happen if I first train a classifier to classify image, and then train another network where it distort an input image to maximize the change in the estimation done by the fore-mentioned classifier at the same time minimize the distortion to the image?</p><p>This could be implemented using a new cost function for the second network.</p><p>Implementing.<br>2017/10/27</p><p>##Recursive Conv Net<br>What would happen is we make a convolution neural network recursive? Will this somehow benefit video generation?</p><p>To be tested.<br>2017/10/27</p><p>##Dynamic Cost Function<br>Is it possible if we make the cost function dynamic and change according to the condition so the convergence could be faster? Or is it possible to even use RNN to generate cost function? How would that help? What change would that bring about?<br>To be tested<br>2017/10/27</p><p>##Flip network<br>According to <a href="https://arstechnica.com/civis/viewtopic.php?f=8&amp;t=785781" target="_blank" rel="external">here</a>, it looks like computers may have different speed between adding and subtracting numbers. If we flip the network so all addition became subtraction and vise versa (Then we might be maximizing the “cost” function), will it be any faster.</p><p>To be tested<br>2017/10/27</p>]]></content>
     
     <summary type="html">
     
