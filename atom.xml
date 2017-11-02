@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-11-01T03:26:16.112Z</updated>
+  <updated>2017-11-02T13:05:28.204Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -17,13 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Prevent Blocking When Using PyPlot</title>
+    <link href="https://d0048.github.io/blog/2017/11/02/Prevent-Blocking-When-Using-PyPlot/"/>
+    <id>https://d0048.github.io/blog/2017/11/02/Prevent-Blocking-When-Using-PyPlot/</id>
+    <published>2017-11-02T12:58:55.000Z</published>
+    <updated>2017-11-02T13:05:28.204Z</updated>
+    
+    <content type="html"><![CDATA[<p>After display logic, call <code>imshow()</code> with parameter <code>block=False</code>.<br>2017/11/2</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;After display logic, call &lt;code&gt;imshow()&lt;/code&gt; with parameter &lt;code&gt;block=False&lt;/code&gt;.&lt;br&gt;2017/11/2&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Thoughts For Possible New Network Structures</title>
     <link href="https://d0048.github.io/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/"/>
     <id>https://d0048.github.io/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/</id>
     <published>2017-10-27T14:21:03.000Z</published>
-    <updated>2017-11-01T03:26:16.112Z</updated>
+    <updated>2017-11-02T13:06:23.841Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="These-are-my-own-ideas-of-how-might-the-neural-network-architecture-may-be-improved-as-a-note-reminding-my-further-implementation-of-them"><a href="#These-are-my-own-ideas-of-how-might-the-neural-network-architecture-may-be-improved-as-a-note-reminding-my-further-implementation-of-them" class="headerlink" title="These are my own ideas of how might the neural network architecture may be improved, as a note reminding my further implementation of them"></a>These are my own ideas of how might the neural network architecture may be improved, as a note reminding my further implementation of them</h2><h3 id="Generator-For-Cheating-a-Network"><a href="#Generator-For-Cheating-a-Network" class="headerlink" title="Generator For Cheating a Network"></a>Generator For Cheating a Network</h3><p>What would happen if we first train a classifier to classify image, and then train another network where it distort an input image to maximize the change in the estimation done by the fore-mentioned classifier at the same time minimize the distortion to the image?</p><p>This could be implemented using a new cost function for the second network.</p><p>Implementing.<br>2017/10/27</p><p>I failed to implement this structure in tensorflow in that rather than an actual value, I seems to be getting the uninitialized tensor representation of the output rather than the actual value and I failed to replace the input of the original network with that tensor.<br>2017/10/29</p><p>I found the Generative Adversarial Network (GAN) model which there isn’t that much of a difference between my idea and the model. However, using another network to probe the weak points of an existing network is likely to be a possible idea of improving it.<br>2017/10/30</p><p>This looks like a possible way of modifying the GAN model in that while the discriminator and the generator in the original GAN model works against each other, maybe we can make the discriminator to to create augmented data where it previously wrongly classified. Testing.<br>2017/10/31</p><p>I’m pretty sure this will work, but there are more to it. If I am to train a generator to modify the minimum amount to a picture and at the same time cheating the discriminator, this may work. However, if I am to use the modified image to retrain the network, things may not be as the same… A badly written <code>6</code> might be twisted into something like <code>8</code> from even human perspective and training the discriminator with the image of <code>8</code> and label of <code>6</code> is not likely to improve its performance. </p><p>However, adding the regularization term forcing the generated image to be different from the training set may be a good idea for generators to generate hopefully more creative samples. To be tested, too.<br>2017/11/1</p><h2 id="Ambiguity-Measure-for-Dropout"><a href="#Ambiguity-Measure-for-Dropout" class="headerlink" title="Ambiguity Measure for Dropout"></a>Ambiguity Measure for Dropout</h2><p>Since increasing ambiguity is a good thing to do in ensembled classifiers, and dropout is essentially a cheap way to ensemble networks, why don’t we add another regularization term in the cost function to increase the ambiguity while dropout?<br>2017/11/1</p><h2 id="Certainty-Measure-for-the-Result"><a href="#Certainty-Measure-for-the-Result" class="headerlink" title="Certainty Measure for the Result"></a>Certainty Measure for the Result</h2><p>According to my observation, it’s weird that a classifier networks always give a clear indication of the result and there is no indication for “Uncertain”. In another word, it seems unlikely for multiple/none of the output nodes to fire at the same time. </p><p>The above may not necessarily be true, but it’s obvious that when a classifier network is given a sample that is totally different from any of the samples in the training set, the result tends to be coming from the weighted combination of the training examples. Will it be possible if we add another class to contain everything else and feed in random noises?</p><p>Unlikely to be useful.<br>2017/11/1</p><h3 id="Recursive-Conv-Net"><a href="#Recursive-Conv-Net" class="headerlink" title="Recursive Conv Net"></a>Recursive Conv Net</h3><p>What would happen is we make a convolution neural network recursive? Will this somehow benefit video generation?</p><p>To be tested.<br>2017/10/27</p><p>It exists…<br>2017/10/30</p><h2 id="Dynamic-Cost-Function"><a href="#Dynamic-Cost-Function" class="headerlink" title="Dynamic Cost Function"></a>Dynamic Cost Function</h2><p>Is it possible if we make the cost function dynamic and change according to the condition so the convergence could be faster? Or is it possible to even use RNN to generate cost function? How would that help? What change would that bring about?<br>To be tested.<br>2017/10/27</p><h3 id="Flip-network"><a href="#Flip-network" class="headerlink" title="Flip network"></a>Flip network</h3><p>According to <a href="https://arstechnica.com/civis/viewtopic.php?f=8&amp;t=785781" target="_blank" rel="external">here</a>, it looks like computers may have different speed between adding and subtracting numbers. If we flip the network so all addition became subtraction and vise versa (Then we might be maximizing the “cost” function), will it be any faster?</p><p>To be tested.<br>2017/10/27</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="These-are-my-own-ideas-of-how-might-the-neural-network-architecture-may-be-improved-as-a-note-reminding-my-further-implementation-of-them"><a href="#These-are-my-own-ideas-of-how-might-the-neural-network-architecture-may-be-improved-as-a-note-reminding-my-further-implementation-of-them" class="headerlink" title="These are my own ideas of how might the neural network architecture may be improved, as a note reminding my further implementation of them"></a>These are my own ideas of how might the neural network architecture may be improved, as a note reminding my further implementation of them</h2><h3 id="Generator-For-Cheating-a-Network"><a href="#Generator-For-Cheating-a-Network" class="headerlink" title="Generator For Cheating a Network"></a>Generator For Cheating a Network</h3><p>What would happen if we first train a classifier to classify image, and then train another network where it distort an input image to maximize the change in the estimation done by the fore-mentioned classifier at the same time minimize the distortion to the image?</p><p>This could be implemented using a new cost function for the second network.</p><p>Implementing.<br>2017/10/27</p><p>I failed to implement this structure in tensorflow in that rather than an actual value, I seems to be getting the uninitialized tensor representation of the output rather than the actual value and I failed to replace the input of the original network with that tensor.<br>2017/10/29</p><p>I found the Generative Adversarial Network (GAN) model which there isn’t that much of a difference between my idea and the model. However, using another network to probe the weak points of an existing network is likely to be a possible idea of improving it.<br>2017/10/30</p><p>This looks like a possible way of modifying the GAN model in that while the discriminator and the generator in the original GAN model works against each other, maybe we can make the discriminator to to create augmented data where it previously wrongly classified. Testing.<br>2017/10/31</p><p>I’m pretty sure this will work, but there are more to it. If I am to train a generator to modify the minimum amount to a picture and at the same time cheating the discriminator, this may work. However, if I am to use the modified image to retrain the network, things may not be as the same… A badly written <code>6</code> might be twisted into something like <code>8</code> from even human perspective and training the discriminator with the image of <code>8</code> and label of <code>6</code> is not likely to improve its performance. </p><p>However, adding the regularization term forcing the generated image to be different from the training set may be a good idea for generators to generate hopefully more creative samples. To be tested, too.<br>2017/11/1</p><p>This is indeed different from regular gan. It looks working but further experiments are to be done.<br>2017/11/2</p><h2 id="Ambiguity-Measure-for-Dropout"><a href="#Ambiguity-Measure-for-Dropout" class="headerlink" title="Ambiguity Measure for Dropout"></a>Ambiguity Measure for Dropout</h2><p>Since increasing ambiguity is a good thing to do in ensembled classifiers, and dropout is essentially a cheap way to ensemble networks, why don’t we add another regularization term in the cost function to increase the ambiguity while dropout?<br>2017/11/1</p><h2 id="Certainty-Measure-for-the-Result"><a href="#Certainty-Measure-for-the-Result" class="headerlink" title="Certainty Measure for the Result"></a>Certainty Measure for the Result</h2><p>According to my observation, it’s weird that a classifier networks always give a clear indication of the result and there is no indication for “Uncertain”. In another word, it seems unlikely for multiple/none of the output nodes to fire at the same time. </p><p>The above may not necessarily be true, but it’s obvious that when a classifier network is given a sample that is totally different from any of the samples in the training set, the result tends to be coming from the weighted combination of the training examples. Will it be possible if we add another class to contain everything else and feed in random noises?</p><p>Unlikely to be useful.<br>2017/11/1</p><h3 id="Recursive-Conv-Net"><a href="#Recursive-Conv-Net" class="headerlink" title="Recursive Conv Net"></a>Recursive Conv Net</h3><p>What would happen is we make a convolution neural network recursive? Will this somehow benefit video generation?</p><p>To be tested.<br>2017/10/27</p><p>It exists…<br>2017/10/30</p><h2 id="Dynamic-Cost-Function"><a href="#Dynamic-Cost-Function" class="headerlink" title="Dynamic Cost Function"></a>Dynamic Cost Function</h2><p>Is it possible if we make the cost function dynamic and change according to the condition so the convergence could be faster? Or is it possible to even use RNN to generate cost function? How would that help? What change would that bring about?<br>To be tested.<br>2017/10/27</p><h3 id="Flip-network"><a href="#Flip-network" class="headerlink" title="Flip network"></a>Flip network</h3><p>According to <a href="https://arstechnica.com/civis/viewtopic.php?f=8&amp;t=785781" target="_blank" rel="external">here</a>, it looks like computers may have different speed between adding and subtracting numbers. If we flip the network so all addition became subtraction and vise versa (Then we might be maximizing the “cost” function), will it be any faster?</p><p>To be tested.<br>2017/10/27</p>]]></content>
     
     <summary type="html">
     
@@ -64,9 +90,9 @@
     
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
-      <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
-    
       <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
+    
+      <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
     
   </entry>
   
@@ -495,31 +521,6 @@ Traceback
     
     
       <category term="C" scheme="https://d0048.github.io/blog/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>How to have two header files contain each other to use the others&#39; class</title>
-    <link href="https://d0048.github.io/blog/2017/05/17/how-to-have-two-header-files-contain-each-other-to-use-the-others-class-2/"/>
-    <id>https://d0048.github.io/blog/2017/05/17/how-to-have-two-header-files-contain-each-other-to-use-the-others-class-2/</id>
-    <published>2017-05-17T08:47:15.000Z</published>
-    <updated>2017-05-17T09:00:09.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>When 2 <code>.h</code> files are trying to use classes in each other, an error will occur if no special treatment is applied:</p><pre> syntax error : identifier "class_name"</pre>It seems like the compiler identify the class as an identifier. I tried to use macro commands like the following <pre>#ifndef PACKAGE#include "Package.h"#define PACKAGE#endif</pre>==But failed.==With the help of this [passage](http://www.bijishequ.com/detail/149692?p=), I found a way to solve it. A class in C++ can be first declared and then defined like this:<pre>class class_name;//this is a declaration.class class_name{    Content contents;};//this is a definition</pre><p>So by putting only the declaration of classes in the header files or by putting another declaration of the class before use, it is made possible for this problem to be solved.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;When 2 &lt;code&gt;.h&lt;/code&gt; files are trying to use classes in each other, an error will occur if no special treatment is applied:&lt;/p&gt;
-&lt;pre&gt;
- 
-      
-    
-    </summary>
-    
-    
-      <category term="CPP" scheme="https://d0048.github.io/blog/tags/CPP/"/>
     
   </entry>
   
