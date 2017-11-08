@@ -3,15 +3,20 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>Archives | D0048</title>
+  <title>Use System Memory Together with Graphic Memory in TensorFlow | D0048</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="D0048">
-<meta property="og:url" content="https://d0048.github.io/blog/archives/page/8/index.html">
+  <meta name="description" content="The default options in tensorflow uses graphic memories only and all the tensors are allocated on boot. These are relatively faster, but are also disaster when using a graphic card with lower memories">
+<meta name="keywords" content="Solution,ML,Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Use System Memory Together with Graphic Memory in TensorFlow">
+<meta property="og:url" content="https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/index.html">
 <meta property="og:site_name" content="D0048">
+<meta property="og:description" content="The default options in tensorflow uses graphic memories only and all the tensors are allocated on boot. These are relatively faster, but are also disaster when using a graphic card with lower memories">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-11-08T03:05:53.808Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="D0048">
+<meta name="twitter:title" content="Use System Memory Together with Graphic Memory in TensorFlow">
+<meta name="twitter:description" content="The default options in tensorflow uses graphic memories only and all the tensors are allocated on boot. These are relatively faster, but are also disaster when using a graphic card with lower memories">
   
     <link rel="alternate" href="/blog/atom.xml" title="D0048" type="application/atom+xml">
   
@@ -77,63 +82,68 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2016/11/30/building-ssh-server-on-arukas-io/" class="archive-article-date">
-  <time datetime="2016-11-30T12:21:02.000Z" itemprop="datePublished">Nov 30</time>
+        <section id="main"><article id="post-Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/" class="article-date">
+  <time datetime="2017-11-08T02:52:25.000Z" itemprop="datePublished">2017-11-08</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2016/11/30/building-ssh-server-on-arukas-io/">Building SSH server on arukas.io</a>
+    <h1 class="article-title" itemprop="name">
+      Use System Memory Together with Graphic Memory in TensorFlow
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2016/11/30/building-shadow-socks-server-on-arukas-io-and-connect-it-with-a-regular-client/" class="archive-article-date">
-  <time datetime="2016-11-30T11:45:40.000Z" itemprop="datePublished">Nov 30</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2016/11/30/building-shadow-socks-server-on-arukas-io-and-connect-it-with-a-regular-client/">Building shadow socks server on arukas.io and connect it with a regular client</a>
-    </h1>
-  
+        <p>The default options in tensorflow uses graphic memories only and all the tensors are allocated on boot. These are relatively faster, but are also disaster when using a graphic card with lower memories, and I am always getting OOMs from my model.</p>
+<p>There are two ways to ease the issue, which are to enable tensorflow to utilize system memory and disable tensorflow to allocated all memory blocks on boot. </p>
+<pre>
+    config = tf.ConfigProto()
+    config.gpu_options.allow_growth = True
+    config.gpu_options.per_process_gpu_memory_fraction = 0.9
+    with tf.Session(config=config) as sess:
+        code to run...
+        pass
+</pre>
 
-    </header>
+
+<p>The attribute <code>config.gpu_options.per_process_gpu_memory_fraction</code> specifies the fraction of maximum graphic memory to use before using system memory.</p>
+<p>2017/11/8</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/" data-id="cj9qgq3bn003mweakheah3ubf" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ML/">ML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2017/11/02/Prevent-Blocking-When-Using-PyPlot/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">Prevent Blocking When Using PyPlot</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
-
-  <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/blog/archives/page/7/">&laquo; __('prev')</a><a class="page-number" href="/blog/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/archives/page/6/">6</a><a class="page-number" href="/blog/archives/page/7/">7</a><span class="page-number current">8</span>
-  </nav>
 </section>
         
           <aside id="sidebar">

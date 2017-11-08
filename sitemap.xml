@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/</loc>
+    
+    <lastmod>2017-11-08T03:05:53.808Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://d0048.github.io/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/</loc>
     
-    <lastmod>2017-11-02T13:06:23.841Z</lastmod>
+    <lastmod>2017-11-08T02:51:35.323Z</lastmod>
     
   </url>
   

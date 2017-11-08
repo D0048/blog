@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-11-02T13:05:28.204Z</updated>
+  <updated>2017-11-08T03:05:53.808Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Use System Memory Together with Graphic Memory in TensorFlow</title>
+    <link href="https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/"/>
+    <id>https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/</id>
+    <published>2017-11-08T02:52:25.000Z</published>
+    <updated>2017-11-08T03:05:53.808Z</updated>
+    
+    <content type="html"><![CDATA[<p>The default options in tensorflow uses graphic memories only and all the tensors are allocated on boot. These are relatively faster, but are also disaster when using a graphic card with lower memories, and I am always getting OOMs from my model.</p><p>There are two ways to ease the issue, which are to enable tensorflow to utilize system memory and disable tensorflow to allocated all memory blocks on boot. </p><pre>    config = tf.ConfigProto()    config.gpu_options.allow_growth = True    config.gpu_options.per_process_gpu_memory_fraction = 0.9    with tf.Session(config=config) as sess:        code to run...        pass</pre><p>The attribute <code>config.gpu_options.per_process_gpu_memory_fraction</code> specifies the fraction of maximum graphic memory to use before using system memory.</p><p>2017/11/8</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;The default options in tensorflow uses graphic memories only and all the tensors are allocated on boot. These are relatively faster, but 
+      
+    
+    </summary>
+    
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
+    
+      <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>Prevent Blocking When Using PyPlot</title>
@@ -47,9 +74,9 @@
     <link href="https://d0048.github.io/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/"/>
     <id>https://d0048.github.io/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/</id>
     <published>2017-10-27T14:21:03.000Z</published>
-    <updated>2017-11-02T13:06:23.841Z</updated>
+    <updated>2017-11-08T02:51:35.323Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="These-are-my-own-ideas-of-how-might-the-neural-network-architecture-may-be-improved-as-a-note-reminding-my-further-implementation-of-them"><a href="#These-are-my-own-ideas-of-how-might-the-neural-network-architecture-may-be-improved-as-a-note-reminding-my-further-implementation-of-them" class="headerlink" title="These are my own ideas of how might the neural network architecture may be improved, as a note reminding my further implementation of them"></a>These are my own ideas of how might the neural network architecture may be improved, as a note reminding my further implementation of them</h2><h3 id="Generator-For-Cheating-a-Network"><a href="#Generator-For-Cheating-a-Network" class="headerlink" title="Generator For Cheating a Network"></a>Generator For Cheating a Network</h3><p>What would happen if we first train a classifier to classify image, and then train another network where it distort an input image to maximize the change in the estimation done by the fore-mentioned classifier at the same time minimize the distortion to the image?</p><p>This could be implemented using a new cost function for the second network.</p><p>Implementing.<br>2017/10/27</p><p>I failed to implement this structure in tensorflow in that rather than an actual value, I seems to be getting the uninitialized tensor representation of the output rather than the actual value and I failed to replace the input of the original network with that tensor.<br>2017/10/29</p><p>I found the Generative Adversarial Network (GAN) model which there isn’t that much of a difference between my idea and the model. However, using another network to probe the weak points of an existing network is likely to be a possible idea of improving it.<br>2017/10/30</p><p>This looks like a possible way of modifying the GAN model in that while the discriminator and the generator in the original GAN model works against each other, maybe we can make the discriminator to to create augmented data where it previously wrongly classified. Testing.<br>2017/10/31</p><p>I’m pretty sure this will work, but there are more to it. If I am to train a generator to modify the minimum amount to a picture and at the same time cheating the discriminator, this may work. However, if I am to use the modified image to retrain the network, things may not be as the same… A badly written <code>6</code> might be twisted into something like <code>8</code> from even human perspective and training the discriminator with the image of <code>8</code> and label of <code>6</code> is not likely to improve its performance. </p><p>However, adding the regularization term forcing the generated image to be different from the training set may be a good idea for generators to generate hopefully more creative samples. To be tested, too.<br>2017/11/1</p><p>This is indeed different from regular gan. It looks working but further experiments are to be done.<br>2017/11/2</p><h2 id="Ambiguity-Measure-for-Dropout"><a href="#Ambiguity-Measure-for-Dropout" class="headerlink" title="Ambiguity Measure for Dropout"></a>Ambiguity Measure for Dropout</h2><p>Since increasing ambiguity is a good thing to do in ensembled classifiers, and dropout is essentially a cheap way to ensemble networks, why don’t we add another regularization term in the cost function to increase the ambiguity while dropout?<br>2017/11/1</p><h2 id="Certainty-Measure-for-the-Result"><a href="#Certainty-Measure-for-the-Result" class="headerlink" title="Certainty Measure for the Result"></a>Certainty Measure for the Result</h2><p>According to my observation, it’s weird that a classifier networks always give a clear indication of the result and there is no indication for “Uncertain”. In another word, it seems unlikely for multiple/none of the output nodes to fire at the same time. </p><p>The above may not necessarily be true, but it’s obvious that when a classifier network is given a sample that is totally different from any of the samples in the training set, the result tends to be coming from the weighted combination of the training examples. Will it be possible if we add another class to contain everything else and feed in random noises?</p><p>Unlikely to be useful.<br>2017/11/1</p><h3 id="Recursive-Conv-Net"><a href="#Recursive-Conv-Net" class="headerlink" title="Recursive Conv Net"></a>Recursive Conv Net</h3><p>What would happen is we make a convolution neural network recursive? Will this somehow benefit video generation?</p><p>To be tested.<br>2017/10/27</p><p>It exists…<br>2017/10/30</p><h2 id="Dynamic-Cost-Function"><a href="#Dynamic-Cost-Function" class="headerlink" title="Dynamic Cost Function"></a>Dynamic Cost Function</h2><p>Is it possible if we make the cost function dynamic and change according to the condition so the convergence could be faster? Or is it possible to even use RNN to generate cost function? How would that help? What change would that bring about?<br>To be tested.<br>2017/10/27</p><h3 id="Flip-network"><a href="#Flip-network" class="headerlink" title="Flip network"></a>Flip network</h3><p>According to <a href="https://arstechnica.com/civis/viewtopic.php?f=8&amp;t=785781" target="_blank" rel="external">here</a>, it looks like computers may have different speed between adding and subtracting numbers. If we flip the network so all addition became subtraction and vise versa (Then we might be maximizing the “cost” function), will it be any faster?</p><p>To be tested.<br>2017/10/27</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="These-are-my-own-ideas-of-how-might-the-neural-network-architecture-may-be-improved-as-a-note-reminding-my-further-implementation-of-them"><a href="#These-are-my-own-ideas-of-how-might-the-neural-network-architecture-may-be-improved-as-a-note-reminding-my-further-implementation-of-them" class="headerlink" title="These are my own ideas of how might the neural network architecture may be improved, as a note reminding my further implementation of them"></a>These are my own ideas of how might the neural network architecture may be improved, as a note reminding my further implementation of them</h2><h3 id="Generator-For-Cheating-a-Network"><a href="#Generator-For-Cheating-a-Network" class="headerlink" title="Generator For Cheating a Network"></a>Generator For Cheating a Network</h3><p>What would happen if we first train a classifier to classify image, and then train another network where it distort an input image to maximize the change in the estimation done by the fore-mentioned classifier at the same time minimize the distortion to the image?</p><p>This could be implemented using a new cost function for the second network.</p><p>Implementing.<br>2017/10/27</p><p>I failed to implement this structure in tensorflow in that rather than an actual value, I seems to be getting the uninitialized tensor representation of the output rather than the actual value and I failed to replace the input of the original network with that tensor.<br>2017/10/29</p><p>I found the Generative Adversarial Network (GAN) model which there isn’t that much of a difference between my idea and the model. However, using another network to probe the weak points of an existing network is likely to be a possible idea of improving it.<br>2017/10/30</p><p>This looks like a possible way of modifying the GAN model in that while the discriminator and the generator in the original GAN model works against each other, maybe we can make the discriminator to to create augmented data where it previously wrongly classified. Testing.<br>2017/10/31</p><p>I’m pretty sure this will work, but there are more to it. If I am to train a generator to modify the minimum amount to a picture and at the same time cheating the discriminator, this may work. However, if I am to use the modified image to retrain the network, things may not be as the same… A badly written <code>6</code> might be twisted into something like <code>8</code> from even human perspective and training the discriminator with the image of <code>8</code> and label of <code>6</code> is not likely to improve its performance. </p><p>However, adding the regularization term forcing the generated image to be different from the training set may be a good idea for generators to generate hopefully more creative samples. To be tested, too.<br>2017/11/1</p><p>Seems working. Work handed for something else.<br>2017/11/8</p><p>This is indeed different from regular gan. It looks working but further experiments are to be done.<br>2017/11/2</p><h2 id="Ambiguity-Measure-for-Dropout"><a href="#Ambiguity-Measure-for-Dropout" class="headerlink" title="Ambiguity Measure for Dropout"></a>Ambiguity Measure for Dropout</h2><p>Since increasing ambiguity is a good thing to do in ensembled classifiers, and dropout is essentially a cheap way to ensemble networks, why don’t we add another regularization term in the cost function to increase the ambiguity while dropout?<br>2017/11/1</p><h2 id="Certainty-Measure-for-the-Result"><a href="#Certainty-Measure-for-the-Result" class="headerlink" title="Certainty Measure for the Result"></a>Certainty Measure for the Result</h2><p>According to my observation, it’s weird that a classifier networks always give a clear indication of the result and there is no indication for “Uncertain”. In another word, it seems unlikely for multiple/none of the output nodes to fire at the same time. </p><p>The above may not necessarily be true, but it’s obvious that when a classifier network is given a sample that is totally different from any of the samples in the training set, the result tends to be coming from the weighted combination of the training examples. Will it be possible if we add another class to contain everything else and feed in random noises?</p><p>Unlikely to be useful.<br>2017/11/1</p><h3 id="Recursive-Conv-Net"><a href="#Recursive-Conv-Net" class="headerlink" title="Recursive Conv Net"></a>Recursive Conv Net</h3><p>What would happen is we make a convolution neural network recursive? Will this somehow benefit video generation?</p><p>To be tested.<br>2017/10/27</p><p>It exists…<br>2017/10/30</p><h2 id="Dynamic-Cost-Function"><a href="#Dynamic-Cost-Function" class="headerlink" title="Dynamic Cost Function"></a>Dynamic Cost Function</h2><p>Is it possible if we make the cost function dynamic and change according to the condition so the convergence could be faster? Or is it possible to even use RNN to generate cost function? How would that help? What change would that bring about?<br>To be tested.<br>2017/10/27</p><h3 id="Flip-network"><a href="#Flip-network" class="headerlink" title="Flip network"></a>Flip network</h3><p>According to <a href="https://arstechnica.com/civis/viewtopic.php?f=8&amp;t=785781" target="_blank" rel="external">here</a>, it looks like computers may have different speed between adding and subtracting numbers. If we flip the network so all addition became subtraction and vise versa (Then we might be maximizing the “cost” function), will it be any faster?</p><p>To be tested.<br>2017/10/27</p>]]></content>
     
     <summary type="html">
     
@@ -495,32 +522,6 @@ Traceback
     
     
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A few points need to be caution while using crypt() in c</title>
-    <link href="https://d0048.github.io/blog/2017/06/13/a-few-points-need-to-be-caution-while-using-crypt-in-c/"/>
-    <id>https://d0048.github.io/blog/2017/06/13/a-few-points-need-to-be-caution-while-using-crypt-in-c/</id>
-    <published>2017-06-13T00:48:16.000Z</published>
-    <updated>2017-06-13T01:09:55.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>While using this function, there’s a lot that’s mentioned in the manual but hard to find.</p><p>From manual:</p><pre>#define _XOPEN_SOURCE        /* See feature_test_macros(7) */#include <unistd.h>char *crypt(const char *key, const char *salt);#define _GNU_SOURCE          /* See feature_test_macros(7) */#include <crypt.h>char *crypt_r(const char *key, const char *salt,struct crypt_data *data);Link with -lcrypt.</crypt.h></unistd.h></pre><p>However:</p><pre>The return value points to static data whose contentis overwritten by each call.</pre>This means a strdup or similar operation is necessary to copy it if one want to preserve the value and use the previous after another crypt. Also, it is not in the manual that using an encrypted string as salt means using the same salt that encrypts the string is used to encrypt the new one. The reason is that the string output will have its own salt at its beginning. The manual mentions nothing about how the check works but it works at here. So I looked for the source code in c posix library(From here:https://code.woboq.org/userspace/glibc/crypt/crypt-entry.c.html#crypt):<pre>157    char *158    crypt (const char *key, const char *salt)159    {160    #ifdef _LIBC161      /* Try to find out whether we have to use MD5 encryption replacement.  */162      if (strncmp (md5_salt_prefix, salt, sizeof (md5_salt_prefix) - 1) == 0163          /* Let __crypt_r deal with the error code if FIPS is enabled.  */164          && !fips_enabled_p ())165        return __md5_crypt (key, salt);166    167      /* Try to find out whether we have to use SHA256 encryption replacement.  */168      if (strncmp (sha256_salt_prefix, salt, sizeof (sha256_salt_prefix) - 1) == 0)169        return __sha256_crypt (key, salt);170    171      /* Try to find out whether we have to use SHA512 encryption replacement.  */172      if (strncmp (sha512_salt_prefix, salt, sizeof (sha512_salt_prefix) - 1) == 0)173        return __sha512_crypt (key, salt);174    #endif175    176      return __crypt_r (key, salt, &_ufc_foobar);177    }</pre><p>It seems to be smarter than I excepted and can even determine which way to encrypt according to the salt….</p><p>2017/6/13</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;While using this function, there’s a lot that’s mentioned in the manual but hard to find.&lt;/p&gt;
-&lt;p&gt;From manual:&lt;/p&gt;
-&lt;pre&gt;
-#define _XOPEN_SO
-      
-    
-    </summary>
-    
-    
-      <category term="C" scheme="https://d0048.github.io/blog/tags/C/"/>
     
   </entry>
   
