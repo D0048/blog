@@ -66,9 +66,9 @@ ga('send', 'pageview');
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://d0048.github.io/blog"></form>
@@ -119,7 +119,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/" data-id="cj9qgq3bn003mweakheah3ubf" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/" data-id="cj9qgq3bn003mweakheah3ubf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ML/">ML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -158,7 +158,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/11/02/Prevent-Blocking-When-Using-PyPlot/" data-id="cj9qgq3ar002bweakeyk7cg4l" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/02/Prevent-Blocking-When-Using-PyPlot/" data-id="cj9qgq3ar002bweakeyk7cg4l" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -198,12 +198,13 @@ ga('send', 'pageview');
 <p>I failed to implement this structure in tensorflow in that rather than an actual value, I seems to be getting the uninitialized tensor representation of the output rather than the actual value and I failed to replace the input of the original network with that tensor.<br>2017/10/29</p>
 <p>I found the Generative Adversarial Network (GAN) model which there isn’t that much of a difference between my idea and the model. However, using another network to probe the weak points of an existing network is likely to be a possible idea of improving it.<br>2017/10/30</p>
 <p>This looks like a possible way of modifying the GAN model in that while the discriminator and the generator in the original GAN model works against each other, maybe we can make the discriminator to to create augmented data where it previously wrongly classified. Testing.<br>2017/10/31</p>
-<p>I’m pretty sure this will work, but there are more to it. If I am to train a generator to modify the minimum amount to a picture and at the same time cheating the discriminator, this may work. However, if I am to use the modified image to retrain the network, things may not be as the same… A badly written <code>6</code> might be twisted into something like <code>8</code> from even human perspective and training the discriminator with the image of <code>8</code> and label of <code>6</code> is not likely to improve its performance. </p>
+<p>I’m pretty sure this will work, but there are more to it. If I am to train a generator to modify the minimum amount to a picture and at the same time cheating the discriminator, this may work. However, if I am to use the modified image to retrain the network, things may not be as the same… A badly written <code>6</code> might be twisted into something like <code>8</code> from even human perspective and training the discriminator with the image of <code>8</code> and label of <code>6</code> is not likely to improve its performance.</p>
 <p>However, adding the regularization term forcing the generated image to be different from the training set may be a good idea for generators to generate hopefully more creative samples. To be tested, too.<br>2017/11/1</p>
-<p>Seems working. Work handed for something else.<br>2017/11/8</p>
 <p>This is indeed different from regular gan. It looks working but further experiments are to be done.<br>2017/11/2</p>
+<p>Seems working. Work hanged for something else.<br>2017/11/8</p>
+<p>This is called <code>Generative Poisoning Attack</code> and extensive research seems to has been performed on it.<br>2017/11/8</p>
 <h2 id="Ambiguity-Measure-for-Dropout"><a href="#Ambiguity-Measure-for-Dropout" class="headerlink" title="Ambiguity Measure for Dropout"></a>Ambiguity Measure for Dropout</h2><p>Since increasing ambiguity is a good thing to do in ensembled classifiers, and dropout is essentially a cheap way to ensemble networks, why don’t we add another regularization term in the cost function to increase the ambiguity while dropout?<br>2017/11/1</p>
-<h2 id="Certainty-Measure-for-the-Result"><a href="#Certainty-Measure-for-the-Result" class="headerlink" title="Certainty Measure for the Result"></a>Certainty Measure for the Result</h2><p>According to my observation, it’s weird that a classifier networks always give a clear indication of the result and there is no indication for “Uncertain”. In another word, it seems unlikely for multiple/none of the output nodes to fire at the same time. </p>
+<h2 id="Certainty-Measure-for-the-Result"><a href="#Certainty-Measure-for-the-Result" class="headerlink" title="Certainty Measure for the Result"></a>Certainty Measure for the Result</h2><p>According to my observation, it’s weird that a classifier networks always give a clear indication of the result and there is no indication for “Uncertain”. In another word, it seems unlikely for multiple/none of the output nodes to fire at the same time.</p>
 <p>The above may not necessarily be true, but it’s obvious that when a classifier network is given a sample that is totally different from any of the samples in the training set, the result tends to be coming from the weighted combination of the training examples. Will it be possible if we add another class to contain everything else and feed in random noises?</p>
 <p>Unlikely to be useful.<br>2017/11/1</p>
 <h3 id="Recursive-Conv-Net"><a href="#Recursive-Conv-Net" class="headerlink" title="Recursive Conv Net"></a>Recursive Conv Net</h3><p>What would happen is we make a convolution neural network recursive? Will this somehow benefit video generation?</p>
@@ -216,7 +217,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/" data-id="cj9qgq3ba0033weakm47v9ez7" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/" data-id="cj9qgq3ba0033weakm47v9ez7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ML/">ML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Problem/">Problem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li></ul>
@@ -260,7 +261,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/25/to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch/" data-id="cj9qgq3c8004gweakfzyt0j83" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/25/to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch/" data-id="cj9qgq3c8004gweakfzyt0j83" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ML/">ML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -320,7 +321,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/25/Note-on-1x1-Convolutions/" data-id="cj9qgq3ao0026weakz46wdufz" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/25/Note-on-1x1-Convolutions/" data-id="cj9qgq3ao0026weakz46wdufz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ML/">ML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Problem/">Problem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li></ul>
@@ -360,7 +361,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/23/getopt-function-on-raspery-pi/" data-id="cj9qgq3c30046weakzj8kxzc5" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/23/getopt-function-on-raspery-pi/" data-id="cj9qgq3c30046weakzj8kxzc5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -435,7 +436,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/17/The-Harmonic-Series-how-comes-the-divergence/" data-id="cj9qgq3b70030weak3qgzjh8e" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/17/The-Harmonic-Series-how-comes-the-divergence/" data-id="cj9qgq3b70030weak3qgzjh8e" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Math/">Math</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li></ul>
@@ -494,7 +495,7 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/" data-id="cj9qgq3c40049weakajusk9p4" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/" data-id="cj9qgq3c40049weakajusk9p4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ML/">ML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -546,7 +547,7 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/" data-id="cj9qgq39r001dweakmxw1ph2b" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/" data-id="cj9qgq39r001dweakmxw1ph2b" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li></ul>
@@ -601,7 +602,7 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/" data-id="cj9qgq3aq0029weakk4tgryls" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/" data-id="cj9qgq3aq0029weakk4tgryls" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Python/">Python</a></li></ul>
@@ -627,7 +628,7 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Bukkit/">Bukkit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/C/">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/CPP/">CPP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Compiler/">Compiler</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Debug/">Debug</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/File-Recovery/">File Recovery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Flash/">Flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/GFW/">GFW</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Kindle/">Kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/ML/">ML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Math/">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Outdated/">Outdated</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Problem/">Problem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SSH/">SSH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Solution/">Solution</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Terminator/">Terminator</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Vim/">Vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/WinAPI/">WinAPI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Xorg/">Xorg</a></li></ul>
     </div>
@@ -637,7 +638,7 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
       <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12.86px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 17.14px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 18.57px;">CPP</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15.71px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 11.43px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 12.86px;">Linux</a> <a href="/blog/tags/ML/" style="font-size: 14.29px;">ML</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 11.43px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 11.43px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Outdated/" style="font-size: 11.43px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12.86px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 14.29px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12.86px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 14.29px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12.86px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
     </div>
@@ -656,7 +657,7 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
