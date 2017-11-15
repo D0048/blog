@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-11-08T03:05:53.808Z</updated>
+  <updated>2017-11-15T03:19:37.848Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Rejailbreak Kindle PaperWhite3 After Automatic Upgrade to 5.9.2</title>
+    <link href="https://d0048.github.io/blog/2017/11/15/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/"/>
+    <id>https://d0048.github.io/blog/2017/11/15/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/</id>
+    <published>2017-11-15T03:08:09.000Z</published>
+    <updated>2017-11-15T03:19:37.848Z</updated>
+    
+    <content type="html"><![CDATA[<p>My kindle pw3 seems to be automatically updated from 5.9.1 to 5.9.2 and I am unable to run KUAL anymore. To fix this, the following is performed and I am not sure whether any of these steps are necessary.But I did get everything back without losing any data/plugins.</p><ol><li><p>Applied a jailbreak hotfix <code>Update_jailbreak_hotfix_1.14_nomax_install.bin</code>. File found at <a href="https://bookfere.com/post/576.html" target="_blank" rel="external">here</a>. Patched by copying it to the root fs mounted on computer and manually select “update” in menu.</p></li><li><p>Applied <code>Update_KUALBooklet_v2.7_install.bin</code>. File found at <a href="https://bookfere.com/post/311.html" target="_blank" rel="external">here</a>. Patched by copying it to <code>/mrpackages</code> and searching <code>;log mrpi</code>. </p></li></ol><p>This process is recorded hoping to be helpful. Do notice that your devices may not work just as mine and I will not be responsible for any following consequences happened to your device.</p><p>2017/11/15</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;My kindle pw3 seems to be automatically updated from 5.9.1 to 5.9.2 and I am unable to run KUAL anymore. To fix this, the following is pe
+      
+    
+    </summary>
+    
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+  </entry>
   
   <entry>
     <title>Use System Memory Together with Graphic Memory in TensorFlow</title>
@@ -499,29 +522,6 @@ Traceback
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
       <category term="Vim" scheme="https://d0048.github.io/blog/tags/Vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Audio device disabled and replaced by dummy audio after using hdajackretask</title>
-    <link href="https://d0048.github.io/blog/2017/07/11/audio-device-disabled-and-replaced-by-dummy-audio-after-using-hdajackretask/"/>
-    <id>https://d0048.github.io/blog/2017/07/11/audio-device-disabled-and-replaced-by-dummy-audio-after-using-hdajackretask/</id>
-    <published>2017-07-11T02:57:33.000Z</published>
-    <updated>2017-07-11T03:12:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>After some modification on <code>hdajackretask</code>, which previously worked but disabled my audio card after reboot(in both dual of windows 10 and ubuntu).</p><p>Ubuntu will reports an error of <code>codecs not found</code> and windows will return an error of <code>device moved</code>.</p><p>In my case, this problem is solved through editing <code>/etc/modprobe.d/alsa-base.conf</code> in that the desired audio card is marked with <code>index=-2</code>.</p><p>By changing the index of the desired interface to ‘1’,(in my case, the one with <code>intel</code> in it because I am using <code>snd-hda-intel</code> ) and adding <code>options snd-hda-intel model=auto</code>, the problem is resolved after reboot. </p><p>2017/7/11</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;After some modification on &lt;code&gt;hdajackretask&lt;/code&gt;, which previously worked but disabled my audio card after reboot(in both dual of wi
-      
-    
-    </summary>
-    
-    
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
