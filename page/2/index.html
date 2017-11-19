@@ -79,6 +79,65 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/" class="article-date">
+  <time datetime="2017-10-16T08:18:46.000Z" itemprop="datePublished">2017-10-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/">&#34;libcusolver.so.8.0: cannot open shared object file&#34; error while importing tensorflow</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>After installing the gpu version of the tensorflow, I got this error while importing it:</p>
+<pre>
+>>> import tensorflow as tf
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/pywrap_tensorflow.py", line 41, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.5/imp.py", line 242, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 342, in load_dynamic
+    return _load(spec)
+ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or directory
+</module></module></pre>
+
+<p>None of the solutions online, like setting the environmental variables to cuda installation.</p>
+<p>I tried <code>locate libcusolver.so</code> and none of the paths refers to the version I wanted. This is because tensorflow only works with cuda 8.0 but the newest version of cuda is installed. (In my case, 8.0).</p>
+<p>Because I am using ubuntu and installed cuda through ppa, I simply installed cuda 8.0 through <code>sudo apt-get install cuda-8-0</code> and everything worked. </p>
+<p>2017/10/16</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/" data-id="cja6dwo3q0047jxaky9itnn69" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ML/">ML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/" class="article-date">
@@ -119,7 +178,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/" data-id="cja1vouvm001f5aak83ot34jj" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/" data-id="cja6dwo1w002zjxak9hwulq6t" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li></ul>
@@ -174,7 +233,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/" data-id="cja1voux2002i5aaka27z32lp" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/" data-id="cja6dwo0v001yjxakld3zt9zs" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Python/">Python</a></li></ul>
@@ -241,7 +300,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/05/Some-Thoughts-on-Deep-Neural-Networks-and-Handwritten-digit-recognition/" data-id="cja1vouy3003g5aak2vk0r9ad" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/05/Some-Thoughts-on-Deep-Neural-Networks-and-Handwritten-digit-recognition/" data-id="cja6dwo1o002rjxakdapms3wp" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li></ul>
@@ -282,7 +341,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/09/24/update-pepper-flash-player-under-linux/" data-id="cja1vouyy004b5aakn1le5uf8" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/09/24/update-pepper-flash-player-under-linux/" data-id="cja6dwo2f003ejxak5t4b677z" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Flash/">Flash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -324,7 +383,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/09/12/convert-an-image-into-an-xbitmap-array/" data-id="cja1vouvk001d5aakpwkkxk4x" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/09/12/convert-an-image-into-an-xbitmap-array/" data-id="cja6dwnz6000ujxak6j7g2n87" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Xorg/">Xorg</a></li></ul>
@@ -376,7 +435,7 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/09/12/a-key-point-understanding-single-variable-chain-rule/" data-id="cja1voutn00055aakgfsivo27" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/09/12/a-key-point-understanding-single-variable-chain-rule/" data-id="cja6dwnz3000qjxakaczp2o3y" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Math/">Math</a></li></ul>
@@ -420,7 +479,7 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/09/09/change-wall-papers-on-a-rooted-kindle-manually-without-installing-any-more-hacks/" data-id="cja1vouwt002f5aaknw2530dg" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/09/09/change-wall-papers-on-a-rooted-kindle-manually-without-installing-any-more-hacks/" data-id="cja6dwnyy000ojxakiyf6tlwt" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Kindle/">Kindle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -463,7 +522,7 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/09/05/solve-missingsectionheadererror-file-contains-no-section-headers-in-configphaser-pyhton/" data-id="cja1vouxs00385aaknvre3i8l" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/09/05/solve-missingsectionheadererror-file-contains-no-section-headers-in-configphaser-pyhton/" data-id="cja6dwo1a002djxaknafi4s7i" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Python/">Python</a></li></ul>
@@ -507,51 +566,10 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/09/03/cong-e-ni-cong-er-neng-sui/" data-id="cja1vouvf00185aakbl6j0ux5" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/09/03/cong-e-ni-cong-er-neng-sui/" data-id="cja6dwnz5000sjxakhuxvnb4v" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Security/">Security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-casting-java-obj-into-string" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2017/08/02/casting-java-obj-into-string/" class="article-date">
-  <time datetime="2017-08-02T05:42:54.000Z" itemprop="datePublished">2017-08-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2017/08/02/casting-java-obj-into-string/">Casting java obj[] into String[]</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>In java, an object array can not be directly cast into a string array. This problem usually occurs when getting an array from a collection. </p>
-<p>According to <a href="https://stackoverflow.com/questions/22731706/java-lang-classcastexception-ljava-lang-object-cannot-be-cast-to-ljava-lang" target="_blank" rel="external">this post</a>It’s possible to do it like this:<br><code>String[] str = someCollection.toArray(new String[someCollection.size()]);</code></p>
-<p>2017.8.2</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/08/02/casting-java-obj-into-string/" data-id="cja1vouvh001b5aakbv02fzpr" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
 
     </footer>
   </div>
@@ -586,7 +604,7 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
   <div class="widget-wrap">
     <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12.5px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 17.5px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 18.75px;">CPP</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 16.25px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 11.25px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 13.75px;">Linux</a> <a href="/blog/tags/ML/" style="font-size: 15px;">ML</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 11.25px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 11.25px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Outdated/" style="font-size: 11.25px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12.5px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 15px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12.5px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 15px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12.5px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
+      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12.86px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 17.14px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 18.57px;">CPP</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15.71px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 11.43px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 14.29px;">Linux</a> <a href="/blog/tags/ML/" style="font-size: 14.29px;">ML</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 11.43px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 11.43px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Outdated/" style="font-size: 11.43px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12.86px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 14.29px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12.86px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 14.29px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12.86px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
     </div>
   </div>
 
@@ -608,6 +626,10 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
       <ul>
         
           <li>
+            <a href="/blog/2017/11/19/Preventing-CPU-IO-Intensive-Programs-Blocking-Linux-Gui/">Preventing CPU/IO Intensive Programs Blocking Linux Gui</a>
+          </li>
+        
+          <li>
             <a href="/blog/2017/11/16/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/">|failed to start docker application container engine| error after upgrade on ubuntu</a>
           </li>
         
@@ -621,10 +643,6 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
         
           <li>
             <a href="/blog/2017/11/02/Prevent-Blocking-When-Using-PyPlot/">Prevent Blocking When Using PyPlot</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/">Thoughts For Possible New Network Structures</a>
           </li>
         
       </ul>
@@ -685,22 +703,6 @@ s.setAttribute('data-timestamp', +new Date());
 
 <script src="/blog/js/script.js"></script>
 
-  </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>

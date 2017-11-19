@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-11-16T02:50:30.528Z</updated>
+  <updated>2017-11-19T06:31:20.710Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Preventing CPU/IO Intensive Programs Blocking Linux Gui</title>
+    <link href="https://d0048.github.io/blog/2017/11/19/Preventing-CPU-IO-Intensive-Programs-Blocking-Linux-Gui/"/>
+    <id>https://d0048.github.io/blog/2017/11/19/Preventing-CPU-IO-Intensive-Programs-Blocking-Linux-Gui/</id>
+    <published>2017-11-19T06:05:40.000Z</published>
+    <updated>2017-11-19T06:31:20.710Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="What-for"><a href="#What-for" class="headerlink" title="What for?"></a>What for?</h3><p>The fact that the linux kernel does NOT come with a GUI and the GUIs used are third  party components, their default priority levels (or nice level, which is user-space name for priority.) are the same as any other user space programs. This may cause the GUI to freeze when performing CPU/IO intensive jobs since they all run at the same priority level. </p><h3 id="What’s-nice-value-priority"><a href="#What’s-nice-value-priority" class="headerlink" title="What’s nice value/priority?"></a>What’s nice value/priority?</h3><p>To prevent that, we need to change the nice level, where the priority of a process equals <code>NICE_VALUE+20</code>. That’s said, higher priority level, same as higher nice level, creates a less prior job. </p><p>Usually run a program with <code>nice -n $NI_VALUE $COMMAND</code> starts a program with a given nice value. <code>renice -n NI_VALUE $PID</code> changes the priority level of a process with the given pid. (multiple pid could be given to change them all) </p><p>Sub-processes owns the same nice level with their parents.</p><h3 id="What-about-IO"><a href="#What-about-IO" class="headerlink" title="What about IO?"></a>What about IO?</h3><p>The above works for CPU priority only. For IO control, the default priority will be <code>cpu_priority / 5</code> and one can always change that using <code>ionice</code>.</p><h3 id="To-make-them-automatic"><a href="#To-make-them-automatic" class="headerlink" title="To make them automatic"></a>To make them automatic</h3><p>I recommend putting the pivotal GUI components into startup script or <code>crontab -e</code>(cron needed to be installed) like this:</p><pre>#"sudo crontab -e" to input* * * * * renice -n -4 -p $(pidof vivaldi-bin)* * * * * renice -n -8 -p $(pidof nautilus)* * * * * renice -n -8 -p $(pidof Xorg)* * * * * renice -n -8 -p $(pidof compiz)</pre><p>2017/11/19</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;What-for&quot;&gt;&lt;a href=&quot;#What-for&quot; class=&quot;headerlink&quot; title=&quot;What for?&quot;&gt;&lt;/a&gt;What for?&lt;/h3&gt;&lt;p&gt;The fact that the linux kernel does NOT come
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+  </entry>
   
   <entry>
     <title>|failed to start docker application container engine| error after upgrade on ubuntu</title>
@@ -85,9 +110,9 @@
     
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
-      <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
-    
       <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
+    
+      <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
     
   </entry>
   
@@ -165,9 +190,9 @@
     
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
-      <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
-    
       <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
+    
+      <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
     
   </entry>
   
@@ -495,31 +520,6 @@ Traceback
       <category term="Security" scheme="https://d0048.github.io/blog/tags/Security/"/>
     
       <category term="Thoughts" scheme="https://d0048.github.io/blog/tags/Thoughts/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Casting java obj[] into String[]</title>
-    <link href="https://d0048.github.io/blog/2017/08/02/casting-java-obj-into-string/"/>
-    <id>https://d0048.github.io/blog/2017/08/02/casting-java-obj-into-string/</id>
-    <published>2017-08-02T05:42:54.000Z</published>
-    <updated>2017-08-02T05:46:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>In java, an object array can not be directly cast into a string array. This problem usually occurs when getting an array from a collection. </p><p>According to <a href="https://stackoverflow.com/questions/22731706/java-lang-classcastexception-ljava-lang-object-cannot-be-cast-to-ljava-lang" target="_blank" rel="external">this post</a>It’s possible to do it like this:<br><code>String[] str = someCollection.toArray(new String[someCollection.size()]);</code></p><p>2017.8.2</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;In java, an object array can not be directly cast into a string array. This problem usually occurs when getting an array from a collectio
-      
-    
-    </summary>
-    
-    
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
-      <category term="Java" scheme="https://d0048.github.io/blog/tags/Java/"/>
     
   </entry>
   

@@ -3,20 +3,20 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>Building SSH server on arukas.io | D0048</title>
+  <title>Preventing CPU/IO Intensive Programs Blocking Linux Gui | D0048</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#The following content no longer works… #Create a regular 512Mb RAM application with Docker image: jdeathe/centos-ssh:latest #Found document of configuration in https://hub.docker.com/r/jdeathe/centos">
-<meta name="keywords" content="Outdated">
+  <meta name="description" content="What for?The fact that the linux kernel does NOT come with a GUI and the GUIs used are third  party components, their default priority levels (or nice level, which is user-space name for priority.) ar">
+<meta name="keywords" content="Linux,Solution">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Building SSH server on arukas.io">
-<meta property="og:url" content="https://d0048.github.io/blog/2016/11/30/building-ssh-server-on-arukas-io/index.html">
+<meta property="og:title" content="Preventing CPU&#x2F;IO Intensive Programs Blocking Linux Gui">
+<meta property="og:url" content="https://d0048.github.io/blog/2017/11/19/Preventing-CPU-IO-Intensive-Programs-Blocking-Linux-Gui/index.html">
 <meta property="og:site_name" content="D0048">
-<meta property="og:description" content="#The following content no longer works… #Create a regular 512Mb RAM application with Docker image: jdeathe/centos-ssh:latest #Found document of configuration in https://hub.docker.com/r/jdeathe/centos">
+<meta property="og:description" content="What for?The fact that the linux kernel does NOT come with a GUI and the GUIs used are third  party components, their default priority levels (or nice level, which is user-space name for priority.) ar">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2016-12-01T06:45:01.000Z">
+<meta property="og:updated_time" content="2017-11-19T06:31:20.710Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Building SSH server on arukas.io">
-<meta name="twitter:description" content="#The following content no longer works… #Create a regular 512Mb RAM application with Docker image: jdeathe/centos-ssh:latest #Found document of configuration in https://hub.docker.com/r/jdeathe/centos">
+<meta name="twitter:title" content="Preventing CPU&#x2F;IO Intensive Programs Blocking Linux Gui">
+<meta name="twitter:description" content="What for?The fact that the linux kernel does NOT come with a GUI and the GUIs used are third  party components, their default priority levels (or nice level, which is user-space name for priority.) ar">
   
     <link rel="alternate" href="/blog/atom.xml" title="D0048" type="application/atom+xml">
   
@@ -82,10 +82,10 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-building-ssh-server-on-arukas-io" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Preventing-CPU-IO-Intensive-Programs-Blocking-Linux-Gui" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/2016/11/30/building-ssh-server-on-arukas-io/" class="article-date">
-  <time datetime="2016-11-30T12:21:02.000Z" itemprop="datePublished">2016-11-30</time>
+    <a href="/blog/2017/11/19/Preventing-CPU-IO-Intensive-Programs-Blocking-Linux-Gui/" class="article-date">
+  <time datetime="2017-11-19T06:05:40.000Z" itemprop="datePublished">2017-11-19</time>
 </a>
     
   </div>
@@ -96,7 +96,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      Building SSH server on arukas.io
+      Preventing CPU/IO Intensive Programs Blocking Linux Gui
     </h1>
   
 
@@ -104,31 +104,29 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#The following content no longer works…</p>
-<p>#Create a regular 512Mb RAM application with Docker image: <code>jdeathe/centos-ssh:latest</code></p>
-<p>#Found document of configuration in <a href="https://hub.docker.com/r/jdeathe/centos-ssh/" target="_blank" rel="external">https://hub.docker.com/r/jdeathe/centos-ssh/</a></p>
-<p>#According to the document, open tcp port 22 to the public for ssh protocol connection. </p>
-<p>#In my case, port 2020, 4443 and 25565 also opens in tcp for other purposes. </p>
-<p>#According to the document, set up environment variables:</p>
-<pre><code>SSH_SUDO=ALL=(ALL) NOPASSWD:ALL
-SSH_USER=████
-SSH_USER_PASSWORD=████
-SSH_AUTHORIZED_KEYS=ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAikXL8TXKhADkOOjwEcE0tx792JMYR9mvlRTi+koG0Wb+0s6ouc████████████████████████████████████████████████████lDeqAwjJFC0er1oR6SHjgwxVU9uUfXS+AA03thfgK60CaWRUmCCUbc3vGqCyNMN44WfTMDiEz9zzeDpsrV+1/vQnxSO+K8eWhIV2jmyPMfc9z7QAs7USPfGY7TeLrFgb8m3AuFXFSdwdBp2rmPcLZbjZ9nNNR+f7eZLBn/wwE8z+rCevcprNoZgEn/0sUoHFQ== rsa-key-20161028</code></pre>
+        <h3 id="What-for"><a href="#What-for" class="headerlink" title="What for?"></a>What for?</h3><p>The fact that the linux kernel does NOT come with a GUI and the GUIs used are third  party components, their default priority levels (or nice level, which is user-space name for priority.) are the same as any other user space programs. This may cause the GUI to freeze when performing CPU/IO intensive jobs since they all run at the same priority level. </p>
+<h3 id="What’s-nice-value-priority"><a href="#What’s-nice-value-priority" class="headerlink" title="What’s nice value/priority?"></a>What’s nice value/priority?</h3><p>To prevent that, we need to change the nice level, where the priority of a process equals <code>NICE_VALUE+20</code>. That’s said, higher priority level, same as higher nice level, creates a less prior job. </p>
+<p>Usually run a program with <code>nice -n $NI_VALUE $COMMAND</code> starts a program with a given nice value. <code>renice -n NI_VALUE $PID</code> changes the priority level of a process with the given pid. (multiple pid could be given to change them all) </p>
+<p>Sub-processes owns the same nice level with their parents.</p>
+<h3 id="What-about-IO"><a href="#What-about-IO" class="headerlink" title="What about IO?"></a>What about IO?</h3><p>The above works for CPU priority only. For IO control, the default priority will be <code>cpu_priority / 5</code> and one can always change that using <code>ionice</code>.</p>
+<h3 id="To-make-them-automatic"><a href="#To-make-them-automatic" class="headerlink" title="To make them automatic"></a>To make them automatic</h3><p>I recommend putting the pivotal GUI components into startup script or <code>crontab -e</code>(cron needed to be installed) like this:</p>
+<pre>
+#"sudo crontab -e" to input
+* * * * * renice -n -4 -p $(pidof vivaldi-bin)
+* * * * * renice -n -8 -p $(pidof nautilus)
+* * * * * renice -n -8 -p $(pidof Xorg)
+* * * * * renice -n -8 -p $(pidof compiz)
+</pre>
 
-<p>#Try previeous SSH-2 RSA keys but failed. <code>Error: server rejects our key.</code></p>
-<p>#Environment variable <code>SSH_USER_PASSWORD=██████</code> does not take in effect for unknown reasons. Error: <em>Fatal error: No supported authentication methods available (server sent: public key,gssapi-key-keyex,gssapt-with-mic)[From putty_V0.63.0.0.43510830]</em></p>
-<p>#Generate a new pair of SSH-2 RSA keys from puttygen. Update environment variable: SSH_AUTHORIZED_KEYS with the new public key. </p>
-<p>#Try reconnect with private key. Success. </p>
-<p>[Warn]: Server domain name and ports mapped is dynamic every restart. <br><br>[Info]: Red-hat linux system used in this server. <br><br>[Info]: Installed package “screen” with command “sudo yum install screen -y”</p>
-<p>*****Server/Client configuration Complete!*****</p>
+<p>2017/11/19</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2016/11/30/building-ssh-server-on-arukas-io/" data-id="cja6dwnyv000njxak5mg1fshb" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/19/Preventing-CPU-IO-Intensive-Programs-Blocking-Linux-Gui/" data-id="cja6dwo0z0023jxaksoekr7te" class="article-share-link">Partager</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Outdated/">Outdated</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
 
     </footer>
   </div>
@@ -136,19 +134,10 @@ SSH_AUTHORIZED_KEYS=ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAikXL8TXKhADkOOjwEcE0tx79
     
 <nav id="article-nav">
   
-    <a href="/blog/2016/12/01/some-reminders-when-using-constructors/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
-      <div class="article-nav-title">
-        
-          Some reminding on constructors
-        
-      </div>
-    </a>
   
-  
-    <a href="/blog/2016/11/30/building-shadow-socks-server-on-arukas-io-and-connect-it-with-a-regular-client/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/2017/11/16/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title">Building shadow socks server on arukas.io and connect it with a regular client</div>
+      <div class="article-nav-title">|failed to start docker application container engine| error after upgrade on ubuntu</div>
     </a>
   
 </nav>

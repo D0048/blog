@@ -79,6 +79,61 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/03/19/shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn/" class="article-date">
+  <time datetime="2017-03-19T13:11:05.000Z" itemprop="datePublished">2017-03-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/03/19/shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn/">使用脚本自动更新host实现不用vpn，不用服务器的翻墙。。。</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(Ignore this if you can’t read it coz you won’t need it anyways ;p)<br><br>（这篇只为某些人打算省事而写。。。该host可靠性好步骤少。。。可以少踩点坑。。）<br><br>恩。。。鉴于看不懂中文的大概也不需要这个,需要这个的也不想看英文，这篇用中文写好了。。。</p>
+<p>总之该方法只能访问下谷歌油管之类的国外网站，在各种vpn被封的场景下很好用。</p>
+<p>那么现在就正式开始吧。。。<code>这样的玩意请在终端里输入</code></p>
+<p>window平台:</p>
+<p>   某github开发者很贴心的吧工具都写好了。。so。。。<br><br>   <a href="https://github.com/HostsTools/Windows" target="_blank" rel="external">https://github.com/HostsTools/Windows</a><br></p>
+<p>Unix平台（mac/linux。。之类）：</p>
+<p>   MAC似乎有人写了：<a href="https://github.com/HostsTools/OSX" target="_blank" rel="external">https://github.com/HostsTools/OSX</a></p>
+<p>linux的话靠自己吧：</p>
+<p>   1.安装git。 具体方式取决于发行版，有包管理器的话软件包叫git-core。(像什么<code>sudo apt-get install git-core</code>啦。。<code>yum install gitcore</code>啦。。。)没有的话请自己编译。</p>
+<p>   2.随便找个github上还有人维护的hosts文件，再随便找个目录，pull下来。。：<br><code>git pull https://github.com/racaljk/hosts.git</code></p>
+<p>   3.写个脚本。。。：<br><code>nano hosts_updater.sh</code><br>里面输入：</p>
+<p><pre><br>cd /你/现在/的路径/hosts<br>git pull<br>cat /你/现在/的路径/hosts/hosts | sudo tee /etc/hosts ##这句话没有写错。。。<br>/etc/init.d/networking restart<br></pre><br>ctrl+x然后回车保存退出</p>
+<p>   4.给上脚本权限并且执行一次试试:<br><br><code>chmod +x hosts_updater.sh</code><br><br><code>./hosts_updater.sh</code><br><br>过一会看看能不能上谷歌什么的。。。可能需要重启。。。（目测仅debian系可用，红帽党们估计也用不到吧。。）</p>
+<p>   5.安装crontab。。。(像什么<code>sudo apt-get install crontab</code>啦。。<code>yum install crontab</code>啦。。。或者自己编译)</p>
+<p>   6.登录到root用户中:<br><br><code>su root</code></p>
+<p>   7.在crontab里面注册指令让它定时执行。。。:<br><br><code>crontab -e</code><br><br>如果要你选择编辑器，选nano吧。。。<br><br>在最后一行加上 <code>0 0 * * * /到你脚本的路径/hosts_updater.sh</code> <br><br>一样保存退出。。。完事<br></p>
+<p>2017/3/19 22:06</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/03/19/shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn/" data-id="cja6dwo5f006ojxakndrpmf19" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/GFW/">GFW</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-logging-as-another-user-and-then-exit-after-finishing-the-desired-work-in-shell-script-2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2017/03/19/logging-as-another-user-and-then-exit-after-finishing-the-desired-work-in-shell-script-2/" class="article-date">
@@ -115,7 +170,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/19/logging-as-another-user-and-then-exit-after-finishing-the-desired-work-in-shell-script-2/" data-id="cja1vouwc00205aak1l0h8fxq" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/03/19/logging-as-another-user-and-then-exit-after-finishing-the-desired-work-in-shell-script-2/" data-id="cja6dwnzx001cjxakramqgxi1" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -157,7 +212,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/19/use-property-files-in-java/" data-id="cja1vouyn003z5aakx4dh9de1" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/03/19/use-property-files-in-java/" data-id="cja6dwo2l003ljxak2v59t0t9" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Java/">Java</a></li></ul>
@@ -213,7 +268,7 @@ inline std::string its(int i){
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/15/the-c-and-c-style-ways-to-transfrom-int-into-char-or-stream/" data-id="cja1vouy0003e5aakfuaeu4a4" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/03/15/the-c-and-c-style-ways-to-transfrom-int-into-char-or-stream/" data-id="cja6dwo1h002mjxakp0b8yb6o" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -262,7 +317,7 @@ inline std::string its(int i){
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/15/wierd-resource-release/" data-id="cja1vouyt00455aakhgmomj70" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/03/15/wierd-resource-release/" data-id="cja6dwo2w003sjxak0p88zvqm" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li></ul>
@@ -305,7 +360,7 @@ inline std::string its(int i){
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/14/method-id-not-in-0-0xffff-65536-error/" data-id="cja1vouzc004m5aakqxovk78g" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/03/14/method-id-not-in-0-0xffff-65536-error/" data-id="cja6dwo3h0042jxaknjdsq5fw" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Java/">Java</a></li></ul>
@@ -351,7 +406,7 @@ inline std::string its(int i){
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/02/a-fast-way-to-save-terminator-layout-into-config-file-and-set-it-to-default-2/" data-id="cja1vouv800145aak9ee7qylg" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/03/02/a-fast-way-to-save-terminator-layout-into-config-file-and-set-it-to-default-2/" data-id="cja6dwnxj0004jxakwe9o2yxf" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -391,7 +446,7 @@ inline std::string its(int i){
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/02/customer-command-in-terminator-config-file-not-executing/" data-id="cja1vouxm00315aakpxi8vd8e" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/03/02/customer-command-in-terminator-config-file-not-executing/" data-id="cja6dwo200034jxakrcvvopnn" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Terminator/">Terminator</a></li></ul>
@@ -435,7 +490,7 @@ inline std::string its(int i){
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/27/no-matching-algo-kex-error-while-attempt-to-ssh-via-older-ssh-clients/" data-id="cja1vouzh004t5aakjqvqt8cd" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/27/no-matching-algo-kex-error-while-attempt-to-ssh-via-older-ssh-clients/" data-id="cja6dwo3v004cjxakj10bscp5" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SSH/">SSH</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -484,53 +539,10 @@ inline std::string its(int i){
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/16/downgrade-kindle-paper-white1-pw-from-the-system-version-5-6-1-1-for-jailbreak/" data-id="cja1vouvv001m5aakb8n0d9yk" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/16/downgrade-kindle-paper-white1-pw-from-the-system-version-5-6-1-1-for-jailbreak/" data-id="cja6dwnzg0012jxakcpx8thgb" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Kindle/">Kindle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-about-getline-method-in-java" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2017/02/16/about-getline-method-in-java/" class="article-date">
-  <time datetime="2017-02-16T07:04:20.000Z" itemprop="datePublished">2017-02-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2017/02/16/about-getline-method-in-java/">About getline() method in Java</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Recently, I was trying to use an example program in Java to communicate with another C++ program through net socket. The example use a method in Class Stream called <code>getline()</code> to read from the socket with cause a problem that I failed to receive anything which is already sent.</p>
-<p>There are two reasons:</p>
-<p>First, this method will stuck the thread until a line is read. This disable all the debug output in my program.  </p>
-<p>Second, the method will only return if a <code>\n</code> sign or <code>/r</code> sign is read which is not contained in what’s sent. This disable the method from outputting anything and also stuck it forever. </p>
-<p>2017/2/20 12:33</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/16/about-getline-method-in-java/" data-id="cja1vouu1000c5aakin897wjb" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Java/">Java</a></li></ul>
 
     </footer>
   </div>
@@ -565,7 +577,7 @@ inline std::string its(int i){
   <div class="widget-wrap">
     <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12.5px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 17.5px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 18.75px;">CPP</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 16.25px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 11.25px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 13.75px;">Linux</a> <a href="/blog/tags/ML/" style="font-size: 15px;">ML</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 11.25px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 11.25px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Outdated/" style="font-size: 11.25px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12.5px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 15px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12.5px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 15px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12.5px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
+      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12.86px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 17.14px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 18.57px;">CPP</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15.71px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 11.43px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 14.29px;">Linux</a> <a href="/blog/tags/ML/" style="font-size: 14.29px;">ML</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 11.43px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 11.43px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Outdated/" style="font-size: 11.43px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12.86px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 14.29px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12.86px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 14.29px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12.86px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
     </div>
   </div>
 
@@ -587,6 +599,10 @@ inline std::string its(int i){
       <ul>
         
           <li>
+            <a href="/blog/2017/11/19/Preventing-CPU-IO-Intensive-Programs-Blocking-Linux-Gui/">Preventing CPU/IO Intensive Programs Blocking Linux Gui</a>
+          </li>
+        
+          <li>
             <a href="/blog/2017/11/16/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/">|failed to start docker application container engine| error after upgrade on ubuntu</a>
           </li>
         
@@ -600,10 +616,6 @@ inline std::string its(int i){
         
           <li>
             <a href="/blog/2017/11/02/Prevent-Blocking-When-Using-PyPlot/">Prevent Blocking When Using PyPlot</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/">Thoughts For Possible New Network Structures</a>
           </li>
         
       </ul>
@@ -664,22 +676,6 @@ s.setAttribute('data-timestamp', +new Date());
 
 <script src="/blog/js/script.js"></script>
 
-  </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
