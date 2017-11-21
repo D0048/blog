@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-11-21T09:01:04.749Z</updated>
+  <updated>2017-11-21T09:31:20.093Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -21,12 +21,23 @@
     <link href="https://d0048.github.io/blog/2017/11/21/A-Brief-Summary-of-the-Godel-s-Incompleteness-Theorems/"/>
     <id>https://d0048.github.io/blog/2017/11/21/A-Brief-Summary-of-the-Godel-s-Incompleteness-Theorems/</id>
     <published>2017-11-21T09:00:50.000Z</published>
-    <updated>2017-11-21T09:01:04.749Z</updated>
+    <updated>2017-11-21T09:31:20.093Z</updated>
+    
+    <content type="html"><![CDATA[<p>$\forall Axiomatic_System \\=&gt;  (!Completeness) OR (!Consistency)$</p><blockquote><p>There are inherent limitations of every formal axiomatic system containing <strong>basic arithmetic</strong>.</p></blockquote><p><br></p><h4 id="Completeness"><a href="#Completeness" class="headerlink" title="Completeness:"></a><strong>Completeness</strong>:</h4><blockquote><p>for any statement in the axioms’ language, that statement or its negation is provable from the axioms</p></blockquote><h4 id="Consistency"><a href="#Consistency" class="headerlink" title="Consistency:"></a><strong>Consistency</strong>:</h4><blockquote><p>there is no statement such that both the statement and its negation are provable from the axioms</p></blockquote><h4 id="First-incompleteness-theorem"><a href="#First-incompleteness-theorem" class="headerlink" title="First incompleteness theorem:"></a><strong>First incompleteness theorem</strong>:</h4><p>The conclusion is: there will always be elements whether </p><ul><li><em>both belong and don’t belong to a set</em> =&gt; Breaking <em>consistancy</em>. </li><li><em>can not be classified</em> =&gt; Breaking the <em>completeness</em>.</li></ul><blockquote><p>Any consistent formal system F within which a certain amount of elementary arithmetic can be carried out is incomplete; i.e., there are statements of the language of F which can neither be proved nor disproved in F.</p></blockquote><p><strong>Gödel sentence</strong> =&gt; The above mentioned statements that either unprovable or could be proved to be both true/false.</p><ul><li>The Gödel sentence is designed to refer, indirectly, to itself. </li><li>Define itself as something that’s not itself in itself. </li><li><p>Construction:</p><ul><li>$T \leftrightarrow \lnot True(T)$</li></ul></li><li><p>With inconsistency $B\lor\lnot B$, we can prove anything:</p><ul><li>$B\lor\lnot B$</li><li>$def: \lnot A \rightarrow (B \lor \lnot B)$</li><li>$\lnot(B\lor \neg B)\rightarrow \neg \neg A$</li><li>$B \land \neg B \rightarrow A$</li><li>$B \land \neg B$</li></ul></li></ul><h4 id="Second-incompleteness-theorem"><a href="#Second-incompleteness-theorem" class="headerlink" title="Second incompleteness theorem:"></a><strong>Second incompleteness theorem</strong>:</h4><h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a><strong>Solution</strong>:</h4><p><a href="https://plato.stanford.edu/entries/type-theory/" target="_blank" rel="external">The Type Theory</a>, Where operators are put into types and they can not be used to describle those that are in the same type, including themselves. This way, the <em>Russell Paradox</em>, using an operation in a statement pointing to the statment itself as a Godel sentence, is simply invalid. </p><p>Reference: <a href="https://en.wikipedia.org/wiki/Gödel&#39;s_incompleteness_theorems" target="_blank" rel="external">Wikipedia</a>, <a href="https://www.zhihu.com/question/27528796" target="_blank" rel="external">Zhihu1</a>, <a href="https://www.zhihu.com/question/20511488/answer/133390930" target="_blank" rel="external">Zhihu2</a></p><p>2017/11/21</p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;p&gt;$\forall Axiomatic_System \\=&amp;gt;  (!Completeness) OR (!Consistency)$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There are inherent limitations of every formal 
+      
+    
     </summary>
     
+    
+      <category term="Math" scheme="https://d0048.github.io/blog/tags/Math/"/>
     
   </entry>
   
