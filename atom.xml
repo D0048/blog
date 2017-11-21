@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-11-19T06:31:20.710Z</updated>
+  <updated>2017-11-21T09:01:04.749Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>A Brief Summary of the Godel&#39;s Incompleteness Theorems</title>
+    <link href="https://d0048.github.io/blog/2017/11/21/A-Brief-Summary-of-the-Godel-s-Incompleteness-Theorems/"/>
+    <id>https://d0048.github.io/blog/2017/11/21/A-Brief-Summary-of-the-Godel-s-Incompleteness-Theorems/</id>
+    <published>2017-11-21T09:00:50.000Z</published>
+    <updated>2017-11-21T09:01:04.749Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Preventing CPU/IO Intensive Programs Blocking Linux Gui</title>
@@ -110,9 +124,9 @@
     
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
-      <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
-    
       <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
+    
+      <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
     
   </entry>
   
@@ -190,9 +204,9 @@
     
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
-      <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
-    
       <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
+    
+      <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
     
   </entry>
   
@@ -495,31 +509,6 @@ Traceback
     
     
       <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Concerns Over a Trend of Online-compiled Application Dev Platforms</title>
-    <link href="https://d0048.github.io/blog/2017/09/03/cong-e-ni-cong-er-neng-sui/"/>
-    <id>https://d0048.github.io/blog/2017/09/03/cong-e-ni-cong-er-neng-sui/</id>
-    <published>2017-09-03T05:58:42.000Z</published>
-    <updated>2017-09-03T06:01:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Along the higher levels of abstract of the hardware, programming tends to become easier and more universal, together with acceptable amount of performance lost. Overall, such observation is a good thing to have since it make everyone’s life easier.  </p><p>However, this could actually cause many security/privacy issues. Using my experience in the summer camp as an example, where we were asked to perform all our developments on an “environment” made by a company called Apicloud(As I was told, there are tons of similar platforms available but they are essentially the same thing). This is a platform where you can create gui phone applications using simple js language and the api the company provided. All the low level code are packaged into so-called “modules”(named by the company). The key point is, those modules are provided by third party, non-open source, and not even accessible to the ones who use it. All the so-called “compilation and build” are performed online, by uploading user code to a repo binds to this user’s account and send an build request over a webpage panel.  </p><p>This is actually a really bad signal—developers no longer know what happened to the project and they just upload their code(more like pseudo-code thou) and depending on some third-party companies in responsible for the rest. One shall never know what has been added into one’s application packages to make an 3-line hello world program larger than 30mb and starts automatically on phone boot. What might be inside? Backdoors? ADs? Or user trackers? We shall never know! Moreover, the account of every developer is forced to bonded to his/er phone number, which is further forced to bonded to his/er ID number. This way, it would be a huge privacy issue in that the gov shall now know who, at where is making those applications, and have the total ability to disable one’s ability to further produce/use any applications by deleting his/er account and disable their applications.  </p><p>This way, users and developers are all losing their control over their applications, instead giving the right to some kinds of third-party organization! </p><p>Moreover, according to my observation, tons of popular, rather lower scale applications, are all based on similar platforms! We shall be aware of what is going on!</p><p>2017/9/3 14:00</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Along the higher levels of abstract of the hardware, programming tends to become easier and more universal, together with acceptable amou
-      
-    
-    </summary>
-    
-    
-      <category term="Security" scheme="https://d0048.github.io/blog/tags/Security/"/>
-    
-      <category term="Thoughts" scheme="https://d0048.github.io/blog/tags/Thoughts/"/>
     
   </entry>
   
