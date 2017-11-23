@@ -3,15 +3,20 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>Tag: Debug | D0048</title>
+  <title>Make touchegg work on ubuntu unity/gnome desktops | D0048</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="D0048">
-<meta property="og:url" content="https://d0048.github.io/blog/tags/Debug/index.html">
+  <meta name="description" content="It seems like the unity DE somehow blocks the mouse gesture for itself, thus most of the other multi-touch recognizers can not catch the events.  To disable this, the unity multi-touch support need to">
+<meta name="keywords" content="Linux,Solution">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Make touchegg work on ubuntu unity&#x2F;gnome desktops">
+<meta property="og:url" content="https://d0048.github.io/blog/2017/11/23/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/index.html">
 <meta property="og:site_name" content="D0048">
+<meta property="og:description" content="It seems like the unity DE somehow blocks the mouse gesture for itself, thus most of the other multi-touch recognizers can not catch the events.  To disable this, the unity multi-touch support need to">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-11-23T03:28:31.289Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="D0048">
+<meta name="twitter:title" content="Make touchegg work on ubuntu unity&#x2F;gnome desktops">
+<meta name="twitter:description" content="It seems like the unity DE somehow blocks the mouse gesture for itself, thus most of the other multi-touch recognizers can not catch the events.  To disable this, the unity multi-touch support need to">
   
     <link rel="alternate" href="/blog/atom.xml" title="D0048" type="application/atom+xml">
   
@@ -77,39 +82,62 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/05/11/meanings-of-memory-excpetion-in-visual-studio-under-debug-mode/" class="archive-article-date">
-  <time datetime="2017-05-11T11:42:58.000Z" itemprop="datePublished">May 11</time>
+        <section id="main"><article id="post-Make-touchegg-work-on-ubuntu-unity-gnome-desktops" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/11/23/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/" class="article-date">
+  <time datetime="2017-11-23T03:23:07.000Z" itemprop="datePublished">2017-11-23</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/05/11/meanings-of-memory-excpetion-in-visual-studio-under-debug-mode/">Meanings of abnormal memories value in visual studio under debug mode</a>
+    <h1 class="article-title" itemprop="name">
+      Make touchegg work on ubuntu unity/gnome desktops
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>It seems like the unity DE somehow blocks the mouse gesture for itself, thus most of the other multi-touch recognizers can not catch the events. </p>
+<p>To disable this, the unity multi-touch support need to be completely disabled:</p>
+<ol>
+<li>Install <code>dconf-editor</code>, using <code>apt install dconf-editor -y</code>.</li>
+<li>Launch <code>dconf-editor</code> via command line.</li>
+<li>Go to <code>com-&gt;canonical-&gt;unity-&gt;gestures</code> and disable everything inside.</li>
+</ol>
+<p>Now tools like toughegg could catch touchpad events as normal. </p>
+<p><code>2017/11/23</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/11/23/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/" data-id="cjabx4oww001naqakszp8sxm6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2017/11/21/A-Brief-Summary-of-the-Godel-s-Incompleteness-Theorems/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">A Brief Summary of the Godel&#39;s Incompleteness Theorems</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         

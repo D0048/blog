@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-11-21T09:31:20.093Z</updated>
+  <updated>2017-11-23T03:28:31.289Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Make touchegg work on ubuntu unity/gnome desktops</title>
+    <link href="https://d0048.github.io/blog/2017/11/23/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/"/>
+    <id>https://d0048.github.io/blog/2017/11/23/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/</id>
+    <published>2017-11-23T03:23:07.000Z</published>
+    <updated>2017-11-23T03:28:31.289Z</updated>
+    
+    <content type="html"><![CDATA[<p>It seems like the unity DE somehow blocks the mouse gesture for itself, thus most of the other multi-touch recognizers can not catch the events. </p><p>To disable this, the unity multi-touch support need to be completely disabled:</p><ol><li>Install <code>dconf-editor</code>, using <code>apt install dconf-editor -y</code>.</li><li>Launch <code>dconf-editor</code> via command line.</li><li>Go to <code>com-&gt;canonical-&gt;unity-&gt;gestures</code> and disable everything inside.</li></ol><p>Now tools like toughegg could catch touchpad events as normal. </p><p><code>2017/11/23</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;It seems like the unity DE somehow blocks the mouse gesture for itself, thus most of the other multi-touch recognizers can not catch the 
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+  </entry>
   
   <entry>
     <title>A Brief Summary of the Godel&#39;s Incompleteness Theorems</title>
@@ -267,9 +292,9 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="C" scheme="https://d0048.github.io/blog/tags/C/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
@@ -496,30 +521,6 @@ Traceback
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
       <category term="Kindle" scheme="https://d0048.github.io/blog/tags/Kindle/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Solve </title>
-    <link href="https://d0048.github.io/blog/2017/09/05/solve-missingsectionheadererror-file-contains-no-section-headers-in-configphaser-pyhton/"/>
-    <id>https://d0048.github.io/blog/2017/09/05/solve-missingsectionheadererror-file-contains-no-section-headers-in-configphaser-pyhton/</id>
-    <published>2017-09-05T12:44:57.000Z</published>
-    <updated>2017-09-05T12:51:27.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>While reading config files with utf-8 BOM header, configphaser throws this confusing exception. </p><p>While most of the online solutions suggests manually change the encoding of the file to ANSCII, or read the file and save it again in another format. The former drops support to special characters and the latter is just not easy enough.</p><p>I found that the default ConfigPhaser uses non-encoded format. In order to make sure it reads the file in the correct format:<br><code>configphaser.ConfigPhaser().read(config_file, encoding=&quot;utf-8-sig&quot;)</code></p><p>This should tell the phaser to use the utf-8 encoding with bom.</p><p>2017/9/5</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;While reading config files with utf-8 BOM header, configphaser throws this confusing exception. &lt;/p&gt;
-&lt;p&gt;While most of the online solution
-      
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
     
   </entry>
   
