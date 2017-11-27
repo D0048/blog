@@ -68,7 +68,7 @@ ga('send', 'pageview');
         
           <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://d0048.github.io/blog"></form>
@@ -78,66 +78,6 @@ ga('send', 'pageview');
 </header>
       <div class="outer">
         <section id="main">
-  
-    <article id="post-Note-on-1x1-Convolutions" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2017/10/25/Note-on-1x1-Convolutions/" class="article-date">
-  <time datetime="2017-10-25T07:12:00.000Z" itemprop="datePublished">2017-10-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2017/10/25/Note-on-1x1-Convolutions/">Note on 1x1 Convolutions</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="What-does-it-do"><a href="#What-does-it-do" class="headerlink" title="What does it do?"></a>What does it do?</h2><p>This is pretty straight forward, just like normal convolution operation, it converts a piece of data structured <code>[channels, height, width]</code> to <code>[kernal_numbers, same_height, same_width]</code>, using a set of learn-able parameters in the size of <code>[kernel_number, channel_number, weight_for_this_channel]</code>. This operation is usually just a meaningless scaling by a constant unless it is performed across channels, which is usually called a cascade cross channel pooling layer. </p>
-<h2 id="What’s-the-purpose"><a href="#What’s-the-purpose" class="headerlink" title="What’s the purpose?"></a>What’s the purpose?</h2><p>Along all materials read, it seems like this operation is widely used on the following purposes:</p>
-<h3 id="Dimension-augmentation-reduction"><a href="#Dimension-augmentation-reduction" class="headerlink" title="Dimension augmentation/reduction."></a>Dimension augmentation/reduction.</h3><p>This operation is capable of mapping an input of any channel to an output of any channel while preserving the original size of the picture. Do be aware that such operation, especially in dimensionality augmentations, uses large amount of extra parameters, making the network possible more prone to overfitting.</p>
-<h3 id="Rescaling-the-last-layer"><a href="#Rescaling-the-last-layer" class="headerlink" title="Rescaling the last layer."></a>Rescaling the last layer.</h3><p>In the above it’s mentioned that 1x1 convolution could serve as a plain scale of a whole channel, which is usually unnecessary. However, if such need exist, it could be met though this operation.</p>
-<h3 id="Increasing-non-linearity"><a href="#Increasing-non-linearity" class="headerlink" title="Increasing non-linearity."></a>Increasing non-linearity.</h3><p>The fact that it involves a non-linear mapping without drastically altering the input, the non-linearity of the network is increased without using plain fully-connected layers which destroys the relationship between nearby pixels. At the same time, the original size of the input could be preserved.</p>
-<h3 id="The-Network-in-Network-NIN-Structure"><a href="#The-Network-in-Network-NIN-Structure" class="headerlink" title="The (Network in Network)NIN Structure"></a>The (Network in Network)NIN Structure</h3><p>This concept first appeared to me while reading a research paper called <a href="https://arxiv.org/pdf/1312.4400v3.pdf" target="_blank" rel="external">network in network</a>, which seems to be another powerful modification made on CNNs. One of the key aspect this paper adapted is using a multilayer perceptron model to replace the traditional convolution kernel. </p>
-<p>As I wonder how could this model be implemented using higher level api of popular machine learning libraries without modifying the lower level codes, the paper actually stated that such operation of sliding a mini-MLP over a picture across the previous channels is equivalent to cross channel convolution with 1x1 kernels, where a few new 1x1 convolutional layer(CCCP) is appended to a normal convolutional layer to reach the goal.</p>
-<p>The fact that this CCCP operation appending to a normal convolution layers will make a equivalent MLP serves as a sliding convolution kernel, is hard to imagine to be true. It creates confusion in my understanding and it is not until I unroll the whole process so it could be under stood.</p>
-<p>Rather than 2d convolution, using 1d convolution makes things more straight forward while the same rule applies to arbitrary dimensions of convolution.</p>
-<p>Suppose we have an 1d input with 2 channels:<br><br><br><img src="/blog/images/1d_input.png" class="[class1 class2]"><br><br><br>And we perform a normal convolution with one kernel of 2.<br><br><br><img src="/blog/images/1d_input_conv2.png" class="[class1 class2]"><br><br><br>After appending a 1x1(in 1d convolution, just 1) convolution layer with <strong>two</strong> kernels, it looks like:<br><br><br><img src="/blog/images/1d_input_conv2_conv1.png" class="[class1 class2]"><br><br><br>And another 1x1 layer with <strong>two</strong> kernels added:<br><br><br><img src="/blog/images/1d_input_conv2_conv1_conv1.png" class="[class1 class2]"><br><br><br>It’s not hard to see, that this structure is indeed a sliding MLP layer with the input size of the convolution size of the layer appended to, the depth of the number of 1x1 layers appended and the hidden unit numbers of the product of all kernel numbers in the hidden unit, the input numbers and the last layer.</p>
-<h3 id="The-Inception-module"><a href="#The-Inception-module" class="headerlink" title="The Inception module"></a>The Inception module</h3><p>The <a href="https://hacktilldawn.com/2016/09/25/inception-modules-explained-and-implemented/" target="_blank" rel="external">inception module</a> is first used in the googlenet architecture, and proved to be really useful.<br><img src="https://raw.githubusercontent.com/iamaaditya/iamaaditya.github.io/master/images/inception_1x1.png" alt=""></p>
-<center>picture retrieved from this <a href="https://wiki.tum.de/display/lfdv/Layers+of+a+Convolutional+Neural+Network" target="_blank" rel="external">website</a></center>
-
-<p>What this module does is really just adjoining all the output of different size of convolution/pooling together and let the network to choose which to use itself. The pro of this method is that the network is made more resistant to shift in sizes of the target, and the manually adjusting size of the kernels is no longer required–we got most of the possible sizes needed all here.</p>
-<p>As a result, the 1x1 convolution naturally became one of the choices.</p>
-<h2 id="Ideas-for-Future-Research"><a href="#Ideas-for-Future-Research" class="headerlink" title="Ideas for Future Research"></a>Ideas for Future Research</h2><p>As I read, neurons that fired together creates a relationship between each other and every one of them got easier to fire next time given the condition that the related neurons are fired.</p>
-<p>I am thinking that neurons in regular DNNs does not have any knowledge of the state of other neurons in the same layer, thus maybe it would be possible to create such a relation, to somehow create <strong>“logic”</strong> for networks?</p>
-<p>To do so, maybe we need another set of weights in each neuron used to scale the states of other neurons in the same layer and add to the output, somehow like this:<br>$$<br>\vec{y_{n}}=(\mathbf{W_n}^T \times  \vec{y_{n-1}} + \vec{b_n})+\mathbf{W_{new}}^T (\mathbf{W_n}^T \times  \vec{y_{n-1}} + \vec{b_n})<br>$$</p>
-<p><center><strong>If the formula is not displayed correctly, please allow unsecure(HTTP) cross site scripts in your browser.</strong></center><br>The new weight matrix for the new output will be an <code>n*n</code> matrix considering <code>n</code> as the size of the output.</p>
-<p>The detailed implementation is to be researched.</p>
-<p>Edit: Okay… This seems to be just an really stupid way of adding an extra layer, and won’t really make any difference from just adding one at all. (2017/10/27)</p>
-<p>References:<br><a href="http://blog.csdn.net/yiliang_/article/details/60468655" target="_blank" rel="external">http://blog.csdn.net/yiliang_/article/details/60468655</a><br><a href="http://blog.csdn.net/mounty_fsc/article/details/51746111" target="_blank" rel="external">http://blog.csdn.net/mounty_fsc/article/details/51746111</a><br><a href="http://jntsai.blogspot.com/2015/03/paper-summary-network-in-network-deep.html" target="_blank" rel="external">http://jntsai.blogspot.com/2015/03/paper-summary-network-in-network-deep.html</a><br><a href="https://www.zhihu.com/question/64098749" target="_blank" rel="external">https://www.zhihu.com/question/64098749</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/25/Note-on-1x1-Convolutions/" data-id="cjai6ycph0021utakztbr6pp0" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ML/">ML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Problem/">Problem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
   
     <article id="post-getopt-function-on-raspery-pi" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -167,7 +107,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/23/getopt-function-on-raspery-pi/" data-id="cjai6ycrw004dutakbnu9z5qh" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/23/getopt-function-on-raspery-pi/" data-id="cjai6ycrw004dutakbnu9z5qh" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -242,7 +182,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/17/The-Harmonic-Series-how-comes-the-divergence/" data-id="cjai6ycr6003mutakgv0y2bt0" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/17/The-Harmonic-Series-how-comes-the-divergence/" data-id="cjai6ycr6003mutakgv0y2bt0" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Math/">Math</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li></ul>
@@ -301,7 +241,7 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/" data-id="cjai6ycsg004zutakg1hg4fbe" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/" data-id="cjai6ycsg004zutakg1hg4fbe" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ML/">ML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -353,7 +293,7 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/" data-id="cjai6yco70012utak1mnbxjz9" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/" data-id="cjai6yco70012utak1mnbxjz9" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li></ul>
@@ -408,7 +348,7 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/" data-id="cjai6ycpm0028utakuf6ybck9" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/" data-id="cjai6ycpm0028utakuf6ybck9" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Python/">Python</a></li></ul>
@@ -475,7 +415,7 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/05/Some-Thoughts-on-Deep-Neural-Networks-and-Handwritten-digit-recognition/" data-id="cjai6ycrx004futakdgltqd3s" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/05/Some-Thoughts-on-Deep-Neural-Networks-and-Handwritten-digit-recognition/" data-id="cjai6ycrx004futakdgltqd3s" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li></ul>
@@ -516,7 +456,7 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/09/24/update-pepper-flash-player-under-linux/" data-id="cjai6ycrl0043utakiqxrtwbt" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/09/24/update-pepper-flash-player-under-linux/" data-id="cjai6ycrl0043utakiqxrtwbt" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Flash/">Flash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -558,7 +498,7 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/09/12/convert-an-image-into-an-xbitmap-array/" data-id="cjai6yco4000xutakpepjgytf" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/09/12/convert-an-image-into-an-xbitmap-array/" data-id="cjai6yco4000xutakpepjgytf" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Xorg/">Xorg</a></li></ul>
@@ -610,10 +550,54 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/09/12/a-key-point-understanding-single-variable-chain-rule/" data-id="cjai6ycne0009utakmejgoclt" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/09/12/a-key-point-understanding-single-variable-chain-rule/" data-id="cjai6ycne0009utakmejgoclt" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Math/">Math</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-change-wall-papers-on-a-rooted-kindle-manually-without-installing-any-more-hacks" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/09/09/change-wall-papers-on-a-rooted-kindle-manually-without-installing-any-more-hacks/" class="article-date">
+  <time datetime="2017-09-09T01:43:08.000Z" itemprop="datePublished">2017-09-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/09/09/change-wall-papers-on-a-rooted-kindle-manually-without-installing-any-more-hacks/">Change screen saver image on a rooted kindle pw2 manually without installing any more hacks</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>I am just tired with the screensaver images and the ads thus trying to change them up. Also, I don’t want any more hack packages without really checking what’s inside myself. </p>
+<p>First of all, connect to the shell of that kindle using whatever methods possible.(e.g: xterm)</p>
+<p>The original wall papers seems to be located at <code>/user/share/blanket/screensaver/</code>. By replacing them with my own, I should be able to use my own images.</p>
+<p>However, the file system there seems to be mounted as read only. Use <code>df /user/share/blanket/screensaver/</code> to locate the mounting point and remount it with <code>mount -o remount,rw /</code>(coz in my case it mounted together with <code>/</code>)</p>
+<p>Then, one could freely copy his/her images(should be in the right size) into that folder following the name sequence. </p>
+<p>2017/9/9</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/09/09/change-wall-papers-on-a-rooted-kindle-manually-without-installing-any-more-hacks/" data-id="cjai6yco3000vutak86g5h58z" class="article-share-link">Delen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Kindle/">Kindle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
 
     </footer>
   </div>
@@ -636,7 +620,7 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Labels</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Bukkit/">Bukkit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/C/">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/CPP/">CPP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Compiler/">Compiler</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Debug/">Debug</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/File-Recovery/">File Recovery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Flash/">Flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/GFW/">GFW</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Kindle/">Kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/ML/">ML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Math/">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Outdated/">Outdated</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Problem/">Problem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SSH/">SSH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Solution/">Solution</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Terminator/">Terminator</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Vim/">Vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/WinAPI/">WinAPI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Xorg/">Xorg</a></li></ul>
     </div>
@@ -655,7 +639,7 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
     </div>
@@ -665,13 +649,9 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/blog/2017/11/27/printer-buffer-1/">printer buffer#1</a>
-          </li>
         
           <li>
             <a href="/blog/2017/11/23/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/">Make touchegg work on ubuntu unity/gnome desktops</a>
@@ -687,6 +667,10 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
         
           <li>
             <a href="/blog/2017/11/16/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/">|failed to start docker application container engine| error after upgrade on ubuntu</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/11/15/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/">Rejailbreak Kindle PaperWhite3 After Automatic Upgrade to 5.9.2</a>
           </li>
         
       </ul>

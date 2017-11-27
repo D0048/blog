@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-11-27T12:50:01.906Z</updated>
+  <updated>2017-11-23T03:28:31.289Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,29 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>printer buffer#1</title>
-    <link href="https://d0048.github.io/blog/2017/11/27/printer-buffer-1/"/>
-    <id>https://d0048.github.io/blog/2017/11/27/printer-buffer-1/</id>
-    <published>2017-11-27T12:49:33.000Z</published>
-    <updated>2017-11-27T12:50:01.906Z</updated>
-    
-    <content type="html"><![CDATA[<p>#cache<br>Newton’s Law of Universal Gravity:</p><blockquote><p>Any two object excerts a gravitional force of attraction on each other. </p></blockquote><p>Newton’s $1^{st}$:</p><blockquote><p>Inertia.</p></blockquote><p>Newton’s $2^{nd}$:</p><blockquote><p>$F=ma$</p></blockquote><p>Newton’s $3^{rd}$:</p><blockquote><p>$F=F_{anti}$</p></blockquote><hr><h4 id="Static-Kinetic-Friction"><a href="#Static-Kinetic-Friction" class="headerlink" title="Static/Kinetic Friction:"></a><em>Static/Kinetic Friction</em>:</h4><p><strong>Static</strong>:<br>$$F_f  &lt;  u_s*F_n$$<br>$F_f$ = Friction force<br>$u_s$ = coefficient of static friction<br>$F_n$ = Normal Force</p><p><strong>Kinetic</strong>:<br>$$F_f=u_k*F_n$$<br>$F_f$ = Friction force<br>$u_k$ = coefficient of kinetic friction<br>$F_n$ = Normal Force                                                                       </p><h4 id="Gravity-Orbits"><a href="#Gravity-Orbits" class="headerlink" title="Gravity/Orbits:"></a><strong>Gravity/Orbits</strong>:</h4><h3 id="Standard"><a href="#Standard" class="headerlink" title="Standard:"></a>Standard:</h3><p>$G\approx6.67408 × 10^{-11} m^3 kg^{-1} s^{-2}$</p><p>$$g=a=\frac{v^2}{r}$$</p><p>$$v=2\pi rf=\frac{2\pi r}{T}=\sqrt{\frac{GM}{r}}=\sqrt{gr}$$</p><p>$$Tension=F_{M on m}=\frac{GMm}{r^2}=ma=\frac{mv^2}{r}$$</p><p>$$T^2=(\frac{4\pi ^2}{GM})r^2$$</p><p>$$T=\frac{2\pi r}{v}<br>=2\pi\sqrt{\frac{r}{g}}=\frac{2\pi r}{\sqrt{\frac{GM}{r}}}$$</p><p>$$v_{critical}=\sqrt{\frac{rw}{m}}=\sqrt{gr}$$</p><p>$$<br>M=\frac{4\pi ^2 r^3}{GT^2}<br>$$</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;#cache&lt;br&gt;Newton’s Law of Universal Gravity:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Any two object excerts a gravitional force of attraction on each other. 
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>Make touchegg work on ubuntu unity/gnome desktops</title>
@@ -519,6 +496,31 @@ Traceback
     
     
       <category term="Math" scheme="https://d0048.github.io/blog/tags/Math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Change screen saver image on a rooted kindle pw2 manually without installing any more hacks</title>
+    <link href="https://d0048.github.io/blog/2017/09/09/change-wall-papers-on-a-rooted-kindle-manually-without-installing-any-more-hacks/"/>
+    <id>https://d0048.github.io/blog/2017/09/09/change-wall-papers-on-a-rooted-kindle-manually-without-installing-any-more-hacks/</id>
+    <published>2017-09-09T01:43:08.000Z</published>
+    <updated>2017-09-09T01:58:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>I am just tired with the screensaver images and the ads thus trying to change them up. Also, I don’t want any more hack packages without really checking what’s inside myself. </p><p>First of all, connect to the shell of that kindle using whatever methods possible.(e.g: xterm)</p><p>The original wall papers seems to be located at <code>/user/share/blanket/screensaver/</code>. By replacing them with my own, I should be able to use my own images.</p><p>However, the file system there seems to be mounted as read only. Use <code>df /user/share/blanket/screensaver/</code> to locate the mounting point and remount it with <code>mount -o remount,rw /</code>(coz in my case it mounted together with <code>/</code>)</p><p>Then, one could freely copy his/her images(should be in the right size) into that folder following the name sequence. </p><p>2017/9/9</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;I am just tired with the screensaver images and the ads thus trying to change them up. Also, I don’t want any more hack packages without 
+      
+    
+    </summary>
+    
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="Kindle" scheme="https://d0048.github.io/blog/tags/Kindle/"/>
     
   </entry>
   
