@@ -79,6 +79,51 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-a-huge-vulnerability-on-most-of-the-multicraft-panel-hosting-service" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2016/12/13/a-huge-vulnerability-on-most-of-the-multicraft-panel-hosting-service/" class="article-date">
+  <time datetime="2016-12-13T07:50:46.000Z" itemprop="datePublished">2016-12-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2016/12/13/a-huge-vulnerability-on-most-of-the-multicraft-panel-hosting-service/">A Huge Vulnerability on Most of the Multicraft Panel Hosting Service</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2016/12/13<br>Multicraft: <a href="http://www.multicraft.org/" target="_blank" rel="external">http://www.multicraft.org/</a></p>
+<p>When a customer purchases a web-panel Minecraft Server, it’s actually one of the server applications runs on a server. Most of the time, the operating system is Windows server (at least at here…). These kind of services will usually go with an account on the web-panel and an account for a FTP file server with limited accessibility. The web-panel is used to manage the input and output of the application log. The ftp server is used to manage the files belongs to the application including plugins and maps. </p>
+<p>So I believe that there will be multiple server appilication on the actual server because 2 application might share the same subdomain/ip address but just in different ports. Since accessing other dictionaries on the FTP server is prohibited, I believe that no dockers/virtual machines are present. </p>
+<p>Also, I found that although users don’t have permission to edit other dictionaries, the application do have the permission to access the dictionaries of the other users. Since it’s not under linux, we don’t need to care about file owner’s issue. At the same time, we can easily access the application server through ftp server which is a compiled jar file. By reverse and recompile it, we can control the whole server. </p>
+<p>Then I found that java codes in ./plugin and ./mod which is the application’s plugins and mods can be customized with your own code and will be executed by the application. In that, we can even execute shell command directly through runtime. Till now, I tried shutdown it and it works. </p>
+<p>2016/12/14<br>Demo code:<a href="https://github.com/D0048/CraftPlugins/tree/master/ShellController" target="_blank" rel="external">https://github.com/D0048/CraftPlugins/tree/master/ShellController</a></p>
+<p>2016/12/17<br>I tested in my server, it’s working.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2016/12/13/a-huge-vulnerability-on-most-of-the-multicraft-panel-hosting-service/" data-id="cjai6ycnt000nutakjtco2b9u" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Bukkit/">Bukkit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Security/">Security</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-good-posts-i-found" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2016/12/06/good-posts-i-found/" class="article-date">
@@ -222,7 +267,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2016/12/06/good-posts-i-found/" data-id="cjabx4ouy0000aqak33zjw8fs" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2016/12/06/good-posts-i-found/" data-id="cjai6ycmx0001utak7e67umqv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li></ul>
@@ -268,7 +313,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2016/12/05/oncommand-mothod-when-developing-plugins-for-bukkit-2/" data-id="cjabx4oyv003saqakiffxluoq" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2016/12/05/oncommand-mothod-when-developing-plugins-for-bukkit-2/" data-id="cjai6ycq9002putak5v039i9u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Bukkit/">Bukkit</a></li></ul>
@@ -351,7 +396,7 @@ else {
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2016/12/01/unsolved-problem-list/" data-id="cjabx4oyi003aaqakthqbrcir" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2016/12/01/unsolved-problem-list/" data-id="cjai6ycr4003jutakoxn2y4fo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Problem/">Problem</a></li></ul>
@@ -393,7 +438,7 @@ else {
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2016/12/01/file-recovery-on-linux-after-rm/" data-id="cjabx4owm001eaqakr2gerfei" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2016/12/01/file-recovery-on-linux-after-rm/" data-id="cjai6ycom001futak8as0geav" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/File-Recovery/">File Recovery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -432,7 +477,7 @@ else {
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2016/12/01/some-reminders-when-using-constructors/" data-id="cjabx4oy8002waqakdbvx1egp" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2016/12/01/some-reminders-when-using-constructors/" data-id="cjai6ycqs0039utakihw2pg56" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li></ul>
@@ -487,7 +532,7 @@ SSH_AUTHORIZED_KEYS=ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAikXL8TXKhADkOOjwEcE0tx79
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2016/11/30/building-ssh-server-on-arukas-io/" data-id="cjabx4ow5000taqakgqn5zx5t" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2016/11/30/building-ssh-server-on-arukas-io/" data-id="cjai6ycnq000lutak0ukqhc6e" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Outdated/">Outdated</a></li></ul>
@@ -538,7 +583,7 @@ SSH_AUTHORIZED_KEYS=ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAikXL8TXKhADkOOjwEcE0tx79
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2016/11/30/building-shadow-socks-server-on-arukas-io-and-connect-it-with-a-regular-client/" data-id="cjabx4owe0014aqakrdma0rk7" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2016/11/30/building-shadow-socks-server-on-arukas-io-and-connect-it-with-a-regular-client/" data-id="cjai6ycoh001autakqzjmzqmr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Outdated/">Outdated</a></li></ul>
@@ -598,6 +643,10 @@ SSH_AUTHORIZED_KEYS=ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAikXL8TXKhADkOOjwEcE0tx79
       <ul>
         
           <li>
+            <a href="/blog/2017/11/27/printer-buffer-1/">printer buffer#1</a>
+          </li>
+        
+          <li>
             <a href="/blog/2017/11/23/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/">Make touchegg work on ubuntu unity/gnome desktops</a>
           </li>
         
@@ -611,10 +660,6 @@ SSH_AUTHORIZED_KEYS=ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAikXL8TXKhADkOOjwEcE0tx79
         
           <li>
             <a href="/blog/2017/11/16/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/">|failed to start docker application container engine| error after upgrade on ubuntu</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2017/11/15/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/">Rejailbreak Kindle PaperWhite3 After Automatic Upgrade to 5.9.2</a>
           </li>
         
       </ul>
