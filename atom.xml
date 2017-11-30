@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-11-30T04:34:08.114Z</updated>
+  <updated>2017-11-30T11:11:07.849Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://d0048.github.io/blog/2017/11/30/Setting-up-the-FRC-development-envrionment-on-ubuntu-16-04/"/>
     <id>https://d0048.github.io/blog/2017/11/30/Setting-up-the-FRC-development-envrionment-on-ubuntu-16-04/</id>
     <published>2017-11-30T01:21:42.000Z</published>
-    <updated>2017-11-30T04:34:08.114Z</updated>
+    <updated>2017-11-30T11:11:07.849Z</updated>
     
-    <content type="html"><![CDATA[<p>This is a record setting up the FRC development environment for C++/Java for the comp in 2018. </p><ol><li><p>Normally setting up the system, install anything one may need like <code>git/svn/browser</code>… and so on. </p></li><li><p>Add FRC cmake tool ppa: <code>sudo add-apt-repository ppa:wpilib/toolchain-beta</code>, download package list: <code>sudo apt update</code>, download toolchains <code>sudo apt install frc-toolchain</code>.</p></li><li><p>Download eclipse <code>sudo apt install eclipse</code>.</p></li><li><p>Download C++ support for eclipse <code>sudo apt install sudo apt install eclipse-cdt*</code> if using bash(default). If using zsh, use <code>sudo apt install eclipse-cdt\*</code>.</p></li><li></li></ol><p><code>2017/11/30</code> TO BE CONTINUED</p>]]></content>
+    <content type="html"><![CDATA[<p>This is a record setting up the FRC development environment for C++/Java for the comp in 2018. </p><ol><li><p>Normally setting up the system, install anything one may need like <code>git/svn/browser</code>… and so on. </p></li><li><p>Add FRC cmake tool ppa: <code>sudo add-apt-repository ppa:wpilib/toolchain-beta</code>, download package list: <code>sudo apt update</code>, download toolchains <code>sudo apt install frc-toolchain</code>.</p></li><li><p>Download eclipse <code>sudo apt install eclipse</code>.</p></li><li><p>Download C++ support for eclipse <code>sudo apt install sudo apt install eclipse-cdt*</code> if using bash(default). If using zsh, use <code>sudo apt install eclipse-cdt\*</code>.</p></li><li><p>Install the IDE/editor wanted. In my case: </p></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make;</div><div class="line">sudo add-apt-repository ppa:jonathonf/vim;</div><div class="line">sudo apt update;</div><div class="line">sudo apt install ubuntu-make vim;</div></pre></td></tr></table></figure><h1 id="At-here-refer-this-link-to-fix-a-bug-of-umake"><a href="#At-here-refer-this-link-to-fix-a-bug-of-umake" class="headerlink" title="At here refer this link to fix a bug of umake"></a>At here refer <a href="">this link</a> to fix a bug of umake</h1><pre><code class="bash"></code></pre><p><code>2017/11/30</code> TO BE CONTINUED</p>]]></content>
     
     <summary type="html">
     
