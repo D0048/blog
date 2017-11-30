@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="D0048">
 <meta property="og:description" content="This is a record setting up the FRC development environment for C++/Java for the comp in 2018.   Normally setting up the system, install anything one may need like git/svn/browser… and so on.   Add FR">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-30T11:32:27.715Z">
+<meta property="og:updated_time" content="2017-11-30T14:00:27.638Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Setting up the FRC development envrionment on ubuntu 16.04">
 <meta name="twitter:description" content="This is a record setting up the FRC development environment for C++/Java for the comp in 2018.   Normally setting up the system, install anything one may need like git/svn/browser… and so on.   Add FR">
@@ -117,9 +117,11 @@ ga('send', 'pageview');
 <li><p>Install the IDE/editor wanted. In my case: </p>
 </li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make;</div><div class="line">sudo add-apt-repository ppa:jonathonf/vim;</div><div class="line">sudo apt update;</div><div class="line">sudo apt install ubuntu-make vim;</div><div class="line">umake ide eclipse</div><div class="line">umake ide eclipse-cpp</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make;</div><div class="line">sudo add-apt-repository ppa:jonathonf/vim;</div><div class="line">sudo apt update;</div><div class="line">sudo apt install ubuntu-make vim;</div><div class="line">umake ide eclipse</div></pre></td></tr></table></figure>
 <p><strong>If umake went wrong(which suppose to in my current version), refer <a href="https://d0048.github.io/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/">this link</a> to fix a bug of umake</strong></p>
 <ol>
+<li><p>Open eclipse and install the CDT plugin(for cpp development) and vim mode.<br><code>help-&gt;install new software-&gt;add-&gt;Enter &quot;http://download.eclipse.org/tools/cdt/releases/9.3&quot; for eclipse oxygen -&gt; select all -&gt; install...</code><br><code>help-&gt;install new software-&gt;add-&gt;Enter &quot; http://vrapper.sourceforge.net/update-site/stable&quot; for eclipse oxygen -&gt; select all -&gt; install...</code></p>
+</li>
 <li></li>
 </ol>
 <p><code>2017/11/30</code> TO BE CONTINUED</p>
