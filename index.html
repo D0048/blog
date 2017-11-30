@@ -79,6 +79,60 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/" class="article-date">
+  <time datetime="2017-11-30T11:12:31.000Z" itemprop="datePublished">2017-11-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/">Solution to AttributeError ProgressBar object has no attribute finished error using ubuntu-make</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>It seems like the umake version contained in the ubuntu 16.04 ppa <code>ppa:ubuntu-desktop/ubuntu-make</code> breaks due to a change in the API of the python <code>ProgressBar</code> module…</p>
+<p>The error log looks like this: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">N/A% (0 of 100) |                        | Elapsed Time: 0:00:00 ETA:  --:--:--Downloading and installing requirements</div><div class="line">ERROR: Unhandled exception</div><div class="line">Traceback (most recent call last):</div><div class="line">  File <span class="string">"/usr/lib/python3/dist-packages/umake/tools.py"</span>, line 158, <span class="keyword">in</span> wrapper</div><div class="line">    <span class="keyword">function</span>(*args, **kwargs)</div><div class="line">  File <span class="string">"/usr/lib/python3/dist-packages/umake/frameworks/baseinstaller.py"</span>, line 288, <span class="keyword">in</span> get_progress</div><div class="line">    <span class="keyword">if</span> not self.pbar.finished:  <span class="comment"># drawing is delayed, so ensure we are not done first</span></div><div class="line">AttributeError: <span class="string">'ProgressBar'</span> object has no attribute <span class="string">'finished'</span></div><div class="line">ERROR: Unhandled exception</div><div class="line">Traceback (most recent call last):</div><div class="line">  File <span class="string">"/usr/lib/python3/dist-packages/umake/tools.py"</span>, line 158, <span class="keyword">in</span> wrapper</div><div class="line">    <span class="keyword">function</span>(*args, **kwargs)</div><div class="line">  File <span class="string">"/usr/lib/python3/dist-packages/umake/frameworks/baseinstaller.py"</span>, line 288, <span class="keyword">in</span> get_progress</div><div class="line">    <span class="keyword">if</span> not self.pbar.finished:  <span class="comment"># drawing is delayed, so ensure we are not done first</span></div><div class="line">AttributeError: <span class="string">'ProgressBar'</span> object has no attribute <span class="string">'finished'</span></div></pre></td></tr></table></figure>
+<p>However, I failed to find a file corresponding to <code>File &quot;/usr/lib/python3/dist-packages/umake/frameworks/baseinstaller.py&quot;</code> in the github repo, thus failing to start an pr/issue. </p>
+<p>For those who encounter similar issue, here’s the quick fix…</p>
+<ol>
+<li><p>Use your favorite editor and root access to open the file <code>/usr/lib/python3/dist-packages/umake/frameworks/baseinstaller.py</code>, e.g <code>sudo gedit /usr/lib/python3/dist-packages/umake/frameworks/baseinstaller.py</code>. </p>
+</li>
+<li><p>Go to line 288.</p>
+</li>
+<li><p>Change the line <code>if not self.pbar.finished:  # drawing is delayed, so ensure we are not done first</code> to <code>if True:</code>, save and quit. </p>
+</li>
+<li><p>The progress bar may looks kinda broken after the fix, but will have no interruption to any installation…</p>
+</li>
+</ol>
+<p><code>2017/11/30</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/" data-id="cjame6c7800009gaka5msv9ib" class="article-share-link">Delen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Setting-up-the-FRC-development-envrionment-on-ubuntu-16-04" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2017/11/30/Setting-up-the-FRC-development-envrionment-on-ubuntu-16-04/" class="article-date">
@@ -555,50 +609,6 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2017/10/25/to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch/" class="article-date">
-  <time datetime="2017-10-25T12:14:52.000Z" itemprop="datePublished">2017-10-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2017/10/25/to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch/">to_categorical() missing 1 required positional argument nb_classes caused by tflearn version mismatch</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><code>TypeError: to_categorical() missing 1 required positional argument: &#39;nb_classes&#39;</code> was encountered while I was trying to run an example program based on it.</p>
-<p>The function <code>to_catagorical()</code> used to require two arguments, where the second is called <code>nb_classes</code> and represents the total class numbers in classification as an integer. </p>
-<p>It’s not until this <a href="https://github.com/tflearn/tflearn/pull/923" target="_blank" rel="external">pr</a> that the second function is no longer needed but the support for the previous usage is dropped and all the examples are updated to adapt to the new usage.</p>
-<p>However, until today, the default version installed directed from pip is not new enough to support this new feature, thus causing a problem. </p>
-<p>To solve it, either try update to the newest version via <code>pip install git+https://github.com/tflearn/tflearn.git</code> or just add the class number. </p>
-<p>2017/10/25</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/25/to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch/" data-id="cjame51on005lveakb06suqc7" class="article-share-link">Delen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ML/">ML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -625,7 +635,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12.5px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 17.5px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 18.75px;">CPP</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 10px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 11.25px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 16.25px;">Linux</a> <a href="/blog/tags/ML/" style="font-size: 13.75px;">ML</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 11.25px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12.5px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Outdated/" style="font-size: 11.25px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12.5px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 13.75px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12.5px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 13.75px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12.5px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
+      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12.86px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 17.14px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 18.57px;">CPP</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 10px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15.71px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 11.43px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17.14px;">Linux</a> <a href="/blog/tags/ML/" style="font-size: 14.29px;">ML</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 11.43px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12.86px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Outdated/" style="font-size: 11.43px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12.86px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 14.29px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12.86px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 14.29px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12.86px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
     </div>
   </div>
 
@@ -647,6 +657,10 @@ ga('send', 'pageview');
       <ul>
         
           <li>
+            <a href="/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/">Solution to AttributeError ProgressBar object has no attribute finished error using ubuntu-make</a>
+          </li>
+        
+          <li>
             <a href="/blog/2017/11/30/Setting-up-the-FRC-development-envrionment-on-ubuntu-16-04/">Setting up the FRC development envrionment on ubuntu 16.04</a>
           </li>
         
@@ -660,10 +674,6 @@ ga('send', 'pageview');
         
           <li>
             <a href="/blog/2017/11/19/Preventing-CPU-IO-Intensive-Programs-Blocking-Linux-Gui/">Preventing CPU/IO Intensive Programs Blocking Linux Gui</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2017/11/16/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/">|failed to start docker application container engine| error after upgrade on ubuntu</a>
           </li>
         
       </ul>
@@ -724,6 +734,22 @@ s.setAttribute('data-timestamp', +new Date());
 
 <script src="/blog/js/script.js"></script>
 
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
 </body>
 </html>

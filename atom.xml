@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-11-30T11:11:07.849Z</updated>
+  <updated>2017-11-30T11:23:24.500Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Solution to AttributeError ProgressBar object has no attribute finished error using ubuntu-make</title>
+    <link href="https://d0048.github.io/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/"/>
+    <id>https://d0048.github.io/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/</id>
+    <published>2017-11-30T11:12:31.000Z</published>
+    <updated>2017-11-30T11:23:24.500Z</updated>
+    
+    <content type="html"><![CDATA[<p>It seems like the umake version contained in the ubuntu 16.04 ppa <code>ppa:ubuntu-desktop/ubuntu-make</code> breaks due to a change in the API of the python <code>ProgressBar</code> module…</p><p>The error log looks like this: </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">N/A% (0 of 100) |                        | Elapsed Time: 0:00:00 ETA:  --:--:--Downloading and installing requirements</div><div class="line">ERROR: Unhandled exception</div><div class="line">Traceback (most recent call last):</div><div class="line">  File <span class="string">"/usr/lib/python3/dist-packages/umake/tools.py"</span>, line 158, <span class="keyword">in</span> wrapper</div><div class="line">    <span class="keyword">function</span>(*args, **kwargs)</div><div class="line">  File <span class="string">"/usr/lib/python3/dist-packages/umake/frameworks/baseinstaller.py"</span>, line 288, <span class="keyword">in</span> get_progress</div><div class="line">    <span class="keyword">if</span> not self.pbar.finished:  <span class="comment"># drawing is delayed, so ensure we are not done first</span></div><div class="line">AttributeError: <span class="string">'ProgressBar'</span> object has no attribute <span class="string">'finished'</span></div><div class="line">ERROR: Unhandled exception</div><div class="line">Traceback (most recent call last):</div><div class="line">  File <span class="string">"/usr/lib/python3/dist-packages/umake/tools.py"</span>, line 158, <span class="keyword">in</span> wrapper</div><div class="line">    <span class="keyword">function</span>(*args, **kwargs)</div><div class="line">  File <span class="string">"/usr/lib/python3/dist-packages/umake/frameworks/baseinstaller.py"</span>, line 288, <span class="keyword">in</span> get_progress</div><div class="line">    <span class="keyword">if</span> not self.pbar.finished:  <span class="comment"># drawing is delayed, so ensure we are not done first</span></div><div class="line">AttributeError: <span class="string">'ProgressBar'</span> object has no attribute <span class="string">'finished'</span></div></pre></td></tr></table></figure><p>However, I failed to find a file corresponding to <code>File &quot;/usr/lib/python3/dist-packages/umake/frameworks/baseinstaller.py&quot;</code> in the github repo, thus failing to start an pr/issue. </p><p>For those who encounter similar issue, here’s the quick fix…</p><ol><li><p>Use your favorite editor and root access to open the file <code>/usr/lib/python3/dist-packages/umake/frameworks/baseinstaller.py</code>, e.g <code>sudo gedit /usr/lib/python3/dist-packages/umake/frameworks/baseinstaller.py</code>. </p></li><li><p>Go to line 288.</p></li><li><p>Change the line <code>if not self.pbar.finished:  # drawing is delayed, so ensure we are not done first</code> to <code>if True:</code>, save and quit. </p></li><li><p>The progress bar may looks kinda broken after the fix, but will have no interruption to any installation…</p></li></ol><p><code>2017/11/30</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;It seems like the umake version contained in the ubuntu 16.04 ppa &lt;code&gt;ppa:ubuntu-desktop/ubuntu-make&lt;/code&gt; breaks due to a change in t
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+  </entry>
   
   <entry>
     <title>Setting up the FRC development envrionment on ubuntu 16.04</title>
@@ -500,31 +525,6 @@ Traceback
       <category term="C" scheme="https://d0048.github.io/blog/tags/C/"/>
     
       <category term="Xorg" scheme="https://d0048.github.io/blog/tags/Xorg/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A key point understanding single variable chain rule</title>
-    <link href="https://d0048.github.io/blog/2017/09/12/a-key-point-understanding-single-variable-chain-rule/"/>
-    <id>https://d0048.github.io/blog/2017/09/12/a-key-point-understanding-single-variable-chain-rule/</id>
-    <published>2017-09-12T12:33:25.000Z</published>
-    <updated>2017-09-12T12:37:29.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>A key point understanding single variable chain rule: </p><p>f(g(x)) = f’(g)*g’ </p><p>At f’(g) part, g is inserted into f’ as a macro <strong>==after==</strong> taking the derivative!!!!! </p><p>e.g:</p><pre>f(x)=a^2g(x)=2af'(g), instead of dx((2a)^2) /dyis actually: "dx(a^2)/dy".replace("a","2a") !!!</pre><p>2017/9/12 20:30</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;A key point understanding single variable chain rule: &lt;/p&gt;
-&lt;p&gt;f(g(x)) = f’(g)*g’ &lt;/p&gt;
-&lt;p&gt;At f’(g) part, g is inserted into f’ as a macro 
-      
-    
-    </summary>
-    
-    
-      <category term="Math" scheme="https://d0048.github.io/blog/tags/Math/"/>
     
   </entry>
   

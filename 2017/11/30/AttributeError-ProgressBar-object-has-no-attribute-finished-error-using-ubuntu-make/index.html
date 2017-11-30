@@ -3,20 +3,20 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>A few points need to be caution while using crypt() in c | D0048</title>
+  <title>Solution to AttributeError ProgressBar object has no attribute finished error using ubuntu-make | D0048</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="While using this function, there’s a lot that’s mentioned in the manual but hard to find. From manual:  #define _XOPEN_SOURCE        /* See feature_test_macros(7) */ #include  char *crypt(const char *">
-<meta name="keywords" content="C">
+  <meta name="description" content="It seems like the umake version contained in the ubuntu 16.04 ppa ppa:ubuntu-desktop/ubuntu-make breaks due to a change in the API of the python ProgressBar module… The error log looks like this:  123">
+<meta name="keywords" content="Linux,Solution">
 <meta property="og:type" content="article">
-<meta property="og:title" content="A few points need to be caution while using crypt() in c">
-<meta property="og:url" content="https://d0048.github.io/blog/2017/06/13/a-few-points-need-to-be-caution-while-using-crypt-in-c/index.html">
+<meta property="og:title" content="Solution to AttributeError ProgressBar object has no attribute finished error using ubuntu-make">
+<meta property="og:url" content="https://d0048.github.io/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/index.html">
 <meta property="og:site_name" content="D0048">
-<meta property="og:description" content="While using this function, there’s a lot that’s mentioned in the manual but hard to find. From manual:  #define _XOPEN_SOURCE        /* See feature_test_macros(7) */ #include  char *crypt(const char *">
+<meta property="og:description" content="It seems like the umake version contained in the ubuntu 16.04 ppa ppa:ubuntu-desktop/ubuntu-make breaks due to a change in the API of the python ProgressBar module… The error log looks like this:  123">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-06-13T01:09:55.000Z">
+<meta property="og:updated_time" content="2017-11-30T11:23:24.500Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="A few points need to be caution while using crypt() in c">
-<meta name="twitter:description" content="While using this function, there’s a lot that’s mentioned in the manual but hard to find. From manual:  #define _XOPEN_SOURCE        /* See feature_test_macros(7) */ #include  char *crypt(const char *">
+<meta name="twitter:title" content="Solution to AttributeError ProgressBar object has no attribute finished error using ubuntu-make">
+<meta name="twitter:description" content="It seems like the umake version contained in the ubuntu 16.04 ppa ppa:ubuntu-desktop/ubuntu-make breaks due to a change in the API of the python ProgressBar module… The error log looks like this:  123">
   
     <link rel="alternate" href="/blog/atom.xml" title="D0048" type="application/atom+xml">
   
@@ -82,10 +82,10 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-a-few-points-need-to-be-caution-while-using-crypt-in-c" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/2017/06/13/a-few-points-need-to-be-caution-while-using-crypt-in-c/" class="article-date">
-  <time datetime="2017-06-13T00:48:16.000Z" itemprop="datePublished">2017-06-13</time>
+    <a href="/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/" class="article-date">
+  <time datetime="2017-11-30T11:12:31.000Z" itemprop="datePublished">2017-11-30</time>
 </a>
     
   </div>
@@ -96,7 +96,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      A few points need to be caution while using crypt() in c
+      Solution to AttributeError ProgressBar object has no attribute finished error using ubuntu-make
     </h1>
   
 
@@ -104,63 +104,30 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>While using this function, there’s a lot that’s mentioned in the manual but hard to find.</p>
-<p>From manual:</p>
-<pre>
-#define _XOPEN_SOURCE        /* See feature_test_macros(7) */
-#include <unistd.h>
-char *crypt(const char *key, const char *salt);
-#define _GNU_SOURCE          /* See feature_test_macros(7) */
-#include <crypt.h>
-char *crypt_r(const char *key, const char *salt,
-struct crypt_data *data);
-Link with -lcrypt.
-</crypt.h></unistd.h></pre>
-
-<p>However:</p>
-<pre>
-The return value points to static data whose content
-is overwritten by each call.
-</pre>
-This means a strdup or similar operation is necessary to copy it if one want to preserve the value and use the previous after another crypt. 
-
-Also, it is not in the manual that using an encrypted string as salt means using the same salt that encrypts the string is used to encrypt the new one. The reason is that the string output will have its own salt at its beginning. The manual mentions nothing about how the check works but it works at here. 
-
-So I looked for the source code in c posix library(From here:https://code.woboq.org/userspace/glibc/crypt/crypt-entry.c.html#crypt):
-<pre>
-157    char *
-158    crypt (const char *key, const char *salt)
-159    {
-160    #ifdef _LIBC
-161      /* Try to find out whether we have to use MD5 encryption replacement.  */
-162      if (strncmp (md5_salt_prefix, salt, sizeof (md5_salt_prefix) - 1) == 0
-163          /* Let __crypt_r deal with the error code if FIPS is enabled.  */
-164          && !fips_enabled_p ())
-165        return __md5_crypt (key, salt);
-166    
-167      /* Try to find out whether we have to use SHA256 encryption replacement.  */
-168      if (strncmp (sha256_salt_prefix, salt, sizeof (sha256_salt_prefix) - 1) == 0)
-169        return __sha256_crypt (key, salt);
-170    
-171      /* Try to find out whether we have to use SHA512 encryption replacement.  */
-172      if (strncmp (sha512_salt_prefix, salt, sizeof (sha512_salt_prefix) - 1) == 0)
-173        return __sha512_crypt (key, salt);
-174    #endif
-175    
-176      return __crypt_r (key, salt, &_ufc_foobar);
-177    }
-</pre>
-
-<p>It seems to be smarter than I excepted and can even determine which way to encrypt according to the salt….</p>
-<p>2017/6/13</p>
+        <p>It seems like the umake version contained in the ubuntu 16.04 ppa <code>ppa:ubuntu-desktop/ubuntu-make</code> breaks due to a change in the API of the python <code>ProgressBar</code> module…</p>
+<p>The error log looks like this: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">N/A% (0 of 100) |                        | Elapsed Time: 0:00:00 ETA:  --:--:--Downloading and installing requirements</div><div class="line">ERROR: Unhandled exception</div><div class="line">Traceback (most recent call last):</div><div class="line">  File <span class="string">"/usr/lib/python3/dist-packages/umake/tools.py"</span>, line 158, <span class="keyword">in</span> wrapper</div><div class="line">    <span class="keyword">function</span>(*args, **kwargs)</div><div class="line">  File <span class="string">"/usr/lib/python3/dist-packages/umake/frameworks/baseinstaller.py"</span>, line 288, <span class="keyword">in</span> get_progress</div><div class="line">    <span class="keyword">if</span> not self.pbar.finished:  <span class="comment"># drawing is delayed, so ensure we are not done first</span></div><div class="line">AttributeError: <span class="string">'ProgressBar'</span> object has no attribute <span class="string">'finished'</span></div><div class="line">ERROR: Unhandled exception</div><div class="line">Traceback (most recent call last):</div><div class="line">  File <span class="string">"/usr/lib/python3/dist-packages/umake/tools.py"</span>, line 158, <span class="keyword">in</span> wrapper</div><div class="line">    <span class="keyword">function</span>(*args, **kwargs)</div><div class="line">  File <span class="string">"/usr/lib/python3/dist-packages/umake/frameworks/baseinstaller.py"</span>, line 288, <span class="keyword">in</span> get_progress</div><div class="line">    <span class="keyword">if</span> not self.pbar.finished:  <span class="comment"># drawing is delayed, so ensure we are not done first</span></div><div class="line">AttributeError: <span class="string">'ProgressBar'</span> object has no attribute <span class="string">'finished'</span></div></pre></td></tr></table></figure>
+<p>However, I failed to find a file corresponding to <code>File &quot;/usr/lib/python3/dist-packages/umake/frameworks/baseinstaller.py&quot;</code> in the github repo, thus failing to start an pr/issue. </p>
+<p>For those who encounter similar issue, here’s the quick fix…</p>
+<ol>
+<li><p>Use your favorite editor and root access to open the file <code>/usr/lib/python3/dist-packages/umake/frameworks/baseinstaller.py</code>, e.g <code>sudo gedit /usr/lib/python3/dist-packages/umake/frameworks/baseinstaller.py</code>. </p>
+</li>
+<li><p>Go to line 288.</p>
+</li>
+<li><p>Change the line <code>if not self.pbar.finished:  # drawing is delayed, so ensure we are not done first</code> to <code>if True:</code>, save and quit. </p>
+</li>
+<li><p>The progress bar may looks kinda broken after the fix, but will have no interruption to any installation…</p>
+</li>
+</ol>
+<p><code>2017/11/30</code></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/06/13/a-few-points-need-to-be-caution-while-using-crypt-in-c/" data-id="cjame51io000dveaku3mxnmj3" class="article-share-link">Delen</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/" data-id="cjame6c7800009gaka5msv9ib" class="article-share-link">Delen</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
 
     </footer>
   </div>
@@ -168,19 +135,10 @@ So I looked for the source code in c posix library(From here:https://code.woboq.
     
 <nav id="article-nav">
   
-    <a href="/blog/2017/07/11/audio-device-disabled-and-replaced-by-dummy-audio-after-using-hdajackretask/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Nieuwer</strong>
-      <div class="article-nav-title">
-        
-          Audio device disabled and replaced by dummy audio after using hdajackretask
-        
-      </div>
-    </a>
   
-  
-    <a href="/blog/2017/05/17/how-to-have-two-header-files-contain-each-other-to-use-the-others-class-2/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/2017/11/30/Setting-up-the-FRC-development-envrionment-on-ubuntu-16-04/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Ouder</strong>
-      <div class="article-nav-title">How to have two header files contain each other to use the others&#39; class</div>
+      <div class="article-nav-title">Setting up the FRC development envrionment on ubuntu 16.04</div>
     </a>
   
 </nav>
