@@ -66,9 +66,9 @@ ga('send', 'pageview');
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS-каналы"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Поиск"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://d0048.github.io/blog"></form>
@@ -78,6 +78,72 @@ ga('send', 'pageview');
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/12/10/Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout/" class="article-date">
+  <time datetime="2017-12-10T14:47:15.000Z" itemprop="datePublished">2017-12-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/12/10/Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout/">Ubuntu 16.04 ultimate dual graphic card solution with newest nvidia proprietary drivers switchable without logout</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Finally I got it working. Using both nvidia-prime and bumblebee at the same time to allow switches between the two graphic cards (intel and nvidia) in both per-application-without-logout and whole-system-with-logout manner. My cuda also stays working at both mode. </p>
+<p>The following are the steps. </p>
+<ol>
+<li><p>Add newest nvidia-driver ppa: <code>sudo add-apt-repository ppa:graphics-drivers/ppa;sudo apt update</code>.</p>
+</li>
+<li><p>Install the proprietary driver(in my case, 384, larger index should means newer) and nvidia-prime: <code>sudo apt install nvidia-384 nvidia-prime</code>.</p>
+</li>
+<li><p>[optional] Add prime-indicator ppa and install <code>sudo add-apt-repository ppa:nilarimogard/webupd8;sudo apt update;sudo apt install prime-indicator-plus;</code></p>
+</li>
+<li><p>Reboot and the graphic cards should be able to be switchable with the indicator or x-org-setting from the dash menu. But it requires a reboot to perform the switch. If that’s not satisfactory and the user want more flexible control, proceed. If not, stop here. </p>
+</li>
+<li><p>Install bbswitch and bumblebee: <code>sudo apt install bbswitch-dkms bumblebee bumblebee-nvidia</code>.</p>
+</li>
+<li><p>Configure bumblebee to work. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo gpasswd -a <span class="variable">$USER</span> bumblebee</div><div class="line">sudo systemctl <span class="built_in">enable</span> bumblebeed</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>open the config file <code>sudo gedit /etc/bumblebee/bumblebee.conf</code> and edit:<br><code>Driver=</code> $\rightarrow$ <code>Driver=nvidia</code><br><strong>Remember to replace all <code>384</code> to your driver index</strong><br><code>KernelDriver=nvidia-384</code><br><code>LibraryPath=/usr/lib/nvidia-384:/usr/lib32/nvidia-384</code><br><code>XorgModulePath=/usr/lib/nvidia-384/xorg,/usr/lib/xorg/modules</code></p>
+<p>open the config file <code>/etc/modprobe.d/bumblebee.conf</code> and add:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">blacklist nvidia-384</div><div class="line">blacklist nvidia-384-updates</div><div class="line">blacklist nvidia-experimental-384</div></pre></td></tr></table></figure></p>
+<ol>
+<li><p>Reboot and prey.</p>
+</li>
+<li><p>If everything goes right, you should be able to use <code>optirun COMMAND</code> to run an application using the nvidia graphic card even if you disabled the card and set to use the intel graphic card in the nvidia-prime setting. </p>
+</li>
+<li><p>Remember to turn off the power of nvidia GPU after using it through the indicator to save power.</p>
+</li>
+</ol>
+<p>2017/12/10</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/12/10/Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout/" data-id="cjb0wnygc003khrak7m57rwi4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -121,7 +187,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/" data-id="cjame6c7800009gaka5msv9ib" class="article-share-link">Поделиться</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/" data-id="cjb0wnydt000mhrakwdikilff" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -195,7 +261,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/11/30/Setting-up-the-FRC-development-environment-on-ubuntu-16-04/" data-id="cjamk0od200008pakts4of5tz" class="article-share-link">Поделиться</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/30/Setting-up-the-FRC-development-environment-on-ubuntu-16-04/" data-id="cjb0wnyg8003dhrak92ph3s89" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/FRC/">FRC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -242,7 +308,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/11/23/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/" data-id="cjame51le002zveak9eke1rg7" class="article-share-link">Поделиться</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/23/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/" data-id="cjb0wnyfg002hhrakunxy7dll" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -321,7 +387,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/11/21/A-Brief-Summary-of-the-Godel-s-Incompleteness-Theorems/" data-id="cjame51hj0000veakq71gnw9z" class="article-share-link">Поделиться</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/21/A-Brief-Summary-of-the-Godel-s-Incompleteness-Theorems/" data-id="cjb0wnycw0000hrak3e3grvjl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Math/">Math</a></li></ul>
@@ -374,7 +440,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/11/19/Preventing-CPU-IO-Intensive-Programs-Blocking-Linux-Gui/" data-id="cjame51m2003pveak50zt2w52" class="article-share-link">Поделиться</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/19/Preventing-CPU-IO-Intensive-Programs-Blocking-Linux-Gui/" data-id="cjb0wnyff002ehrak1bvlagkn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -414,7 +480,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/11/16/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/" data-id="cjame51o20055veakkuwago28" class="article-share-link">Поделиться</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/16/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/" data-id="cjb0wnyh9004qhraky4cbmpvl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -461,7 +527,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/11/15/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/" data-id="cjame51lv003hveaklt5d6upm" class="article-share-link">Поделиться</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/15/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/" data-id="cjb0wnyga003fhrakecqvw9ir" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -513,7 +579,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/" data-id="cjame51np004vveakot57l67j" class="article-share-link">Поделиться</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/" data-id="cjb0wnygs0044hraklq1qulbm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ML/">ML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -552,74 +618,10 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/11/02/Prevent-Blocking-When-Using-PyPlot/" data-id="cjame51lu003fveakrq053fph" class="article-share-link">Поделиться</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/02/Prevent-Blocking-When-Using-PyPlot/" data-id="cjb0wnyfm002jhrakwbyy516b" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Thoughts-For-Possible-New-Network-Structures" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/" class="article-date">
-  <time datetime="2017-10-27T14:21:03.000Z" itemprop="datePublished">2017-10-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/">Thoughts For Possible New Network Structures</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="These-are-my-own-ideas-of-how-might-the-neural-network-architecture-may-be-improved-as-a-note-reminding-my-further-implementation-of-them"><a href="#These-are-my-own-ideas-of-how-might-the-neural-network-architecture-may-be-improved-as-a-note-reminding-my-further-implementation-of-them" class="headerlink" title="These are my own ideas of how might the neural network architecture may be improved, as a note reminding my further implementation of them"></a>These are my own ideas of how might the neural network architecture may be improved, as a note reminding my further implementation of them</h2><h3 id="Measure-for-Overfitting"><a href="#Measure-for-Overfitting" class="headerlink" title="Measure for Overfitting"></a>Measure for Overfitting</h3><p><strong><em>TODO</em></strong>: Add measure in respect to acc.<br><strong><em>TODO</em></strong>: Compare $O$ with normal CNN/DNN.</p>
-<p>We does need some measure to see if/how the network is overfitting the training data.</p>
-<p>My first thought is just use $O=LOSS(X_{train})-LOSS(X_{test})$. This seems to be working, and the value stays at around $0\pm0.04$, which means sometimes the network performs better in the training set($O&gt;0$) and sometimes the opposite($)&lt;0$).</p>
-<p>However, after accuracy reaches $99.2\%$, the frequency of observing a positive overfit index $O$ increases and the average index also increase. </p>
-<p><strong>To compare this index with the overfitting condition of other networks</strong>, I need to first somehow add the accuracy into the calculation of the index and then compare them on other architectures.<br>2017/11/21</p>
-<h3 id="Generator-For-Cheating-a-Network"><a href="#Generator-For-Cheating-a-Network" class="headerlink" title="Generator For Cheating a Network"></a>Generator For Cheating a Network</h3><p>What would happen if we first train a classifier to classify image, and then train another network where it distort an input image to maximize the change in the estimation done by the fore-mentioned classifier at the same time minimize the distortion to the image?</p>
-<p>This could be implemented using a new cost function for the second network.</p>
-<p>Implementing.<br>2017/10/27</p>
-<p>I failed to implement this structure in tensorflow in that rather than an actual value, I seems to be getting the uninitialized tensor representation of the output rather than the actual value and I failed to replace the input of the original network with that tensor.<br>2017/10/29</p>
-<p>I found the Generative Adversarial Network (GAN) model which there isn’t that much of a difference between my idea and the model. However, using another network to probe the weak points of an existing network is likely to be a possible idea of improving it.<br>2017/10/30</p>
-<p>This looks like a possible way of modifying the GAN model in that while the discriminator and the generator in the original GAN model works against each other, maybe we can make the discriminator to to create augmented data where it previously wrongly classified. Testing.<br>2017/10/31</p>
-<p>I’m pretty sure this will work, but there are more to it. If I am to train a generator to modify the minimum amount to a picture and at the same time cheating the discriminator, this may work. However, if I am to use the modified image to retrain the network, things may not be as the same… A badly written <code>6</code> might be twisted into something like <code>8</code> from even human perspective and training the discriminator with the image of <code>8</code> and label of <code>6</code> is not likely to improve its performance.</p>
-<p>However, adding the regularization term forcing the generated image to be different from the training set may be a good idea for generators to generate hopefully more creative samples. To be tested, too.<br>2017/11/1</p>
-<p>This is indeed different from regular gan. It looks working but further experiments are to be done.<br>2017/11/2</p>
-<p>Seems working. Work hanged for something else.<br>2017/11/8</p>
-<p>This is called <code>Generative Poisoning Attack</code> and extensive research seems to has been performed on it.<br>2017/11/8</p>
-<h2 id="Ambiguity-Measure-for-Dropout"><a href="#Ambiguity-Measure-for-Dropout" class="headerlink" title="Ambiguity Measure for Dropout"></a>Ambiguity Measure for Dropout</h2><p>Since increasing ambiguity is a good thing to do in ensembled classifiers, and dropout is essentially a cheap way to ensemble networks, why don’t we add another regularization term in the cost function to increase the ambiguity while dropout?<br>2017/11/1</p>
-<h2 id="Certainty-Measure-for-the-Result"><a href="#Certainty-Measure-for-the-Result" class="headerlink" title="Certainty Measure for the Result"></a>Certainty Measure for the Result</h2><p>According to my observation, it’s weird that a classifier networks always give a clear indication of the result and there is no indication for “Uncertain”. In another word, it seems unlikely for multiple/none of the output nodes to fire at the same time.</p>
-<p>The above may not necessarily be true, but it’s obvious that when a classifier network is given a sample that is totally different from any of the samples in the training set, the result tends to be coming from the weighted combination of the training examples. Will it be possible if we add another class to contain everything else and feed in random noises?</p>
-<p>Unlikely to be useful.<br>2017/11/1</p>
-<h3 id="Recursive-Conv-Net"><a href="#Recursive-Conv-Net" class="headerlink" title="Recursive Conv Net"></a>Recursive Conv Net</h3><p>What would happen is we make a convolution neural network recursive? Will this somehow benefit video generation?</p>
-<p>To be tested.<br>2017/10/27</p>
-<p>It exists…<br>2017/10/30</p>
-<h2 id="Dynamic-Cost-Function"><a href="#Dynamic-Cost-Function" class="headerlink" title="Dynamic Cost Function"></a>Dynamic Cost Function</h2><p>Is it possible if we make the cost function dynamic and change according to the condition so the convergence could be faster? Or is it possible to even use RNN to generate cost function? How would that help? What change would that bring about?<br>To be tested.<br>2017/10/27</p>
-<h3 id="Flip-network"><a href="#Flip-network" class="headerlink" title="Flip network"></a>Flip network</h3><p>According to <a href="https://arstechnica.com/civis/viewtopic.php?f=8&amp;t=785781" target="_blank" rel="external">here</a>, it looks like computers may have different speed between adding and subtracting numbers. If we flip the network so all addition became subtraction and vise versa (Then we might be maximizing the “cost” function), will it be any faster?</p>
-<p>To be tested.<br>2017/10/27</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/" data-id="cjame51mp0049veakw0br1ax4" class="article-share-link">Поделиться</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ML/">ML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Problem/">Problem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li></ul>
 
     </footer>
   </div>
@@ -642,7 +644,7 @@ ga('send', 'pageview');
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Метки</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Bukkit/">Bukkit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/C/">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/CPP/">CPP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Compiler/">Compiler</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Debug/">Debug</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/FRC/">FRC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/File-Recovery/">File Recovery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Flash/">Flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/GFW/">GFW</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Kindle/">Kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/ML/">ML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Math/">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Outdated/">Outdated</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Problem/">Problem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SSH/">SSH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Solution/">Solution</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Terminator/">Terminator</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Vim/">Vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/WinAPI/">WinAPI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Xorg/">Xorg</a></li></ul>
     </div>
@@ -652,18 +654,18 @@ ga('send', 'pageview');
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Облако меток</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12.86px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 17.14px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 18.57px;">CPP</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 10px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15.71px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 11.43px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17.14px;">Linux</a> <a href="/blog/tags/ML/" style="font-size: 14.29px;">ML</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 11.43px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12.86px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Outdated/" style="font-size: 11.43px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12.86px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 14.29px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12.86px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 14.29px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12.86px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
+      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12.5px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 16.25px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 18.75px;">CPP</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 10px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 11.25px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/blog/tags/ML/" style="font-size: 13.75px;">ML</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 11.25px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12.5px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Outdated/" style="font-size: 11.25px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12.5px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 13.75px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12.5px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 13.75px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12.5px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Архив</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
     </div>
   </div>
 
@@ -671,9 +673,13 @@ ga('send', 'pageview');
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Недавние записи</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/blog/2017/12/10/Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout/">Ubuntu 16.04 ultimate dual graphic card solution with newest nvidia proprietary drivers switchable without logout</a>
+          </li>
         
           <li>
             <a href="/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/">Solution to AttributeError ProgressBar object has no attribute finished error using ubuntu-make</a>
@@ -689,10 +695,6 @@ ga('send', 'pageview');
         
           <li>
             <a href="/blog/2017/11/21/A-Brief-Summary-of-the-Godel-s-Incompleteness-Theorems/">A Brief Summary of the Godel&#39;s Incompleteness Theorems</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2017/11/19/Preventing-CPU-IO-Intensive-Programs-Blocking-Linux-Gui/">Preventing CPU/IO Intensive Programs Blocking Linux Gui</a>
           </li>
         
       </ul>

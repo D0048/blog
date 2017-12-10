@@ -3,15 +3,20 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>Archives: 2017/11 | D0048</title>
+  <title>Ubuntu 16.04 ultimate dual graphic card solution with newest nvidia proprietary drivers switchable without logout | D0048</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="D0048">
-<meta property="og:url" content="https://d0048.github.io/blog/archives/2017/11/index.html">
+  <meta name="description" content="Finally I got it working. Using both nvidia-prime and bumblebee at the same time to allow switches between the two graphic cards (intel and nvidia) in both per-application-without-logout and whole-sys">
+<meta name="keywords" content="Solution,Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu 16.04 ultimate dual graphic card solution with newest nvidia proprietary drivers switchable without logout">
+<meta property="og:url" content="https://d0048.github.io/blog/2017/12/10/Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout/index.html">
 <meta property="og:site_name" content="D0048">
+<meta property="og:description" content="Finally I got it working. Using both nvidia-prime and bumblebee at the same time to allow switches between the two graphic cards (intel and nvidia) in both per-application-without-logout and whole-sys">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-12-10T15:09:42.378Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="D0048">
+<meta name="twitter:title" content="Ubuntu 16.04 ultimate dual graphic card solution with newest nvidia proprietary drivers switchable without logout">
+<meta name="twitter:description" content="Finally I got it working. Using both nvidia-prime and bumblebee at the same time to allow switches between the two graphic cards (intel and nvidia) in both per-application-without-logout and whole-sys">
   
     <link rel="alternate" href="/blog/atom.xml" title="D0048" type="application/atom+xml">
   
@@ -77,191 +82,81 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/" class="archive-article-date">
-  <time datetime="2017-11-30T11:12:31.000Z" itemprop="datePublished">Nov 30</time>
+        <section id="main"><article id="post-Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/12/10/Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout/" class="article-date">
+  <time datetime="2017-12-10T14:47:15.000Z" itemprop="datePublished">2017-12-10</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/">Solution to AttributeError ProgressBar object has no attribute finished error using ubuntu-make</a>
+    <h1 class="article-title" itemprop="name">
+      Ubuntu 16.04 ultimate dual graphic card solution with newest nvidia proprietary drivers switchable without logout
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/11/30/Setting-up-the-FRC-development-environment-on-ubuntu-16-04/" class="archive-article-date">
-  <time datetime="2017-11-30T01:21:42.000Z" itemprop="datePublished">Nov 30</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/11/30/Setting-up-the-FRC-development-environment-on-ubuntu-16-04/">Setting up the FRC development environment on ubuntu 16.04</a>
-    </h1>
-  
+        <p>Finally I got it working. Using both nvidia-prime and bumblebee at the same time to allow switches between the two graphic cards (intel and nvidia) in both per-application-without-logout and whole-system-with-logout manner. My cuda also stays working at both mode. </p>
+<p>The following are the steps. </p>
+<ol>
+<li><p>Add newest nvidia-driver ppa: <code>sudo add-apt-repository ppa:graphics-drivers/ppa;sudo apt update</code>.</p>
+</li>
+<li><p>Install the proprietary driver(in my case, 384, larger index should means newer) and nvidia-prime: <code>sudo apt install nvidia-384 nvidia-prime</code>.</p>
+</li>
+<li><p>[optional] Add prime-indicator ppa and install <code>sudo add-apt-repository ppa:nilarimogard/webupd8;sudo apt update;sudo apt install prime-indicator-plus;</code></p>
+</li>
+<li><p>Reboot and the graphic cards should be able to be switchable with the indicator or x-org-setting from the dash menu. But it requires a reboot to perform the switch. If that’s not satisfactory and the user want more flexible control, proceed. If not, stop here. </p>
+</li>
+<li><p>Install bbswitch and bumblebee: <code>sudo apt install bbswitch-dkms bumblebee bumblebee-nvidia</code>.</p>
+</li>
+<li><p>Configure bumblebee to work. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo gpasswd -a <span class="variable">$USER</span> bumblebee</div><div class="line">sudo systemctl <span class="built_in">enable</span> bumblebeed</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>open the config file <code>sudo gedit /etc/bumblebee/bumblebee.conf</code> and edit:<br><code>Driver=</code> $\rightarrow$ <code>Driver=nvidia</code><br><strong>Remember to replace all <code>384</code> to your driver index</strong><br><code>KernelDriver=nvidia-384</code><br><code>LibraryPath=/usr/lib/nvidia-384:/usr/lib32/nvidia-384</code><br><code>XorgModulePath=/usr/lib/nvidia-384/xorg,/usr/lib/xorg/modules</code></p>
+<p>open the config file <code>/etc/modprobe.d/bumblebee.conf</code> and add:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">blacklist nvidia-384</div><div class="line">blacklist nvidia-384-updates</div><div class="line">blacklist nvidia-experimental-384</div></pre></td></tr></table></figure></p>
+<ol>
+<li><p>Reboot and prey.</p>
+</li>
+<li><p>If everything goes right, you should be able to use <code>optirun COMMAND</code> to run an application using the nvidia graphic card even if you disabled the card and set to use the intel graphic card in the nvidia-prime setting. </p>
+</li>
+<li><p>Remember to turn off the power of nvidia GPU after using it through the indicator to save power.</p>
+</li>
+</ol>
+<p>2017/12/10</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/11/23/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/" class="archive-article-date">
-  <time datetime="2017-11-23T03:23:07.000Z" itemprop="datePublished">Nov 23</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/11/23/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/">Make touchegg work on ubuntu unity/gnome desktops</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/11/21/A-Brief-Summary-of-the-Godel-s-Incompleteness-Theorems/" class="archive-article-date">
-  <time datetime="2017-11-21T09:00:50.000Z" itemprop="datePublished">Nov 21</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/12/10/Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout/" data-id="cjb0wnygc003khrak7m57rwi4" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/11/21/A-Brief-Summary-of-the-Godel-s-Incompleteness-Theorems/">A Brief Summary of the Godel&#39;s Incompleteness Theorems</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/11/19/Preventing-CPU-IO-Intensive-Programs-Blocking-Linux-Gui/" class="archive-article-date">
-  <time datetime="2017-11-19T06:05:40.000Z" itemprop="datePublished">Nov 19</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/11/19/Preventing-CPU-IO-Intensive-Programs-Blocking-Linux-Gui/">Preventing CPU/IO Intensive Programs Blocking Linux Gui</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/11/16/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/" class="archive-article-date">
-  <time datetime="2017-11-16T02:47:52.000Z" itemprop="datePublished">Nov 16</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/11/16/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/">|failed to start docker application container engine| error after upgrade on ubuntu</a>
-    </h1>
   
+    <a href="/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Solution to AttributeError ProgressBar object has no attribute finished error using ubuntu-make</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/11/15/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/" class="archive-article-date">
-  <time datetime="2017-11-15T03:08:09.000Z" itemprop="datePublished">Nov 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/11/15/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/">Rejailbreak Kindle PaperWhite3 After Automatic Upgrade to 5.9.2</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/" class="archive-article-date">
-  <time datetime="2017-11-08T02:52:25.000Z" itemprop="datePublished">Nov 8</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/">Use System Memory Together with Graphic Memory in TensorFlow</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/11/02/Prevent-Blocking-When-Using-PyPlot/" class="archive-article-date">
-  <time datetime="2017-11-02T12:58:55.000Z" itemprop="datePublished">Nov 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/11/02/Prevent-Blocking-When-Using-PyPlot/">Prevent Blocking When Using PyPlot</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
 </section>
         

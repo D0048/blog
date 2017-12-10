@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-11-30T11:23:24.500Z</updated>
+  <updated>2017-12-10T15:09:42.378Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ubuntu 16.04 ultimate dual graphic card solution with newest nvidia proprietary drivers switchable without logout</title>
+    <link href="https://d0048.github.io/blog/2017/12/10/Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout/"/>
+    <id>https://d0048.github.io/blog/2017/12/10/Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout/</id>
+    <published>2017-12-10T14:47:15.000Z</published>
+    <updated>2017-12-10T15:09:42.378Z</updated>
+    
+    <content type="html"><![CDATA[<p>Finally I got it working. Using both nvidia-prime and bumblebee at the same time to allow switches between the two graphic cards (intel and nvidia) in both per-application-without-logout and whole-system-with-logout manner. My cuda also stays working at both mode. </p><p>The following are the steps. </p><ol><li><p>Add newest nvidia-driver ppa: <code>sudo add-apt-repository ppa:graphics-drivers/ppa;sudo apt update</code>.</p></li><li><p>Install the proprietary driver(in my case, 384, larger index should means newer) and nvidia-prime: <code>sudo apt install nvidia-384 nvidia-prime</code>.</p></li><li><p>[optional] Add prime-indicator ppa and install <code>sudo add-apt-repository ppa:nilarimogard/webupd8;sudo apt update;sudo apt install prime-indicator-plus;</code></p></li><li><p>Reboot and the graphic cards should be able to be switchable with the indicator or x-org-setting from the dash menu. But it requires a reboot to perform the switch. If that’s not satisfactory and the user want more flexible control, proceed. If not, stop here. </p></li><li><p>Install bbswitch and bumblebee: <code>sudo apt install bbswitch-dkms bumblebee bumblebee-nvidia</code>.</p></li><li><p>Configure bumblebee to work. </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo gpasswd -a <span class="variable">$USER</span> bumblebee</div><div class="line">sudo systemctl <span class="built_in">enable</span> bumblebeed</div></pre></td></tr></table></figure></li></ol><p>open the config file <code>sudo gedit /etc/bumblebee/bumblebee.conf</code> and edit:<br><code>Driver=</code> $\rightarrow$ <code>Driver=nvidia</code><br><strong>Remember to replace all <code>384</code> to your driver index</strong><br><code>KernelDriver=nvidia-384</code><br><code>LibraryPath=/usr/lib/nvidia-384:/usr/lib32/nvidia-384</code><br><code>XorgModulePath=/usr/lib/nvidia-384/xorg,/usr/lib/xorg/modules</code></p><p>open the config file <code>/etc/modprobe.d/bumblebee.conf</code> and add:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">blacklist nvidia-384</div><div class="line">blacklist nvidia-384-updates</div><div class="line">blacklist nvidia-experimental-384</div></pre></td></tr></table></figure></p><ol><li><p>Reboot and prey.</p></li><li><p>If everything goes right, you should be able to use <code>optirun COMMAND</code> to run an application using the nvidia graphic card even if you disabled the card and set to use the intel graphic card in the nvidia-prime setting. </p></li><li><p>Remember to turn off the power of nvidia GPU after using it through the indicator to save power.</p></li></ol><p>2017/12/10</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Finally I got it working. Using both nvidia-prime and bumblebee at the same time to allow switches between the two graphic cards (intel a
+      
+    
+    </summary>
+    
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Solution to AttributeError ProgressBar object has no attribute finished error using ubuntu-make</title>
@@ -35,9 +60,9 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
-    
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
     
   </entry>
   
@@ -62,9 +87,9 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
-    
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
     
       <category term="FRC" scheme="https://d0048.github.io/blog/tags/FRC/"/>
     
@@ -89,9 +114,9 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
-    
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
     
   </entry>
   
@@ -139,9 +164,9 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
-    
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
     
   </entry>
   
@@ -164,9 +189,9 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
-    
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
     
   </entry>
   
@@ -214,9 +239,9 @@
     
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
-      <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
-    
       <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
+    
+      <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
     
   </entry>
   
@@ -294,9 +319,9 @@
     
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
-      <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
-    
       <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
+    
+      <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
     
   </entry>
   
@@ -500,31 +525,6 @@ Traceback
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
       <category term="Flash" scheme="https://d0048.github.io/blog/tags/Flash/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Convert an image into an XBitMap C array stored in a C header file</title>
-    <link href="https://d0048.github.io/blog/2017/09/12/convert-an-image-into-an-xbitmap-array/"/>
-    <id>https://d0048.github.io/blog/2017/09/12/convert-an-image-into-an-xbitmap-array/</id>
-    <published>2017-09-12T12:52:52.000Z</published>
-    <updated>2017-09-12T12:56:06.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>==<a href="https://stackoverflow.com/questions/2156572/c-header-file-with-bitmapped-fonts/2156872#2156872" target="_blank" rel="external">Credit: StackOverflow</a>==</p><p>Basically, install <code>imagemagick</code>, and use the shell command: <code>convert $source.png $dest.xbm</code>….</p><p>This is a really simple solution but takes me hours to really figure things out.</p><p>2017/9/12 21:00</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;==&lt;a href=&quot;https://stackoverflow.com/questions/2156572/c-header-file-with-bitmapped-fonts/2156872#2156872&quot; target=&quot;_blank&quot; rel=&quot;external&quot;
-      
-    
-    </summary>
-    
-    
-      <category term="C" scheme="https://d0048.github.io/blog/tags/C/"/>
-    
-      <category term="Xorg" scheme="https://d0048.github.io/blog/tags/Xorg/"/>
     
   </entry>
   
