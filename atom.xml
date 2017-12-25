@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-12-12T03:39:44.329Z</updated>
+  <updated>2017-12-25T03:51:13.659Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>UFix Xlib:  extension GLX missing on display :8 error running Gui programs</title>
+    <link href="https://d0048.github.io/blog/2017/12/25/UFix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/"/>
+    <id>https://d0048.github.io/blog/2017/12/25/UFix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/</id>
+    <published>2017-12-25T03:51:13.000Z</published>
+    <updated>2017-12-25T03:51:13.659Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Ubuntu 16.04 ultimate dual graphic card solution with newest nvidia proprietary drivers switchable without logout</title>
@@ -35,9 +49,9 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
@@ -60,9 +74,9 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
@@ -87,9 +101,9 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
       <category term="FRC" scheme="https://d0048.github.io/blog/tags/FRC/"/>
     
@@ -114,9 +128,9 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
@@ -164,9 +178,9 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
@@ -189,9 +203,9 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
@@ -239,9 +253,9 @@
     
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
-      <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
-    
       <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
+    
+      <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
     
   </entry>
   
@@ -319,9 +333,9 @@
     
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
-      <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
-    
       <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
+    
+      <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
     
   </entry>
   
@@ -371,9 +385,9 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="C" scheme="https://d0048.github.io/blog/tags/C/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
@@ -499,32 +513,6 @@ Traceback
     
     
       <category term="Machine Learning" scheme="https://d0048.github.io/blog/tags/Machine-Learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Update pepper flash player under linux</title>
-    <link href="https://d0048.github.io/blog/2017/09/24/update-pepper-flash-player-under-linux/"/>
-    <id>https://d0048.github.io/blog/2017/09/24/update-pepper-flash-player-under-linux/</id>
-    <published>2017-09-24T09:53:28.000Z</published>
-    <updated>2017-09-24T09:54:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Install of going for update using package manager, use <code>sudo update-pepperflashplugin-nonfree --install</code>.</p><p>ps: the most idiotic design ever :’</p><p>2017/9/24</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Install of going for update using package manager, use &lt;code&gt;sudo update-pepperflashplugin-nonfree --install&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;ps: the most 
-      
-    
-    </summary>
-    
-    
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
-      <category term="Flash" scheme="https://d0048.github.io/blog/tags/Flash/"/>
     
   </entry>
   
