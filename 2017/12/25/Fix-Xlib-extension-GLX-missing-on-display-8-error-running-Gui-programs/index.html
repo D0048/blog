@@ -3,20 +3,20 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>Building SSH server on arukas.io | D0048</title>
+  <title>Fix Xlib:  extension GLX missing on display :8 error running Gui programs | D0048</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#The following content no longer works… #Create a regular 512Mb RAM application with Docker image: jdeathe/centos-ssh:latest #Found document of configuration in https://hub.docker.com/r/jdeathe/centos">
-<meta name="keywords" content="Outdated">
+  <meta name="description" content="After installing both Bumblebee and Nvdia Prime like this, an error of:1Xlib:  extension &quot;GLX&quot; missing on display &quot;:8&quot;. is got when attempting to run an gui program.  The most effective solution found">
+<meta name="keywords" content="Linux,Solution">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Building SSH server on arukas.io">
-<meta property="og:url" content="https://d0048.github.io/blog/2016/11/30/building-ssh-server-on-arukas-io/index.html">
+<meta property="og:title" content="Fix Xlib:  extension GLX missing on display :8 error running Gui programs">
+<meta property="og:url" content="https://d0048.github.io/blog/2017/12/25/Fix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/index.html">
 <meta property="og:site_name" content="D0048">
-<meta property="og:description" content="#The following content no longer works… #Create a regular 512Mb RAM application with Docker image: jdeathe/centos-ssh:latest #Found document of configuration in https://hub.docker.com/r/jdeathe/centos">
+<meta property="og:description" content="After installing both Bumblebee and Nvdia Prime like this, an error of:1Xlib:  extension &quot;GLX&quot; missing on display &quot;:8&quot;. is got when attempting to run an gui program.  The most effective solution found">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2016-12-01T06:45:01.000Z">
+<meta property="og:updated_time" content="2017-12-25T04:04:01.330Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Building SSH server on arukas.io">
-<meta name="twitter:description" content="#The following content no longer works… #Create a regular 512Mb RAM application with Docker image: jdeathe/centos-ssh:latest #Found document of configuration in https://hub.docker.com/r/jdeathe/centos">
+<meta name="twitter:title" content="Fix Xlib:  extension GLX missing on display :8 error running Gui programs">
+<meta name="twitter:description" content="After installing both Bumblebee and Nvdia Prime like this, an error of:1Xlib:  extension &quot;GLX&quot; missing on display &quot;:8&quot;. is got when attempting to run an gui program.  The most effective solution found">
   
     <link rel="alternate" href="/blog/atom.xml" title="D0048" type="application/atom+xml">
   
@@ -82,10 +82,10 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-building-ssh-server-on-arukas-io" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Fix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/2016/11/30/building-ssh-server-on-arukas-io/" class="article-date">
-  <time datetime="2016-11-30T12:21:02.000Z" itemprop="datePublished">2016-11-30</time>
+    <a href="/blog/2017/12/25/Fix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/" class="article-date">
+  <time datetime="2017-12-25T03:53:57.000Z" itemprop="datePublished">2017-12-25</time>
 </a>
     
   </div>
@@ -96,7 +96,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      Building SSH server on arukas.io
+      Fix Xlib:  extension GLX missing on display :8 error running Gui programs
     </h1>
   
 
@@ -104,31 +104,29 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#The following content no longer works…</p>
-<p>#Create a regular 512Mb RAM application with Docker image: <code>jdeathe/centos-ssh:latest</code></p>
-<p>#Found document of configuration in <a href="https://hub.docker.com/r/jdeathe/centos-ssh/" target="_blank" rel="external">https://hub.docker.com/r/jdeathe/centos-ssh/</a></p>
-<p>#According to the document, open tcp port 22 to the public for ssh protocol connection. </p>
-<p>#In my case, port 2020, 4443 and 25565 also opens in tcp for other purposes. </p>
-<p>#According to the document, set up environment variables:</p>
-<pre><code>SSH_SUDO=ALL=(ALL) NOPASSWD:ALL
-SSH_USER=████
-SSH_USER_PASSWORD=████
-SSH_AUTHORIZED_KEYS=ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAikXL8TXKhADkOOjwEcE0tx792JMYR9mvlRTi+koG0Wb+0s6ouc████████████████████████████████████████████████████lDeqAwjJFC0er1oR6SHjgwxVU9uUfXS+AA03thfgK60CaWRUmCCUbc3vGqCyNMN44WfTMDiEz9zzeDpsrV+1/vQnxSO+K8eWhIV2jmyPMfc9z7QAs7USPfGY7TeLrFgb8m3AuFXFSdwdBp2rmPcLZbjZ9nNNR+f7eZLBn/wwE8z+rCevcprNoZgEn/0sUoHFQ== rsa-key-20161028</code></pre>
-
-<p>#Try previeous SSH-2 RSA keys but failed. <code>Error: server rejects our key.</code></p>
-<p>#Environment variable <code>SSH_USER_PASSWORD=██████</code> does not take in effect for unknown reasons. Error: <em>Fatal error: No supported authentication methods available (server sent: public key,gssapi-key-keyex,gssapt-with-mic)[From putty_V0.63.0.0.43510830]</em></p>
-<p>#Generate a new pair of SSH-2 RSA keys from puttygen. Update environment variable: SSH_AUTHORIZED_KEYS with the new public key. </p>
-<p>#Try reconnect with private key. Success. </p>
-<p>[Warn]: Server domain name and ports mapped is dynamic every restart. <br><br>[Info]: Red-hat linux system used in this server. <br><br>[Info]: Installed package “screen” with command “sudo yum install screen -y”</p>
-<p>*****Server/Client configuration Complete!*****</p>
+        <p>After installing both Bumblebee and Nvdia Prime like <a href="https://d0048.github.io/blog/2017/12/10/Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout/">this</a>, an error of:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Xlib:  extension <span class="string">"GLX"</span> missing on display <span class="string">":8"</span>.</div></pre></td></tr></table></figure></p>
+<p>is got when attempting to run an gui program. </p>
+<p>The most effective solution found is to follow this solution <a href="https://github.com/Bumblebee-Project/Bumblebee/issues/759" target="_blank" rel="external">here</a> given by sapjunior, but with slight modification. </p>
+<p>Here’s the solution worked for me:<br><strong><em>Still all the driver version numbers need to be replaced with yours!</em></strong></p>
+<ol>
+<li><p>Add the following to <code>/etc/modprobe.d/bumblebee.conf</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">alias</span> nvidia-drm nvidia_364_drm</div><div class="line"><span class="built_in">alias</span> nvidia-uvm nvidia_364_uvm</div><div class="line"><span class="built_in">alias</span> nvidia-modeset nvidia_364_modeset</div><div class="line">remove nvidia rmmod nvidia-drm nvidia-modeset nvidia-uvm nvidia</div></pre></td></tr></table></figure>
+</li>
+<li><p>Perform the following and choose the one with <code>mesa</code> inside. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo update-alternatives --config x86_64-linux-gnu_gl_conf</div><div class="line">sudo update-alternatives --config x86_64-linux-gnu_egl_conf</div><div class="line">sudo update-alternatives --config i386-linux-gnu_gl_conf</div></pre></td></tr></table></figure>
+</li>
+<li><p>Refresh shared libiary status with <code>sudo ldconfig</code>.</p>
+</li>
+</ol>
+<p>2017/12/25</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2016/11/30/building-ssh-server-on-arukas-io/" data-id="cjbloibkd000xygakpdjb6n7h" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/12/25/Fix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/" data-id="cjbloiblx002dygak6tdxva94" class="article-share-link">Partager</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Outdated/">Outdated</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
 
     </footer>
   </div>
@@ -136,19 +134,10 @@ SSH_AUTHORIZED_KEYS=ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAikXL8TXKhADkOOjwEcE0tx79
     
 <nav id="article-nav">
   
-    <a href="/blog/2016/12/01/some-reminders-when-using-constructors/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
-      <div class="article-nav-title">
-        
-          Some reminding on constructors
-        
-      </div>
-    </a>
   
-  
-    <a href="/blog/2016/11/30/building-shadow-socks-server-on-arukas-io-and-connect-it-with-a-regular-client/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/2017/12/10/Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title">Building shadow socks server on arukas.io and connect it with a regular client</div>
+      <div class="article-nav-title">Ubuntu 16.04 ultimate dual graphic card solution with newest nvidia proprietary drivers switchable without logout</div>
     </a>
   
 </nav>

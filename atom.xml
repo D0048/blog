@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2017-12-25T03:51:13.659Z</updated>
+  <updated>2017-12-25T04:04:01.330Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -17,16 +17,27 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>UFix Xlib:  extension GLX missing on display :8 error running Gui programs</title>
-    <link href="https://d0048.github.io/blog/2017/12/25/UFix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/"/>
-    <id>https://d0048.github.io/blog/2017/12/25/UFix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/</id>
-    <published>2017-12-25T03:51:13.000Z</published>
-    <updated>2017-12-25T03:51:13.659Z</updated>
+    <title>Fix Xlib:  extension GLX missing on display :8 error running Gui programs</title>
+    <link href="https://d0048.github.io/blog/2017/12/25/Fix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/"/>
+    <id>https://d0048.github.io/blog/2017/12/25/Fix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/</id>
+    <published>2017-12-25T03:53:57.000Z</published>
+    <updated>2017-12-25T04:04:01.330Z</updated>
+    
+    <content type="html"><![CDATA[<p>After installing both Bumblebee and Nvdia Prime like <a href="https://d0048.github.io/blog/2017/12/10/Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout/">this</a>, an error of:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Xlib:  extension <span class="string">"GLX"</span> missing on display <span class="string">":8"</span>.</div></pre></td></tr></table></figure></p><p>is got when attempting to run an gui program. </p><p>The most effective solution found is to follow this solution <a href="https://github.com/Bumblebee-Project/Bumblebee/issues/759" target="_blank" rel="external">here</a> given by sapjunior, but with slight modification. </p><p>Here’s the solution worked for me:<br><strong><em>Still all the driver version numbers need to be replaced with yours!</em></strong></p><ol><li><p>Add the following to <code>/etc/modprobe.d/bumblebee.conf</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">alias</span> nvidia-drm nvidia_364_drm</div><div class="line"><span class="built_in">alias</span> nvidia-uvm nvidia_364_uvm</div><div class="line"><span class="built_in">alias</span> nvidia-modeset nvidia_364_modeset</div><div class="line">remove nvidia rmmod nvidia-drm nvidia-modeset nvidia-uvm nvidia</div></pre></td></tr></table></figure></li><li><p>Perform the following and choose the one with <code>mesa</code> inside. </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo update-alternatives --config x86_64-linux-gnu_gl_conf</div><div class="line">sudo update-alternatives --config x86_64-linux-gnu_egl_conf</div><div class="line">sudo update-alternatives --config i386-linux-gnu_gl_conf</div></pre></td></tr></table></figure></li><li><p>Refresh shared libiary status with <code>sudo ldconfig</code>.</p></li></ol><p>2017/12/25</p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;p&gt;After installing both Bumblebee and Nvdia Prime like &lt;a href=&quot;https://d0048.github.io/blog/2017/12/10/Ubuntu-16-04-ultimate-dual-graphic-
+      
+    
     </summary>
     
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
@@ -385,9 +396,9 @@
     </summary>
     
     
-      <category term="C" scheme="https://d0048.github.io/blog/tags/C/"/>
-    
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="C" scheme="https://d0048.github.io/blog/tags/C/"/>
     
   </entry>
   
