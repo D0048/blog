@@ -116,7 +116,7 @@ ga('send', 'pageview');
 </li>
 </ol>
 <p>2017/12/25</p>
-<p>Add: seems like this setting will be reset after reboot… Just add the following command s on boot:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo update-alternatives --<span class="built_in">set</span> x86_64-linux-gnu_gl_conf /usr/lib/x86_64-linux-gnu/mesa/ld.so.conf</div><div class="line">sudo update-alternatives --<span class="built_in">set</span> x86_64-linux-gnu_egl_conf /usr/lib/x86_64-linux-gnu/mesa-egl/ld.so.conf</div><div class="line">sudo update-alternatives --<span class="built_in">set</span> i386-linux-gnu_gl_conf /usr/lib/i386-linux-gnu/mesa/ld.so.conf</div><div class="line">sudo ldconfig</div></pre></td></tr></table></figure></p>
+<p>Add: seems like this setting will be reset after reboot… Just add the following command s on boot:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sleep 5 <span class="comment">#Some delay seems to be necessary</span></div><div class="line">sudo update-alternatives --<span class="built_in">set</span> x86_64-linux-gnu_gl_conf /usr/lib/x86_64-linux-gnu/mesa/ld.so.conf</div><div class="line">sudo update-alternatives --<span class="built_in">set</span> x86_64-linux-gnu_egl_conf /usr/lib/x86_64-linux-gnu/mesa-egl/ld.so.conf</div><div class="line">sudo update-alternatives --<span class="built_in">set</span> i386-linux-gnu_gl_conf /usr/lib/i386-linux-gnu/mesa/ld.so.conf</div><div class="line">sudo ldconfig</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -750,7 +750,7 @@ s.setAttribute('data-timestamp', +new Date());
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 D0048<br>
+      &copy; 2018 D0048<br>
     </div>
   </div>
 </footer>

@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="D0048">
 <meta property="og:description" content="After installing both Bumblebee and Nvdia Prime like this, an error of:1Xlib:  extension &quot;GLX&quot; missing on display &quot;:8&quot;. is got when attempting to run an gui program.  The most effective solution found">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-12-30T15:19:19.558Z">
+<meta property="og:updated_time" content="2018-01-01T14:29:21.518Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Fix Xlib:  extension GLX missing on display :8 error running Gui programs">
 <meta name="twitter:description" content="After installing both Bumblebee and Nvdia Prime like this, an error of:1Xlib:  extension &quot;GLX&quot; missing on display &quot;:8&quot;. is got when attempting to run an gui program.  The most effective solution found">
@@ -119,7 +119,7 @@ ga('send', 'pageview');
 </li>
 </ol>
 <p>2017/12/25</p>
-<p>Add: seems like this setting will be reset after reboot… Just add the following command s on boot:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo update-alternatives --<span class="built_in">set</span> x86_64-linux-gnu_gl_conf /usr/lib/x86_64-linux-gnu/mesa/ld.so.conf</div><div class="line">sudo update-alternatives --<span class="built_in">set</span> x86_64-linux-gnu_egl_conf /usr/lib/x86_64-linux-gnu/mesa-egl/ld.so.conf</div><div class="line">sudo update-alternatives --<span class="built_in">set</span> i386-linux-gnu_gl_conf /usr/lib/i386-linux-gnu/mesa/ld.so.conf</div><div class="line">sudo ldconfig</div></pre></td></tr></table></figure></p>
+<p>Add: seems like this setting will be reset after reboot… Just add the following command s on boot:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sleep 5 <span class="comment">#Some delay seems to be necessary</span></div><div class="line">sudo update-alternatives --<span class="built_in">set</span> x86_64-linux-gnu_gl_conf /usr/lib/x86_64-linux-gnu/mesa/ld.so.conf</div><div class="line">sudo update-alternatives --<span class="built_in">set</span> x86_64-linux-gnu_egl_conf /usr/lib/x86_64-linux-gnu/mesa-egl/ld.so.conf</div><div class="line">sudo update-alternatives --<span class="built_in">set</span> i386-linux-gnu_gl_conf /usr/lib/i386-linux-gnu/mesa/ld.so.conf</div><div class="line">sudo ldconfig</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -242,7 +242,7 @@ s.setAttribute('data-timestamp', +new Date());
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 D0048<br>
+      &copy; 2018 D0048<br>
     </div>
   </div>
 </footer>
