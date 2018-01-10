@@ -109,15 +109,31 @@ ga('send', 'pageview');
 <li><p>Add the following to <code>/etc/modprobe.d/bumblebee.conf</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">alias</span> nvidia-drm nvidia_364_drm</div><div class="line"><span class="built_in">alias</span> nvidia-uvm nvidia_364_uvm</div><div class="line"><span class="built_in">alias</span> nvidia-modeset nvidia_364_modeset</div><div class="line">remove nvidia rmmod nvidia-drm nvidia-modeset nvidia-uvm nvidia</div></pre></td></tr></table></figure>
 </li>
-<li><p>Perform the following and choose the one with <code>mesa</code> inside. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo update-alternatives --config x86_64-linux-gnu_gl_conf</div><div class="line">sudo update-alternatives --config x86_64-linux-gnu_egl_conf</div><div class="line">sudo update-alternatives --config i386-linux-gnu_gl_conf</div></pre></td></tr></table></figure>
+<li><p>Perform these two command and record the configuration file names currently used.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo update-alternatives --config x86_64-linux-gnu_gl_conf</div><div class="line">sudo update-alternatives --config i386-linux-gnu_gl_conf</div></pre></td></tr></table></figure>
 </li>
-<li><p>Refresh shared libiary status with <code>sudo ldconfig</code>.</p>
+<li><p>Make sure the <code>x86_64</code> config contains all of the following</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/usr/lib/x86_64-linux-gnu/mesa</div><div class="line">/usr/lib/x86_64-linux-gnu/mesa-egl</div><div class="line">/usr/lib/i386-linux-gnu/mesa</div><div class="line">/usr/lib/i386-linux-gnu/mesa-egl</div><div class="line">/usr/lib/nvidia-387</div><div class="line">/usr/lib32/nvidia-387</div></pre></td></tr></table></figure>
+<p>and the i386 config contains all of the following:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/usr/lib/i386-linux-gnu/mesa</div><div class="line">/usr/lib32/nvidia-387</div></pre></td></tr></table></figure>
 </li>
+<li><p>Refresh shared libiary status with <code>sudo ldconfig</code>. (Maybe reboot just in case)</p>
+</li>
+</ol>
+<p>2018/1/10</p>
+<!---
+1. Perform the following and choose the one with `mesa` inside. 
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo update-alternatives --config x86_64-linux-gnu_gl_conf</div><div class="line">sudo update-alternatives --config x86_64-linux-gnu_egl_conf</div><div class="line">sudo update-alternatives --config i386-linux-gnu_gl_conf</div><div class="line">sudo update-alternatives --config i386-linux-gnu_egl_conf</div></pre></td></tr></table></figure>
+<ol>
+<li>Edit: The following still seems to be necessary…<br>add /usr/lib/nvidia-364 to =&gt; /usr/lib/x86_64-linux-gnu/mesa/ld.so.conf<br>add /usr/lib32/nvidia-364 to =&gt; /usr/lib/i386-linux-gnu/mesa/ld.so.conf</li>
+</ol>
+<ol>
+<li>Refresh shared libiary status with <code>sudo ldconfig</code>.</li>
 </ol>
 <p>2017/12/25</p>
 <p>Add: seems like this setting will be reset after reboot… Just add the following command s on boot:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sleep 5 <span class="comment">#Some delay seems to be necessary</span></div><div class="line">sudo update-alternatives --<span class="built_in">set</span> x86_64-linux-gnu_gl_conf /usr/lib/x86_64-linux-gnu/mesa/ld.so.conf</div><div class="line">sudo update-alternatives --<span class="built_in">set</span> x86_64-linux-gnu_egl_conf /usr/lib/x86_64-linux-gnu/mesa-egl/ld.so.conf</div><div class="line">sudo update-alternatives --<span class="built_in">set</span> i386-linux-gnu_gl_conf /usr/lib/i386-linux-gnu/mesa/ld.so.conf</div><div class="line">sudo ldconfig</div></pre></td></tr></table></figure></p>
-
+<p>–&gt;</p>
+-->
       
     </div>
     <footer class="article-footer">
