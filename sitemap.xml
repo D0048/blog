@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://d0048.github.io/blog/2017/11/30/Setting-up-the-FRC-development-environment-on-ubuntu-16-04/</loc>
+    
+    <lastmod>2018-01-17T12:30:38.897Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://d0048.github.io/blog/2017/12/25/Fix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/</loc>
     
     <lastmod>2018-01-10T07:53:31.084Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://d0048.github.io/blog/2017/12/10/Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout/</loc>
     
     <lastmod>2017-12-25T04:06:54.236Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://d0048.github.io/blog/2017/11/30/Setting-up-the-FRC-development-environment-on-ubuntu-16-04/</loc>
-    
-    <lastmod>2017-12-04T11:23:04.025Z</lastmod>
     
   </url>
   
