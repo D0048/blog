@@ -221,11 +221,11 @@
   </entry>
   
   <entry>
-    <title>Rejailbreak Kindle PaperWhite3 After Automatic Upgrade to 5.9.2/5.9.3/5.9.4</title>
+    <title>Rejailbreak Kindle PaperWhite3 After Automatic Upgrade to 5.9.2/5.9.3/5.9.4/5.9.5</title>
     <link href="https://d0048.github.io/blog/2017/11/15/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/"/>
     <id>https://d0048.github.io/blog/2017/11/15/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/</id>
     <published>2017-11-15T03:08:09.000Z</published>
-    <updated>2018-03-01T06:04:52.544Z</updated>
+    <updated>2018-05-18T00:10:56.376Z</updated>
     
     <content type="html"><![CDATA[<p>(Tested to be working with later versions)<br>My kindle pw3 seems to be automatically updated from 5.9.1 to 5.9.2 and I am unable to run KUAL anymore. To fix this, the following is performed and I am not sure whether any of these steps are necessary.But I did get everything back without losing any data/plugins.</p><ol><li><p>Applied a jailbreak hotfix <code>Update_jailbreak_hotfix_1.14_nomax_install.bin</code>. File found at <a href="https://bookfere.com/post/576.html" target="_blank" rel="external">here</a>. Patched by copying it to the root fs mounted on computer and manually select “update” in menu.</p></li><li><p>Applied <code>Update_KUALBooklet_v2.7_install.bin</code>. File found at <a href="https://bookfere.com/post/311.html" target="_blank" rel="external">here</a>. Patched by copying it to <code>/mrpackages</code> and searching <code>;log mrpi</code>. </p></li></ol><p>This process is recorded hoping to be helpful. Do notice that your devices may not work just as mine and I will not be responsible for any following consequences happened to your device.</p><p>2017/11/15</p>]]></content>
     
