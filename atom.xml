@@ -18,8 +18,8 @@
   
   <entry>
     <title>Fix Xlib:  extension GLX missing on display :8 error running Gui programs</title>
-    <link href="https://d0048.github.io/blog/2017/12/25/Fix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/"/>
-    <id>https://d0048.github.io/blog/2017/12/25/Fix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/</id>
+    <link href="https://d0048.github.io/blog/2017/12/24/Fix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/"/>
+    <id>https://d0048.github.io/blog/2017/12/24/Fix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/</id>
     <published>2017-12-25T03:53:57.000Z</published>
     <updated>2018-01-10T07:53:31.084Z</updated>
     
@@ -93,8 +93,8 @@
   
   <entry>
     <title>Setting up the FRC development environment on ubuntu 16.04</title>
-    <link href="https://d0048.github.io/blog/2017/11/30/Setting-up-the-FRC-development-environment-on-ubuntu-16-04/"/>
-    <id>https://d0048.github.io/blog/2017/11/30/Setting-up-the-FRC-development-environment-on-ubuntu-16-04/</id>
+    <link href="https://d0048.github.io/blog/2017/11/29/Setting-up-the-FRC-development-environment-on-ubuntu-16-04/"/>
+    <id>https://d0048.github.io/blog/2017/11/29/Setting-up-the-FRC-development-environment-on-ubuntu-16-04/</id>
     <published>2017-11-30T01:21:42.000Z</published>
     <updated>2018-01-17T14:52:21.428Z</updated>
     
@@ -122,8 +122,8 @@
   
   <entry>
     <title>Make touchegg work on ubuntu unity/gnome desktops</title>
-    <link href="https://d0048.github.io/blog/2017/11/23/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/"/>
-    <id>https://d0048.github.io/blog/2017/11/23/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/</id>
+    <link href="https://d0048.github.io/blog/2017/11/22/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/"/>
+    <id>https://d0048.github.io/blog/2017/11/22/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/</id>
     <published>2017-11-23T03:23:07.000Z</published>
     <updated>2017-11-23T03:28:31.289Z</updated>
     
@@ -197,8 +197,8 @@
   
   <entry>
     <title>|failed to start docker application container engine| error after upgrade on ubuntu</title>
-    <link href="https://d0048.github.io/blog/2017/11/16/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/"/>
-    <id>https://d0048.github.io/blog/2017/11/16/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/</id>
+    <link href="https://d0048.github.io/blog/2017/11/15/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/"/>
+    <id>https://d0048.github.io/blog/2017/11/15/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/</id>
     <published>2017-11-16T02:47:52.000Z</published>
     <updated>2017-11-16T02:50:30.528Z</updated>
     
@@ -221,11 +221,11 @@
   </entry>
   
   <entry>
-    <title>Rejailbreak Kindle PaperWhite3 After Automatic Upgrade to 5.9.2/5.9.3/5.9.4/5.9.5</title>
-    <link href="https://d0048.github.io/blog/2017/11/15/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/"/>
-    <id>https://d0048.github.io/blog/2017/11/15/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/</id>
+    <title>Rejailbreak Kindle PaperWhite3 After Automatic Upgrade to 5.9.2/5.9.3/5.9.4/5.9.5/5.9.6</title>
+    <link href="https://d0048.github.io/blog/2017/11/14/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/"/>
+    <id>https://d0048.github.io/blog/2017/11/14/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/</id>
     <published>2017-11-15T03:08:09.000Z</published>
-    <updated>2018-05-18T00:10:56.376Z</updated>
+    <updated>2018-06-30T20:58:21.488Z</updated>
     
     <content type="html"><![CDATA[<p>(Tested to be working with later versions)<br>My kindle pw3 seems to be automatically updated from 5.9.1 to 5.9.2 and I am unable to run KUAL anymore. To fix this, the following is performed and I am not sure whether any of these steps are necessary.But I did get everything back without losing any data/plugins.</p><ol><li><p>Applied a jailbreak hotfix <code>Update_jailbreak_hotfix_1.14_nomax_install.bin</code>. File found at <a href="https://bookfere.com/post/576.html" target="_blank" rel="external">here</a>. Patched by copying it to the root fs mounted on computer and manually select “update” in menu.</p></li><li><p>Applied <code>Update_KUALBooklet_v2.7_install.bin</code>. File found at <a href="https://bookfere.com/post/311.html" target="_blank" rel="external">here</a>. Patched by copying it to <code>/mrpackages</code> and searching <code>;log mrpi</code>. </p></li></ol><p>This process is recorded hoping to be helpful. Do notice that your devices may not work just as mine and I will not be responsible for any following consequences happened to your device.</p><p>2017/11/15</p>]]></content>
     
@@ -247,8 +247,8 @@
   
   <entry>
     <title>Use System Memory Together with Graphic Memory in TensorFlow</title>
-    <link href="https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/"/>
-    <id>https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/</id>
+    <link href="https://d0048.github.io/blog/2017/11/07/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/"/>
+    <id>https://d0048.github.io/blog/2017/11/07/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/</id>
     <published>2017-11-08T02:52:25.000Z</published>
     <updated>2017-11-08T03:05:53.808Z</updated>
     
@@ -483,8 +483,8 @@ Traceback
   
   <entry>
     <title>Pass Strings from Python to C/CPP libs</title>
-    <link href="https://d0048.github.io/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/"/>
-    <id>https://d0048.github.io/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/</id>
+    <link href="https://d0048.github.io/blog/2017/10/11/Pass-Strings-from-Python-to-C-CPP-libs/"/>
+    <id>https://d0048.github.io/blog/2017/10/11/Pass-Strings-from-Python-to-C-CPP-libs/</id>
     <published>2017-10-12T00:49:35.000Z</published>
     <updated>2017-10-12T01:18:45.194Z</updated>
     
