@@ -13,13 +13,13 @@
 <meta property="og:site_name" content="D0048">
 <meta property="og:description" content="Method:For every layer’s output in a densely connected net, calculate its mutual information with the input $X$ and output $Y$. Plot the two mutual information of each layer against each other. Observ">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://d0048.github.io/blog/images/bottleneck1.png">
-<meta property="og:image" content="https://d0048.github.io/blog/images/bottleneck0.png">
-<meta property="og:updated_time" content="2018-07-22T21:27:14.241Z">
+<meta property="og:image" content="https://d0048.github.io/blog/images/images/bottleneck1.png">
+<meta property="og:image" content="https://d0048.github.io/blog/images/images/bottleneck0.png">
+<meta property="og:updated_time" content="2018-07-22T22:41:21.494Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Note: Deep Learning and the Information Bottleneck Principle">
 <meta name="twitter:description" content="Method:For every layer’s output in a densely connected net, calculate its mutual information with the input $X$ and output $Y$. Plot the two mutual information of each layer against each other. Observ">
-<meta name="twitter:image" content="https://d0048.github.io/blog/images/bottleneck1.png">
+<meta name="twitter:image" content="https://d0048.github.io/blog/images/images/bottleneck1.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="D0048" type="application/atom+xml">
   
@@ -109,11 +109,11 @@ ga('send', 'pageview');
       
         <p><strong>Method</strong>:<br>For every layer’s output in a densely connected net, calculate its mutual information with the input $X$ and output $Y$.</p>
 <p>Plot the two mutual information of each layer against each other. Observe change as the model is being trained.</p>
-<img src="/blog/images/bottleneck1.png" class="[class1 class2]">
+<img src="/blog/images/images/bottleneck1.png" class="[class1 class2]">
 <p>NOTE: This network have exactly 12 bits of input and 2 bits of output.</p>
 <p><strong>Before training</strong>:<br>As a matter of fact, we observe the input layer(green) tells everything about the input itself, and almost everything about the output itself. Since all weights are randomly initialized, as the network goes deeper (further left bottom to the graph), less mutual information are contained against both $X$ and $Y$.</p>
 <p><strong>After training</strong>:<br>The layer outputs contains less information about the input, but more about the output.</p>
-<p><strong>What is important: The Middle</strong>:<br><img src="/blog/images/bottleneck0.png" class="[class1 class2]"></p>
+<p><strong>What is important: The Middle</strong>:<br><img src="/blog/images/images/bottleneck0.png" class="[class1 class2]"></p>
 <p>Looking at a graph of how each layer moves along the training process, two distinct phases could be found, where in the first phase the layer contains more information of $Y$, where training error decreases. This phase happens fast. The second phase, taking most of the epoches, is a process of eliminating information of $X$ from the layer output. It is viewed as the process of generalization.</p>
 <hr>
 <p>reference:<br><a href="https://www.youtube.com/watch?v=EQTtBRM0sIs" target="_blank" rel="external">https://www.youtube.com/watch?v=EQTtBRM0sIs</a></p>
