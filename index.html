@@ -103,11 +103,11 @@ ga('send', 'pageview');
       
         <p><strong>Method</strong>:<br>For every layer’s output in a densely connected net, calculate its mutual information with the input $X$ and output $Y$.</p>
 <p>Plot the two mutual information of each layer against each other. Observe change as the model is being trained.</p>
-<img src="/blog/images/images/bottleneck1.png" class="[class1 class2]">
+<img src="/blog/images/bottleneck_1.png" class="[class1 class2]">
 <p>NOTE: This network have exactly 12 bits of input and 2 bits of output.</p>
 <p><strong>Before training</strong>:<br>As a matter of fact, we observe the input layer(green) tells everything about the input itself, and almost everything about the output itself. Since all weights are randomly initialized, as the network goes deeper (further left bottom to the graph), less mutual information are contained against both $X$ and $Y$.</p>
 <p><strong>After training</strong>:<br>The layer outputs contains less information about the input, but more about the output.</p>
-<p><strong>What is important: The Middle</strong>:<br><img src="/blog/images/images/bottleneck0.png" class="[class1 class2]"></p>
+<p><strong>What is important: The Middle</strong>:<br><img src="/blog/images/bottleneck_0.png" class="[class1 class2]"></p>
 <p>Looking at a graph of how each layer moves along the training process, two distinct phases could be found, where in the first phase the layer contains more information of $Y$, where training error decreases. This phase happens fast. The second phase, taking most of the epoches, is a process of eliminating information of $X$ from the layer output. It is viewed as the process of generalization.</p>
 <hr>
 <p>reference:<br><a href="https://www.youtube.com/watch?v=EQTtBRM0sIs" target="_blank" rel="external">https://www.youtube.com/watch?v=EQTtBRM0sIs</a></p>
