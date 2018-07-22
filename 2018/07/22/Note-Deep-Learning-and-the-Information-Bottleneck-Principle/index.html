@@ -3,15 +3,23 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>Archives: 2018 | D0048</title>
+  <title>Note: Deep Learning and the Information Bottleneck Principle | D0048</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="D0048">
-<meta property="og:url" content="https://d0048.github.io/blog/archives/2018/index.html">
+  <meta name="description" content="Method:For every layer’s output in a densely connected net, calculate its mutual information with the input $X$ and output $Y$. Plot the two mutual information of each layer against each other. Observ">
+<meta name="keywords" content="ML,Note">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Note: Deep Learning and the Information Bottleneck Principle">
+<meta property="og:url" content="https://d0048.github.io/blog/2018/07/22/Note-Deep-Learning-and-the-Information-Bottleneck-Principle/index.html">
 <meta property="og:site_name" content="D0048">
+<meta property="og:description" content="Method:For every layer’s output in a densely connected net, calculate its mutual information with the input $X$ and output $Y$. Plot the two mutual information of each layer against each other. Observ">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://d0048.github.io/blog/images/bottleneck1.png">
+<meta property="og:image" content="https://d0048.github.io/blog/images/bottleneck0.png">
+<meta property="og:updated_time" content="2018-07-22T21:27:14.241Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="D0048">
+<meta name="twitter:title" content="Note: Deep Learning and the Information Bottleneck Principle">
+<meta name="twitter:description" content="Method:For every layer’s output in a densely connected net, calculate its mutual information with the input $X$ and output $Y$. Plot the two mutual information of each layer against each other. Observ">
+<meta name="twitter:image" content="https://d0048.github.io/blog/images/bottleneck1.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="D0048" type="application/atom+xml">
   
@@ -77,58 +85,63 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2018/07/22/Note-Deep-Learning-and-the-Information-Bottleneck-Principle/" class="archive-article-date">
-  <time datetime="2018-07-22T09:25:32.000Z" itemprop="datePublished">Jul 22</time>
+        <section id="main"><article id="post-Note-Deep-Learning-and-the-Information-Bottleneck-Principle" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2018/07/22/Note-Deep-Learning-and-the-Information-Bottleneck-Principle/" class="article-date">
+  <time datetime="2018-07-22T09:25:32.000Z" itemprop="datePublished">2018-07-22</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2018/07/22/Note-Deep-Learning-and-the-Information-Bottleneck-Principle/">Note: Deep Learning and the Information Bottleneck Principle</a>
+    <h1 class="article-title" itemprop="name">
+      Note: Deep Learning and the Information Bottleneck Principle
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2018/07/21/Note-A-Neural-Algorithm-of-Artistic-Style/" class="archive-article-date">
-  <time datetime="2018-07-22T03:38:33.000Z" itemprop="datePublished">Jul 22</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2018/07/21/Note-A-Neural-Algorithm-of-Artistic-Style/">Note: A Neural Algorithm of Artistic Style</a>
-    </h1>
-  
+        <p><strong>Method</strong>:<br>For every layer’s output in a densely connected net, calculate its mutual information with the input $X$ and output $Y$.</p>
+<p>Plot the two mutual information of each layer against each other. Observe change as the model is being trained.</p>
+<img src="/blog/images/bottleneck1.png" class="[class1 class2]">
+<p>NOTE: This network have exactly 12 bits of input and 2 bits of output.</p>
+<p><strong>Before training</strong>:<br>As a matter of fact, we observe the input layer(green) tells everything about the input itself, and almost everything about the output itself. Since all weights are randomly initialized, as the network goes deeper (further left bottom to the graph), less mutual information are contained against both $X$ and $Y$.</p>
+<p><strong>After training</strong>:<br>The layer outputs contains less information about the input, but more about the output.</p>
+<p><strong>What is important: The Middle</strong>:<br><img src="/blog/images/bottleneck0.png" class="[class1 class2]"></p>
+<p>Looking at a graph of how each layer moves along the training process, two distinct phases could be found, where in the first phase the layer contains more information of $Y$, where training error decreases. This phase happens fast. The second phase, taking most of the epoches, is a process of eliminating information of $X$ from the layer output. It is viewed as the process of generalization.</p>
+<hr>
+<p>reference:<br><a href="https://www.youtube.com/watch?v=EQTtBRM0sIs" target="_blank" rel="external">https://www.youtube.com/watch?v=EQTtBRM0sIs</a></p>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2018/07/22/Note-Deep-Learning-and-the-Information-Bottleneck-Principle/" data-id="cjjxcs7z7003ktdakjk5obccq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ML/">ML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Note/">Note</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2018/07/21/Note-A-Neural-Algorithm-of-Artistic-Style/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Note: A Neural Algorithm of Artistic Style</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
