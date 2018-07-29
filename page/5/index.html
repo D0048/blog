@@ -79,6 +79,50 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-run-custom-script" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/04/18/run-custom-script/" class="article-date">
+  <time datetime="2017-04-18T10:39:37.000Z" itemprop="datePublished">2017-04-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/04/18/run-custom-script/">Run custom script/program on linux hibernate/suspend/thaw/resume/lid-close/lid-open</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>For <b>hibernate/suspend/resume:</b></p>
+<p>Any executable file under <code>/etc/pm/sleep.d</code> will be executed one any of the above actions with a string inside <strong>the second parameter</strong>(which is <code>args[1]</code> in C or <code>$1</code> in shell). This parameter may reads <code>hibernate</code>, <code>thaw</code>, <code>suspend</code> or resume depending on the operation the system is doing. </p>
+<p>Just write a script or a program that does a certain operation according to the parameter recieved and throw it into the dictionary, mark it as executable(chmod) and it should do the job. </p>
+<p>For <b>lid close/lid open:</b><br>Solutions from here:<br><a href="http://forums.fedoraforum.org/showthread.php?t=291877" target="_blank" rel="external">http://forums.fedoraforum.org/showthread.php?t=291877</a><br>and here:<br><a href="https://wiki.archlinux.org/index.php/Acpid" target="_blank" rel="external">https://wiki.archlinux.org/index.php/Acpid</a><br>looks pretty relevant. However, None of them works.</p>
+<p>Still finding solutions.</p>
+<p>2017/4/18 19:48</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/04/18/run-custom-script/" data-id="cjk76cy7t002rcbakcom3g3y8" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-genymotion-can-not-login-even-with-correct-password-and-user-name" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2017/04/17/genymotion-can-not-login-even-with-correct-password-and-user-name/" class="article-date">
@@ -107,7 +151,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/17/genymotion-can-not-login-even-with-correct-password-and-user-name/" data-id="cjjxcs7xr001qtdakkchdd4g3" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/17/genymotion-can-not-login-even-with-correct-password-and-user-name/" data-id="cjk76cy64001bcbak7i980086" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -147,7 +191,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/17/virtual-box-error-rtr3init-failed-with-rc-1912-rc-1912/" data-id="cjjxcs80y005rtdakjgro7767" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/17/virtual-box-error-rtr3init-failed-with-rc-1912-rc-1912/" data-id="cjk76cy9d004fcbakfqg05mmh" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -316,7 +360,7 @@ ${color black}$hr
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/10/a-conky-profile-that-allows-notes-from-file-to-be-displayed-on-desktop/" data-id="cjjxcs7w7000btdakzs6gb6jd" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/10/a-conky-profile-that-allows-notes-from-file-to-be-displayed-on-desktop/" data-id="cjk76cy4e0005cbako65lh79e" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -357,7 +401,7 @@ ${color black}$hr
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/09/solve-the-conky-transparent-issue-under-unity-desktop/" data-id="cjjxcs7zz004ltdakwx00i34t" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/09/solve-the-conky-transparent-issue-under-unity-desktop/" data-id="cjk76cy860039cbak2z4oigrj" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -397,7 +441,7 @@ ${color black}$hr
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/09/solve-the-problem-that-conky-window-disappears-after-clicking-desktop/" data-id="cjjxcs7zx004itdakh6yqzhej" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/09/solve-the-problem-that-conky-window-disappears-after-clicking-desktop/" data-id="cjk76cy820036cbakavm95r1o" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -441,7 +485,7 @@ ${color black}$hr
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/05/ways-to-share-the-same-profile-among-chromium-and-chrome-under-ubuntu/" data-id="cjjxcs80t005ntdakfoff4jkg" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/05/ways-to-share-the-same-profile-among-chromium-and-chrome-under-ubuntu/" data-id="cjk76cy9f004jcbakwhr8vbso" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -481,7 +525,7 @@ ${color black}$hr
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/23/transform-int-to-string-in-java/" data-id="cjjxcs809004ztdak6cp5pihd" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/03/23/transform-int-to-string-in-java/" data-id="cjk76cy8j003ocbak6arbqwxi" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -527,7 +571,7 @@ ${color black}$hr
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/20/difference-between-shallow-copy-default-and-deep-copy-of-objects/" data-id="cjjxcs7xc001btdakk8h1id3k" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/03/20/difference-between-shallow-copy-default-and-deep-copy-of-objects/" data-id="cjk76cy5y0016cbak9tqvi07u" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -580,58 +624,10 @@ ${color black}$hr
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/19/shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn/" data-id="cjjxcs819006btdakc7gfunzd" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/03/19/shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn/" data-id="cjk76cy9x0056cbakkypooytz" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/GFW/">GFW</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-logging-as-another-user-and-then-exit-after-finishing-the-desired-work-in-shell-script-2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2017/03/19/logging-as-another-user-and-then-exit-after-finishing-the-desired-work-in-shell-script-2/" class="article-date">
-  <time datetime="2017-03-19T12:32:58.000Z" itemprop="datePublished">2017-03-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2017/03/19/logging-as-another-user-and-then-exit-after-finishing-the-desired-work-in-shell-script-2/">Log in as another user and then exit after finishing the desired work in shell script</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Today I met a problem that I tried to log in as another user and them execute my script. Simply using <code>su user</code> or <code>su - user</code> will not work or exit in scripts even if I write <code>exit</code> after that. </p>
-<p>I want to exeute <code>himawaripy</code> program for a dynamic wall paper. Using <code>crontab</code> does not work. </p>
-<p>The fist solution is using <code>sudo -u user command</code>. This works in that the script exit correctly but the wallpaper does not change. </p>
-<p>The second solution is found online:</p>
-<block><pre><br>!#/bin/bash<br>su - user&lt;&lt;!<br>command_to_execute<br>exit<br>!<br></pre></block>
-
-<p>This also successfully exit but does not change the wall paper. </p>
-<p>I believe it’s the program’s fault instead of the shell’s. ==Still finding why. ==</p>
-<p>About the usage:<br><a href="https://en.wikipedia.org/wiki/Here_document" target="_blank" rel="external">https://en.wikipedia.org/wiki/Here_document</a></p>
-<p>2017/3/19 20:40</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/19/logging-as-another-user-and-then-exit-after-finishing-the-desired-work-in-shell-script-2/" data-id="cjjxcs7y20020tdakynwz5v39" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
 
     </footer>
   </div>
@@ -666,7 +662,7 @@ ${color black}$hr
   <div class="widget-wrap">
     <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12.22px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 16.67px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 18.89px;">CPP</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 10px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 14.44px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 12.22px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17.78px;">Linux</a> <a href="/blog/tags/ML/" style="font-size: 15.56px;">ML</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 11.11px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12.22px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 11.11px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 11.11px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12.22px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 13.33px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12.22px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 14.44px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12.22px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
+      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12.5px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 16.25px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 18.75px;">CPP</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 10px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 12.5px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/blog/tags/ML/" style="font-size: 16.25px;">ML</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 11.25px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12.5px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 12.5px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 11.25px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12.5px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 13.75px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12.5px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 15px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12.5px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
     </div>
   </div>
 
@@ -688,6 +684,10 @@ ${color black}$hr
       <ul>
         
           <li>
+            <a href="/blog/2018/07/29/Note-Cycle-GAN/">Note: Cycle GAN</a>
+          </li>
+        
+          <li>
             <a href="/blog/2018/07/22/Note-Deep-Learning-and-the-Information-Bottleneck-Principle/">Note: Deep Learning and the Information Bottleneck Principle</a>
           </li>
         
@@ -701,10 +701,6 @@ ${color black}$hr
         
           <li>
             <a href="/blog/2017/12/10/Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout/">Ubuntu 16.04 ultimate dual graphic card solution with newest nvidia proprietary drivers switchable without logout</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/">Solution to AttributeError ProgressBar object has no attribute finished error using ubuntu-make</a>
           </li>
         
       </ul>

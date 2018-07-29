@@ -79,6 +79,52 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-using-windows-h-or-winsocks" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/02/15/using-windows-h-or-winsocks/" class="article-date">
+  <time datetime="2017-02-15T07:03:27.000Z" itemprop="datePublished">2017-02-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/02/15/using-windows-h-or-winsocks/">Using windows.h or winsocks.h/winsocks2.h in MFC applications</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Just add the macro <code>#define _AFXDLL</code> before every header files or in the <code>stdafx.h</code> one thing for all:</p>
+<pre><block>
+#ifndef _AFXDLL
+#define _AFXDLL
+#endif
+</block></pre>
+
+<p>After that, use <code>#include &lt;afxwin.h&gt;</code> to replace any of the <code>windows.h</code> in any other files.<br>2017/2/15 15:08</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/02/15/using-windows-h-or-winsocks/" data-id="cjk76cy99004acbakje4fdyp2" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/WinAPI/">WinAPI</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-output-cstring-type-with-cout-and-printf" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2017/02/13/output-cstring-type-with-cout-and-printf/" class="article-date">
@@ -108,7 +154,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/13/output-cstring-type-with-cout-and-printf/" data-id="cjjxcs7zc003otdakjoqwzvsi" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/13/output-cstring-type-with-cout-and-printf/" data-id="cjk76cy800034cbak275ve3qh" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li></ul>
@@ -151,7 +197,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/13/different-between-type-bool-bool-boolean-and-boolean-in-c/" data-id="cjjxcs7xf001dtdakup6rmtsg" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/13/different-between-type-bool-bool-boolean-and-boolean-in-c/" data-id="cjk76cy5s0014cbaks45q7c8x" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li></ul>
@@ -193,7 +239,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/13/when-binding-sockets-to-server-which-adress-to-choose/" data-id="cjjxcs810005vtdakjaxt2vdq" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/13/when-binding-sockets-to-server-which-adress-to-choose/" data-id="cjk76cy9g004mcbakpsp95wgv" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Network/">Network</a></li></ul>
@@ -233,7 +279,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/09/unknown-2/" data-id="cjjxcs80f0055tdaktig2t57z" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/09/unknown-2/" data-id="cjk76cy8q003vcbakccb76jh6" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Compiler/">Compiler</a></li></ul>
@@ -272,7 +318,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/09/use-getversionexw-function-in-the-new-c-standard/" data-id="cjjxcs80j005atdakvqajmxga" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/09/use-getversionexw-function-in-the-new-c-standard/" data-id="cjk76cy8z0042cbakjn6wmosf" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li></ul>
@@ -311,7 +357,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/09/duplicated-macro-definitions-when-containing-both-windows-h-and-winsock-h/" data-id="cjjxcs7zf003rtdakiswg2kiq" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/09/duplicated-macro-definitions-when-containing-both-windows-h-and-winsock-h/" data-id="cjk76cy6w001ycbaktq8n7mzd" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/WinAPI/">WinAPI</a></li></ul>
@@ -350,7 +396,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/08/a-bad-but-useable-way-to-deal-with-_tchar-argv/" data-id="cjjxcs7w2000atdakr5cvxkfr" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/08/a-bad-but-useable-way-to-deal-with-_tchar-argv/" data-id="cjk76cy4c0004cbakgx7gd3v2" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -445,7 +491,7 @@ I use these codes to initialize a entry table.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/08/how-to-create-a-windows-services-program-to-run-background-in-start-up-and-how-to-register-it/" data-id="cjjxcs7xy001vtdaked1pbubs" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/08/how-to-create-a-windows-services-program-to-run-background-in-start-up-and-how-to-register-it/" data-id="cjk76cyb8007tcbak3v6tir10" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/WinAPI/">WinAPI</a></li></ul>
@@ -484,46 +530,7 @@ I use these codes to initialize a entry table.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/08/a-way-to-avoid-duplicate-declaration/" data-id="cjjxcs7wg000ltdakez4qd1on" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-a-good-way-to-avoid-duplicated-definition-in-header-files" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2017/02/08/a-good-way-to-avoid-duplicated-definition-in-header-files/" class="article-date">
-  <time datetime="2017-02-08T14:16:32.000Z" itemprop="datePublished">2017-02-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2017/02/08/a-good-way-to-avoid-duplicated-definition-in-header-files/">Another good way to avoid duplicated declaration in C/C++ header files besides #ifdef</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Since I prefer to declare everything in the .h file instead of .c/.cpp to make the whole program more readable, I am always dealing with duplicated definitions because of wrong insertion of them. <br><br>Using <code>#ifndef</code> macro is the traditional way to do that, but I simply hate adding <code>#endif</code> at the end of my code. <br><br>Now, I found a new way to do that. Adding key word <code>extern</code> before declaring them and declare them again in the .c/.cpp file can also do the trick. Since the compiles simple replace the .h file at the place where the macro <code>#include</code> is, using extern can solve all the conflicts. </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/08/a-good-way-to-avoid-duplicated-definition-in-header-files/" data-id="cjjxcs7wq000ttdakp0mikpb4" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/08/a-way-to-avoid-duplicate-declaration/" data-id="cjk76cy4u000fcbaki0vjazeo" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li></ul>
@@ -561,7 +568,7 @@ I use these codes to initialize a entry table.
   <div class="widget-wrap">
     <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12.22px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 16.67px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 18.89px;">CPP</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 10px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 14.44px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 12.22px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17.78px;">Linux</a> <a href="/blog/tags/ML/" style="font-size: 15.56px;">ML</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 11.11px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12.22px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 11.11px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 11.11px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12.22px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 13.33px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12.22px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 14.44px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12.22px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
+      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12.5px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 16.25px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 18.75px;">CPP</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 10px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 12.5px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/blog/tags/ML/" style="font-size: 16.25px;">ML</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 11.25px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12.5px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 12.5px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 11.25px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12.5px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 13.75px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12.5px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 15px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12.5px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
     </div>
   </div>
 
@@ -583,6 +590,10 @@ I use these codes to initialize a entry table.
       <ul>
         
           <li>
+            <a href="/blog/2018/07/29/Note-Cycle-GAN/">Note: Cycle GAN</a>
+          </li>
+        
+          <li>
             <a href="/blog/2018/07/22/Note-Deep-Learning-and-the-Information-Bottleneck-Principle/">Note: Deep Learning and the Information Bottleneck Principle</a>
           </li>
         
@@ -596,10 +607,6 @@ I use these codes to initialize a entry table.
         
           <li>
             <a href="/blog/2017/12/10/Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout/">Ubuntu 16.04 ultimate dual graphic card solution with newest nvidia proprietary drivers switchable without logout</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/">Solution to AttributeError ProgressBar object has no attribute finished error using ubuntu-make</a>
           </li>
         
       </ul>
