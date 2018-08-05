@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2018-07-29T18:25:04.955Z</updated>
+  <updated>2018-08-05T02:02:38.856Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Note: Neural Turning Machine</title>
+    <link href="https://d0048.github.io/blog/2018/08/05/Note-Neural-Turning-Machine/"/>
+    <id>https://d0048.github.io/blog/2018/08/05/Note-Neural-Turning-Machine/</id>
+    <published>2018-08-05T01:59:58.000Z</published>
+    <updated>2018-08-05T02:02:38.856Z</updated>
+    
+    <content type="html"><![CDATA[<p>Most elegent design I’ve ever seen…</p><h4 id="Mundane-Turing-Machine"><a href="#Mundane-Turing-Machine" class="headerlink" title="Mundane Turing Machine"></a>Mundane Turing Machine</h4><p>A machine in every move, read a symbol from the current position of its <strong>head</strong> on a <strong>tape</strong>, from its <strong>state register</strong> and the symbol read to find the next insturction from its <strong>table</strong>, then based on the instruction, write a symbol with <strong>head</strong>, update its state register, and chooses to move left/right or halt.</p><p>Reference: See <a href="https://en.wikipedia.org/wiki/Turing_machine" target="_blank" rel="external">wikipedia</a>.</p><p><strong>Question:</strong><br>    Wouldn’t turing machine in N-Dimentional Space to be interesting…the head could move in an arbitary direction…</p><hr><h4 id="Overall-Archtecture"><a href="#Overall-Archtecture" class="headerlink" title="Overall Archtecture"></a>Overall Archtecture</h4><img src="/blog/images/neural_turing_machine/ntm_1.png" class="[class1 class2]"><p><strong><em>Difference:</em></strong><br>The a neural network is used to replace the mundane <strong>table</strong>, just like what the Deep Q-learning did. <strong>So this is basically a Q-learning model with a differertiable memory bank!</strong></p><hr><h4 id="Memory-Operations"><a href="#Memory-Operations" class="headerlink" title="Memory Operations"></a>Memory Operations</h4><p>In compensation to that, the memory need to be be differertiable to update by gradient descent.</p><p><strong>Define</strong> memory to be a $M\times N$ Matrix $M_t$. It is seemed as a memory with $N$ entries, and each entry have a capacity of $M$.</p><p><strong>Read Operation:</strong><br>The read head emmits a softmaxed vector $w_t$ of length $N$, the read $1 \times M$ vector $r_t$ would be<br>$$r_t=\sum_i^N{w_t(i) \times M_t(i)}$$<br>very intuitive.</p><p><strong>Write Operation:</strong><br>Write head emmits a softmaxed weighting vector $w_t$ to specifiy which entries of matix will be midified.</p><p>For erase, the write head emmits a softmaxed erase vector $e_t$, and erase contents by the two weightings:<br>$$\dot M_{t+1}(i) = M_t(i)*(1-w_t(i)e_t(i))$$</p><p>For writing, the write head emmits a addition vector $a_t$ to add to the selected contents:<br>$$M_{t+1}(i)=\dot M_t(i) + w_t(i)a_t(i)$$</p><hr><h4 id="Addressing"><a href="#Addressing" class="headerlink" title="Addressing"></a>Addressing</h4><p>The afore-mentioned weighting vectors are used to operate selected entries, but to select the entries in a diffenertiable way, we need two addressing mechanisms, namely: <strong>Content-based Addressing</strong> and <strong>Location-based Addressing</strong>.</p><p><strong>Overall Addressing Diagram</strong><br><img src="/blog/images/neural_turing_machine/ntm_2.png" class="[class1 class2]"></p><p><strong>Content-based Addressing</strong></p><p>It allows the network to select entries by stating its content, so that it could update it. The head emmits a vector $k_t$ length of $M$, which is compared to each entries to get a content similarity vector $w^c_t$ of length $N$<br>$$w^c_t(i) = \frac{k_t \cdot M(:,i)}{||k_t||\cdot||M(:,i)||} $$<br>. This weighting is then normalized by softmax to further attenuate smaller values and amplify larger values.</p><p><strong>Location-based Addressing</strong></p><p>It allows the network to get the memory of a location without knowing what’s inside.</p><p>First, each head need to provide a scalar interpolation gate $g_t$ to specify which type of addressing is to be used in order to get the current memory:<br>$$w^g_t = g_t w^c_t + (1-g_t) w_{t-1}$$</p><p>In terms of location-based addressing, there are three possible actions, namely to shift: $-1,0,1$ entry to the right, same as a mundane turing machine. This is controlled by a length $3$ softmaxed vector $s_t$ provided by the head. other than softmax, using a shift scalar emitted by the controller as lower bound to simply clip the outputs is also experimented.</p><p>In order to perform the selected shift, a circular convolution is performed on memory $M_t$ by performing that on its index, namely, $w^g_t$, basically rolling the weighting vector $w^g_t$ by $s_t$.<br>$$\dot w_t = \sum_{j=0}^{N-1}w^g_t(j)s_t(i-j)$$</p><p><strong>Sharpening</strong></p><p>Inevitably the rolled weighting vector $w_t^g$ will be blurry due to the diffenertiable nature of the roll. A sharpening operation using a scalar $\mathcal{Y}_t \geqslant 1$ emmitted by the head.<br>$$w_t(i) = \frac{\dot{w_t}(i)^{\mathcal{Y}_t}}{<br>\sum{\dot{w_t}(i)^{\mathcal{Y}_t}}<br>}$$</p><hr><h4 id="Controller-Network"><a href="#Controller-Network" class="headerlink" title="Controller Network"></a>Controller Network</h4><p>Both feed-forward neural network and LSTM are considered to be used as controller. However, due to the fact that currently only one reading/writing head is used, simple operations like multiplying two numbers in memory is made impossible for a feed-forward network. Thus those units of recurrent nature would works better.</p><hr><h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><p><em><a href="https://arxiv.org/abs/1410.5401" target="_blank" rel="external">Neural Turing Machines</a></em> 2014. Alex Graves, Greg Wayne &amp; Ivo Danihelka</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Most elegent design I’ve ever seen…&lt;/p&gt;
+&lt;h4 id=&quot;Mundane-Turing-Machine&quot;&gt;&lt;a href=&quot;#Mundane-Turing-Machine&quot; class=&quot;headerlink&quot; title=&quot;Munda
+      
+    
+    </summary>
+    
+    
+      <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
+    
+      <category term="Note" scheme="https://d0048.github.io/blog/tags/Note/"/>
+    
+  </entry>
   
   <entry>
     <title>Note: Cycle GAN</title>
@@ -68,8 +94,8 @@
   
   <entry>
     <title>Note: A Neural Algorithm of Artistic Style</title>
-    <link href="https://d0048.github.io/blog/2018/07/21/Note-A-Neural-Algorithm-of-Artistic-Style/"/>
-    <id>https://d0048.github.io/blog/2018/07/21/Note-A-Neural-Algorithm-of-Artistic-Style/</id>
+    <link href="https://d0048.github.io/blog/2018/07/22/Note-A-Neural-Algorithm-of-Artistic-Style/"/>
+    <id>https://d0048.github.io/blog/2018/07/22/Note-A-Neural-Algorithm-of-Artistic-Style/</id>
     <published>2018-07-22T03:38:33.000Z</published>
     <updated>2018-07-22T15:41:36.514Z</updated>
     
@@ -96,8 +122,8 @@
   
   <entry>
     <title>Fix Xlib:  extension GLX missing on display :8 error running Gui programs</title>
-    <link href="https://d0048.github.io/blog/2017/12/24/Fix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/"/>
-    <id>https://d0048.github.io/blog/2017/12/24/Fix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/</id>
+    <link href="https://d0048.github.io/blog/2017/12/25/Fix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/"/>
+    <id>https://d0048.github.io/blog/2017/12/25/Fix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/</id>
     <published>2017-12-25T03:53:57.000Z</published>
     <updated>2018-01-10T07:53:31.084Z</updated>
     
@@ -113,9 +139,9 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
@@ -138,9 +164,9 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
@@ -163,16 +189,16 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
   <entry>
     <title>Setting up the FRC development environment on ubuntu 16.04</title>
-    <link href="https://d0048.github.io/blog/2017/11/29/Setting-up-the-FRC-development-environment-on-ubuntu-16-04/"/>
-    <id>https://d0048.github.io/blog/2017/11/29/Setting-up-the-FRC-development-environment-on-ubuntu-16-04/</id>
+    <link href="https://d0048.github.io/blog/2017/11/30/Setting-up-the-FRC-development-environment-on-ubuntu-16-04/"/>
+    <id>https://d0048.github.io/blog/2017/11/30/Setting-up-the-FRC-development-environment-on-ubuntu-16-04/</id>
     <published>2017-11-30T01:21:42.000Z</published>
     <updated>2018-01-17T14:52:21.428Z</updated>
     
@@ -190,9 +216,9 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
       <category term="FRC" scheme="https://d0048.github.io/blog/tags/FRC/"/>
     
@@ -200,8 +226,8 @@
   
   <entry>
     <title>Make touchegg work on ubuntu unity/gnome desktops</title>
-    <link href="https://d0048.github.io/blog/2017/11/22/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/"/>
-    <id>https://d0048.github.io/blog/2017/11/22/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/</id>
+    <link href="https://d0048.github.io/blog/2017/11/23/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/"/>
+    <id>https://d0048.github.io/blog/2017/11/23/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/</id>
     <published>2017-11-23T03:23:07.000Z</published>
     <updated>2017-11-23T03:28:31.289Z</updated>
     
@@ -217,9 +243,9 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
@@ -267,16 +293,16 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
   <entry>
     <title>|failed to start docker application container engine| error after upgrade on ubuntu</title>
-    <link href="https://d0048.github.io/blog/2017/11/15/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/"/>
-    <id>https://d0048.github.io/blog/2017/11/15/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/</id>
+    <link href="https://d0048.github.io/blog/2017/11/16/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/"/>
+    <id>https://d0048.github.io/blog/2017/11/16/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/</id>
     <published>2017-11-16T02:47:52.000Z</published>
     <updated>2017-11-16T02:50:30.528Z</updated>
     
@@ -292,16 +318,16 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
   <entry>
     <title>Rejailbreak Kindle PaperWhite3 After Automatic Upgrade to 5.9.2/5.9.3/5.9.4/5.9.5/5.9.6</title>
-    <link href="https://d0048.github.io/blog/2017/11/14/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/"/>
-    <id>https://d0048.github.io/blog/2017/11/14/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/</id>
+    <link href="https://d0048.github.io/blog/2017/11/15/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/"/>
+    <id>https://d0048.github.io/blog/2017/11/15/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/</id>
     <published>2017-11-15T03:08:09.000Z</published>
     <updated>2018-06-30T20:58:21.488Z</updated>
     
@@ -325,8 +351,8 @@
   
   <entry>
     <title>Use System Memory Together with Graphic Memory in TensorFlow</title>
-    <link href="https://d0048.github.io/blog/2017/11/07/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/"/>
-    <id>https://d0048.github.io/blog/2017/11/07/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/</id>
+    <link href="https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/"/>
+    <id>https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/</id>
     <published>2017-11-08T02:52:25.000Z</published>
     <updated>2017-11-08T03:05:53.808Z</updated>
     
@@ -505,34 +531,6 @@
       <category term="Math" scheme="https://d0048.github.io/blog/tags/Math/"/>
     
       <category term="Thoughts" scheme="https://d0048.github.io/blog/tags/Thoughts/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>&quot;libcusolver.so.8.0: cannot open shared object file&quot; error while importing tensorflow</title>
-    <link href="https://d0048.github.io/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/"/>
-    <id>https://d0048.github.io/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/</id>
-    <published>2017-10-16T08:18:46.000Z</published>
-    <updated>2017-10-16T08:34:30.468Z</updated>
-    
-    <content type="html"><![CDATA[<p>After installing the gpu version of the tensorflow, I got this error while importing it:</p><pre>>>> import tensorflow as tfTraceback (most recent call last):  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/pywrap_tensorflow.py", line 41, in <module>    from tensorflow.python.pywrap_tensorflow_internal import *  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>    _pywrap_tensorflow_internal = swig_import_helper()  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)  File "/usr/lib/python3.5/imp.py", line 242, in load_module    return load_dynamic(name, filename, file)  File "/usr/lib/python3.5/imp.py", line 342, in load_dynamic    return _load(spec)ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or directory</module></module></pre><p>None of the solutions online, like setting the environmental variables to cuda installation.</p><p>I tried <code>locate libcusolver.so</code> and none of the paths refers to the version I wanted. This is because tensorflow only works with cuda 8.0 but the newest version of cuda is installed. (In my case, 8.0).</p><p>Because I am using ubuntu and installed cuda through ppa, I simply installed cuda 8.0 through <code>sudo apt-get install cuda-8-0</code> and everything worked. </p><p>2017/10/16</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;After installing the gpu version of the tensorflow, I got this error while importing it:&lt;/p&gt;
-&lt;pre&gt;
-&gt;&gt;&gt; import tensorflow as tf
-Traceback 
-      
-    
-    </summary>
-    
-    
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
-      <category term="ML" scheme="https://d0048.github.io/blog/tags/ML/"/>
     
   </entry>
   

@@ -66,9 +66,9 @@ ga('send', 'pageview');
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://d0048.github.io/blog"></form>
@@ -78,6 +78,48 @@ ga('send', 'pageview');
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-problems-with-the-schools-sms-log-system-that-contains-high-vulnerabilities" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/04/25/problems-with-the-schools-sms-log-system-that-contains-high-vulnerabilities/" class="article-date">
+  <time datetime="2017-04-25T12:44:39.000Z" itemprop="datePublished">2017-04-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/04/25/problems-with-the-schools-sms-log-system-that-contains-high-vulnerabilities/">Problems with the school&#39;s SMS log system that contains high vulnerabilities</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>I just found that the school’s SMS system, which contains all the sensitive and private information of almost every students and personnel in our school, including accounts that can directly change the students’ scores, is highly vulnerable. </p>
+<p>First of all, no ssl certificates are used. That means all the password and content are delivered directly without any encryption. That means…Well, this is what I got on my account:<br><img src="/content/images/2017/04/2017-04-25-20-50-09----.png" alt=""><br>Any time if our traffic are sniffered in any of the routers it routes through, all the passwords and contents in the pages will be leaked. </p>
+<p>Second of all, the side does not limit attempts to enter wrong passwords. That means, with a little amount of time and it will be possible to try out passwords of teachers with a small script.<br>Here is a small example:<br><code>wget http://sms.██s.com/login --post-data=&#39;username=p1234&amp;password=123456&#39; -r</code><br>This is a shell command for an attempt to recursively download all the contents owned by a student’s account. It can be easily planted into a program to try all possible combinations until success. Once the password is correct, all the private information will leak. Also, if the account is for a teacher, students will be able to change their scores themselves. </p>
+<p>==Plus, most of the teachers are using default passwords today…which are██..==</p>
+<p>In conclusion, the school platform need to be refined so that it is made safer!</p>
+<p>2017/4/25</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/04/25/problems-with-the-schools-sms-log-system-that-contains-high-vulnerabilities/" data-id="cjkg7ch6f002jkqaknpf3qodz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-run-custom-script" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -111,7 +153,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/18/run-custom-script/" data-id="cjk76cy7t002rcbakcom3g3y8" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/18/run-custom-script/" data-id="cjkg7ch6r002tkqak6ryk1n0j" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -151,7 +193,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/17/genymotion-can-not-login-even-with-correct-password-and-user-name/" data-id="cjk76cy64001bcbak7i980086" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/17/genymotion-can-not-login-even-with-correct-password-and-user-name/" data-id="cjkg7ch5b0018kqakghuak2au" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -191,7 +233,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/17/virtual-box-error-rtr3init-failed-with-rc-1912-rc-1912/" data-id="cjk76cy9d004fcbakfqg05mmh" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/17/virtual-box-error-rtr3init-failed-with-rc-1912-rc-1912/" data-id="cjkg7ch80004jkqak6yascp6b" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -360,7 +402,7 @@ ${color black}$hr
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/10/a-conky-profile-that-allows-notes-from-file-to-be-displayed-on-desktop/" data-id="cjk76cy4e0005cbako65lh79e" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/10/a-conky-profile-that-allows-notes-from-file-to-be-displayed-on-desktop/" data-id="cjkg7ch4c0009kqakk45yqr7q" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -401,7 +443,7 @@ ${color black}$hr
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/09/solve-the-conky-transparent-issue-under-unity-desktop/" data-id="cjk76cy860039cbak2z4oigrj" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/09/solve-the-conky-transparent-issue-under-unity-desktop/" data-id="cjkg7ch700038kqak1g0pondi" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -441,7 +483,7 @@ ${color black}$hr
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/09/solve-the-problem-that-conky-window-disappears-after-clicking-desktop/" data-id="cjk76cy820036cbakavm95r1o" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/09/solve-the-problem-that-conky-window-disappears-after-clicking-desktop/" data-id="cjkg7ch74003dkqak53ag19ow" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -485,7 +527,7 @@ ${color black}$hr
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/04/05/ways-to-share-the-same-profile-among-chromium-and-chrome-under-ubuntu/" data-id="cjk76cy9f004jcbakwhr8vbso" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/04/05/ways-to-share-the-same-profile-among-chromium-and-chrome-under-ubuntu/" data-id="cjkg7ch8b004ykqak1uh2x89y" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -525,7 +567,7 @@ ${color black}$hr
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/23/transform-int-to-string-in-java/" data-id="cjk76cy8j003ocbak6arbqwxi" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/03/23/transform-int-to-string-in-java/" data-id="cjkg7ch7g003ukqakcwlpi5zl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -571,64 +613,9 @@ ${color black}$hr
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/20/difference-between-shallow-copy-default-and-deep-copy-of-objects/" data-id="cjk76cy5y0016cbak9tqvi07u" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/03/20/difference-between-shallow-copy-default-and-deep-copy-of-objects/" data-id="cjkg7ch530012kqakq4obxpf0" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2017/03/19/shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn/" class="article-date">
-  <time datetime="2017-03-19T13:11:05.000Z" itemprop="datePublished">2017-03-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2017/03/19/shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn/">使用脚本自动更新host实现不用vpn，不用服务器的翻墙。。。</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>(Ignore this if you can’t read it coz you won’t need it anyways ;p)<br><br>（这篇只为某些人打算省事而写。。。该host可靠性好步骤少。。。可以少踩点坑。。）<br><br>恩。。。鉴于看不懂中文的大概也不需要这个,需要这个的也不想看英文，这篇用中文写好了。。。</p>
-<p>总之该方法只能访问下谷歌油管之类的国外网站，在各种vpn被封的场景下很好用。</p>
-<p>那么现在就正式开始吧。。。<code>这样的玩意请在终端里输入</code></p>
-<p>window平台:</p>
-<p>   某github开发者很贴心的吧工具都写好了。。so。。。<br><br>   <a href="https://github.com/HostsTools/Windows" target="_blank" rel="external">https://github.com/HostsTools/Windows</a><br></p>
-<p>Unix平台（mac/linux。。之类）：</p>
-<p>   MAC似乎有人写了：<a href="https://github.com/HostsTools/OSX" target="_blank" rel="external">https://github.com/HostsTools/OSX</a></p>
-<p>linux的话靠自己吧：</p>
-<p>   1.安装git。 具体方式取决于发行版，有包管理器的话软件包叫git-core。(像什么<code>sudo apt-get install git-core</code>啦。。<code>yum install gitcore</code>啦。。。)没有的话请自己编译。</p>
-<p>   2.随便找个github上还有人维护的hosts文件，再随便找个目录，pull下来。。：<br><code>git pull https://github.com/racaljk/hosts.git</code></p>
-<p>   3.写个脚本。。。：<br><code>nano hosts_updater.sh</code><br>里面输入：</p>
-<p><pre><br>cd /你/现在/的路径/hosts<br>git pull<br>cat /你/现在/的路径/hosts/hosts | sudo tee /etc/hosts ##这句话没有写错。。。<br>/etc/init.d/networking restart<br></pre><br>ctrl+x然后回车保存退出</p>
-<p>   4.给上脚本权限并且执行一次试试:<br><br><code>chmod +x hosts_updater.sh</code><br><br><code>./hosts_updater.sh</code><br><br>过一会看看能不能上谷歌什么的。。。可能需要重启。。。（目测仅debian系可用，红帽党们估计也用不到吧。。）</p>
-<p>   5.安装crontab。。。(像什么<code>sudo apt-get install crontab</code>啦。。<code>yum install crontab</code>啦。。。或者自己编译)</p>
-<p>   6.登录到root用户中:<br><br><code>su root</code></p>
-<p>   7.在crontab里面注册指令让它定时执行。。。:<br><br><code>crontab -e</code><br><br>如果要你选择编辑器，选nano吧。。。<br><br>在最后一行加上 <code>0 0 * * * /到你脚本的路径/hosts_updater.sh</code> <br><br>一样保存退出。。。完事<br></p>
-<p>2017/3/19 22:06</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/03/19/shi-yong-jiao-ben-zi-dong-geng-xin-hostshi-xian-bu-yong-vpn/" data-id="cjk76cy9x0056cbakkypooytz" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/GFW/">GFW</a></li></ul>
-
     </footer>
   </div>
   
@@ -650,7 +637,7 @@ ${color black}$hr
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Bukkit/">Bukkit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/C/">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/CPP/">CPP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Compiler/">Compiler</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Debug/">Debug</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/FRC/">FRC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/File-Recovery/">File Recovery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Flash/">Flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/GFW/">GFW</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Kindle/">Kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/ML/">ML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Math/">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Note/">Note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Outdated/">Outdated</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Problem/">Problem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SSH/">SSH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Solution/">Solution</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Terminator/">Terminator</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Vim/">Vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/WinAPI/">WinAPI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Xorg/">Xorg</a></li></ul>
     </div>
@@ -660,9 +647,9 @@ ${color black}$hr
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12.5px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 16.25px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 18.75px;">CPP</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 10px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 12.5px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/blog/tags/ML/" style="font-size: 16.25px;">ML</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 11.25px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12.5px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 12.5px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 11.25px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12.5px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 13.75px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12.5px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 15px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12.5px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
+      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 16px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 19px;">CPP</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 10px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 12px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/blog/tags/ML/" style="font-size: 17px;">ML</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 11px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 13px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 11px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 14px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 15px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
     </div>
   </div>
 
@@ -671,7 +658,7 @@ ${color black}$hr
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
     </div>
   </div>
 
@@ -679,9 +666,13 @@ ${color black}$hr
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/blog/2018/08/05/Note-Neural-Turning-Machine/">Note: Neural Turning Machine</a>
+          </li>
         
           <li>
             <a href="/blog/2018/07/29/Note-Cycle-GAN/">Note: Cycle GAN</a>
@@ -692,15 +683,11 @@ ${color black}$hr
           </li>
         
           <li>
-            <a href="/blog/2018/07/21/Note-A-Neural-Algorithm-of-Artistic-Style/">Note: A Neural Algorithm of Artistic Style</a>
+            <a href="/blog/2018/07/22/Note-A-Neural-Algorithm-of-Artistic-Style/">Note: A Neural Algorithm of Artistic Style</a>
           </li>
         
           <li>
-            <a href="/blog/2017/12/24/Fix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/">Fix Xlib:  extension GLX missing on display :8 error running Gui programs</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2017/12/10/Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout/">Ubuntu 16.04 ultimate dual graphic card solution with newest nvidia proprietary drivers switchable without logout</a>
+            <a href="/blog/2017/12/25/Fix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/">Fix Xlib:  extension GLX missing on display :8 error running Gui programs</a>
           </li>
         
       </ul>
