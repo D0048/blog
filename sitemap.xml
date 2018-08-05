@@ -2,30 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://d0048.github.io/blog/2018/08/05/Note-Neural-Turning-Machine/</loc>
+    <loc>https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/</loc>
     
-    <lastmod>2018-08-05T02:02:38.856Z</lastmod>
+    <lastmod>2018-08-05T02:06:29.970Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://d0048.github.io/blog/2017/10/25/to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch/</loc>
+    
+    <lastmod>2018-08-05T02:06:11.904Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://d0048.github.io/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/</loc>
+    
+    <lastmod>2018-08-05T02:05:52.650Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://d0048.github.io/blog/2018/07/29/Note-Cycle-GAN/</loc>
     
-    <lastmod>2018-07-29T18:25:04.955Z</lastmod>
+    <lastmod>2018-08-05T02:04:46.111Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://d0048.github.io/blog/2018/07/22/Note-Deep-Learning-and-the-Information-Bottleneck-Principle/</loc>
     
-    <lastmod>2018-07-22T22:49:07.843Z</lastmod>
+    <lastmod>2018-08-05T02:04:41.962Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://d0048.github.io/blog/2018/08/05/Note-Neural-Turning-Machine/</loc>
+    
+    <lastmod>2018-08-05T02:04:37.342Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://d0048.github.io/blog/2017/10/25/Note-on-1x1-Convolutions/</loc>
+    
+    <lastmod>2018-08-05T02:04:25.706Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://d0048.github.io/blog/2018/07/22/Note-A-Neural-Algorithm-of-Artistic-Style/</loc>
     
-    <lastmod>2018-07-22T15:41:36.514Z</lastmod>
+    <lastmod>2018-08-05T02:04:15.501Z</lastmod>
     
   </url>
   
@@ -79,13 +107,6 @@
   </url>
   
   <url>
-    <loc>https://d0048.github.io/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/</loc>
-    
-    <lastmod>2017-11-21T08:56:50.653Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://d0048.github.io/blog/2017/11/19/Preventing-CPU-IO-Intensive-Programs-Blocking-Linux-Gui/</loc>
     
     <lastmod>2017-11-19T06:31:20.710Z</lastmod>
@@ -100,30 +121,9 @@
   </url>
   
   <url>
-    <loc>https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/</loc>
-    
-    <lastmod>2017-11-08T03:05:53.808Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://d0048.github.io/blog/2017/11/02/Prevent-Blocking-When-Using-PyPlot/</loc>
     
     <lastmod>2017-11-02T13:05:28.204Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://d0048.github.io/blog/2017/10/25/Note-on-1x1-Convolutions/</loc>
-    
-    <lastmod>2017-10-27T14:30:47.249Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://d0048.github.io/blog/2017/10/25/to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch/</loc>
-    
-    <lastmod>2017-10-25T14:00:43.011Z</lastmod>
     
   </url>
   
