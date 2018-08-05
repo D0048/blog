@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://d0048.github.io/blog/2018/08/05/Note-Neural-Turning-Machine/</loc>
+    
+    <lastmod>2018-08-05T02:12:01.644Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/</loc>
     
     <lastmod>2018-08-05T02:06:29.970Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>https://d0048.github.io/blog/2018/07/22/Note-Deep-Learning-and-the-Information-Bottleneck-Principle/</loc>
     
     <lastmod>2018-08-05T02:04:41.962Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://d0048.github.io/blog/2018/08/05/Note-Neural-Turning-Machine/</loc>
-    
-    <lastmod>2018-08-05T02:04:37.342Z</lastmod>
     
   </url>
   
