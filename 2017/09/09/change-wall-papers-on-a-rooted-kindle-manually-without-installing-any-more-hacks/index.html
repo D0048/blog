@@ -109,7 +109,13 @@ ga('send', 'pageview');
 <p>The original wall papers seems to be located at <code>/usr/share/blanket/screensaver/</code>. By replacing them with my own, I should be able to use my own images.</p>
 <p>However, the file system there seems to be mounted as read only. Use <code>df /usr/share/blanket/screensaver/</code> to locate the mounting point and remount it with <code>mount -o remount,rw /</code>(coz in my case it mounted together with <code>/</code>)</p>
 <p>Then, one could freely copy his/her images(should be in the right size) into that folder following the name sequence. </p>
-<p>Tips: Try replace <code>/usr/share/blanket/screensaver/</code> with a symbolic link to <code>/mnt/us/screensaver</code> so that wallpapers could be changed faster.</p>
+<h5 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h5><ul>
+<li><p>Try replace <code>/usr/share/blanket/screensaver/</code> with a symbolic link to <code>/mnt/us/screensaver</code> so that wallpapers could be changed faster.</p>
+</li>
+<li><p>Try this convenient script to convert all png images under a folder to correctly resized/renamed kindle wallpaper:<br>(Gist)[<a href="https://gist.github.com/D0048/3a4823e1321e9b30ad38095dcc96f52a" target="_blank" rel="external">https://gist.github.com/D0048/3a4823e1321e9b30ad38095dcc96f52a</a>]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line">find . -name &quot;*.png&quot; -exec sh -c &quot;convert &#123;&#125; -resize 1030x1030 -gravity center -extent 1072x1448  -colorspace Gray &#123;&#125;&quot; \;</div><div class="line"></div><div class="line">a=0</div><div class="line">for i in *.png; do</div><div class="line">  new=$(printf &quot;bg_ss%02d.png&quot; &quot;$a&quot;)</div><div class="line">  mv -i -- &quot;$i&quot; &quot;$new&quot;</div><div class="line">  let a=a+1</div><div class="line">done</div></pre></td></tr></table></figure>
+</li>
+</ul>
 <p>2017/9/9</p>
 
       
