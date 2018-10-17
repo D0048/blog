@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://d0048.github.io/blog/2018/10/17/Comic-1-Advancement/index.html">
 <meta property="og:site_name" content="D0048">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-10-17T13:43:55.896Z">
+<meta property="og:updated_time" content="2018-10-17T13:45:32.808Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Comic: 1. Advancement">
   
@@ -101,9 +101,8 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!-- 
-<img src="/blog/path/to/image" class="[class names]" title="[width] [height] [title text [alt text]]"> 
-<p>–&gt;<br><img class="comic1/comic1-1.png"></p>
+        <!-- <img src="/blog/path/to/image" class="[class names]" title="[width] [height] [title text [alt text]]"> –&gt;
+<img class="comic1/comic1-1.png">
 <img class="comic1/comic1-2.png">
 -->
       
@@ -251,6 +250,22 @@ s.setAttribute('data-timestamp', +new Date());
 
 <script src="/blog/js/script.js"></script>
 
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
 </body>
 </html>

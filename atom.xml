@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2018-10-17T13:43:55.896Z</updated>
+  <updated>2018-10-17T13:45:32.808Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -21,17 +21,16 @@
     <link href="https://d0048.github.io/blog/2018/10/17/Comic-1-Advancement/"/>
     <id>https://d0048.github.io/blog/2018/10/17/Comic-1-Advancement/</id>
     <published>2018-10-17T13:26:12.000Z</published>
-    <updated>2018-10-17T13:43:55.896Z</updated>
+    <updated>2018-10-17T13:45:32.808Z</updated>
     
-    <content type="html"><![CDATA[<!-- <img src="/blog/path/to/image" class="[class names]" title="[width] [height] [title text [alt text]]"> <p>–&gt;<br><img class="comic1/comic1-1.png"></p><img class="comic1/comic1-2.png">-->]]></content>
+    <content type="html"><![CDATA[<!-- <img src="/blog/path/to/image" class="[class names]" title="[width] [height] [title text [alt text]]"> –&gt;<img class="comic1/comic1-1.png"><img class="comic1/comic1-2.png">-->]]></content>
     
     <summary type="html">
     
       
       
-        &lt;!-- 
-&lt;img src=&quot;/blog/path/to/image&quot; class=&quot;[class names]&quot; title=&quot;[width] [height] [title text [alt text]]&quot;&gt; 
-&lt;p&gt;–&amp;gt;&lt;br&gt;&lt;img class=&quot;comic1
+        &lt;!-- &lt;img src=&quot;/blog/path/to/image&quot; class=&quot;[class names]&quot; title=&quot;[width] [height] [title text [alt text]]&quot;&gt; –&amp;gt;
+&lt;img class=&quot;comic1/comic1-
       
     
     </summary>
