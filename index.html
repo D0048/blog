@@ -103,8 +103,8 @@ ga('send', 'pageview');
       
         <!-- 
 <img src="/blog/path/to/image" class="[class names]" title="[width] [height] [title text [alt text]]"> 
-<p>–&gt;<br><img class="comic1/comic1-1.png [400,1000] [[C1]]"></p>
-<img class="comic1/comic1-2.png [400,1000] [[C2]]">
+<p>–&gt;<br><img class="comic1/comic1-1.png"></p>
+<img class="comic1/comic1-2.png">
 -->
       
     </div>
@@ -788,22 +788,6 @@ s.setAttribute('data-timestamp', +new Date());
 
 <script src="/blog/js/script.js"></script>
 
-  </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
