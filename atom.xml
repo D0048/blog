@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2018-10-17T14:32:33.525Z</updated>
+  <updated>2018-10-17T14:35:15.758Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -21,16 +21,15 @@
     <link href="https://d0048.github.io/blog/2018/10/17/Comic-2-Desktops/"/>
     <id>https://d0048.github.io/blog/2018/10/17/Comic-2-Desktops/</id>
     <published>2018-10-17T14:20:14.000Z</published>
-    <updated>2018-10-17T14:32:33.525Z</updated>
+    <updated>2018-10-17T14:35:15.758Z</updated>
     
-    <content type="html"><![CDATA[<img src="/blog/images/comic2/2-1.png" class="{" width":"100"="" }"=""><img src="/blog/images/comic2/2-2.png" class="{" width":"100"="" }"=""><p>Fan arts inspired by the <a href="https://xkcd.com/" target="_blank" rel="external">XKCD</a> comics. </p>]]></content>
+    <content type="html"><![CDATA[<img src="/blog/images/comic2/2-1.png" class="class">]]></content>
     
     <summary type="html">
     
       
       
-        &lt;img src=&quot;/blog/images/comic2/2-1.png&quot; class=&quot;{&quot; width&quot;:&quot;100&quot;=&quot;&quot; }&quot;=&quot;&quot;&gt;
-&lt;img src=&quot;/blog/images/comic2/2-2.png&quot; class=&quot;{&quot; width&quot;:&quot;100&quot;=&quot;&quot; }&quot;=
+        &lt;img src=&quot;/blog/images/comic2/2-1.png&quot; class=&quot;class&quot;&gt;
       
     
     </summary>
