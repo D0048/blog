@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2018-10-17T13:51:41.443Z</updated>
+  <updated>2018-10-17T13:53:54.078Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -21,15 +21,16 @@
     <link href="https://d0048.github.io/blog/2018/10/17/Comic-1-Advancement/"/>
     <id>https://d0048.github.io/blog/2018/10/17/Comic-1-Advancement/</id>
     <published>2018-10-17T13:26:12.000Z</published>
-    <updated>2018-10-17T13:51:41.443Z</updated>
+    <updated>2018-10-17T13:53:54.078Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="comic1/comic1-1.png" alt=""><br><img src="comic1/comic1-2.png" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<img src="/blog/images/comic1/comic1-1.png"><img src="/blog/images/comic1/comic1-2.png">]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;img src=&quot;comic1/comic1-1.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;comic1/comic1-2.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+        &lt;img src=&quot;/blog/images/comic1/comic1-1.png&quot;&gt;
+&lt;img src=&quot;/blog/images/comic1/comic1-2.png&quot;&gt;
 
       
     
