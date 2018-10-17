@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2018-10-17T14:12:34.758Z</updated>
+  <updated>2018-10-17T14:22:20.374Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -17,13 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Comic: 2. Desktops</title>
+    <link href="https://d0048.github.io/blog/2018/10/17/Comic-2-Desktops/"/>
+    <id>https://d0048.github.io/blog/2018/10/17/Comic-2-Desktops/</id>
+    <published>2018-10-17T14:20:14.000Z</published>
+    <updated>2018-10-17T14:22:20.374Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/blog/images/comic2/comic1-1.png"><img src="/blog/images/comic2/comic1-2.png"><p>Fan arts inspired by the <a href="xkcd.com">XKCD</a> comics. </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;img src=&quot;/blog/images/comic2/comic1-1.png&quot;&gt;
+&lt;img src=&quot;/blog/images/comic2/comic1-2.png&quot;&gt;
+&lt;p&gt;Fan arts inspired by the &lt;a href=&quot;xkcd.com&quot;&gt;XKC
+      
+    
+    </summary>
+    
+    
+      <category term="Comics" scheme="https://d0048.github.io/blog/tags/Comics/"/>
+    
+      <category term="Thoughts" scheme="https://d0048.github.io/blog/tags/Thoughts/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Comic: 1. Advancement</title>
     <link href="https://d0048.github.io/blog/2018/10/17/Comic-1-Advancement/"/>
     <id>https://d0048.github.io/blog/2018/10/17/Comic-1-Advancement/</id>
     <published>2018-10-17T13:26:12.000Z</published>
-    <updated>2018-10-17T14:12:34.758Z</updated>
+    <updated>2018-10-17T14:21:42.970Z</updated>
     
-    <content type="html"><![CDATA[<img src="/blog/images/comic1/comic1-1.png"><img src="/blog/images/comic1/comic1-2.png">]]></content>
+    <content type="html"><![CDATA[<img src="/blog/images/comic1/comic1-1.png"><img src="/blog/images/comic1/comic1-2.png"><p>Fan arts inspired by the <a href="xkcd.com">XKCD</a> comics. </p>]]></content>
     
     <summary type="html">
     
@@ -31,7 +58,7 @@
       
         &lt;img src=&quot;/blog/images/comic1/comic1-1.png&quot;&gt;
 &lt;img src=&quot;/blog/images/comic1/comic1-2.png&quot;&gt;
-
+&lt;p&gt;Fan arts inspired by the &lt;a href=&quot;xkcd.com&quot;&gt;XKC
       
     
     </summary>
@@ -166,9 +193,9 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
@@ -191,9 +218,9 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
@@ -216,9 +243,9 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
@@ -243,9 +270,9 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
       <category term="FRC" scheme="https://d0048.github.io/blog/tags/FRC/"/>
     
@@ -270,9 +297,9 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
@@ -320,9 +347,9 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
@@ -345,9 +372,9 @@
     </summary>
     
     
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
@@ -507,31 +534,6 @@
       <category term="Machine Learning" scheme="https://d0048.github.io/blog/tags/Machine-Learning/"/>
     
       <category term="Problem" scheme="https://d0048.github.io/blog/tags/Problem/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>getopt() function on raspery pi</title>
-    <link href="https://d0048.github.io/blog/2017/10/23/getopt-function-on-raspery-pi/"/>
-    <id>https://d0048.github.io/blog/2017/10/23/getopt-function-on-raspery-pi/</id>
-    <published>2017-10-23T08:20:57.000Z</published>
-    <updated>2017-10-23T08:25:24.764Z</updated>
-    
-    <content type="html"><![CDATA[<p>While the <code>getopt()</code> function provided by <code>getopt.h</code> usually returns <code>-1</code> after there are no more arguments. But probably due to certain issues relating to treatment of signs of integers on arm-devices (to be researched), it might return <code>255</code> instead when out of arguments. </p><p>2017/10/23</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;While the &lt;code&gt;getopt()&lt;/code&gt; function provided by &lt;code&gt;getopt.h&lt;/code&gt; usually returns &lt;code&gt;-1&lt;/code&gt; after there are no more argume
-      
-    
-    </summary>
-    
-    
-      <category term="C" scheme="https://d0048.github.io/blog/tags/C/"/>
-    
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
