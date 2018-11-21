@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2018-11-21T03:03:11.894Z</updated>
+  <updated>2018-11-21T03:32:15.315Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Comic: 4. Aphorism Space Search</title>
+    <link href="https://d0048.github.io/blog/2018/11/21/Comic-4-Aphorism-Space-Search/"/>
+    <id>https://d0048.github.io/blog/2018/11/21/Comic-4-Aphorism-Space-Search/</id>
+    <published>2018-11-21T03:04:54.000Z</published>
+    <updated>2018-11-21T03:32:15.315Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/blog/2018/11/21/Comic-4-Aphorism-Space-Search/4-1.jpg" alt="[An example aphorism subjects to the search. Credit: (cjfe.org/)]" title="[An example aphorism subjects to the search. Credit: (cjfe.org/)]"><img src="/blog/2018/11/21/Comic-4-Aphorism-Space-Search/4-2.png" alt="[Generalization of the search process.]" title="[Generalization of the search process.]"><p>Especially suitable for high-school essay prompt generation. </p><p>Fan arts inspired by the <a href="https://xkcd.com/" target="_blank" rel="external">XKCD</a> comics. </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;img src=&quot;/blog/2018/11/21/Comic-4-Aphorism-Space-Search/4-1.jpg&quot; alt=&quot;[An example aphorism subjects to the search. Credit: (cjfe.org/)]&quot; ti
+      
+    
+    </summary>
+    
+    
+      <category term="Comics" scheme="https://d0048.github.io/blog/tags/Comics/"/>
+    
+      <category term="Thoughts" scheme="https://d0048.github.io/blog/tags/Thoughts/"/>
+    
+  </entry>
   
   <entry>
     <title>Comic: 3. Shadow</title>
@@ -506,33 +531,6 @@
       <category term="Machine Learning" scheme="https://d0048.github.io/blog/tags/Machine-Learning/"/>
     
       <category term="Problem" scheme="https://d0048.github.io/blog/tags/Problem/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>to_categorical() missing 1 required positional argument nb_classes caused by tflearn version mismatch</title>
-    <link href="https://d0048.github.io/blog/2017/10/25/to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch/"/>
-    <id>https://d0048.github.io/blog/2017/10/25/to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch/</id>
-    <published>2017-10-25T12:14:52.000Z</published>
-    <updated>2018-08-05T02:06:11.904Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>TypeError: to_categorical() missing 1 required positional argument: &#39;nb_classes&#39;</code> was encountered while I was trying to run an example program based on it.</p><p>The function <code>to_catagorical()</code> used to require two arguments, where the second is called <code>nb_classes</code> and represents the total class numbers in classification as an integer. </p><p>It’s not until this <a href="https://github.com/tflearn/tflearn/pull/923" target="_blank" rel="external">pr</a> that the second function is no longer needed but the support for the previous usage is dropped and all the examples are updated to adapt to the new usage.</p><p>However, until today, the default version installed directed from pip is not new enough to support this new feature, thus causing a problem. </p><p>To solve it, either try update to the newest version via <code>pip install git+https://github.com/tflearn/tflearn.git</code> or just add the class number. </p><p>2017/10/25</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;code&gt;TypeError: to_categorical() missing 1 required positional argument: &amp;#39;nb_classes&amp;#39;&lt;/code&gt; was encountered while I was trying 
-      
-    
-    </summary>
-    
-    
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
-      <category term="Machine Learning" scheme="https://d0048.github.io/blog/tags/Machine-Learning/"/>
-    
-      <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
     
   </entry>
   

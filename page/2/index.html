@@ -79,6 +79,60 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/" class="article-date">
+  <time datetime="2017-11-30T11:12:31.000Z" itemprop="datePublished">2017-11-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/">Solution to AttributeError ProgressBar object has no attribute finished error using ubuntu-make</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>It seems like the umake version contained in the ubuntu 16.04 ppa <code>ppa:ubuntu-desktop/ubuntu-make</code> breaks due to a change in the API of the python <code>ProgressBar</code> module…</p>
+<p>The error log looks like this: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">N/A% (0 of 100) |                        | Elapsed Time: 0:00:00 ETA:  --:--:--Downloading and installing requirements</div><div class="line">ERROR: Unhandled exception</div><div class="line">Traceback (most recent call last):</div><div class="line">  File <span class="string">"/usr/lib/python3/dist-packages/umake/tools.py"</span>, line 158, <span class="keyword">in</span> wrapper</div><div class="line">    <span class="keyword">function</span>(*args, **kwargs)</div><div class="line">  File <span class="string">"/usr/lib/python3/dist-packages/umake/frameworks/baseinstaller.py"</span>, line 288, <span class="keyword">in</span> get_progress</div><div class="line">    <span class="keyword">if</span> not self.pbar.finished:  <span class="comment"># drawing is delayed, so ensure we are not done first</span></div><div class="line">AttributeError: <span class="string">'ProgressBar'</span> object has no attribute <span class="string">'finished'</span></div><div class="line">ERROR: Unhandled exception</div><div class="line">Traceback (most recent call last):</div><div class="line">  File <span class="string">"/usr/lib/python3/dist-packages/umake/tools.py"</span>, line 158, <span class="keyword">in</span> wrapper</div><div class="line">    <span class="keyword">function</span>(*args, **kwargs)</div><div class="line">  File <span class="string">"/usr/lib/python3/dist-packages/umake/frameworks/baseinstaller.py"</span>, line 288, <span class="keyword">in</span> get_progress</div><div class="line">    <span class="keyword">if</span> not self.pbar.finished:  <span class="comment"># drawing is delayed, so ensure we are not done first</span></div><div class="line">AttributeError: <span class="string">'ProgressBar'</span> object has no attribute <span class="string">'finished'</span></div></pre></td></tr></table></figure>
+<p>However, I failed to find a file corresponding to <code>File &quot;/usr/lib/python3/dist-packages/umake/frameworks/baseinstaller.py&quot;</code> in the github repo, thus failing to start an pr/issue. </p>
+<p>For those who encounter similar issue, here’s the quick fix…</p>
+<ol>
+<li><p>Use your favorite editor and root access to open the file <code>/usr/lib/python3/dist-packages/umake/frameworks/baseinstaller.py</code>, e.g <code>sudo gedit /usr/lib/python3/dist-packages/umake/frameworks/baseinstaller.py</code>. </p>
+</li>
+<li><p>Go to line 288.</p>
+</li>
+<li><p>Change the line <code>if not self.pbar.finished:  # drawing is delayed, so ensure we are not done first</code> to <code>if True:</code>, save and quit. </p>
+</li>
+<li><p>The progress bar may looks kinda broken after the fix, but will have no interruption to any installation…</p>
+</li>
+</ol>
+<p><code>2017/11/30</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/" data-id="cjoqm1gpx000sujakv5whl8d3" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Setting-up-the-FRC-development-environment-on-ubuntu-16-04" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2017/11/30/Setting-up-the-FRC-development-environment-on-ubuntu-16-04/" class="article-date">
@@ -150,7 +204,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/11/30/Setting-up-the-FRC-development-environment-on-ubuntu-16-04/" data-id="cjoqkuifl0042l0ak1t891jsp" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/30/Setting-up-the-FRC-development-environment-on-ubuntu-16-04/" data-id="cjoqm1gsf003qujakvw2nntfa" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/FRC/">FRC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -197,7 +251,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/11/23/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/" data-id="cjoqkuif60033l0akik3hqnx4" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/23/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/" data-id="cjoqm1gri002pujakoe76z7zp" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -276,7 +330,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/11/21/A-Brief-Summary-of-the-Godel-s-Incompleteness-Theorems/" data-id="cjoqkuida0006l0akwfcfuqh2" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/21/A-Brief-Summary-of-the-Godel-s-Incompleteness-Theorems/" data-id="cjoqm1gpd0002ujakwsbjov7k" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Math/">Math</a></li></ul>
@@ -329,7 +383,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/11/19/Preventing-CPU-IO-Intensive-Programs-Blocking-Linux-Gui/" data-id="cjoqkuiff003nl0akfyszyfd2" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/19/Preventing-CPU-IO-Intensive-Programs-Blocking-Linux-Gui/" data-id="cjoqm1gs4003eujakibgdxaj4" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -369,7 +423,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/11/16/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/" data-id="cjoqkuig8005kl0ak83i02nnj" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/16/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/" data-id="cjoqm1gtn005dujakes0w2lp8" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -416,7 +470,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/11/15/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/" data-id="cjoqkuifk003zl0akgokbn31k" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/15/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/" data-id="cjoqm1gs8003jujakhiwfej6s" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Kindle/">Kindle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -468,7 +522,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/" data-id="cjoqkuig5005dl0akgxwxlzpj" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/" data-id="cjoqm1gta004wujak16bbp4bi" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -507,7 +561,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/11/02/Prevent-Blocking-When-Using-PyPlot/" data-id="cjoqkuifi003ul0akz41r3qfv" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/11/02/Prevent-Blocking-When-Using-PyPlot/" data-id="cjoqm1grx0036ujakyj6gecpl" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -571,54 +625,10 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/" data-id="cjoqkuifr004hl0ak6nnhz0aj" class="article-share-link">Partager</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/" data-id="cjoqm1gss0047ujakjp9st1g1" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Problem/">Problem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2017/10/25/to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch/" class="article-date">
-  <time datetime="2017-10-25T12:14:52.000Z" itemprop="datePublished">2017-10-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2017/10/25/to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch/">to_categorical() missing 1 required positional argument nb_classes caused by tflearn version mismatch</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><code>TypeError: to_categorical() missing 1 required positional argument: &#39;nb_classes&#39;</code> was encountered while I was trying to run an example program based on it.</p>
-<p>The function <code>to_catagorical()</code> used to require two arguments, where the second is called <code>nb_classes</code> and represents the total class numbers in classification as an integer. </p>
-<p>It’s not until this <a href="https://github.com/tflearn/tflearn/pull/923" target="_blank" rel="external">pr</a> that the second function is no longer needed but the support for the previous usage is dropped and all the examples are updated to adapt to the new usage.</p>
-<p>However, until today, the default version installed directed from pip is not new enough to support this new feature, thus causing a problem. </p>
-<p>To solve it, either try update to the newest version via <code>pip install git+https://github.com/tflearn/tflearn.git</code> or just add the class number. </p>
-<p>2017/10/25</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/25/to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch/" data-id="cjoqkuigi0069l0akbstq1dcw" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
 
     </footer>
   </div>
@@ -653,7 +663,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 11.82px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 15.45px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 19.09px;">CPP</a> <a href="/blog/tags/Comics/" style="font-size: 11.82px;">Comics</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 10px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 14.55px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 11.82px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17.27px;">Linux</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 18.18px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 11.82px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 12.73px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 10.91px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 11.82px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 13.64px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 11.82px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 16.36px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 11.82px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
+      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 16px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 19px;">CPP</a> <a href="/blog/tags/Comics/" style="font-size: 13px;">Comics</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 10px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 12px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17px;">Linux</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 18px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 13px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 11px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 14px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 17px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
     </div>
   </div>
 
@@ -675,6 +685,10 @@ ga('send', 'pageview');
       <ul>
         
           <li>
+            <a href="/blog/2018/11/21/Comic-4-Aphorism-Space-Search/">Comic: 4. Aphorism Space Search</a>
+          </li>
+        
+          <li>
             <a href="/blog/2018/11/20/Comic-3-Shadow/">Comic: 3. Shadow</a>
           </li>
         
@@ -688,10 +702,6 @@ ga('send', 'pageview');
         
           <li>
             <a href="/blog/2018/08/05/Note-Neural-Turning-Machine/">Note: Neural Turning Machine</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2018/07/29/Note-Cycle-GAN/">Note: Cycle GAN</a>
           </li>
         
       </ul>
