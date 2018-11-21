@@ -2,30 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://d0048.github.io/blog/2018/11/20/Comic-3-Shadow/</loc>
+    
+    <lastmod>2018-11-21T03:03:11.894Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://d0048.github.io/blog/2018/10/17/Comic-2-Desktops/</loc>
     
-    <lastmod>2018-10-17T14:40:47.815Z</lastmod>
+    <lastmod>2018-11-07T03:22:25.235Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://d0048.github.io/blog/2018/10/17/Comic-1-Advancement/</loc>
     
-    <lastmod>2018-10-17T14:27:03.313Z</lastmod>
+    <lastmod>2018-10-17T14:27:03.314Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://d0048.github.io/blog/2017/11/15/Rejailbreak-Kindle-PaperWhite3-After-Automatic-Upgrade-to-5-9-2/</loc>
     
-    <lastmod>2018-08-25T13:47:53.228Z</lastmod>
+    <lastmod>2018-08-25T13:47:53.229Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://d0048.github.io/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/</loc>
     
-    <lastmod>2018-08-05T02:12:47.095Z</lastmod>
+    <lastmod>2018-08-05T02:12:47.096Z</lastmod>
     
   </url>
   
@@ -39,7 +46,7 @@
   <url>
     <loc>https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/</loc>
     
-    <lastmod>2018-08-05T02:06:29.970Z</lastmod>
+    <lastmod>2018-08-05T02:06:29.971Z</lastmod>
     
   </url>
   
@@ -67,7 +74,7 @@
   <url>
     <loc>https://d0048.github.io/blog/2018/07/22/Note-Deep-Learning-and-the-Information-Bottleneck-Principle/</loc>
     
-    <lastmod>2018-08-05T02:04:41.962Z</lastmod>
+    <lastmod>2018-08-05T02:04:41.963Z</lastmod>
     
   </url>
   
@@ -81,7 +88,7 @@
   <url>
     <loc>https://d0048.github.io/blog/2018/07/22/Note-A-Neural-Algorithm-of-Artistic-Style/</loc>
     
-    <lastmod>2018-08-05T02:04:15.501Z</lastmod>
+    <lastmod>2018-08-05T02:04:15.502Z</lastmod>
     
   </url>
   
@@ -109,21 +116,21 @@
   <url>
     <loc>https://d0048.github.io/blog/2017/11/30/AttributeError-ProgressBar-object-has-no-attribute-finished-error-using-ubuntu-make/</loc>
     
-    <lastmod>2017-11-30T11:23:24.500Z</lastmod>
+    <lastmod>2017-11-30T11:23:24.501Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://d0048.github.io/blog/2017/11/23/Make-touchegg-work-on-ubuntu-unity-gnome-desktops/</loc>
     
-    <lastmod>2017-11-23T03:28:31.289Z</lastmod>
+    <lastmod>2017-11-23T03:28:31.290Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://d0048.github.io/blog/2017/11/21/A-Brief-Summary-of-the-Godel-s-Incompleteness-Theorems/</loc>
     
-    <lastmod>2017-11-21T09:31:20.093Z</lastmod>
+    <lastmod>2017-11-21T09:31:20.094Z</lastmod>
     
   </url>
   
@@ -144,14 +151,14 @@
   <url>
     <loc>https://d0048.github.io/blog/2017/11/02/Prevent-Blocking-When-Using-PyPlot/</loc>
     
-    <lastmod>2017-11-02T13:05:28.204Z</lastmod>
+    <lastmod>2017-11-02T13:05:28.205Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://d0048.github.io/blog/2017/10/23/getopt-function-on-raspery-pi/</loc>
     
-    <lastmod>2017-10-23T08:25:24.764Z</lastmod>
+    <lastmod>2017-10-23T08:25:24.765Z</lastmod>
     
   </url>
   
@@ -165,21 +172,21 @@
   <url>
     <loc>https://d0048.github.io/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/</loc>
     
-    <lastmod>2017-10-15T12:08:19.805Z</lastmod>
+    <lastmod>2017-10-15T12:08:19.806Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://d0048.github.io/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/</loc>
     
-    <lastmod>2017-10-12T01:18:45.194Z</lastmod>
+    <lastmod>2017-10-12T01:18:45.195Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://d0048.github.io/blog/2017/10/05/Some-Thoughts-on-Deep-Neural-Networks-and-Handwritten-digit-recognition/</loc>
     
-    <lastmod>2017-10-05T04:06:16.823Z</lastmod>
+    <lastmod>2017-10-05T04:06:16.824Z</lastmod>
     
   </url>
   

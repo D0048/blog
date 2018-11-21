@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (unknown)"
+   sodipodi:docname="Shadow.svg"
+   inkscape:export-filename="/home/d0048/桌面/Shadow.svg.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient2435"
+       inkscape:collect="always">
+      <stop
+         id="stop2439"
+         offset="0"
+         style="stop-color:#000000;stop-opacity:1;" />
+      <stop
+         id="stop2441"
+         offset="1"
+         style="stop-color:#000000;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2399"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2397" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2291"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#a365ff;stop-opacity:1;"
+         offset="0"
+         id="stop2289" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2149"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2147" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2115"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#b4b1ff;stop-opacity:1;"
+         offset="0"
+         id="stop2113" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2435"
+       id="linearGradient2401"
+       x1="135.48581"
+       y1="126.1039"
+       x2="147.26627"
+       y2="126.1039"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2435"
+       id="linearGradient2403"
+       x1="123.70535"
+       y1="126.1039"
+       x2="135.48579"
+       y2="126.1039"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2435"
+       id="linearGradient2405"
+       x1="111.92489"
+       y1="126.1039"
+       x2="123.70534"
+       y2="126.1039"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2435"
+       id="linearGradient2407"
+       x1="100.14444"
+       y1="126.1039"
+       x2="111.92489"
+       y2="126.1039"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2435"
+       id="linearGradient2409"
+       x1="88.363983"
+       y1="126.1039"
+       x2="100.14443"
+       y2="126.1039"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2435"
+       id="linearGradient2411"
+       x1="129.59557"
+       y1="137.88437"
+       x2="141.37602"
+       y2="137.88437"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2435"
+       id="linearGradient2413"
+       x1="117.81512"
+       y1="137.88437"
+       x2="129.59557"
+       y2="137.88437"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2435"
+       id="linearGradient2415"
+       x1="106.03466"
+       y1="137.88437"
+       x2="117.81511"
+       y2="137.88437"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2435"
+       id="linearGradient2417"
+       x1="94.254211"
+       y1="137.88437"
+       x2="106.03466"
+       y2="137.88437"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2435"
+       id="linearGradient2419"
+       x1="111.9249"
+       y1="149.66483"
+       x2="123.70535"
+       y2="149.66483"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2435"
+       id="linearGradient2421"
+       x1="100.14444"
+       y1="149.66483"
+       x2="111.92489"
+       y2="149.66483"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2435"
+       id="linearGradient2423"
+       x1="123.70535"
+       y1="149.66483"
+       x2="135.48579"
+       y2="149.66483"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2435"
+       id="linearGradient2425"
+       x1="106.03466"
+       y1="161.44528"
+       x2="117.81511"
+       y2="161.44528"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2435"
+       id="linearGradient2427"
+       x1="117.81512"
+       y1="161.44528"
+       x2="129.59557"
+       y2="161.44528"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2435"
+       id="linearGradient2437"
+       gradientUnits="userSpaceOnUse"
+       x1="111.9249"
+       y1="173.22574"
+       x2="123.70535"
+       y2="173.22574" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="314.62944"
+     inkscape:cy="648.03168"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g1646"
+     showgrid="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid853" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="116.7474"
+       y="150.81769"
+       id="text838"><tspan
+         sodipodi:role="line"
+         id="tspan836"
+         x="116.7474"
+         y="153.9045"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+         rotate="0" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="116.74739"
+       y="148.69159"
+       id="text842"><tspan
+         sodipodi:role="line"
+         id="tspan840"
+         x="116.74739"
+         y="151.7784"
+         style="stroke-width:0.26458332" /></text>
+    <g
+       id="g851-4-0-7"
+       transform="matrix(0.89838059,0,0,0.89838059,11.896769,-6.7893076)">
+      <g
+         id="g1574"
+         transform="translate(-19.143242,-20.615798)">
+        <rect
+           y="167.33551"
+           x="111.9249"
+           height="11.780452"
+           width="11.78045"
+           id="rect815"
+           style="opacity:0.608;fill-opacity:1.0;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;fill:url(#linearGradient2437)" />
+        <rect
+           y="155.55505"
+           x="117.81512"
+           height="11.780452"
+           width="11.78045"
+           id="rect815-0"
+           style="opacity:0.608;fill-opacity:1.0;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;fill:url(#linearGradient2427)" />
+        <rect
+           y="155.55505"
+           x="106.03466"
+           height="11.780452"
+           width="11.78045"
+           id="rect815-0-6"
+           style="opacity:0.608;fill-opacity:1.0;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;fill:url(#linearGradient2425)" />
+        <rect
+           y="143.7746"
+           x="123.70535"
+           height="11.780452"
+           width="11.78045"
+           id="rect815-0-5"
+           style="opacity:0.608;fill-opacity:1.0;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;fill:url(#linearGradient2423)" />
+        <rect
+           y="143.7746"
+           x="100.14444"
+           height="11.780452"
+           width="11.78045"
+           id="rect815-0-3"
+           style="opacity:0.608;fill-opacity:1.0;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;fill:url(#linearGradient2421)" />
+        <rect
+           style="opacity:0.608;fill-opacity:1.0;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;fill:url(#linearGradient2419)"
+           id="rect815-0-5-4"
+           width="11.78045"
+           height="11.780452"
+           x="111.9249"
+           y="143.7746" />
+        <rect
+           y="131.99414"
+           x="94.254211"
+           height="11.780452"
+           width="11.78045"
+           id="rect815-0-3-2"
+           style="opacity:0.608;fill-opacity:1.0;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;fill:url(#linearGradient2417)" />
+        <rect
+           style="opacity:0.608;fill-opacity:1.0;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;fill:url(#linearGradient2415)"
+           id="rect815-0-5-4-8-7"
+           width="11.78045"
+           height="11.780452"
+           x="106.03466"
+           y="131.99414" />
+        <rect
+           style="opacity:0.608;fill-opacity:1.0;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;fill:url(#linearGradient2413)"
+           id="rect815-0-5-4-8-79"
+           width="11.78045"
+           height="11.780452"
+           x="117.81512"
+           y="131.99414" />
+        <rect
+           y="131.99414"
+           x="129.59557"
+           height="11.780452"
+           width="11.78045"
+           id="rect815-0-3-2-2"
+           style="opacity:0.608;fill-opacity:1.0;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;fill:url(#linearGradient2411)" />
+        <rect
+           y="120.21368"
+           x="88.363983"
+           height="11.780452"
+           width="11.78045"
+           id="rect815-0-3-2-1"
+           style="opacity:0.608;fill-opacity:1.0;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;fill:url(#linearGradient2409)" />
+        <rect
+           style="opacity:0.608;fill-opacity:1.0;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;fill:url(#linearGradient2407)"
+           id="rect815-0-5-4-8-7-7"
+           width="11.78045"
+           height="11.780452"
+           x="100.14444"
+           y="120.21368" />
+        <rect
+           style="opacity:0.608;fill-opacity:1.0;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;fill:url(#linearGradient2405)"
+           id="rect815-0-5-4-8-79-7"
+           width="11.78045"
+           height="11.780452"
+           x="111.92489"
+           y="120.21368" />
+        <rect
+           y="120.21368"
+           x="123.70535"
+           height="11.780452"
+           width="11.78045"
+           id="rect815-0-3-2-2-8"
+           style="opacity:0.608;fill-opacity:1.0;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;fill:url(#linearGradient2403)" />
+        <rect
+           y="120.21368"
+           x="135.48581"
+           height="11.780452"
+           width="11.78045"
+           id="rect815-0-3-2-2-8-8"
+           style="opacity:0.608;fill-opacity:1.0;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;fill:url(#linearGradient2401)" />
+        <g
+           id="g1784"
+           transform="translate(1.636258,0.0127608)">
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             x="114.32101"
+             y="175.37418"
+             id="text846"><tspan
+               sodipodi:role="line"
+               id="tspan844"
+               x="114.32101"
+               y="175.37418"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.26458332">1</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             x="120.21124"
+             y="163.59372"
+             id="text846-9"><tspan
+               sodipodi:role="line"
+               id="tspan844-1"
+               x="120.21124"
+               y="163.59372"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.26458332">1</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             x="108.43077"
+             y="163.59372"
+             id="text846-9-2"><tspan
+               sodipodi:role="line"
+               id="tspan844-1-5"
+               x="108.43077"
+               y="163.59372"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.26458332">1</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             x="126.10146"
+             y="151.81326"
+             id="text846-9-0"><tspan
+               sodipodi:role="line"
+               id="tspan844-1-2"
+               x="126.10146"
+               y="151.81326"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.26458332">1</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             x="102.54055"
+             y="151.81326"
+             id="text846-9-5"><tspan
+               sodipodi:role="line"
+               id="tspan844-1-1"
+               x="102.54055"
+               y="151.81326"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.26458332">1</tspan></text>
+          <text
+             id="text846-9-0-3"
+             y="151.81326"
+             x="114.32101"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             xml:space="preserve"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.26458332"
+               y="151.81326"
+               x="114.32101"
+               id="tspan844-1-2-1"
+               sodipodi:role="line">2</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             x="96.650322"
+             y="140.03281"
+             id="text846-9-5-8"><tspan
+               sodipodi:role="line"
+               id="tspan844-1-1-8"
+               x="96.650322"
+               y="140.03281"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.26458332">1</tspan></text>
+          <text
+             id="text846-9-0-3-6-6"
+             y="140.03279"
+             x="108.43076"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             xml:space="preserve"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.26458332"
+               y="140.03279"
+               x="108.43076"
+               sodipodi:role="line"
+               id="tspan1018-8">3</tspan></text>
+          <text
+             id="text846-9-0-3-6-0"
+             y="140.03279"
+             x="120.21121"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#030303;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             xml:space="preserve"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#030303;fill-opacity:1;stroke-width:0.26458332"
+               y="140.03279"
+               x="120.21121"
+               sodipodi:role="line"
+               id="tspan1018-3">3</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             x="131.99168"
+             y="140.03281"
+             id="text846-9-5-8-6"><tspan
+               sodipodi:role="line"
+               id="tspan844-1-1-8-5"
+               x="131.99168"
+               y="140.03281"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.26458332">1</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             x="90.760094"
+             y="128.25235"
+             id="text846-9-5-8-0"><tspan
+               sodipodi:role="line"
+               id="tspan844-1-1-8-4"
+               x="90.760094"
+               y="128.25235"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.26458332">1</tspan></text>
+          <text
+             id="text846-9-0-3-6-6-0"
+             y="128.25233"
+             x="102.54053"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             xml:space="preserve"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.26458332"
+               y="128.25233"
+               x="102.54053"
+               sodipodi:role="line"
+               id="tspan1018-8-8">4</tspan></text>
+          <text
+             id="text846-9-0-3-6-0-9"
+             y="128.25233"
+             x="114.32098"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             xml:space="preserve"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.26458332"
+               y="128.25233"
+               x="114.32098"
+               sodipodi:role="line"
+               id="tspan1018-3-3">6</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             x="126.10146"
+             y="128.25235"
+             id="text846-9-5-8-6-3"><tspan
+               sodipodi:role="line"
+               id="tspan844-1-1-8-5-0"
+               x="126.10146"
+               y="128.25235"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.26458332">4</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             x="137.88191"
+             y="128.25235"
+             id="text846-9-5-8-6-3-9"><tspan
+               sodipodi:role="line"
+               id="tspan844-1-1-8-5-0-1"
+               x="137.88191"
+               y="128.25235"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.26458332">1</tspan></text>
+        </g>
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot1648"
+           style="fill:black;fill-opacity:1;stroke:none;font-family:'Roboto Mono for Powerline';font-style:normal;font-weight:normal;font-size:13.33333333px;line-height:1.25;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"><flowRegion
+             id="flowRegion1650"><rect
+               id="rect1652"
+               width="200"
+               height="40"
+               x="280"
+               y="462.51968" /></flowRegion><flowPara
+             id="flowPara1654"></flowPara></flowRoot>        <flowRoot
+           xml:space="preserve"
+           id="flowRoot1656"
+           style="fill:black;fill-opacity:1;stroke:none;font-family:'Roboto Mono for Powerline';font-style:normal;font-weight:normal;font-size:13.33333333px;line-height:1.25;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"><flowRegion
+             id="flowRegion1658"><rect
+               id="rect1660"
+               width="275"
+               height="235"
+               x="255"
+               y="277.51968" /></flowRegion><flowPara
+             id="flowPara1662"></flowPara></flowRoot>      </g>
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot1248"
+         style="fill:black;fill-opacity:1;stroke:none;font-family:'Roboto Mono for Powerline';font-style:normal;font-weight:normal;font-size:13.33333333px;line-height:1.25;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"><flowRegion
+           id="flowRegion1250"><rect
+             id="rect1252"
+             width="240"
+             height="225"
+             x="325"
+             y="377.51968" /></flowRegion><flowPara
+           id="flowPara1254"></flowPara></flowRoot>      <g
+         id="g1646"
+         transform="matrix(1,0,0.69999865,0.79999993,-152.62326,44.658551)">
+        <g
+           transform="rotate(179.99999,134.74952,148.92854)"
+           id="g851-7">
+          <rect
+             style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none"
+             id="rect815-8"
+             width="11.78045"
+             height="11.780452"
+             x="111.9249"
+             y="143.7746" />
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             x="114.32101"
+             y="151.81326"
+             id="text846-2"><tspan
+               sodipodi:role="line"
+               id="tspan844-5"
+               x="114.32101"
+               y="151.81326"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332">-1</tspan></text>
+        </g>
+        <g
+           transform="rotate(179.99999,131.80441,154.81877)"
+           id="g851-4-3">
+          <rect
+             style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none"
+             id="rect815-0-4"
+             width="11.78045"
+             height="11.780452"
+             x="111.9249"
+             y="143.7746" />
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             x="114.32101"
+             y="151.81326"
+             id="text846-9-9"><tspan
+               sodipodi:role="line"
+               id="tspan844-1-0"
+               x="114.32101"
+               y="151.81326"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332">-1</tspan></text>
+        </g>
+        <g
+           transform="rotate(179.99999,137.69464,154.81877)"
+           id="g851-4-9-2">
+          <rect
+             style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none"
+             id="rect815-0-6-0"
+             width="11.78045"
+             height="11.780452"
+             x="111.9249"
+             y="143.7746" />
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             x="114.32101"
+             y="151.81326"
+             id="text846-9-2-1"><tspan
+               sodipodi:role="line"
+               id="tspan844-1-5-9"
+               x="114.32101"
+               y="151.81326"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332">-1</tspan></text>
+        </g>
+        <g
+           transform="rotate(179.99999,128.8593,160.709)"
+           id="g851-4-0-6">
+          <rect
+             style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none"
+             id="rect815-0-5-2"
+             width="11.78045"
+             height="11.780452"
+             x="111.9249"
+             y="143.7746" />
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             x="114.32101"
+             y="151.81326"
+             id="text846-9-0-1"><tspan
+               sodipodi:role="line"
+               id="tspan844-1-2-2"
+               x="114.32101"
+               y="151.81326"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332">-1</tspan></text>
+        </g>
+        <g
+           transform="rotate(179.99999,140.63976,160.709)"
+           id="g851-4-94-0">
+          <g
+             id="g968-7">
+            <rect
+               y="143.7746"
+               x="111.9249"
+               height="11.780452"
+               width="11.78045"
+               id="rect815-0-3-3"
+               style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none" />
+            <text
+               id="text846-9-5-1"
+               y="151.81326"
+               x="114.32101"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+               xml:space="preserve"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+                 y="151.81326"
+                 x="114.32101"
+                 id="tspan844-1-1-1"
+                 sodipodi:role="line">-1</tspan></text>
+          </g>
+        </g>
+        <g
+           id="g1259-9"
+           transform="rotate(179.99999,134.74953,160.709)">
+          <rect
+             y="143.7746"
+             x="111.9249"
+             height="11.780452"
+             width="11.78045"
+             id="rect815-0-5-4-0"
+             style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none" />
+          <text
+             id="text846-9-0-3-5"
+             y="151.81326"
+             x="114.32101"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             xml:space="preserve"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+               y="151.81326"
+               x="114.32101"
+               id="tspan844-1-2-1-6"
+               sodipodi:role="line">-2</tspan></text>
+        </g>
+        <g
+           transform="rotate(179.99999,143.58487,166.59923)"
+           id="g851-4-94-8-7">
+          <g
+             id="g968-9-7">
+            <rect
+               y="143.7746"
+               x="111.9249"
+               height="11.780452"
+               width="11.78045"
+               id="rect815-0-3-2-4"
+               style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none" />
+            <text
+               id="text846-9-5-8-06"
+               y="151.81326"
+               x="114.32101"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+               xml:space="preserve"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+                 y="151.81326"
+                 x="114.32101"
+                 id="tspan844-1-1-8-47"
+                 sodipodi:role="line">-1</tspan></text>
+          </g>
+        </g>
+        <g
+           transform="rotate(179.99999,135.48581,160.709)"
+           id="g1129-4">
+          <rect
+             y="131.99414"
+             x="107.50723"
+             height="11.780452"
+             width="11.78045"
+             id="rect815-0-5-4-8-7-8"
+             style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none" />
+          <text
+             id="text846-9-0-3-6-6-5"
+             y="140.03279"
+             x="109.90333"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             xml:space="preserve"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+               y="140.03279"
+               x="109.90333"
+               sodipodi:role="line"
+               id="tspan1018-8-82">-3</tspan></text>
+        </g>
+        <g
+           transform="rotate(179.99999,135.48581,160.709)"
+           id="g1147-60">
+          <g
+             id="g1140-6">
+            <g
+               id="g1134-6">
+              <rect
+                 y="131.99414"
+                 x="119.28768"
+                 height="11.780452"
+                 width="11.78045"
+                 id="rect815-0-5-4-8-79-4"
+                 style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none" />
+              <text
+                 id="text846-9-0-3-6-0-6"
+                 y="140.03279"
+                 x="121.68378"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+                 xml:space="preserve"><tspan
+                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+                   y="140.03279"
+                   x="121.68378"
+                   sodipodi:role="line"
+                   id="tspan1018-3-2">-3</tspan></text>
+            </g>
+          </g>
+        </g>
+        <g
+           transform="rotate(179.99999,125.91419,166.59923)"
+           id="g851-4-94-8-6-8">
+          <g
+             id="g968-9-5-9">
+            <rect
+               y="143.7746"
+               x="111.9249"
+               height="11.780452"
+               width="11.78045"
+               id="rect815-0-3-2-2-6"
+               style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none" />
+            <text
+               id="text846-9-5-8-6-0"
+               y="151.81326"
+               x="114.32101"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+               xml:space="preserve"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+                 y="151.81326"
+                 x="114.32101"
+                 id="tspan844-1-1-8-5-7"
+                 sodipodi:role="line">-1</tspan></text>
+          </g>
+        </g>
+        <g
+           transform="rotate(179.99999,146.52999,172.48946)"
+           id="g851-4-94-8-0-0">
+          <g
+             id="g968-9-4-1">
+            <rect
+               y="143.7746"
+               x="111.9249"
+               height="11.780452"
+               width="11.78045"
+               id="rect815-0-3-2-1-0"
+               style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none" />
+            <text
+               id="text846-9-5-8-0-1"
+               y="151.81326"
+               x="114.32101"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+               xml:space="preserve"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+                 y="151.81326"
+                 x="114.32101"
+                 id="tspan844-1-1-8-4-3"
+                 sodipodi:role="line">-1</tspan></text>
+          </g>
+        </g>
+        <g
+           transform="rotate(179.99999,138.43093,166.59923)"
+           id="g1129-8-7">
+          <rect
+             y="131.99414"
+             x="107.50723"
+             height="11.780452"
+             width="11.78045"
+             id="rect815-0-5-4-8-7-7-7"
+             style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none" />
+          <text
+             id="text846-9-0-3-6-6-0-2"
+             y="140.03279"
+             x="109.90333"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             xml:space="preserve"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+               y="140.03279"
+               x="109.90333"
+               sodipodi:role="line"
+               id="tspan1018-8-8-6">-4</tspan></text>
+        </g>
+        <g
+           transform="rotate(179.99999,138.43093,166.59923)"
+           id="g1147-6-4">
+          <g
+             id="g1140-2-5">
+            <g
+               id="g1134-4-2">
+              <rect
+                 y="131.99414"
+                 x="119.28768"
+                 height="11.780452"
+                 width="11.78045"
+                 id="rect815-0-5-4-8-79-7-0"
+                 style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none" />
+              <text
+                 id="text846-9-0-3-6-0-9-2"
+                 y="140.03279"
+                 x="121.68378"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+                 xml:space="preserve"><tspan
+                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+                   y="140.03279"
+                   x="121.68378"
+                   sodipodi:role="line"
+                   id="tspan1018-3-3-9">-6</tspan></text>
+            </g>
+          </g>
+        </g>
+        <g
+           transform="rotate(179.99999,128.8593,172.48946)"
+           id="g851-4-94-8-6-9-0">
+          <g
+             id="g968-9-5-2-9">
+            <rect
+               y="143.7746"
+               x="111.9249"
+               height="11.780452"
+               width="11.78045"
+               id="rect815-0-3-2-2-8-9"
+               style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none" />
+            <text
+               id="text846-9-5-8-6-3-4"
+               y="151.81326"
+               x="114.32101"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+               xml:space="preserve"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+                 y="151.81326"
+                 x="114.32101"
+                 id="tspan844-1-1-8-5-0-5"
+                 sodipodi:role="line">-4</tspan></text>
+          </g>
+        </g>
+        <g
+           transform="rotate(179.99999,122.96907,172.48946)"
+           id="g851-4-94-8-6-9-1-1">
+          <g
+             id="g968-9-5-2-7-0">
+            <rect
+               y="143.7746"
+               x="111.9249"
+               height="11.780452"
+               width="11.78045"
+               id="rect815-0-3-2-2-8-8-3"
+               style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none" />
+            <text
+               id="text846-9-5-8-6-3-9-7"
+               y="151.81326"
+               x="114.32101"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+               xml:space="preserve"><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Roboto Mono for Powerline';-inkscape-font-specification:'Roboto Mono for Powerline, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+                 y="151.81326"
+                 x="114.32101"
+                 id="tspan844-1-1-8-5-0-1-8"
+                 sodipodi:role="line">-1</tspan></text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
