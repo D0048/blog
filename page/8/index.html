@@ -79,6 +79,46 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-unknown-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/02/09/unknown-2/" class="article-date">
+  <time datetime="2017-02-09T15:01:33.000Z" itemprop="datePublished">2017-02-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/02/09/unknown-2/">Unknown problem...</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>From: <a href="http://blog.csdn.net/creazyapple/article/details/7459875" target="_blank" rel="external">http://blog.csdn.net/creazyapple/article/details/7459875</a><br>Deal with this:</p>
+<p><pre><block><br>1&gt;InfoSenser.obj : error LNK2019: 无法解析的外部符号 _inet_ntoa@4，该符号在函数 “public: void <strong>thiscall InfoSenser::printNetInfo(void)” (?printNetInfo@InfoSenser@@QAEXXZ) 中被引用<br>1&gt;InfoSenser.obj : error LNK2019: 无法解析的外部符号 _gethostbyname@4，该符号在函数 “public: </strong>thiscall InfoSenser::InfoSenser(void)” (??0InfoSenser@@QAE@XZ) 中被引用<br>1&gt;InfoSenser.obj : error LNK2019: 无法解析的外部符号 _gethostname@8，该符号在函数 “public: <strong>thiscall InfoSenser::InfoSenser(void)” (??0InfoSenser@@QAE@XZ) 中被引用<br>1&gt;InfoSenser.obj : error LNK2019: 无法解析的外部符号 _WSAStartup@8，该符号在函数 “public: </strong>thiscall InfoSenser::InfoSenser(void)” (??0InfoSenser@@QAE@XZ) 中被引用<br>1&gt;InfoSenser.obj : error LNK2019: 无法解析的外部符号 _WSACleanup@0，该符号在函数 “public: <strong>thiscall InfoSenser::~InfoSenser(void)” (??1InfoSenser@@QAE@XZ) 中被引用<br>1&gt;InfoSenser.obj : error LNK2019: 无法解析的外部符号 _WSAGetLastError@0，该符号在函数 “public: </strong>thiscall InfoSenser::InfoSenser(void)” (??0InfoSenser@@QAE@XZ) 中被引用<br>1&gt;D:\netbeans-java\CraftPlugins\ClientCtl\ClientCtl\Debug\ClientCtl.exe : fatal error LNK1120: 6 个无法解析的外部命令<br></block></pre><br>Add <code>#pragma comment(lib,&quot;ws2_32.lib&quot;)</code>right after the inclusion of header files in the .cpp file could previent this.<br>==Still need to find out how does this work. It statically load a dll which I don’t know what it is.==<br>2017/2/9 23:15</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/02/09/unknown-2/" data-id="cjquzcagp004zt6akbq7itbqu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Compiler/">Compiler</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-use-getversionexw-function-in-the-new-c-standard" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2017/02/09/use-getversionexw-function-in-the-new-c-standard/" class="article-date">
@@ -106,7 +146,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/09/use-getversionexw-function-in-the-new-c-standard/" data-id="cjoqm1gt4004oujakbyy7phmy" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/09/use-getversionexw-function-in-the-new-c-standard/" data-id="cjquzcagx0056t6ak07et5dsr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li></ul>
@@ -145,7 +185,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/09/duplicated-macro-definitions-when-containing-both-windows-h-and-winsock-h/" data-id="cjoqm1grg002kujakma15avbl" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/09/duplicated-macro-definitions-when-containing-both-windows-h-and-winsock-h/" data-id="cjquzcaed0032t6akin31rev5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/WinAPI/">WinAPI</a></li></ul>
@@ -184,7 +224,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/08/a-bad-but-useable-way-to-deal-with-_tchar-argv/" data-id="cjoqm1gpk0009ujakmk74i6af" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/08/a-bad-but-useable-way-to-deal-with-_tchar-argv/" data-id="cjquzcad4001ot6akn3v1vgvs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -279,7 +319,7 @@ I use these codes to initialize a entry table.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/08/how-to-create-a-windows-services-program-to-run-background-in-start-up-and-how-to-register-it/" data-id="cjoqm1gr10020ujake22xm919" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/08/how-to-create-a-windows-services-program-to-run-background-in-start-up-and-how-to-register-it/" data-id="cjquzcadx002it6ak0n08im2f" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/WinAPI/">WinAPI</a></li></ul>
@@ -318,7 +358,7 @@ I use these codes to initialize a entry table.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/08/a-way-to-avoid-duplicate-declaration/" data-id="cjoqm1gpp000gujakjk44yutd" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/08/a-way-to-avoid-duplicate-declaration/" data-id="cjquzcab7000ft6akxa5p76m6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li></ul>
@@ -357,7 +397,7 @@ I use these codes to initialize a entry table.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/08/a-good-way-to-avoid-duplicated-definition-in-header-files/" data-id="cjoqm1gpu000pujakgzwo9q33" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/08/a-good-way-to-avoid-duplicated-definition-in-header-files/" data-id="cjquzcabe000nt6aknqk0pxdb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li></ul>
@@ -399,7 +439,7 @@ I use these codes to initialize a entry table.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/06/a/" data-id="cjoqm1gpg0004ujakwwzdjnru" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/06/a/" data-id="cjquzcaaw0006t6akbf7b7my2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Security/">Security</a></li></ul>
@@ -445,7 +485,7 @@ I use these codes to initialize a entry table.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/01/12/ubuntu-failure-to-download-extra-data-files-ttf-mscorefonts-installer-solution/" data-id="cjoqm1gt0004jujako9n74pdz" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/01/12/ubuntu-failure-to-download-extra-data-files-ttf-mscorefonts-installer-solution/" data-id="cjquzcajn007ut6akv4m17eqo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -484,54 +524,10 @@ I use these codes to initialize a entry table.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/01/05/nullpointer-error-cost-in-arraylist-when-iterating-through-it-by-foreach-function-in-java/" data-id="cjoqm1gvp0083ujakplye7mzf" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/01/05/nullpointer-error-cost-in-arraylist-when-iterating-through-it-by-foreach-function-in-java/" data-id="cjquzcaff003ht6akup7fmmct" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-allow-scripts-and-other-programs-too-boot-with-linux" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2016/12/20/allow-scripts-and-other-programs-too-boot-with-linux/" class="article-date">
-  <time datetime="2016-12-20T01:40:58.000Z" itemprop="datePublished">2016-12-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2016/12/20/allow-scripts-and-other-programs-too-boot-with-linux/">Allow scripts and other programs to boot with Linux</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>There are a few ways to do that.</p>
-<ol>
-<li>add your script or program in th form of absolute pass inside the <code>/etc/rc.local</code> before <code>exit 0</code>. </li>
-</ol>
-<p>2.Use sys-rc-config to set a suitable start up level.<br>==Remember to disable your script before installing new software if you are using this way. Unregistered scripts will confuse the installation program and stop it.==</p>
-<p>3.register the program as a service in the system. </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2016/12/20/allow-scripts-and-other-programs-too-boot-with-linux/" data-id="cjoqm1gpt000nujakg9ynh8bo" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
 
     </footer>
   </div>
@@ -566,7 +562,7 @@ I use these codes to initialize a entry table.
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 16px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 19px;">CPP</a> <a href="/blog/tags/Comics/" style="font-size: 13px;">Comics</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 10px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 12px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17px;">Linux</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 18px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 13px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 11px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 14px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 17px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
+      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 16px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 19px;">CPP</a> <a href="/blog/tags/Comics/" style="font-size: 13px;">Comics</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 11px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 12px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17px;">Linux</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 18px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 13px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 11px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 14px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 17px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
     </div>
   </div>
 
@@ -575,7 +571,7 @@ I use these codes to initialize a entry table.
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
     </div>
   </div>
 
@@ -586,6 +582,10 @@ I use these codes to initialize a entry table.
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/blog/2019/01/13/Workaround-for-FRC-ADXRS450-Gyro-failure-Returning-All-Zeros/">Workaround for FRC ADXRS450 Gyro failure: Returning All Zeros</a>
+          </li>
         
           <li>
             <a href="/blog/2018/11/21/Comic-4-Aphorism-Space-Search/">Comic: 4. Aphorism Space Search</a>
@@ -601,10 +601,6 @@ I use these codes to initialize a entry table.
         
           <li>
             <a href="/blog/2018/10/17/Comic-1-Advancement/">Comic: 1. Advancement</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2018/08/05/Note-Neural-Turning-Machine/">Note: Neural Turning Machine</a>
           </li>
         
       </ul>
@@ -641,7 +637,7 @@ s.setAttribute('data-timestamp', +new Date());
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018 D0048<br>
+      &copy; 2019 D0048<br>
     </div>
   </div>
 </footer>

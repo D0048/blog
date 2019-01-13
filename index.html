@@ -79,6 +79,61 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-Workaround-for-FRC-ADXRS450-Gyro-failure-Returning-All-Zeros" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2019/01/13/Workaround-for-FRC-ADXRS450-Gyro-failure-Returning-All-Zeros/" class="article-date">
+  <time datetime="2019-01-13T13:59:20.000Z" itemprop="datePublished">2019-01-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2019/01/13/Workaround-for-FRC-ADXRS450-Gyro-failure-Returning-All-Zeros/">Workaround for FRC ADXRS450 Gyro failure: Returning All Zeros</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Apparently the current version of WPILib(1st 2019 official release) isn’t happy with our ADXRS450 Gyros, and the <code>getAngle()</code> call always return zero. </p>
+<p>Sadly the workaround, although present, doesn’t seems to be indexed by google yet…which is why I am making this post so more people could see it before deciding to spend their precious budget buying a new one, like us. </p>
+<p>The workaround is found <a href="http://wpilib.screenstepslive.com/s/currentCS/m/getting_started/l/1028964-known-issues" target="_blank" rel="external">here</a>, which I will present a copy here:</p>
+<hr>
+<h3 id="Auto-SPI-Does-not-work-in-v12-image-affects-Analog-Devices-IMUs-and-Gyro"><a href="#Auto-SPI-Does-not-work-in-v12-image-affects-Analog-Devices-IMUs-and-Gyro" class="headerlink" title="Auto SPI Does not work in v12 image (affects Analog Devices IMUs and Gyro))"></a>Auto SPI Does not work in v12 image (affects Analog Devices IMUs and Gyro))</h3><p>The Auto SPI functionality used by Analog Devices IMUs (ADIS16448 and ADIS16470) and Gyro (ADXRS450) does not work correctly in the 2019-v12 image that is part of the kickoff release.</p>
+<p>Workaround: After imaging, log into the robot console as admin (via serial or SSH) and run the command “updateNIDrivers”, then reboot. A simplified tool to execute this is in progress and more information about a full update with this issue resolved will be coming soon.</p>
+<p>Solution: We will be issuing an updated FRC Update Suite with a new image that resolves this issue.</p>
+<hr>
+<p>Anyway… If u are still unsure what to do: </p>
+<ol>
+<li>Connect to Roborio-connected router</li>
+<li>Open a terminal in an <code>*nix/Macos/FreeBSD</code> system, or use an emulator like <code>Putty</code> on Windows. </li>
+<li>SSH to the Roborio using username <code>admin</code> and an empty password. By default configuration, the command is : <code>ssh admin@10.71.46.2</code></li>
+<li>Run <code>updateNIDrivers</code>, and reboot.</li>
+<li>Since the workaround require rebuilding the kernel, which is quite resource hungry, you may want to kill the running robot code by <code>mv /home/lvuser/robot_java.jar /home/lvuser/robot_java.jar.disable;killall /usr/local/frc/JRE/bin/java;updateNIDrivers</code>.</li>
+<li>Later <code>mv /home/lvuser/robot_java.jar.disable /home/lvuser/robot_java.jar</code> and reboot.</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2019/01/13/Workaround-for-FRC-ADXRS450-Gyro-failure-Returning-All-Zeros/" data-id="cjquzcahh005qt6akrv9okx7f" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/FRC/">FRC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Comic-4-Aphorism-Space-Search" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2018/11/21/Comic-4-Aphorism-Space-Search/" class="article-date">
@@ -109,7 +164,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2018/11/21/Comic-4-Aphorism-Space-Search/" data-id="cjoqm1gqa001eujaknge7tafm" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2018/11/21/Comic-4-Aphorism-Space-Search/" data-id="cjquzcade0021t6akkub4s6gp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Comics/">Comics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li></ul>
@@ -149,7 +204,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2018/11/20/Comic-3-Shadow/" data-id="cjoqm1gq8001cujaksqooavnn" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2018/11/20/Comic-3-Shadow/" data-id="cjquzcad7001tt6ak5mf42cov" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Comics/">Comics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li></ul>
@@ -190,7 +245,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2018/10/17/Comic-2-Desktops/" data-id="cjoqm1gq60019ujakodep9xb3" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2018/10/17/Comic-2-Desktops/" data-id="cjquzcad6001rt6akwyy95rw9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Comics/">Comics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li></ul>
@@ -231,7 +286,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2018/10/17/Comic-1-Advancement/" data-id="cjoqm1gq40017ujak7bp02smi" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2018/10/17/Comic-1-Advancement/" data-id="cjquzcad3001mt6ak4gqyrm5d" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Comics/">Comics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li></ul>
@@ -299,7 +354,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2018/08/05/Note-Neural-Turning-Machine/" data-id="cjoqm1grp002wujak82ww5okx" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2018/08/05/Note-Neural-Turning-Machine/" data-id="cjquzcaf2003ct6akewhiugzi" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Note/">Note</a></li></ul>
@@ -345,7 +400,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2018/07/29/Note-Cycle-GAN/" data-id="cjoqm1grl002rujakiwg8gsbc" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2018/07/29/Note-Cycle-GAN/" data-id="cjquzcagj004st6ak73ki82n3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Note/">Note</a></li></ul>
@@ -393,7 +448,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2018/07/22/Note-Deep-Learning-and-the-Information-Bottleneck-Principle/" data-id="cjoqm1grn002uujakyks81hxl" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2018/07/22/Note-Deep-Learning-and-the-Information-Bottleneck-Principle/" data-id="cjquzcaek0039t6akrwii43d1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Note/">Note</a></li></ul>
@@ -449,7 +504,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2018/07/22/Note-A-Neural-Algorithm-of-Artistic-Style/" data-id="cjoqm1gs00039ujakz0evkhma" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2018/07/22/Note-A-Neural-Algorithm-of-Artistic-Style/" data-id="cjquzcaeg0034t6ak8prbhx8b" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Note/">Note</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li></ul>
@@ -519,77 +574,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/12/25/Fix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/" data-id="cjoqm1grh002mujakoux637cn" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2017/12/10/Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout/" class="article-date">
-  <time datetime="2017-12-10T14:47:15.000Z" itemprop="datePublished">2017-12-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2017/12/10/Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout/">Ubuntu 16.04 ultimate dual graphic card solution with newest nvidia proprietary drivers switchable without logout</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Finally I got it working. Using both nvidia-prime and bumblebee at the same time to allow switches between the two graphic cards (intel and nvidia) in both per-application-without-logout and whole-system-with-logout manner. My cuda also stays working at both mode. </p>
-<p>The following are the steps. </p>
-<ol>
-<li><p>Add newest nvidia-driver ppa: <code>sudo add-apt-repository ppa:graphics-drivers/ppa;sudo apt update</code>.</p>
-</li>
-<li><p>Install the proprietary driver(in my case, 384, larger index should means newer) and nvidia-prime: <code>sudo apt install nvidia-384 nvidia-prime</code>.</p>
-</li>
-<li><p>[optional] Add prime-indicator ppa and install <code>sudo add-apt-repository ppa:nilarimogard/webupd8;sudo apt update;sudo apt install prime-indicator-plus;</code></p>
-</li>
-<li><p>Reboot and the graphic cards should be able to be switchable with the indicator or x-org-setting from the dash menu. But it requires a reboot to perform the switch. If that’s not satisfactory and the user want more flexible control, proceed. If not, stop here. </p>
-</li>
-<li><p>Install bbswitch and bumblebee: <code>sudo apt install bbswitch-dkms bumblebee bumblebee-nvidia</code>.</p>
-</li>
-<li><p>Configure bumblebee to work. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo gpasswd -a <span class="variable">$USER</span> bumblebee</div><div class="line">sudo systemctl <span class="built_in">enable</span> bumblebeed</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>open the config file <code>sudo gedit /etc/bumblebee/bumblebee.conf</code> and edit:<br><code>Driver=</code> $\rightarrow$ <code>Driver=nvidia</code><br><strong>Remember to replace all <code>384</code> to your driver index</strong><br><code>KernelDriver=nvidia-384</code><br><code>LibraryPath=/usr/lib/nvidia-384:/usr/lib32/nvidia-384</code><br><code>XorgModulePath=/usr/lib/nvidia-384/xorg,/usr/lib/xorg/modules</code></p>
-<p>open the config file <code>/etc/modprobe.d/bumblebee.conf</code> and add:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">blacklist nvidia-384</div><div class="line">blacklist nvidia-384-updates</div><div class="line">blacklist nvidia-experimental-384</div></pre></td></tr></table></figure></p>
-<ol>
-<li><p>Reboot and prey.</p>
-</li>
-<li><p>If everything goes right, you should be able to use <code>optirun COMMAND</code> to run an application using the nvidia graphic card even if you disabled the card and set to use the intel graphic card in the nvidia-prime setting. </p>
-</li>
-<li><p>Try <code>optirun COMMAND</code> or <code>primusrun COMMAND</code> and see if everything works. It’s said that the former is of better performances but its actually 3 times slower on my machine.</p>
-</li>
-<li><p>Remember to turn off the power of nvidia GPU after using it through the indicator to save power.</p>
-</li>
-</ol>
-<p>2017/12/10</p>
-<p><strong>Add: After updating to nvidia-387, except changing the config files, a manual power on through prime indicator seems to be necessary everytime before use. </strong></p>
-<p>Add: To solve the error: <code>Xlib:  extension &quot;GLX&quot; missing on display &quot;:8&quot;.</code>, see <a href="https://d0048.github.io/blog/2017/12/25/Fix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/">here</a>.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/12/10/Ubuntu-16-04-ultimate-dual-graphic-card-solution-with-newest-nvidia-proprietary-drivers-switchable-without-logout/" data-id="cjoqm1gsx004fujakfk672c36" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/12/25/Fix-Xlib-extension-GLX-missing-on-display-8-error-running-Gui-programs/" data-id="cjquzcads002dt6akeymddf78" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -627,7 +612,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 16px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 19px;">CPP</a> <a href="/blog/tags/Comics/" style="font-size: 13px;">Comics</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 10px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 12px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17px;">Linux</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 18px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 13px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 11px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 14px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 17px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
+      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 16px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 19px;">CPP</a> <a href="/blog/tags/Comics/" style="font-size: 13px;">Comics</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 11px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 12px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17px;">Linux</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 18px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 13px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 11px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 14px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 17px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
     </div>
   </div>
 
@@ -636,7 +621,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
     </div>
   </div>
 
@@ -647,6 +632,10 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/blog/2019/01/13/Workaround-for-FRC-ADXRS450-Gyro-failure-Returning-All-Zeros/">Workaround for FRC ADXRS450 Gyro failure: Returning All Zeros</a>
+          </li>
         
           <li>
             <a href="/blog/2018/11/21/Comic-4-Aphorism-Space-Search/">Comic: 4. Aphorism Space Search</a>
@@ -662,10 +651,6 @@ ga('send', 'pageview');
         
           <li>
             <a href="/blog/2018/10/17/Comic-1-Advancement/">Comic: 1. Advancement</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2018/08/05/Note-Neural-Turning-Machine/">Note: Neural Turning Machine</a>
           </li>
         
       </ul>
@@ -702,7 +687,7 @@ s.setAttribute('data-timestamp', +new Date());
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018 D0048<br>
+      &copy; 2019 D0048<br>
     </div>
   </div>
 </footer>

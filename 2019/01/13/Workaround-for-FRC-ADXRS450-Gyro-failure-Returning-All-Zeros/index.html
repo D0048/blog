@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>Workaround for FRC ADXRS450 Gyro failure: Returning All Zeros | Berton&#39;s Workshop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Apparently the current version of WPILib(1st 2019 official release) isn’t happy with our ADXRS450 Gyros, and the getAngle() call always return zero.  Sadly the workaround, although present, doesn’t se">
+<meta name="keywords" content="FRC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Workaround for FRC ADXRS450 Gyro failure: Returning All Zeros">
+<meta property="og:url" content="https://d0048.github.io/blog/2019/01/13/Workaround-for-FRC-ADXRS450-Gyro-failure-Returning-All-Zeros/index.html">
+<meta property="og:site_name" content="Berton&#39;s Workshop">
+<meta property="og:description" content="Apparently the current version of WPILib(1st 2019 official release) isn’t happy with our ADXRS450 Gyros, and the getAngle() call always return zero.  Sadly the workaround, although present, doesn’t se">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-01-13T14:13:18.689Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Workaround for FRC ADXRS450 Gyro failure: Returning All Zeros">
+<meta name="twitter:description" content="Apparently the current version of WPILib(1st 2019 official release) isn’t happy with our ADXRS450 Gyros, and the getAngle() call always return zero.  Sadly the workaround, although present, doesn’t se">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Berton&#39;s Workshop" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88350074-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+</head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Berton&#39;s Workshop</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">A Record of Thought and Experience</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://d0048.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Workaround-for-FRC-ADXRS450-Gyro-failure-Returning-All-Zeros" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2019/01/13/Workaround-for-FRC-ADXRS450-Gyro-failure-Returning-All-Zeros/" class="article-date">
+  <time datetime="2019-01-13T13:59:20.000Z" itemprop="datePublished">2019-01-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Workaround for FRC ADXRS450 Gyro failure: Returning All Zeros
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Apparently the current version of WPILib(1st 2019 official release) isn’t happy with our ADXRS450 Gyros, and the <code>getAngle()</code> call always return zero. </p>
+<p>Sadly the workaround, although present, doesn’t seems to be indexed by google yet…which is why I am making this post so more people could see it before deciding to spend their precious budget buying a new one, like us. </p>
+<p>The workaround is found <a href="http://wpilib.screenstepslive.com/s/currentCS/m/getting_started/l/1028964-known-issues" target="_blank" rel="external">here</a>, which I will present a copy here:</p>
+<hr>
+<h3 id="Auto-SPI-Does-not-work-in-v12-image-affects-Analog-Devices-IMUs-and-Gyro"><a href="#Auto-SPI-Does-not-work-in-v12-image-affects-Analog-Devices-IMUs-and-Gyro" class="headerlink" title="Auto SPI Does not work in v12 image (affects Analog Devices IMUs and Gyro))"></a>Auto SPI Does not work in v12 image (affects Analog Devices IMUs and Gyro))</h3><p>The Auto SPI functionality used by Analog Devices IMUs (ADIS16448 and ADIS16470) and Gyro (ADXRS450) does not work correctly in the 2019-v12 image that is part of the kickoff release.</p>
+<p>Workaround: After imaging, log into the robot console as admin (via serial or SSH) and run the command “updateNIDrivers”, then reboot. A simplified tool to execute this is in progress and more information about a full update with this issue resolved will be coming soon.</p>
+<p>Solution: We will be issuing an updated FRC Update Suite with a new image that resolves this issue.</p>
+<hr>
+<p>Anyway… If u are still unsure what to do: </p>
+<ol>
+<li>Connect to Roborio-connected router</li>
+<li>Open a terminal in an <code>*nix/Macos/FreeBSD</code> system, or use an emulator like <code>Putty</code> on Windows. </li>
+<li>SSH to the Roborio using username <code>admin</code> and an empty password. By default configuration, the command is : <code>ssh admin@10.71.46.2</code></li>
+<li>Run <code>updateNIDrivers</code>, and reboot.</li>
+<li>Since the workaround require rebuilding the kernel, which is quite resource hungry, you may want to kill the running robot code by <code>mv /home/lvuser/robot_java.jar /home/lvuser/robot_java.jar.disable;killall /usr/local/frc/JRE/bin/java;updateNIDrivers</code>.</li>
+<li>Later <code>mv /home/lvuser/robot_java.jar.disable /home/lvuser/robot_java.jar</code> and reboot.</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2019/01/13/Workaround-for-FRC-ADXRS450-Gyro-failure-Returning-All-Zeros/" data-id="cjquzcahh005qt6akrv9okx7f" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/FRC/">FRC</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2018/11/21/Comic-4-Aphorism-Space-Search/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Comic: 4. Aphorism Space Search</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Bukkit/">Bukkit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/C/">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/CPP/">CPP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Comics/">Comics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Compiler/">Compiler</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Debug/">Debug</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/FRC/">FRC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/File-Recovery/">File Recovery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Flash/">Flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/GFW/">GFW</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Kindle/">Kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Math/">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Note/">Note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Outdated/">Outdated</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Problem/">Problem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SSH/">SSH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Solution/">Solution</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Terminator/">Terminator</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Vim/">Vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/WinAPI/">WinAPI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Xorg/">Xorg</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 16px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 19px;">CPP</a> <a href="/blog/tags/Comics/" style="font-size: 13px;">Comics</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 11px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 12px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17px;">Linux</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 18px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 13px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 11px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 14px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 17px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2019/01/13/Workaround-for-FRC-ADXRS450-Gyro-failure-Returning-All-Zeros/">Workaround for FRC ADXRS450 Gyro failure: Returning All Zeros</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2018/11/21/Comic-4-Aphorism-Space-Search/">Comic: 4. Aphorism Space Search</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2018/11/20/Comic-3-Shadow/">Comic: 3. Shadow</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2018/10/17/Comic-2-Desktops/">Comic: 2. Desktops</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2018/10/17/Comic-1-Advancement/">Comic: 1. Advancement</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://d0048.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                      
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 D0048<br>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>

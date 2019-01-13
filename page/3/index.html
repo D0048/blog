@@ -79,6 +79,70 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-Thoughts-For-Possible-New-Network-Structures" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/" class="article-date">
+  <time datetime="2017-10-27T14:21:03.000Z" itemprop="datePublished">2017-10-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/">Thoughts For Possible New Network Structures</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="These-are-my-own-ideas-of-how-might-the-neural-network-architecture-may-be-improved-as-a-note-reminding-my-further-implementation-of-them"><a href="#These-are-my-own-ideas-of-how-might-the-neural-network-architecture-may-be-improved-as-a-note-reminding-my-further-implementation-of-them" class="headerlink" title="These are my own ideas of how might the neural network architecture may be improved, as a note reminding my further implementation of them"></a>These are my own ideas of how might the neural network architecture may be improved, as a note reminding my further implementation of them</h2><h3 id="Measure-for-Overfitting"><a href="#Measure-for-Overfitting" class="headerlink" title="Measure for Overfitting"></a>Measure for Overfitting</h3><p><strong><em>TODO</em></strong>: Add measure in respect to acc.<br><strong><em>TODO</em></strong>: Compare $O$ with normal CNN/DNN.</p>
+<p>We does need some measure to see if/how the network is overfitting the training data.</p>
+<p>My first thought is just use $O=LOSS(X_{train})-LOSS(X_{test})$. This seems to be working, and the value stays at around $0\pm0.04$, which means sometimes the network performs better in the training set($O&gt;0$) and sometimes the opposite($)&lt;0$).</p>
+<p>However, after accuracy reaches $99.2\%$, the frequency of observing a positive overfit index $O$ increases and the average index also increase. </p>
+<p><strong>To compare this index with the overfitting condition of other networks</strong>, I need to first somehow add the accuracy into the calculation of the index and then compare them on other architectures.<br>2017/11/21</p>
+<h3 id="Generator-For-Cheating-a-Network"><a href="#Generator-For-Cheating-a-Network" class="headerlink" title="Generator For Cheating a Network"></a>Generator For Cheating a Network</h3><p>What would happen if we first train a classifier to classify image, and then train another network where it distort an input image to maximize the change in the estimation done by the fore-mentioned classifier at the same time minimize the distortion to the image?</p>
+<p>This could be implemented using a new cost function for the second network.</p>
+<p>Implementing.<br>2017/10/27</p>
+<p>I failed to implement this structure in tensorflow in that rather than an actual value, I seems to be getting the uninitialized tensor representation of the output rather than the actual value and I failed to replace the input of the original network with that tensor.<br>2017/10/29</p>
+<p>I found the Generative Adversarial Network (GAN) model which there isn’t that much of a difference between my idea and the model. However, using another network to probe the weak points of an existing network is likely to be a possible idea of improving it.<br>2017/10/30</p>
+<p>This looks like a possible way of modifying the GAN model in that while the discriminator and the generator in the original GAN model works against each other, maybe we can make the discriminator to to create augmented data where it previously wrongly classified. Testing.<br>2017/10/31</p>
+<p>I’m pretty sure this will work, but there are more to it. If I am to train a generator to modify the minimum amount to a picture and at the same time cheating the discriminator, this may work. However, if I am to use the modified image to retrain the network, things may not be as the same… A badly written <code>6</code> might be twisted into something like <code>8</code> from even human perspective and training the discriminator with the image of <code>8</code> and label of <code>6</code> is not likely to improve its performance.</p>
+<p>However, adding the regularization term forcing the generated image to be different from the training set may be a good idea for generators to generate hopefully more creative samples. To be tested, too.<br>2017/11/1</p>
+<p>This is indeed different from regular gan. It looks working but further experiments are to be done.<br>2017/11/2</p>
+<p>Seems working. Work hanged for something else.<br>2017/11/8</p>
+<p>This is called <code>Generative Poisoning Attack</code> and extensive research seems to has been performed on it.<br>2017/11/8</p>
+<h2 id="Ambiguity-Measure-for-Dropout"><a href="#Ambiguity-Measure-for-Dropout" class="headerlink" title="Ambiguity Measure for Dropout"></a>Ambiguity Measure for Dropout</h2><p>Since increasing ambiguity is a good thing to do in ensembled classifiers, and dropout is essentially a cheap way to ensemble networks, why don’t we add another regularization term in the cost function to increase the ambiguity while dropout?<br>2017/11/1</p>
+<h2 id="Certainty-Measure-for-the-Result"><a href="#Certainty-Measure-for-the-Result" class="headerlink" title="Certainty Measure for the Result"></a>Certainty Measure for the Result</h2><p>According to my observation, it’s weird that a classifier networks always give a clear indication of the result and there is no indication for “Uncertain”. In another word, it seems unlikely for multiple/none of the output nodes to fire at the same time.</p>
+<p>The above may not necessarily be true, but it’s obvious that when a classifier network is given a sample that is totally different from any of the samples in the training set, the result tends to be coming from the weighted combination of the training examples. Will it be possible if we add another class to contain everything else and feed in random noises?</p>
+<p>Unlikely to be useful.<br>2017/11/1</p>
+<h3 id="Recursive-Conv-Net"><a href="#Recursive-Conv-Net" class="headerlink" title="Recursive Conv Net"></a>Recursive Conv Net</h3><p>What would happen is we make a convolution neural network recursive? Will this somehow benefit video generation?</p>
+<p>To be tested.<br>2017/10/27</p>
+<p>It exists…<br>2017/10/30</p>
+<h2 id="Dynamic-Cost-Function"><a href="#Dynamic-Cost-Function" class="headerlink" title="Dynamic Cost Function"></a>Dynamic Cost Function</h2><p>Is it possible if we make the cost function dynamic and change according to the condition so the convergence could be faster? Or is it possible to even use RNN to generate cost function? How would that help? What change would that bring about?<br>To be tested.<br>2017/10/27</p>
+<h3 id="Flip-network"><a href="#Flip-network" class="headerlink" title="Flip network"></a>Flip network</h3><p>According to <a href="https://arstechnica.com/civis/viewtopic.php?f=8&amp;t=785781" target="_blank" rel="external">here</a>, it looks like computers may have different speed between adding and subtracting numbers. If we flip the network so all addition became subtraction and vise versa (Then we might be maximizing the “cost” function), will it be any faster?</p>
+<p>To be tested.<br>2017/10/27</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/10/27/Thoughts-For-Possible-New-Network-Structures/" data-id="cjquzcagf004nt6aks2zhhy1r" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Problem/">Problem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2017/10/25/to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch/" class="article-date">
@@ -111,7 +175,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/25/to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch/" data-id="cjoqm1gtu005qujakhqjhgb5n" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/25/to-categorical-missing-1-required-positional-argument-nb-classes-caused-by-tflearn-version-mismatch/" data-id="cjquzcahs0063t6ak160w578r" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -171,7 +235,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/25/Note-on-1x1-Convolutions/" data-id="cjoqm1gvo0082ujakf4nj7bxk" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/25/Note-on-1x1-Convolutions/" data-id="cjquzcafd003et6akjcry9jx0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Problem/">Problem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li></ul>
@@ -211,7 +275,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/23/getopt-function-on-raspery-pi/" data-id="cjoqm1gtp005gujakbc2t0nkf" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/23/getopt-function-on-raspery-pi/" data-id="cjquzcahk005ut6akodgadicx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -286,7 +350,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/17/The-Harmonic-Series-how-comes-the-divergence/" data-id="cjoqm1gsu004aujak7ah19q9q" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/17/The-Harmonic-Series-how-comes-the-divergence/" data-id="cjquzcagn004wt6akrur7qnrv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Math/">Math</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li></ul>
@@ -345,7 +409,7 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/" data-id="cjoqm1gts005lujakflpislut" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/16/libcusolver-so-8-0-cannot-open-shared-object-file-error-while-importing-tensorflow/" data-id="cjquzcahq0061t6akwl6wn4w4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -397,7 +461,7 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/" data-id="cjoqm1gqt001tujake53mcmlm" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/14/Difference-Between-Weights-and-Biases-Another-way-of-Looking-at-Forward-propagation/" data-id="cjquzcadg0023t6akq3w5m3et" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li></ul>
@@ -452,7 +516,7 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/" data-id="cjoqm1grv0034ujakov268i0c" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/" data-id="cjquzcafn003rt6aka1ufxga4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Python/">Python</a></li></ul>
@@ -519,7 +583,7 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/05/Some-Thoughts-on-Deep-Neural-Networks-and-Handwritten-digit-recognition/" data-id="cjoqm1gsn0040ujakskwqks4a" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/05/Some-Thoughts-on-Deep-Neural-Networks-and-Handwritten-digit-recognition/" data-id="cjquzcagh004pt6akiozaqtij" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li></ul>
@@ -560,52 +624,10 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/09/24/update-pepper-flash-player-under-linux/" data-id="cjoqm1gt6004rujakyduwa42a" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/09/24/update-pepper-flash-player-under-linux/" data-id="cjquzcah7005dt6ak5eu912kr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Flash/">Flash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-convert-an-image-into-an-xbitmap-array" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2017/09/12/convert-an-image-into-an-xbitmap-array/" class="article-date">
-  <time datetime="2017-09-12T12:52:52.000Z" itemprop="datePublished">2017-09-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2017/09/12/convert-an-image-into-an-xbitmap-array/">Convert an image into an XBitMap C array stored in a C header file</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>==<a href="https://stackoverflow.com/questions/2156572/c-header-file-with-bitmapped-fonts/2156872#2156872" target="_blank" rel="external">Credit: StackOverflow</a>==</p>
-<p>Basically, install <code>imagemagick</code>, and use the shell command: <code>convert $source.png $dest.xbm</code>….</p>
-<p>This is a really simple solution but takes me hours to really figure things out.</p>
-<p>2017/9/12 21:00</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/09/12/convert-an-image-into-an-xbitmap-array/" data-id="cjoqm1gqf001jujakyrhru1s7" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Xorg/">Xorg</a></li></ul>
 
     </footer>
   </div>
@@ -640,7 +662,7 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 16px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 19px;">CPP</a> <a href="/blog/tags/Comics/" style="font-size: 13px;">Comics</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 10px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 12px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17px;">Linux</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 18px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 13px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 11px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 14px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 17px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
+      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 16px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 19px;">CPP</a> <a href="/blog/tags/Comics/" style="font-size: 13px;">Comics</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 11px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 12px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17px;">Linux</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 18px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 13px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 11px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 14px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 17px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
     </div>
   </div>
 
@@ -649,7 +671,7 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
     </div>
   </div>
 
@@ -660,6 +682,10 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/blog/2019/01/13/Workaround-for-FRC-ADXRS450-Gyro-failure-Returning-All-Zeros/">Workaround for FRC ADXRS450 Gyro failure: Returning All Zeros</a>
+          </li>
         
           <li>
             <a href="/blog/2018/11/21/Comic-4-Aphorism-Space-Search/">Comic: 4. Aphorism Space Search</a>
@@ -675,10 +701,6 @@ ImportError: libcusolver.so.8.0: cannot open shared object file: No such file or
         
           <li>
             <a href="/blog/2018/10/17/Comic-1-Advancement/">Comic: 1. Advancement</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2018/08/05/Note-Neural-Turning-Machine/">Note: Neural Turning Machine</a>
           </li>
         
       </ul>
@@ -715,7 +737,7 @@ s.setAttribute('data-timestamp', +new Date());
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018 D0048<br>
+      &copy; 2019 D0048<br>
     </div>
   </div>
 </footer>
