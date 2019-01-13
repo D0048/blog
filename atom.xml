@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2019-01-13T14:13:18.689Z</updated>
+  <updated>2019-01-13T14:16:38.982Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://d0048.github.io/blog/2019/01/13/Workaround-for-FRC-ADXRS450-Gyro-failure-Returning-All-Zeros/"/>
     <id>https://d0048.github.io/blog/2019/01/13/Workaround-for-FRC-ADXRS450-Gyro-failure-Returning-All-Zeros/</id>
     <published>2019-01-13T13:59:20.000Z</published>
-    <updated>2019-01-13T14:13:18.689Z</updated>
+    <updated>2019-01-13T14:16:38.982Z</updated>
     
     <content type="html"><![CDATA[<p>Apparently the current version of WPILib(1st 2019 official release) isn’t happy with our ADXRS450 Gyros, and the <code>getAngle()</code> call always return zero. </p><p>Sadly the workaround, although present, doesn’t seems to be indexed by google yet…which is why I am making this post so more people could see it before deciding to spend their precious budget buying a new one, like us. </p><p>The workaround is found <a href="http://wpilib.screenstepslive.com/s/currentCS/m/getting_started/l/1028964-known-issues" target="_blank" rel="external">here</a>, which I will present a copy here:</p><hr><h3 id="Auto-SPI-Does-not-work-in-v12-image-affects-Analog-Devices-IMUs-and-Gyro"><a href="#Auto-SPI-Does-not-work-in-v12-image-affects-Analog-Devices-IMUs-and-Gyro" class="headerlink" title="Auto SPI Does not work in v12 image (affects Analog Devices IMUs and Gyro))"></a>Auto SPI Does not work in v12 image (affects Analog Devices IMUs and Gyro))</h3><p>The Auto SPI functionality used by Analog Devices IMUs (ADIS16448 and ADIS16470) and Gyro (ADXRS450) does not work correctly in the 2019-v12 image that is part of the kickoff release.</p><p>Workaround: After imaging, log into the robot console as admin (via serial or SSH) and run the command “updateNIDrivers”, then reboot. A simplified tool to execute this is in progress and more information about a full update with this issue resolved will be coming soon.</p><p>Solution: We will be issuing an updated FRC Update Suite with a new image that resolves this issue.</p><hr><p>Anyway… If u are still unsure what to do: </p><ol><li>Connect to Roborio-connected router</li><li>Open a terminal in an <code>*nix/Macos/FreeBSD</code> system, or use an emulator like <code>Putty</code> on Windows. </li><li>SSH to the Roborio using username <code>admin</code> and an empty password. By default configuration, the command is : <code>ssh admin@10.71.46.2</code></li><li>Run <code>updateNIDrivers</code>, and reboot.</li><li>Since the workaround require rebuilding the kernel, which is quite resource hungry, you may want to kill the running robot code by <code>mv /home/lvuser/robot_java.jar /home/lvuser/robot_java.jar.disable;killall /usr/local/frc/JRE/bin/java;updateNIDrivers</code>.</li><li>Later <code>mv /home/lvuser/robot_java.jar.disable /home/lvuser/robot_java.jar</code> and reboot.</li></ol>]]></content>
     
@@ -34,6 +34,8 @@
     
     </summary>
     
+    
+      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
       <category term="FRC" scheme="https://d0048.github.io/blog/tags/FRC/"/>
     
