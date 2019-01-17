@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2019-01-13T14:16:38.982Z</updated>
+  <updated>2019-01-17T02:29:41.440Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Comic: 5. Acceptable Price Range of Pencils</title>
+    <link href="https://d0048.github.io/blog/2019/01/17/Comic-5-Acceptable-Price-Range-of-Pencils/"/>
+    <id>https://d0048.github.io/blog/2019/01/17/Comic-5-Acceptable-Price-Range-of-Pencils/</id>
+    <published>2019-01-17T02:27:32.000Z</published>
+    <updated>2019-01-17T02:29:41.440Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/blog/2019/01/17/Comic-5-Acceptable-Price-Range-of-Pencils/5-1.png" alt="[For 5-dimensional users, please use **Quaternions** instead.]" title="[For 5-dimensional users, please use **Quaternions** instead.]"><p>For 5-dimensional users, please use <strong>Quaternions</strong> instead.</p><p>Fan arts inspired by the <a href="https://xkcd.com/" target="_blank" rel="external">XKCD</a> comics. </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;img src=&quot;/blog/2019/01/17/Comic-5-Acceptable-Price-Range-of-Pencils/5-1.png&quot; alt=&quot;[For 5-dimensional users, please use **Quaternions** inst
+      
+    
+    </summary>
+    
+    
+      <category term="Comics" scheme="https://d0048.github.io/blog/tags/Comics/"/>
+    
+      <category term="Thoughts" scheme="https://d0048.github.io/blog/tags/Thoughts/"/>
+    
+  </entry>
   
   <entry>
     <title>Workaround for FRC ADXRS450 Gyro failure: Returning All Zeros</title>
@@ -46,7 +71,7 @@
     <link href="https://d0048.github.io/blog/2018/11/21/Comic-4-Aphorism-Space-Search/"/>
     <id>https://d0048.github.io/blog/2018/11/21/Comic-4-Aphorism-Space-Search/</id>
     <published>2018-11-21T03:04:54.000Z</published>
-    <updated>2018-11-21T03:43:02.926Z</updated>
+    <updated>2019-01-17T02:28:56.728Z</updated>
     
     <content type="html"><![CDATA[<img src="/blog/2018/11/21/Comic-4-Aphorism-Space-Search/4-1.png" alt="[An example aphorism subjects to the search. Credit: (cjfe.org/)]" title="[An example aphorism subjects to the search. Credit: (cjfe.org/)]"><img src="/blog/2018/11/21/Comic-4-Aphorism-Space-Search/4-2.png" alt="[Generalization of the search process.]" title="[Generalization of the search process.]"><p>Especially suitable for high-school essay prompt generation. </p><p>Fan arts inspired by the <a href="https://xkcd.com/" target="_blank" rel="external">XKCD</a> comics. </p>]]></content>
     
@@ -501,32 +526,6 @@
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
       <category term="Machine Learning" scheme="https://d0048.github.io/blog/tags/Machine-Learning/"/>
-    
-      <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Prevent Blocking When Using PyPlot</title>
-    <link href="https://d0048.github.io/blog/2017/11/02/Prevent-Blocking-When-Using-PyPlot/"/>
-    <id>https://d0048.github.io/blog/2017/11/02/Prevent-Blocking-When-Using-PyPlot/</id>
-    <published>2017-11-02T12:58:55.000Z</published>
-    <updated>2017-11-02T13:05:28.205Z</updated>
-    
-    <content type="html"><![CDATA[<p>After display logic, call <code>imshow()</code> with parameter <code>block=False</code>.<br>2017/11/2</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;After display logic, call &lt;code&gt;imshow()&lt;/code&gt; with parameter &lt;code&gt;block=False&lt;/code&gt;.&lt;br&gt;2017/11/2&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
       <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
     
