@@ -79,6 +79,61 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-building-ssh-server-on-arukas-io" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2016/11/30/building-ssh-server-on-arukas-io/" class="article-date">
+  <time datetime="2016-11-30T12:21:02.000Z" itemprop="datePublished">2016-11-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2016/11/30/building-ssh-server-on-arukas-io/">Building SSH server on arukas.io</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#The following content no longer works…</p>
+<p>#Create a regular 512Mb RAM application with Docker image: <code>jdeathe/centos-ssh:latest</code></p>
+<p>#Found document of configuration in <a href="https://hub.docker.com/r/jdeathe/centos-ssh/" target="_blank" rel="external">https://hub.docker.com/r/jdeathe/centos-ssh/</a></p>
+<p>#According to the document, open tcp port 22 to the public for ssh protocol connection. </p>
+<p>#In my case, port 2020, 4443 and 25565 also opens in tcp for other purposes. </p>
+<p>#According to the document, set up environment variables:</p>
+<pre><code>SSH_SUDO=ALL=(ALL) NOPASSWD:ALL
+SSH_USER=████
+SSH_USER_PASSWORD=████
+SSH_AUTHORIZED_KEYS=ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAikXL8TXKhADkOOjwEcE0tx792JMYR9mvlRTi+koG0Wb+0s6ouc████████████████████████████████████████████████████lDeqAwjJFC0er1oR6SHjgwxVU9uUfXS+AA03thfgK60CaWRUmCCUbc3vGqCyNMN44WfTMDiEz9zzeDpsrV+1/vQnxSO+K8eWhIV2jmyPMfc9z7QAs7USPfGY7TeLrFgb8m3AuFXFSdwdBp2rmPcLZbjZ9nNNR+f7eZLBn/wwE8z+rCevcprNoZgEn/0sUoHFQ== rsa-key-20161028</code></pre>
+
+<p>#Try previeous SSH-2 RSA keys but failed. <code>Error: server rejects our key.</code></p>
+<p>#Environment variable <code>SSH_USER_PASSWORD=██████</code> does not take in effect for unknown reasons. Error: <em>Fatal error: No supported authentication methods available (server sent: public key,gssapi-key-keyex,gssapt-with-mic)[From putty_V0.63.0.0.43510830]</em></p>
+<p>#Generate a new pair of SSH-2 RSA keys from puttygen. Update environment variable: SSH_AUTHORIZED_KEYS with the new public key. </p>
+<p>#Try reconnect with private key. Success. </p>
+<p>[Warn]: Server domain name and ports mapped is dynamic every restart. <br><br>[Info]: Red-hat linux system used in this server. <br><br>[Info]: Installed package “screen” with command “sudo yum install screen -y”</p>
+<p>*****Server/Client configuration Complete!*****</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2016/11/30/building-ssh-server-on-arukas-io/" data-id="cjrbhjfjz000xc3akz0qsv5al" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Outdated/">Outdated</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-building-shadow-socks-server-on-arukas-io-and-connect-it-with-a-regular-client" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2016/11/30/building-shadow-socks-server-on-arukas-io-and-connect-it-with-a-regular-client/" class="article-date">
@@ -118,7 +173,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2016/11/30/building-shadow-socks-server-on-arukas-io-and-connect-it-with-a-regular-client/" data-id="cjqzzytg9000uolak8xzl1351" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2016/11/30/building-shadow-socks-server-on-arukas-io-and-connect-it-with-a-regular-client/" data-id="cjrbhjfjy000vc3ak6o8jqean" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Outdated/">Outdated</a></li></ul>
@@ -156,7 +211,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 16px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 19px;">CPP</a> <a href="/blog/tags/Comics/" style="font-size: 14px;">Comics</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 11px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 12px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17px;">Linux</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 18px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 13px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 11px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 14px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 18px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
+      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 16px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 19px;">CPP</a> <a href="/blog/tags/Comics/" style="font-size: 15px;">Comics</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 11px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 12px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17px;">Linux</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 18px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 13px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 11px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 14px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 19px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
     </div>
   </div>
 
@@ -178,6 +233,10 @@ ga('send', 'pageview');
       <ul>
         
           <li>
+            <a href="/blog/2019/01/25/Comic-6-FRC-Seasons-in-a-Nutshell/">Comic: 6. FRC Seasons in a Nutshell</a>
+          </li>
+        
+          <li>
             <a href="/blog/2019/01/17/Comic-5-Acceptable-Price-Range-of-Pencils/">Comic: 5. Acceptable Price Range of Pencils</a>
           </li>
         
@@ -191,10 +250,6 @@ ga('send', 'pageview');
         
           <li>
             <a href="/blog/2018/11/20/Comic-3-Shadow/">Comic: 3. Shadow</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2018/10/17/Comic-2-Desktops/">Comic: 2. Desktops</a>
           </li>
         
       </ul>

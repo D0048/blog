@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2019-01-17T02:29:41.440Z</updated>
+  <updated>2019-01-25T03:26:41.283Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Comic: 6. FRC Seasons in a Nutshell</title>
+    <link href="https://d0048.github.io/blog/2019/01/25/Comic-6-FRC-Seasons-in-a-Nutshell/"/>
+    <id>https://d0048.github.io/blog/2019/01/25/Comic-6-FRC-Seasons-in-a-Nutshell/</id>
+    <published>2019-01-25T03:11:10.000Z</published>
+    <updated>2019-01-25T03:26:41.283Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/blog/2019/01/25/Comic-6-FRC-Seasons-in-a-Nutshell/6-1.png" alt="[FRC Seasons in a Nutshell]" title="[FRC Seasons in a Nutshell]"><p>EVERY SINGLE SEASON!!!</p><p>Fan arts inspired by the <a href="https://xkcd.com/" target="_blank" rel="external">XKCD</a> comics. </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;img src=&quot;/blog/2019/01/25/Comic-6-FRC-Seasons-in-a-Nutshell/6-1.png&quot; alt=&quot;[FRC Seasons in a Nutshell]&quot; title=&quot;[FRC Seasons in a Nutshell]&quot;&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="Comics" scheme="https://d0048.github.io/blog/tags/Comics/"/>
+    
+      <category term="Thoughts" scheme="https://d0048.github.io/blog/tags/Thoughts/"/>
+    
+  </entry>
   
   <entry>
     <title>Comic: 5. Acceptable Price Range of Pencils</title>
@@ -294,9 +319,9 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
-    
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
     
   </entry>
   
@@ -319,9 +344,9 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
-    
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
     
   </entry>
   
@@ -344,9 +369,9 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
-    
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
     
   </entry>
   
@@ -371,9 +396,9 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
-    
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
     
       <category term="FRC" scheme="https://d0048.github.io/blog/tags/FRC/"/>
     
@@ -398,9 +423,9 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
-    
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
     
   </entry>
   
@@ -448,9 +473,9 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
-    
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
     
   </entry>
   
@@ -473,9 +498,9 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
-    
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
     
   </entry>
   
@@ -501,33 +526,6 @@
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
       <category term="Kindle" scheme="https://d0048.github.io/blog/tags/Kindle/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Use System Memory Together with Graphic Memory in TensorFlow</title>
-    <link href="https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/"/>
-    <id>https://d0048.github.io/blog/2017/11/08/Use-System-Memory-Together-with-Graphic-Memory-in-TensorFlow/</id>
-    <published>2017-11-08T02:52:25.000Z</published>
-    <updated>2018-08-05T02:06:29.971Z</updated>
-    
-    <content type="html"><![CDATA[<p>The default options in tensorflow uses graphic memories only and all the tensors are allocated on boot. These are relatively faster, but are also disaster when using a graphic card with lower memories, and I am always getting OOMs from my model.</p><p>There are two ways to ease the issue, which are to enable tensorflow to utilize system memory and disable tensorflow to allocated all memory blocks on boot. </p><pre>    config = tf.ConfigProto()    config.gpu_options.allow_growth = True    config.gpu_options.per_process_gpu_memory_fraction = 0.9    with tf.Session(config=config) as sess:        code to run...        pass</pre><p>The attribute <code>config.gpu_options.per_process_gpu_memory_fraction</code> specifies the fraction of maximum graphic memory to use before using system memory.</p><p>2017/11/8</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;The default options in tensorflow uses graphic memories only and all the tensors are allocated on boot. These are relatively faster, but 
-      
-    
-    </summary>
-    
-    
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
-    
-      <category term="Machine Learning" scheme="https://d0048.github.io/blog/tags/Machine-Learning/"/>
-    
-      <category term="Python" scheme="https://d0048.github.io/blog/tags/Python/"/>
     
   </entry>
   
