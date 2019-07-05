@@ -79,6 +79,47 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-output-cstring-type-with-cout-and-printf" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/02/13/output-cstring-type-with-cout-and-printf/" class="article-date">
+  <time datetime="2017-02-13T13:58:40.000Z" itemprop="datePublished">2017-02-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/02/13/output-cstring-type-with-cout-and-printf/">Output CString type with std::cout and printf</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>CString is a MFC class and it’s under unicode.</p>
+<p>When using standard stream to output it, use <code>std::wcout</code> instead of <code>std::cout</code> becuase it’s wide charaters. Also, use <code>cstr.GetBuffer()</code> instead of cstr. Or <code>LPCTSTR(cstr)</code> should work the same.<br>Example: </p>
+<p><pre><block><br>CString str1, str2;<br>std::wcout &lt;&lt; “str1: “ &lt;&lt; str1.GetBuffer() &lt;&lt; std::endl &lt;&lt; “str2: “ &lt;&lt; str2.GetBuffer() &lt;&lt; std::endl;<br></block></pre><br><br><br>When using printf, use <code>%S</code> instead of <code>%s</code> should do the job.<br>2016/2/13 22:05</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/02/13/output-cstring-type-with-cout-and-printf/" data-id="cjxpvgoj500378tak0hjvhznc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-different-between-type-bool-bool-boolean-and-boolean-in-c" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2017/02/13/different-between-type-bool-bool-boolean-and-boolean-in-c/" class="article-date">
@@ -110,7 +151,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/13/different-between-type-bool-bool-boolean-and-boolean-in-c/" data-id="cjrbhjfkg001pc3akgxxkge0n" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/13/different-between-type-bool-bool-boolean-and-boolean-in-c/" data-id="cjxpvgoio001u8takldyfhcp8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li></ul>
@@ -152,7 +193,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/13/when-binding-sockets-to-server-which-adress-to-choose/" data-id="cjrbhjfni006yc3akv3wnm0tk" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/13/when-binding-sockets-to-server-which-adress-to-choose/" data-id="cjxpvgok1005h8tak25xfaogy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Network/">Network</a></li></ul>
@@ -192,7 +233,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/09/unknown-2/" data-id="cjrbhjfmg0060c3akxqp7vf3i" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/09/unknown-2/" data-id="cjxpvgojr004n8takmn7lby7m" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Compiler/">Compiler</a></li></ul>
@@ -231,7 +272,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/09/use-getversionexw-function-in-the-new-c-standard/" data-id="cjrbhjfmr006dc3akfc95aez6" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/09/use-getversionexw-function-in-the-new-c-standard/" data-id="cjxpvgojt004u8tak41h1banl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li></ul>
@@ -270,7 +311,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/09/duplicated-macro-definitions-when-containing-both-windows-h-and-winsock-h/" data-id="cjrbhjfks002gc3ak6rjlw2ys" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/09/duplicated-macro-definitions-when-containing-both-windows-h-and-winsock-h/" data-id="cjxpvgoj0002p8taks4e85wk4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/WinAPI/">WinAPI</a></li></ul>
@@ -309,7 +350,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/08/a-bad-but-useable-way-to-deal-with-_tchar-argv/" data-id="cjrbhjfji0003c3akukbkrg3h" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/08/a-bad-but-useable-way-to-deal-with-_tchar-argv/" data-id="cjxpvgohw000b8takm7x2w6r9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -404,7 +445,7 @@ I use these codes to initialize a entry table.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/08/how-to-create-a-windows-services-program-to-run-background-in-start-up-and-how-to-register-it/" data-id="cjrbhjfkm0021c3akz4v6h4rj" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/08/how-to-create-a-windows-services-program-to-run-background-in-start-up-and-how-to-register-it/" data-id="cjxpvgois00258takjvhbpdo1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/WinAPI/">WinAPI</a></li></ul>
@@ -443,7 +484,7 @@ I use these codes to initialize a entry table.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/08/a-way-to-avoid-duplicate-declaration/" data-id="cjrbhjfjp000dc3ak6mzdmyun" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/08/a-way-to-avoid-duplicate-declaration/" data-id="cjxpvgoi0000l8takktjonbg1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li></ul>
@@ -482,52 +523,10 @@ I use these codes to initialize a entry table.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/08/a-good-way-to-avoid-duplicated-definition-in-header-files/" data-id="cjrbhjfjt000mc3aktzidiiiz" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/02/08/a-good-way-to-avoid-duplicated-definition-in-header-files/" data-id="cjxpvgoi3000s8takr0uperlw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CPP/">CPP</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-a" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2017/02/06/a/" class="article-date">
-  <time datetime="2017-02-06T04:14:31.000Z" itemprop="datePublished">2017-02-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2017/02/06/a/">A Script That Might Crush Ubuntu Without Root</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Name the script <code>something.sh</code> and write <code>./something.sh</code> inside it. This is a infinite loop that takes up all the cores of cpu instead of just one like the traditional loops do. It will cause the computer stop resonponding till it lost power. </p>
-<p>Now I wonder I to solve this problem.</p>
-<p>2017/2/6</p>
-<p>Update: Just use <code>ulimit</code>…</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/02/06/a/" data-id="cjrbhjfjf0001c3akd0ij7rlz" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Security/">Security</a></li></ul>
 
     </footer>
   </div>
@@ -562,7 +561,7 @@ I use these codes to initialize a entry table.
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 16px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 19px;">CPP</a> <a href="/blog/tags/Comics/" style="font-size: 15px;">Comics</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 11px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 12px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17px;">Linux</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 18px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 13px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 11px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 14px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 19px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
+      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 11.67px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 15.83px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 18.33px;">CPP</a> <a href="/blog/tags/Comics/" style="font-size: 15px;">Comics</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 10.83px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 14.17px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 11.67px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 17.5px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 11.67px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 12.5px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 10.83px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 11.67px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 13.33px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 11.67px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 19.17px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 11.67px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
     </div>
   </div>
 
@@ -571,7 +570,7 @@ I use these codes to initialize a entry table.
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
     </div>
   </div>
 
@@ -582,6 +581,10 @@ I use these codes to initialize a entry table.
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/blog/2019/07/05/Comic-7-Diamond-And-Lapis/">Comic: 7. Diamond And Lapis</a>
+          </li>
         
           <li>
             <a href="/blog/2019/01/25/Comic-6-FRC-Seasons-in-a-Nutshell/">Comic: 6. FRC Seasons in a Nutshell</a>
@@ -597,10 +600,6 @@ I use these codes to initialize a entry table.
         
           <li>
             <a href="/blog/2018/11/21/Comic-4-Aphorism-Space-Search/">Comic: 4. Aphorism Space Search</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2018/11/20/Comic-3-Shadow/">Comic: 3. Shadow</a>
           </li>
         
       </ul>

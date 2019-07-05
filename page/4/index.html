@@ -79,6 +79,61 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-Pass-Strings-from-Python-to-C-CPP-libs" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/" class="article-date">
+  <time datetime="2017-10-12T00:49:35.000Z" itemprop="datePublished">2017-10-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/">Pass Strings from Python to C/CPP libs</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Python strings are stored in the memory in a way smart but not c-friendly. There are two ways python strings could be stored:</p>
+<ol>
+<li><p>Non-specifically-encoded strings are usually stored as wide chars(<code>wchar</code>), where a string <code>&quot;test&quot;</code> in python basically looks like <code>&quot;t\0e\0s\0t\0&quot;</code>. This will mess with any functions in C relying on <code>\0</code> to find the end of a string(char*). </p>
+</li>
+<li><p>Encoded string are stored in the specified codec.</p>
+</li>
+</ol>
+<p>Then, to pass a string object as <code>char*</code> or <code>wchar_t*</code> into native libiaries:</p>
+<ol>
+<li><p><code>import ctypes</code></p>
+</li>
+<li><p>Create the prototype of a function via <code>cdll_name.func_name.argtypes=[type,type,type]</code> to specify the types to pass. Use <code>ctypes.c_char_p</code> or <code>ctypes.c_wchar_p</code> to replace the type to specify the type wanted. A full lists of types could be found <a href="https://docs.python.org/3/library/ctypes.html" target="_blank" rel="external">here</a> under tag <code>16.16.1.4.</code>.</p>
+</li>
+<li><p>Call the function via <code>cdll_name.func_name(type(arg),type(arg)...)</code>. For example: <code>cdll_name.func_name(c_float(3.1),c_char_p(&quot;foo&quot;),c_wchar_p(&quot;bar&quot;))</code></p>
+</li>
+</ol>
+<p>2017/10/12</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://d0048.github.io/blog/2017/10/12/Pass-Strings-from-Python-to-C-CPP-libs/" data-id="cjxpvgoj600398takc0vsdudv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Some-Thoughts-on-Deep-Neural-Networks-and-Handwritten-digit-recognition" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2017/10/05/Some-Thoughts-on-Deep-Neural-Networks-and-Handwritten-digit-recognition/" class="article-date">
@@ -134,7 +189,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/10/05/Some-Thoughts-on-Deep-Neural-Networks-and-Handwritten-digit-recognition/" data-id="cjrbhjfmb005sc3akgq0my2t6" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/10/05/Some-Thoughts-on-Deep-Neural-Networks-and-Handwritten-digit-recognition/" data-id="cjxpvgoji00438tak3tzgyyal" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Machine-Learning/">Machine Learning</a></li></ul>
@@ -175,7 +230,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/09/24/update-pepper-flash-player-under-linux/" data-id="cjrbhjfmp006bc3aknlfjrnv4" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/09/24/update-pepper-flash-player-under-linux/" data-id="cjxpvgojs004s8takw0vcdxod" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Flash/">Flash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -217,7 +272,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/09/12/convert-an-image-into-an-xbitmap-array/" data-id="cjrbhjfkf001mc3ak9tjr2d0x" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/09/12/convert-an-image-into-an-xbitmap-array/" data-id="cjxpvgoim001p8tak2gncxdvx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/C/">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Xorg/">Xorg</a></li></ul>
@@ -269,7 +324,7 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/09/12/a-key-point-understanding-single-variable-chain-rule/" data-id="cjrbhjfjo000bc3akrsag8sm2" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/09/12/a-key-point-understanding-single-variable-chain-rule/" data-id="cjxpvgohz000j8tak5piumj68" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Math/">Math</a></li></ul>
@@ -320,7 +375,7 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/09/09/change-wall-papers-on-a-rooted-kindle-manually-without-installing-any-more-hacks/" data-id="cjrbhjfk30015c3akcckchqgj" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/09/09/change-wall-papers-on-a-rooted-kindle-manually-without-installing-any-more-hacks/" data-id="cjxpvgoi700128takr6ks3114" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Kindle/">Kindle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -363,7 +418,7 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/09/05/solve-missingsectionheadererror-file-contains-no-section-headers-in-configphaser-pyhton/" data-id="cjrbhjfm7005pc3akw6962yal" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/09/05/solve-missingsectionheadererror-file-contains-no-section-headers-in-configphaser-pyhton/" data-id="cjxpvgoje003v8takyklzi8gt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Python/">Python</a></li></ul>
@@ -407,7 +462,7 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/09/03/cong-e-ni-cong-er-neng-sui/" data-id="cjrbhjfka001ic3ak8i6vkk8o" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/09/03/cong-e-ni-cong-er-neng-sui/" data-id="cjxpvgoih001k8tak5bpkk3cx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Security/">Security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Thoughts/">Thoughts</a></li></ul>
@@ -448,7 +503,7 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/08/02/casting-java-obj-into-string/" data-id="cjrbhjfk40017c3ak8zwdn484" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/08/02/casting-java-obj-into-string/" data-id="cjxpvgoi800148tak8s1gxtt2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
@@ -488,53 +543,10 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/07/20/vim-plugin-syntastic-works-without-error-or-effect/" data-id="cjrbhjfnx0077c3ak5olpwb04" class="article-share-link">Share</a>
+      <a data-url="https://d0048.github.io/blog/2017/07/20/vim-plugin-syntastic-works-without-error-or-effect/" data-id="cjxpvgok7005w8takv0d4vuyb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Vim/">Vim</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-audio-device-disabled-and-replaced-by-dummy-audio-after-using-hdajackretask" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2017/07/11/audio-device-disabled-and-replaced-by-dummy-audio-after-using-hdajackretask/" class="article-date">
-  <time datetime="2017-07-11T02:57:33.000Z" itemprop="datePublished">2017-07-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2017/07/11/audio-device-disabled-and-replaced-by-dummy-audio-after-using-hdajackretask/">Audio device disabled and replaced by dummy audio after using hdajackretask</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>After some modification on <code>hdajackretask</code>, which previously worked but disabled my audio card after reboot(in both dual of windows 10 and ubuntu).</p>
-<p>Ubuntu will reports an error of <code>codecs not found</code> and windows will return an error of <code>device moved</code>.</p>
-<p>In my case, this problem is solved through editing <code>/etc/modprobe.d/alsa-base.conf</code> in that the desired audio card is marked with <code>index=-2</code>.</p>
-<p>By changing the index of the desired interface to ‘1’,(in my case, the one with <code>intel</code> in it because I am using <code>snd-hda-intel</code> ) and adding <code>options snd-hda-intel model=auto</code>, the problem is resolved after reboot. </p>
-<p>2017/7/11</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://d0048.github.io/blog/2017/07/11/audio-device-disabled-and-replaced-by-dummy-audio-after-using-hdajackretask/" data-id="cjrbhjfjv000rc3aknpk2dsht" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Solution/">Solution</a></li></ul>
 
     </footer>
   </div>
@@ -569,7 +581,7 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 12px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 16px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 19px;">CPP</a> <a href="/blog/tags/Comics/" style="font-size: 15px;">Comics</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 11px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 15px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 12px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 17px;">Linux</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 18px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 12px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 13px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 11px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 12px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 14px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 12px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 19px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 12px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
+      <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/Bukkit/" style="font-size: 11.67px;">Bukkit</a> <a href="/blog/tags/C/" style="font-size: 15.83px;">C</a> <a href="/blog/tags/CPP/" style="font-size: 18.33px;">CPP</a> <a href="/blog/tags/Comics/" style="font-size: 15px;">Comics</a> <a href="/blog/tags/Compiler/" style="font-size: 10px;">Compiler</a> <a href="/blog/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/blog/tags/FRC/" style="font-size: 10.83px;">FRC</a> <a href="/blog/tags/File-Recovery/" style="font-size: 10px;">File Recovery</a> <a href="/blog/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/blog/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/blog/tags/Java/" style="font-size: 14.17px;">Java</a> <a href="/blog/tags/Kindle/" style="font-size: 11.67px;">Kindle</a> <a href="/blog/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/blog/tags/Machine-Learning/" style="font-size: 17.5px;">Machine Learning</a> <a href="/blog/tags/Math/" style="font-size: 11.67px;">Math</a> <a href="/blog/tags/Network/" style="font-size: 10px;">Network</a> <a href="/blog/tags/Note/" style="font-size: 12.5px;">Note</a> <a href="/blog/tags/Outdated/" style="font-size: 10.83px;">Outdated</a> <a href="/blog/tags/Problem/" style="font-size: 11.67px;">Problem</a> <a href="/blog/tags/Python/" style="font-size: 13.33px;">Python</a> <a href="/blog/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/blog/tags/Security/" style="font-size: 11.67px;">Security</a> <a href="/blog/tags/Solution/" style="font-size: 20px;">Solution</a> <a href="/blog/tags/Terminator/" style="font-size: 10px;">Terminator</a> <a href="/blog/tags/Thoughts/" style="font-size: 19.17px;">Thoughts</a> <a href="/blog/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/blog/tags/WinAPI/" style="font-size: 11.67px;">WinAPI</a> <a href="/blog/tags/Xorg/" style="font-size: 10px;">Xorg</a>
     </div>
   </div>
 
@@ -578,7 +590,7 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li></ul>
     </div>
   </div>
 
@@ -589,6 +601,10 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/blog/2019/07/05/Comic-7-Diamond-And-Lapis/">Comic: 7. Diamond And Lapis</a>
+          </li>
         
           <li>
             <a href="/blog/2019/01/25/Comic-6-FRC-Seasons-in-a-Nutshell/">Comic: 6. FRC Seasons in a Nutshell</a>
@@ -604,10 +620,6 @@ is actually: "dx(a^2)/dy".replace("a","2a") !!!
         
           <li>
             <a href="/blog/2018/11/21/Comic-4-Aphorism-Space-Search/">Comic: 4. Aphorism Space Search</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2018/11/20/Comic-3-Shadow/">Comic: 3. Shadow</a>
           </li>
         
       </ul>
