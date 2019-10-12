@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://d0048.github.io/blog/"/>
-  <updated>2019-07-05T09:03:47.494Z</updated>
+  <updated>2019-10-12T20:41:31.362Z</updated>
   <id>https://d0048.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hack The Box Write Up: Invitation Code</title>
+    <link href="https://d0048.github.io/blog/2019/10/12/Hack-The-Box-Write-Up-Invitation-Code/"/>
+    <id>https://d0048.github.io/blog/2019/10/12/Hack-The-Box-Write-Up-Invitation-Code/</id>
+    <published>2019-10-12T07:40:29.000Z</published>
+    <updated>2019-10-12T20:41:31.362Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="Security" scheme="https://d0048.github.io/blog/tags/Security/"/>
+    
+      <category term="Hack The Box" scheme="https://d0048.github.io/blog/tags/Hack-The-Box/"/>
+    
+  </entry>
   
   <entry>
     <title>Comic: 7. Diamond And Lapis</title>
@@ -49,13 +67,13 @@
     <published>2019-01-25T03:11:10.000Z</published>
     <updated>2019-01-25T03:26:41.283Z</updated>
     
-    <content type="html"><![CDATA[<img src="/blog/2019/01/25/Comic-6-FRC-Seasons-in-a-Nutshell/6-1.png" alt="[FRC Seasons in a Nutshell]" title="[FRC Seasons in a Nutshell]"><p>EVERY SINGLE SEASON!!!</p><p>Fan arts inspired by the <a href="https://xkcd.com/" target="_blank" rel="external">XKCD</a> comics. </p>]]></content>
+    <content type="html"><![CDATA[<img src="/blog/2019/01/24/Comic-6-FRC-Seasons-in-a-Nutshell/6-1.png" alt="[FRC Seasons in a Nutshell]" title="[FRC Seasons in a Nutshell]"><p>EVERY SINGLE SEASON!!!</p><p>Fan arts inspired by the <a href="https://xkcd.com/" target="_blank" rel="external">XKCD</a> comics. </p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;img src=&quot;/blog/2019/01/25/Comic-6-FRC-Seasons-in-a-Nutshell/6-1.png&quot; alt=&quot;[FRC Seasons in a Nutshell]&quot; title=&quot;[FRC Seasons in a Nutshell]&quot;&gt;
+        &lt;img src=&quot;/blog/2019/01/24/Comic-6-FRC-Seasons-in-a-Nutshell/6-1.png&quot; alt=&quot;[FRC Seasons in a Nutshell]&quot; title=&quot;[FRC Seasons in a Nutshell]&quot;&gt;
       
     
     </summary>
@@ -74,13 +92,13 @@
     <published>2019-01-17T02:27:32.000Z</published>
     <updated>2019-01-17T02:29:41.440Z</updated>
     
-    <content type="html"><![CDATA[<img src="/blog/2019/01/17/Comic-5-Acceptable-Price-Range-of-Pencils/5-1.png" alt="[For 5-dimensional users, please use **Quaternions** instead.]" title="[For 5-dimensional users, please use **Quaternions** instead.]"><p>For 5-dimensional users, please use <strong>Quaternions</strong> instead.</p><p>Fan arts inspired by the <a href="https://xkcd.com/" target="_blank" rel="external">XKCD</a> comics. </p>]]></content>
+    <content type="html"><![CDATA[<img src="/blog/2019/01/16/Comic-5-Acceptable-Price-Range-of-Pencils/5-1.png" alt="[For 5-dimensional users, please use **Quaternions** instead.]" title="[For 5-dimensional users, please use **Quaternions** instead.]"><p>For 5-dimensional users, please use <strong>Quaternions</strong> instead.</p><p>Fan arts inspired by the <a href="https://xkcd.com/" target="_blank" rel="external">XKCD</a> comics. </p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;img src=&quot;/blog/2019/01/17/Comic-5-Acceptable-Price-Range-of-Pencils/5-1.png&quot; alt=&quot;[For 5-dimensional users, please use **Quaternions** inst
+        &lt;img src=&quot;/blog/2019/01/16/Comic-5-Acceptable-Price-Range-of-Pencils/5-1.png&quot; alt=&quot;[For 5-dimensional users, please use **Quaternions** inst
       
     
     </summary>
@@ -124,13 +142,13 @@
     <published>2018-11-21T03:04:54.000Z</published>
     <updated>2019-01-17T02:28:56.728Z</updated>
     
-    <content type="html"><![CDATA[<img src="/blog/2018/11/21/Comic-4-Aphorism-Space-Search/4-1.png" alt="[An example aphorism subjects to the search. Credit: (cjfe.org/)]" title="[An example aphorism subjects to the search. Credit: (cjfe.org/)]"><img src="/blog/2018/11/21/Comic-4-Aphorism-Space-Search/4-2.png" alt="[Generalization of the search process.]" title="[Generalization of the search process.]"><p>Especially suitable for high-school essay prompt generation. </p><p>Fan arts inspired by the <a href="https://xkcd.com/" target="_blank" rel="external">XKCD</a> comics. </p>]]></content>
+    <content type="html"><![CDATA[<img src="/blog/2018/11/20/Comic-4-Aphorism-Space-Search/4-1.png" alt="[An example aphorism subjects to the search. Credit: (cjfe.org/)]" title="[An example aphorism subjects to the search. Credit: (cjfe.org/)]"><img src="/blog/2018/11/20/Comic-4-Aphorism-Space-Search/4-2.png" alt="[Generalization of the search process.]" title="[Generalization of the search process.]"><p>Especially suitable for high-school essay prompt generation. </p><p>Fan arts inspired by the <a href="https://xkcd.com/" target="_blank" rel="external">XKCD</a> comics. </p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;img src=&quot;/blog/2018/11/21/Comic-4-Aphorism-Space-Search/4-1.png&quot; alt=&quot;[An example aphorism subjects to the search. Credit: (cjfe.org/)]&quot; ti
+        &lt;img src=&quot;/blog/2018/11/20/Comic-4-Aphorism-Space-Search/4-1.png&quot; alt=&quot;[An example aphorism subjects to the search. Credit: (cjfe.org/)]&quot; ti
       
     
     </summary>
@@ -149,13 +167,13 @@
     <published>2018-11-20T01:21:23.000Z</published>
     <updated>2018-11-21T03:03:11.894Z</updated>
     
-    <content type="html"><![CDATA[<img src="/blog/2018/11/20/Comic-3-Shadow/Shadow.svg.png" alt="[Shadow]" title="[Shadow]"><p>Fan arts inspired by the <a href="https://xkcd.com/" target="_blank" rel="external">XKCD</a> comics. </p>]]></content>
+    <content type="html"><![CDATA[<img src="/blog/2018/11/19/Comic-3-Shadow/Shadow.svg.png" alt="[Shadow]" title="[Shadow]"><p>Fan arts inspired by the <a href="https://xkcd.com/" target="_blank" rel="external">XKCD</a> comics. </p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;img src=&quot;/blog/2018/11/20/Comic-3-Shadow/Shadow.svg.png&quot; alt=&quot;[Shadow]&quot; title=&quot;[Shadow]&quot;&gt;
+        &lt;img src=&quot;/blog/2018/11/19/Comic-3-Shadow/Shadow.svg.png&quot; alt=&quot;[Shadow]&quot; title=&quot;[Shadow]&quot;&gt;
 &lt;p&gt;Fan arts inspired by the &lt;a href=&quot;https://xkcd
       
     
@@ -345,9 +363,9 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
-    
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
     
   </entry>
   
@@ -370,9 +388,9 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
-    
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
     
   </entry>
   
@@ -395,9 +413,9 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
-    
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
     
   </entry>
   
@@ -422,9 +440,9 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
-    
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
     
       <category term="FRC" scheme="https://d0048.github.io/blog/tags/FRC/"/>
     
@@ -449,9 +467,9 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
-    
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
+    
+      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
     
   </entry>
   
@@ -499,34 +517,9 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
-    
       <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
-  </entry>
-  
-  <entry>
-    <title>|failed to start docker application container engine| error after upgrade on ubuntu</title>
-    <link href="https://d0048.github.io/blog/2017/11/15/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/"/>
-    <id>https://d0048.github.io/blog/2017/11/15/failed-to-start-docker-application-container-engine-error-after-upgrade-on-ubuntu/</id>
-    <published>2017-11-16T02:47:52.000Z</published>
-    <updated>2017-11-16T02:50:30.528Z</updated>
-    
-    <content type="html"><![CDATA[<p>Referring to this (issue)[<a href="https://github.com/moby/moby/issues/29179" target="_blank" rel="external">https://github.com/moby/moby/issues/29179</a>], added <code>--storage-driver=overlay</code> at the end of the line defining <code>ExecStart</code> and tried <code>sudo systemctl daemon-reload;sudo systemctl daemon-reload ;sudo apt -f install</code>.</p><p>Worked for me.<br>2017/11/16</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Referring to this (issue)[&lt;a href=&quot;https://github.com/moby/moby/issues/29179&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/moby/moby
-      
-    
-    </summary>
-    
-    
       <category term="Linux" scheme="https://d0048.github.io/blog/tags/Linux/"/>
-    
-      <category term="Solution" scheme="https://d0048.github.io/blog/tags/Solution/"/>
     
   </entry>
   
